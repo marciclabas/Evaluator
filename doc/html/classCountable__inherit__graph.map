@@ -1,0 +1,7 @@
+<map id="Countable" name="Countable">
+<area shape="rect" id="node1" title="Countable interface." alt="" coords="227,5,315,32"/>
+<area shape="rect" id="node2" href="$classCourseSet.html" title="Set of courses (Course class)" alt="" coords="5,80,93,107"/>
+<area shape="rect" id="node3" href="$classProblemCollection.html" title="Collection of problems (Problem class)" alt="" coords="117,80,259,107"/>
+<area shape="rect" id="node4" href="$classSessionRepository.html" title="Repository of sessions (Session class)" alt="" coords="283,80,426,107"/>
+<area shape="rect" id="node5" href="$classUserSet.html" title="Set of users (User class)" alt="" coords="450,80,523,107"/>
+</map>

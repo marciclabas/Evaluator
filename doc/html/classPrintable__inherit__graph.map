@@ -1,0 +1,12 @@
+<map id="Printable" name="Printable">
+<area shape="rect" id="node1" title="Printable interface." alt="" coords="5,208,85,235"/>
+<area shape="rect" id="node2" href="$classCourse.html" title="Course, set of sessions (Session class) with void intersection." alt="" coords="171,5,238,32"/>
+<area shape="rect" id="node3" href="$classCourseSet.html" title="Set of courses (Course class)" alt="" coords="161,56,249,83"/>
+<area shape="rect" id="node4" href="$classProblem.html" title="Problem with a unique name (id) and some statistics." alt="" coords="167,107,243,133"/>
+<area shape="rect" id="node5" href="$classProblemCollection.html" title="Collection of problems (Problem class)" alt="" coords="134,157,275,184"/>
+<area shape="rect" id="node6" href="$classSession.html" title="Session, set of unique problems (Problem class) with prerequisites." alt="" coords="169,208,241,235"/>
+<area shape="rect" id="node7" href="$classSessionRepository.html" title="Repository of sessions (Session class)" alt="" coords="133,259,276,285"/>
+<area shape="rect" id="node8" href="$classUser.html" title="User with a unique name (id) and the ability to submit problems to a course." alt="" coords="179,309,231,336"/>
+<area shape="rect" id="node9" href="$classUserSet.html" title="Set of users (User class)" alt="" coords="168,360,241,387"/>
+<area shape="rect" id="node10" href="$classusr_1_1ProblemStats.html" title=" " alt="" coords="136,411,273,437"/>
+</map>

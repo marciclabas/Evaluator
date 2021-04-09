@@ -1,0 +1,5 @@
+<map id="Problem" name="Problem">
+<area shape="rect" id="node1" title="Represents a problem with a unique name (id) and some statistics." alt="" coords="65,80,141,107"/>
+<area shape="rect" id="node2" href="$classIReadable.html" title="IReadable interface." alt="" coords="5,5,92,32"/>
+<area shape="rect" id="node3" href="$classIPrintable.html" title="IPrintable interface." alt="" coords="116,5,200,32"/>
+</map>
