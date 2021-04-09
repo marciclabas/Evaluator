@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['user_2ehh_123',['User.hh',['../User_8hh.html',1,'']]],
-  ['userset_2ehh_124',['UserSet.hh',['../UserSet_8hh.html',1,'']]]
+  ['session_2ehh_123',['Session.hh',['../Session_8hh.html',1,'']]],
+  ['sessionrep_2ehh_124',['SessionRep.hh',['../SessionRep_8hh.html',1,'']]]
 ];

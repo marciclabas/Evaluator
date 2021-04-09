@@ -1,27 +1,4 @@
 /**
-@mainpage Evaluator Platform Documentation
-@section intro_sec Abstract
-
-This program mimics a programming lab like platform. Users signed in the platform can enroll
-in courses and submit problems to the platform. Each course contains several sessions which,
-in turn, contain several problems.
-
-@section struct_sec Data structure
-
-The program data is structured i 4 main singleton classes. A @c ProblemCollection, a @c
-SessionRepository, a @c CourseSet and a @c UserSet, each of them containing all elements
-of their kind available in the platform, i.e., <tt>Problem</tt>s, <tt>Session</tt>s,
-<tt>Course</tt>s and <tt>User</tt>s.
-
-@section function_sec Functionality structure
-
-The program functionality is controlled through the standard input/output. All available
-behaviors (<tt>SystemCommand</tt>s) are defined within the @c io <em>namespace</em>, and all the handling logic
-of such commands is implemented in the <em>main</em> function.
-
-*/
-
-/**
 @file program.cc
 @brief File containing the main function
 */

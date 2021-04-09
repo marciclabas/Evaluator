@@ -6,7 +6,7 @@ DOXYFILE_ENCODING      = UTF-8
 PROJECT_NAME           = "Evaluator"
 PROJECT_NUMBER         = "1.0 Specification"
 PROJECT_BRIEF          = "pro2 lab pracs: problem-evaluator-like platform"
-PROJECT_LOGO           = ./icon.png
+PROJECT_LOGO           = ./Doxygen/icon.png
 OUTPUT_DIRECTORY       = doc
 CREATE_SUBDIRS         = NO
 ALLOW_UNICODE_NAMES    = NO
@@ -112,9 +112,9 @@ WARN_LOGFILE           =
 #---------------------------------------------------------------------------
 INPUT                  =
 INPUT_ENCODING         = UTF-8
-FILE_PATTERNS          = program.cc *.hh
+FILE_PATTERNS          = program.cc *.hh README.md
                          
-RECURSIVE              = NO
+RECURSIVE              = YES
 EXCLUDE                = 
 EXCLUDE_SYMLINKS       = NO
 EXCLUDE_PATTERNS       =
@@ -127,7 +127,7 @@ INPUT_FILTER           =
 FILTER_PATTERNS        =
 FILTER_SOURCE_FILES    = NO
 FILTER_SOURCE_PATTERNS =
-USE_MDFILE_AS_MAINPAGE = NO
+USE_MDFILE_AS_MAINPAGE = README.md
 #---------------------------------------------------------------------------
 # configuration options related to source browsing
 #---------------------------------------------------------------------------
@@ -180,7 +180,7 @@ QHG_LOCATION           =
 GENERATE_ECLIPSEHELP   = NO
 ECLIPSE_DOC_ID         = org.doxygen.Project
 DISABLE_INDEX          = NO
-GENERATE_TREEVIEW      = NON
+GENERATE_TREEVIEW      = NO
 ENUM_VALUES_PER_LINE   = 4
 TREEVIEW_WIDTH         = 250
 EXT_LINKS_IN_WINDOW    = NO
