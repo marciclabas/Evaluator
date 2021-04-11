@@ -23,9 +23,9 @@ Inheritance diagram for User\+:\nopagebreak
 \item 
 \mbox{\hyperlink{namespacecrs_ad6124b1a4ba860befee7a8499688e758}{crs\+::\+ID}} \mbox{\hyperlink{class_user_a58f94778be2ff3c33932def944ff3743}{get\+Enrolled\+Course\+ID}} () const
 \begin{DoxyCompactList}\small\item\em Returns the ID of the course the user is enrolled in. \end{DoxyCompactList}\item 
-const std\+::vector$<$ \mbox{\hyperlink{class_problem_stats}{Problem\+Stats}} $>$ \& \mbox{\hyperlink{class_user_abf640d2436d67d0327cd9a4b6f33bb80}{get\+Solved\+Stats}} () const
+const std\+::vector$<$ \mbox{\hyperlink{class_i_printable}{IPrintable}} $>$ \& \mbox{\hyperlink{class_user_a2b7c33f7766f7245225b74f2741821cc}{get\+Solved\+Stats}} () const
 \begin{DoxyCompactList}\small\item\em Returns a vector with the stats of the problems the user has solved. \end{DoxyCompactList}\item 
-const std\+::vector$<$ \mbox{\hyperlink{class_problem_stats}{Problem\+Stats}} $>$ \& \mbox{\hyperlink{class_user_a35dbac271954b5e180f95d1b7201abb7}{get\+Solvable\+Stats}} () const
+const std\+::vector$<$ \mbox{\hyperlink{class_i_printable}{IPrintable}} $>$ \& \mbox{\hyperlink{class_user_a3de54afb03e5d5a2b63cab408612b201}{get\+Solvable\+Stats}} () const
 \begin{DoxyCompactList}\small\item\em Returns a vector with the stats of the problems the user can solve (holds the prerequisites to do so) \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_user_afab0e9d7bbd0acc257f4b747c404e231}{is\+Enrolled\+In\+Course}} () const
 \begin{DoxyCompactList}\small\item\em Checks wheter the user is enrolled in a course. \end{DoxyCompactList}\item 
@@ -46,7 +46,7 @@ void \mbox{\hyperlink{class_i_printable_a5b00d3f39de891a4caf1837763ffe8a3}{print
 \doxysubsection{Detailed Description}
 Represents a user with a unique name (id) and some statistics. 
 
-Definition at line 33 of file User.\+hh.
+Definition at line 21 of file User.\+hh.
 
 
 
@@ -82,11 +82,11 @@ The user is enrolled in some course
 \begin{DoxyPostcond}{Postcondition}
 The ID of the course the user is enrolled in is returned 
 \end{DoxyPostcond}
-\mbox{\Hypertarget{class_user_abf640d2436d67d0327cd9a4b6f33bb80}\label{class_user_abf640d2436d67d0327cd9a4b6f33bb80}} 
+\mbox{\Hypertarget{class_user_a2b7c33f7766f7245225b74f2741821cc}\label{class_user_a2b7c33f7766f7245225b74f2741821cc}} 
 \index{User@{User}!getSolvedStats@{getSolvedStats}}
 \index{getSolvedStats@{getSolvedStats}!User@{User}}
 \doxysubsubsection{\texorpdfstring{getSolvedStats()}{getSolvedStats()}}
-{\footnotesize\ttfamily const std\+::vector$<$\mbox{\hyperlink{class_problem_stats}{Problem\+Stats}}$>$\& User\+::get\+Solved\+Stats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily const std\+::vector$<$\mbox{\hyperlink{class_i_printable}{IPrintable}}$>$\& User\+::get\+Solved\+Stats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -98,11 +98,11 @@ true
 \begin{DoxyPostcond}{Postcondition}
 A vector with the stats of the problems the user has solved is returned 
 \end{DoxyPostcond}
-\mbox{\Hypertarget{class_user_a35dbac271954b5e180f95d1b7201abb7}\label{class_user_a35dbac271954b5e180f95d1b7201abb7}} 
+\mbox{\Hypertarget{class_user_a3de54afb03e5d5a2b63cab408612b201}\label{class_user_a3de54afb03e5d5a2b63cab408612b201}} 
 \index{User@{User}!getSolvableStats@{getSolvableStats}}
 \index{getSolvableStats@{getSolvableStats}!User@{User}}
 \doxysubsubsection{\texorpdfstring{getSolvableStats()}{getSolvableStats()}}
-{\footnotesize\ttfamily const std\+::vector$<$\mbox{\hyperlink{class_problem_stats}{Problem\+Stats}}$>$\& User\+::get\+Solvable\+Stats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily const std\+::vector$<$\mbox{\hyperlink{class_i_printable}{IPrintable}}$>$\& User\+::get\+Solvable\+Stats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 

@@ -8,6 +8,5 @@ var searchData=
   ['problem_5fsession_54',['problem_session',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fad11e2a92f84842f2d7cc143ecbd338e0',1,'io']]],
   ['problemcol_2ehh_55',['ProblemCol.hh',['../_problem_col_8hh.html',1,'']]],
   ['problemcollection_56',['ProblemCollection',['../class_problem_collection.html',1,'ProblemCollection'],['../class_problem_collection.html#a9c64db5612113ea8c9cf2f4756fc1abf',1,'ProblemCollection::ProblemCollection()']]],
-  ['problemstats_57',['ProblemStats',['../class_problem_stats.html',1,'ProblemStats'],['../class_problem_stats.html#a589e8772d08e6e6237911d31f002b813',1,'ProblemStats::ProblemStats()']]],
-  ['program_2ecc_58',['program.cc',['../program_8cc.html',1,'']]]
+  ['program_2ecc_57',['program.cc',['../program_8cc.html',1,'']]]
 ];

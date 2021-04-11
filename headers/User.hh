@@ -14,18 +14,6 @@
 #include <vector>
 #endif
 
-class User;
-
-/**
-@brief Represents the statistics of a problem related to some user
-*/
-class ProblemStats : public IPrintable {
-public:
-	// constructors & destructors
-	ProblemStats(const Problem & problem);
-	~ProblemStats();
-};
-
 /**
 @class User
 @brief Represents a user with a unique name (id) and some statistics
@@ -50,14 +38,14 @@ public:
 	@pre true
 	@post A vector with the stats of the problems the user has solved is returned
 	*/
-	const std::vector<ProblemStats> & getSolvedStats() const;
+	const std::vector<IPrintable> & getSolvedStats() const;
 
 	/**
 	@brief Returns a vector with the stats of the problems the user can solve (holds the prerequisites to do so)
 	@pre true
 	@post A vector with the stats of the problems the user can solve is returned
 	*/
-	const std::vector<ProblemStats> & getSolvableStats() const;
+	const std::vector<IPrintable> & getSolvableStats() const;
 	
 	/**
 	@brief Checks wheter the user is enrolled in a course
