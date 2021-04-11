@@ -1,8 +1,8 @@
 <map id="SessionRep.hh" name="SessionRep.hh">
-<area shape="rect" id="node1" title="File containing the specification of the SessionRepository class." alt="" coords="14,5,123,32"/>
-<area shape="rect" id="node2" href="$Session_8hh.html" title="File containing the specification of the Session class and it&#39;s corresponding namespace." alt="" coords="25,80,112,107"/>
-<area shape="rect" id="node3" href="$Interfaces_8hh.html" title="File containing the specification of multiple common interfaces." alt="" coords="15,304,112,331"/>
-<area shape="rect" id="node5" href="$ProblemCol_8hh.html" title="File containing the specification of the ProblemCollection class." alt="" coords="61,155,167,181"/>
-<area shape="rect" id="node4" href="$Namespaces_8hh.html" title="File containing the namespaces corresponding to Problem, Session, Course and User." alt="" coords="5,379,121,405"/>
-<area shape="rect" id="node6" href="$Problem_8hh.html" title="File containing the specification of the Problem class." alt="" coords="65,229,152,256"/>
+<area shape="rect" id="node1" title="File containing the specification of the SessionRepository class." alt="" coords="13,5,130,32"/>
+<area shape="rect" id="node2" href="$Session_8hh.html" title="File containing the specification of the Session class and it&#39;s corresponding namespace." alt="" coords="25,80,117,107"/>
+<area shape="rect" id="node3" href="$Interfaces_8hh.html" title="File containing the specification of multiple common interfaces." alt="" coords="15,304,122,331"/>
+<area shape="rect" id="node5" href="$ProblemCol_8hh.html" title="File containing the specification of the ProblemCollection class." alt="" coords="61,155,178,181"/>
+<area shape="rect" id="node4" href="$Namespaces_8hh.html" title="File containing the namespaces corresponding to Problem, Session, Course and User." alt="" coords="5,379,132,405"/>
+<area shape="rect" id="node6" href="$Problem_8hh.html" title="File containing the specification of the Problem class." alt="" coords="66,229,162,256"/>
 </map>

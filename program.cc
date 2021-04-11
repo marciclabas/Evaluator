@@ -87,7 +87,7 @@ int main() {
 			crs::ID courseID;
 			cin >> userID >> courseID;
 			
-			if(not userSet.containsElement(userID) or not courseSet.containsElement(courseID)) error();
+			if(not userSet.containsElement(userID)	or not courseSet.containsElement(courseID)) error();
 			else {
 				User & user = userSet[userID];
 				if(user.isEnrolledInCourse()) error();
@@ -127,7 +127,7 @@ int main() {
 			}
 			else error();
         }
-        /*
+        /**
 		 * 		SOLVED / SOLVABLE PROBLEMS
 		 */
         else if(command == solved_problems) {
@@ -145,7 +145,7 @@ int main() {
 				for(const auto & stats : userSet[userID].getSolvableStats()) cout << stats << endl;
 			else error();
         }
-        /*
+        /**
 		 * 		SUBMIT PROBLEM
 		 */
         else if(command == submit_problem) {

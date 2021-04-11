@@ -15,10 +15,12 @@
 /**
 @class CourseSet
 @brief Represents set of courses
+@invariant courses is sorted by id
 */
-class CourseSet : public IReadable, public IPrintable, public IContainer<crs::ID, Course> {	
+class CourseSet : public IReadable, public IPrintable, public IContainer<crs::ID, Course> {
+	std::vector<Course> courses;
+	
 public:
-	// constructors & destructors
 	CourseSet(const SessionRepository& SessionRepository);
 	~CourseSet();
 };

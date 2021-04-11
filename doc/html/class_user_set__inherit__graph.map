@@ -1,6 +1,0 @@
-<map id="UserSet" name="UserSet">
-<area shape="rect" id="node1" title="Represents a set of users." alt="" coords="120,204,232,311"/>
-<area shape="rect" id="node2" href="$class_i_readable.html" title="IReadable interface." alt="" coords="5,42,104,119"/>
-<area shape="rect" id="node3" href="$class_i_printable.html" title="IPrintable interface." alt="" coords="128,42,224,119"/>
-<area shape="rect" id="node4" href="$class_i_container.html" title=" " alt="" coords="249,5,386,156"/>
-</map>

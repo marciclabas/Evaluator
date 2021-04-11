@@ -83,15 +83,15 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classIContainer__inherit__graph.png" border="0" usemap="#aIContainer_3_01ID_00_01T_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="aIContainer_3_01ID_00_01T_01_4_inherit__map" id="aIContainer_3_01ID_00_01T_01_4_inherit__map">
-<area shape="rect" title="IContainer interface" alt="" coords="5,111,136,138"/>
-<area shape="rect" href="classIContainer.html" title=" " alt="" coords="305,5,439,47"/>
-<area shape="rect" href="classIContainer.html" title=" " alt="" coords="304,71,440,112"/>
-<area shape="rect" href="classIContainer.html" title=" " alt="" coords="305,136,439,177"/>
-<area shape="rect" href="classIContainer.html" title=" " alt="" coords="305,201,439,243"/>
-<area shape="rect" href="classUserSet.html" title="Represents a set of users." alt="" coords="519,13,590,39"/>
-<area shape="rect" href="classSessionRepository.html" title="Represents a repository of sessions." alt="" coords="489,78,620,105"/>
-<area shape="rect" href="classProblemCollection.html" title="Represents a collection of problems." alt="" coords="491,143,618,170"/>
-<area shape="rect" href="classCourseSet.html" title="Represents set of courses." alt="" coords="513,209,596,235"/>
+<area shape="rect" title="IContainer interface" alt="" coords="5,111,155,138"/>
+<area shape="rect" href="classIContainer.html" title=" " alt="" coords="343,5,494,47"/>
+<area shape="rect" href="classIContainer.html" title=" " alt="" coords="343,71,495,112"/>
+<area shape="rect" href="classIContainer.html" title=" " alt="" coords="343,136,494,177"/>
+<area shape="rect" href="classIContainer.html" title=" " alt="" coords="344,201,493,243"/>
+<area shape="rect" href="classUserSet.html" title="Represents a set of users." alt="" coords="579,13,652,39"/>
+<area shape="rect" href="classSessionRepository.html" title="Represents a repository of sessions." alt="" coords="544,78,687,105"/>
+<area shape="rect" href="classProblemCollection.html" title="Represents a collection of problems." alt="" coords="545,143,686,170"/>
+<area shape="rect" href="classCourseSet.html" title="Represents set of courses." alt="" coords="571,209,659,235"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -102,12 +102,27 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1a285fa8d0202100ad3d60d78f085677"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_a1a285fa8d0202100ad3d60d78f085677.html#a1a285fa8d0202100ad3d60d78f085677">containsElement</a> (ID id) const</td></tr>
 <tr class="memdesc:a1a285fa8d0202100ad3d60d78f085677"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return wheter the <code><a class="el" href="classIContainer.html" title="IContainer interface">IContainer</a></code> object has an element with the given id.  <a href="classIContainer_a1a285fa8d0202100ad3d60d78f085677.html#a1a285fa8d0202100ad3d60d78f085677">More...</a><br /></td></tr>
 <tr class="separator:a1a285fa8d0202100ad3d60d78f085677"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0f2b19a33fe97ed7bebad7fd191980d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_ac0f2b19a33fe97ed7bebad7fd191980d.html#ac0f2b19a33fe97ed7bebad7fd191980d">containsElement</a> (T element) const</td></tr>
+<tr class="memdesc:ac0f2b19a33fe97ed7bebad7fd191980d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return wheter the <code><a class="el" href="classIContainer.html" title="IContainer interface">IContainer</a></code> object has an element with the same id as <code>element</code>.  <a href="classIContainer_ac0f2b19a33fe97ed7bebad7fd191980d.html#ac0f2b19a33fe97ed7bebad7fd191980d">More...</a><br /></td></tr>
+<tr class="separator:ac0f2b19a33fe97ed7bebad7fd191980d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6a372ab01d690a8ce00c807dd052ceb"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_ac6a372ab01d690a8ce00c807dd052ceb.html#ac6a372ab01d690a8ce00c807dd052ceb">getElement</a> (ID id)</td></tr>
+<tr class="memdesc:ac6a372ab01d690a8ce00c807dd052ceb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the element with the given ID contained in the <code><a class="el" href="classIContainer.html" title="IContainer interface">IContainer</a></code> object.  <a href="classIContainer_ac6a372ab01d690a8ce00c807dd052ceb.html#ac6a372ab01d690a8ce00c807dd052ceb">More...</a><br /></td></tr>
+<tr class="separator:ac6a372ab01d690a8ce00c807dd052ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a680c9a9a75ef1f9289700e4648b8f62b"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_a680c9a9a75ef1f9289700e4648b8f62b.html#a680c9a9a75ef1f9289700e4648b8f62b">operator[]</a> (ID id)</td></tr>
 <tr class="memdesc:a680c9a9a75ef1f9289700e4648b8f62b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the element with the given ID contained in the <code><a class="el" href="classIContainer.html" title="IContainer interface">IContainer</a></code> object.  <a href="classIContainer_a680c9a9a75ef1f9289700e4648b8f62b.html#a680c9a9a75ef1f9289700e4648b8f62b">More...</a><br /></td></tr>
 <tr class="separator:a680c9a9a75ef1f9289700e4648b8f62b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53d878603e548a1c500f67a43ea8699d"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_a53d878603e548a1c500f67a43ea8699d.html#a53d878603e548a1c500f67a43ea8699d">getConstElement</a> (ID id) const</td></tr>
+<tr class="memdesc:a53d878603e548a1c500f67a43ea8699d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the constant element with the given ID contained in the <code><a class="el" href="classIContainer.html" title="IContainer interface">IContainer</a></code> object.  <a href="classIContainer_a53d878603e548a1c500f67a43ea8699d.html#a53d878603e548a1c500f67a43ea8699d">More...</a><br /></td></tr>
+<tr class="separator:a53d878603e548a1c500f67a43ea8699d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeab8a0a391dee3070c21045ab694daab"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_aeab8a0a391dee3070c21045ab694daab.html#aeab8a0a391dee3070c21045ab694daab">operator[]</a> (ID id) const</td></tr>
+<tr class="memdesc:aeab8a0a391dee3070c21045ab694daab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the constant element with the given ID contained in the <code><a class="el" href="classIContainer.html" title="IContainer interface">IContainer</a></code> object.  <a href="classIContainer_aeab8a0a391dee3070c21045ab694daab.html#aeab8a0a391dee3070c21045ab694daab">More...</a><br /></td></tr>
+<tr class="separator:aeab8a0a391dee3070c21045ab694daab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f98d7e86a90a9f521d000d776216b1f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_a3f98d7e86a90a9f521d000d776216b1f.html#a3f98d7e86a90a9f521d000d776216b1f">getCount</a> () const</td></tr>
 <tr class="memdesc:a3f98d7e86a90a9f521d000d776216b1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of elements contained in the <code><a class="el" href="classIContainer.html" title="IContainer interface">IContainer</a></code> object.  <a href="classIContainer_a3f98d7e86a90a9f521d000d776216b1f.html#a3f98d7e86a90a9f521d000d776216b1f">More...</a><br /></td></tr>
 <tr class="separator:a3f98d7e86a90a9f521d000d776216b1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88315472c494cf200df505fbf68b2105"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_a88315472c494cf200df505fbf68b2105.html#a88315472c494cf200df505fbf68b2105">addElement</a> (T newElement)</td></tr>
+<tr class="memdesc:a88315472c494cf200df505fbf68b2105"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new element, given such element.  <a href="classIContainer_a88315472c494cf200df505fbf68b2105.html#a88315472c494cf200df505fbf68b2105">More...</a><br /></td></tr>
+<tr class="separator:a88315472c494cf200df505fbf68b2105"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13b37809c2489f57d670ffc1194b70cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_a13b37809c2489f57d670ffc1194b70cc.html#a13b37809c2489f57d670ffc1194b70cc">addElement</a> (ID newElementID)</td></tr>
 <tr class="memdesc:a13b37809c2489f57d670ffc1194b70cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new element, given such element's id.  <a href="classIContainer_a13b37809c2489f57d670ffc1194b70cc.html#a13b37809c2489f57d670ffc1194b70cc">More...</a><br /></td></tr>
 <tr class="separator:a13b37809c2489f57d670ffc1194b70cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,7 +133,7 @@ interface IContainer&lt; ID, T &gt;</h3>
 
 <p><code><a class="el" href="classIContainer.html" title="IContainer interface">IContainer</a></code> interface </p>
 
-<p class="definition">Definition at line <a class="el" href="Interfaces_8hh_source.html#l00052">52</a> of file <a class="el" href="Interfaces_8hh_source.html">Interfaces.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Interfaces_8hh_source.html#l00066">66</a> of file <a class="el" href="Interfaces_8hh_source.html">Interfaces.hh</a>.</p>
 </div><hr/>The documentation for this interface was generated from the following file:<ul>
 <li><a class="el" href="Interfaces_8hh_source.html">Interfaces.hh</a></li>
 </ul>

@@ -21,16 +21,15 @@ class UserSet : public IReadable, public IPrintable, public IContainer<usr::ID, 
 	std::vector<User> users;
 	
 public:
-	// constructors & destructors
 	UserSet(const CourseSet& courseSet);
 	~UserSet();
 
 	/**
-	@brief Removes a user from the set
-	@pre A user with the given ID exists within the set
-	@post The user with the given ID no longer exists within the set
+	@brief Removes a user from the set if possible and returns @c true if succeeded
+	@pre @c toRemoveUser has a valid id (@c usr::ID)
+	@post @c true is returned if the user was removed from the set. If it was not, beacause a user with the same id did not exist in the set, @c false is returned
 	*/
-	void removeUser(usr::ID toRemoveUser);
+	bool removeUser(usr::ID toRemoveUser);
 };
 
 #endif

@@ -83,11 +83,11 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classCourseSet__inherit__graph.png" border="0" usemap="#aCourseSet_inherit__map" alt="Inheritance graph"/></div>
 <map name="aCourseSet_inherit__map" id="aCourseSet_inherit__map">
-<area shape="rect" title="Represents set of courses." alt="" coords="107,185,189,212"/>
-<area shape="rect" href="classIReadable.html" title="IReadable interface." alt="" coords="5,102,85,129"/>
-<area shape="rect" href="classIPrintable.html" title="IPrintable interface." alt="" coords="109,102,187,129"/>
-<area shape="rect" href="classIContainer.html" title=" " alt="" coords="211,95,344,136"/>
-<area shape="rect" href="classIContainer.html" title="IContainer interface" alt="" coords="212,5,343,32"/>
+<area shape="rect" title="Represents set of courses." alt="" coords="114,185,202,212"/>
+<area shape="rect" href="classIReadable.html" title="IReadable interface." alt="" coords="5,102,92,129"/>
+<area shape="rect" href="classIPrintable.html" title="IPrintable interface." alt="" coords="116,102,200,129"/>
+<area shape="rect" href="classIContainer.html" title=" " alt="" coords="225,95,374,136"/>
+<area shape="rect" href="classIContainer.html" title="IContainer interface" alt="" coords="225,5,374,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -97,23 +97,45 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac96b9d76c9e0f87784138c4086a7435b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21dfdecd8c08a272d6c2af4adc0fccc0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourseSet_a21dfdecd8c08a272d6c2af4adc0fccc0.html#a21dfdecd8c08a272d6c2af4adc0fccc0">~CourseSet</a> ()</td></tr>
 <tr class="separator:a21dfdecd8c08a272d6c2af4adc0fccc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a143d68bd066b688c17e06beba7145c6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIReadable_a143d68bd066b688c17e06beba7145c6f.html#a143d68bd066b688c17e06beba7145c6f">read</a> ()</td></tr>
+<tr class="memdesc:a143d68bd066b688c17e06beba7145c6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read to the <code><a class="el" href="classIReadable.html" title="IReadable interface.">IReadable</a></code> object from the stdin.  <a href="classIReadable_a143d68bd066b688c17e06beba7145c6f.html#a143d68bd066b688c17e06beba7145c6f">More...</a><br /></td></tr>
+<tr class="separator:a143d68bd066b688c17e06beba7145c6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b00d3f39de891a4caf1837763ffe8a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIPrintable_a5b00d3f39de891a4caf1837763ffe8a3.html#a5b00d3f39de891a4caf1837763ffe8a3">print</a> () const</td></tr>
+<tr class="memdesc:a5b00d3f39de891a4caf1837763ffe8a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the <code><a class="el" href="classIPrintable.html" title="IPrintable interface.">IPrintable</a></code> object to the stdout.  <a href="classIPrintable_a5b00d3f39de891a4caf1837763ffe8a3.html#a5b00d3f39de891a4caf1837763ffe8a3">More...</a><br /></td></tr>
+<tr class="separator:a5b00d3f39de891a4caf1837763ffe8a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a285fa8d0202100ad3d60d78f085677"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_a1a285fa8d0202100ad3d60d78f085677.html#a1a285fa8d0202100ad3d60d78f085677">containsElement</a> (<a class="el" href="namespacecrs_ad6124b1a4ba860befee7a8499688e758.html#ad6124b1a4ba860befee7a8499688e758">crs::ID</a> id) const</td></tr>
 <tr class="memdesc:a1a285fa8d0202100ad3d60d78f085677"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return wheter the <code><a class="el" href="classIContainer.html" title="IContainer interface">IContainer</a></code> object has an element with the given id.  <a href="classIContainer_a1a285fa8d0202100ad3d60d78f085677.html#a1a285fa8d0202100ad3d60d78f085677">More...</a><br /></td></tr>
 <tr class="separator:a1a285fa8d0202100ad3d60d78f085677"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0f2b19a33fe97ed7bebad7fd191980d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_ac0f2b19a33fe97ed7bebad7fd191980d.html#ac0f2b19a33fe97ed7bebad7fd191980d">containsElement</a> (<a class="el" href="classCourse.html">Course</a> element) const</td></tr>
+<tr class="memdesc:ac0f2b19a33fe97ed7bebad7fd191980d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return wheter the <code><a class="el" href="classIContainer.html" title="IContainer interface">IContainer</a></code> object has an element with the same id as <code>element</code>.  <a href="classIContainer_ac0f2b19a33fe97ed7bebad7fd191980d.html#ac0f2b19a33fe97ed7bebad7fd191980d">More...</a><br /></td></tr>
+<tr class="separator:ac0f2b19a33fe97ed7bebad7fd191980d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6a372ab01d690a8ce00c807dd052ceb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCourse.html">Course</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_ac6a372ab01d690a8ce00c807dd052ceb.html#ac6a372ab01d690a8ce00c807dd052ceb">getElement</a> (<a class="el" href="namespacecrs_ad6124b1a4ba860befee7a8499688e758.html#ad6124b1a4ba860befee7a8499688e758">crs::ID</a> id)</td></tr>
+<tr class="memdesc:ac6a372ab01d690a8ce00c807dd052ceb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the element with the given ID contained in the <code><a class="el" href="classIContainer.html" title="IContainer interface">IContainer</a></code> object.  <a href="classIContainer_ac6a372ab01d690a8ce00c807dd052ceb.html#ac6a372ab01d690a8ce00c807dd052ceb">More...</a><br /></td></tr>
+<tr class="separator:ac6a372ab01d690a8ce00c807dd052ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a680c9a9a75ef1f9289700e4648b8f62b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCourse.html">Course</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_a680c9a9a75ef1f9289700e4648b8f62b.html#a680c9a9a75ef1f9289700e4648b8f62b">operator[]</a> (<a class="el" href="namespacecrs_ad6124b1a4ba860befee7a8499688e758.html#ad6124b1a4ba860befee7a8499688e758">crs::ID</a> id)</td></tr>
 <tr class="memdesc:a680c9a9a75ef1f9289700e4648b8f62b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the element with the given ID contained in the <code><a class="el" href="classIContainer.html" title="IContainer interface">IContainer</a></code> object.  <a href="classIContainer_a680c9a9a75ef1f9289700e4648b8f62b.html#a680c9a9a75ef1f9289700e4648b8f62b">More...</a><br /></td></tr>
 <tr class="separator:a680c9a9a75ef1f9289700e4648b8f62b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeab8a0a391dee3070c21045ab694daab"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classCourse.html">Course</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_aeab8a0a391dee3070c21045ab694daab.html#aeab8a0a391dee3070c21045ab694daab">operator[]</a> (<a class="el" href="namespacecrs_ad6124b1a4ba860befee7a8499688e758.html#ad6124b1a4ba860befee7a8499688e758">crs::ID</a> id) const</td></tr>
+<tr class="memdesc:aeab8a0a391dee3070c21045ab694daab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the constant element with the given ID contained in the <code><a class="el" href="classIContainer.html" title="IContainer interface">IContainer</a></code> object.  <a href="classIContainer_aeab8a0a391dee3070c21045ab694daab.html#aeab8a0a391dee3070c21045ab694daab">More...</a><br /></td></tr>
+<tr class="separator:aeab8a0a391dee3070c21045ab694daab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53d878603e548a1c500f67a43ea8699d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classCourse.html">Course</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_a53d878603e548a1c500f67a43ea8699d.html#a53d878603e548a1c500f67a43ea8699d">getConstElement</a> (<a class="el" href="namespacecrs_ad6124b1a4ba860befee7a8499688e758.html#ad6124b1a4ba860befee7a8499688e758">crs::ID</a> id) const</td></tr>
+<tr class="memdesc:a53d878603e548a1c500f67a43ea8699d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the constant element with the given ID contained in the <code><a class="el" href="classIContainer.html" title="IContainer interface">IContainer</a></code> object.  <a href="classIContainer_a53d878603e548a1c500f67a43ea8699d.html#a53d878603e548a1c500f67a43ea8699d">More...</a><br /></td></tr>
+<tr class="separator:a53d878603e548a1c500f67a43ea8699d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f98d7e86a90a9f521d000d776216b1f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_a3f98d7e86a90a9f521d000d776216b1f.html#a3f98d7e86a90a9f521d000d776216b1f">getCount</a> () const</td></tr>
 <tr class="memdesc:a3f98d7e86a90a9f521d000d776216b1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of elements contained in the <code><a class="el" href="classIContainer.html" title="IContainer interface">IContainer</a></code> object.  <a href="classIContainer_a3f98d7e86a90a9f521d000d776216b1f.html#a3f98d7e86a90a9f521d000d776216b1f">More...</a><br /></td></tr>
 <tr class="separator:a3f98d7e86a90a9f521d000d776216b1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88315472c494cf200df505fbf68b2105"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_a88315472c494cf200df505fbf68b2105.html#a88315472c494cf200df505fbf68b2105">addElement</a> (<a class="el" href="classCourse.html">Course</a> newElement)</td></tr>
+<tr class="memdesc:a88315472c494cf200df505fbf68b2105"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new element, given such element.  <a href="classIContainer_a88315472c494cf200df505fbf68b2105.html#a88315472c494cf200df505fbf68b2105">More...</a><br /></td></tr>
+<tr class="separator:a88315472c494cf200df505fbf68b2105"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13b37809c2489f57d670ffc1194b70cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_a13b37809c2489f57d670ffc1194b70cc.html#a13b37809c2489f57d670ffc1194b70cc">addElement</a> (<a class="el" href="namespacecrs_ad6124b1a4ba860befee7a8499688e758.html#ad6124b1a4ba860befee7a8499688e758">crs::ID</a> newElementID)</td></tr>
 <tr class="memdesc:a13b37809c2489f57d670ffc1194b70cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new element, given such element's id.  <a href="classIContainer_a13b37809c2489f57d670ffc1194b70cc.html#a13b37809c2489f57d670ffc1194b70cc">More...</a><br /></td></tr>
 <tr class="separator:a13b37809c2489f57d670ffc1194b70cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents set of courses. </p>
+<dl class="section invariant"><dt>Invariant</dt><dd>courses is sorted by id </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="CourseSet_8hh_source.html#l00019">19</a> of file <a class="el" href="CourseSet_8hh_source.html">CourseSet.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CourseSet_8hh_source.html#l00020">20</a> of file <a class="el" href="CourseSet_8hh_source.html">CourseSet.hh</a>.</p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="CourseSet_8hh_source.html">CourseSet.hh</a></li>
 </ul>

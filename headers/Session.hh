@@ -21,13 +21,25 @@
 /**
 @class Session
 @brief Represents a session, i.e., a set of non-repeated problems with prerequisites with a unique name (id)
+@invariant 	<ol>
+				<li>Problems within @c problemsTree are unique</li>
+				<li>The tree structure corresponds to the prerequisites between problems</li>
+			</ol>
 */
 
 class Session : public IReadable, public IPrintable {
+	ses::ID	id;
+	BinTree<prb::ID> problemsTree;
+
 public:
-	// constructors & destructors
 	Session();
-	~Session();
+
+	/**
+	@brief Checks wether the implicit value (@c this) is to be ordered before the parameter (@c session)
+	@pre true
+	@post @c true is returned if this->id < session->id, @c false is otherwise
+	*/
+	bool operator<(const Session & session);
 };
 
 #endif
