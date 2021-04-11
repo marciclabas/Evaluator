@@ -7,8 +7,7 @@ Represents a user with a unique name (id) and some statistics.
 
 
 
-Inheritance diagram for User\+:
-\nopagebreak
+Inheritance diagram for User\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -37,7 +36,11 @@ void \mbox{\hyperlink{class_user_ae0d7460cd0a7ff8c069b07f573f3a46f}{enroll\+Cour
 void \mbox{\hyperlink{class_user_a37756db9d861c3b26d3060f18ea449ee}{unenroll\+Course}} ()
 \begin{DoxyCompactList}\small\item\em Unenrolls the user from the current course. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_user_ad7d1e5f0aa6e6a489b2379511082350f}{parse\+Submission}} (\mbox{\hyperlink{namespaceprb_ac73f5af4cf1ee8080561c3daea7a437f}{prb\+::\+ID}} problem\+ID, \mbox{\hyperlink{namespaceprb_a72e825355fbd24713dfb8ef9875aa775}{prb\+::result}} r)
-\begin{DoxyCompactList}\small\item\em Updates the user\textquotesingle{}s stats according to the given result of a submission. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Updates the user\textquotesingle{}s stats according to the given result of a submission. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_readable_a143d68bd066b688c17e06beba7145c6f}{read}} ()
+\begin{DoxyCompactList}\small\item\em Read to the {\ttfamily \mbox{\hyperlink{class_i_readable}{IReadable}}} object from the stdin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_printable_a5b00d3f39de891a4caf1837763ffe8a3}{print}} () const
+\begin{DoxyCompactList}\small\item\em Print the {\ttfamily \mbox{\hyperlink{class_i_printable}{IPrintable}}} object to the stdout. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -190,6 +193,38 @@ Updates the user\textquotesingle{}s stats according to the given result of a sub
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
 If {\ttfamily result} (the problem is accepted) the problem is removed from solvable and added to solved. Otherwise, tho problem (contained in solvable) count is incremented by 1 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_i_readable_a143d68bd066b688c17e06beba7145c6f}\label{class_i_readable_a143d68bd066b688c17e06beba7145c6f}} 
+\index{User@{User}!read@{read}}
+\index{read@{read}!User@{User}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily void IReadable\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Read to the {\ttfamily \mbox{\hyperlink{class_i_readable}{IReadable}}} object from the stdin. 
+
+\begin{DoxyPrecond}{Precondition}
+true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The {\ttfamily \mbox{\hyperlink{class_i_readable}{IReadable}}} object is read from the stdin 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_i_printable_a5b00d3f39de891a4caf1837763ffe8a3}\label{class_i_printable_a5b00d3f39de891a4caf1837763ffe8a3}} 
+\index{User@{User}!print@{print}}
+\index{print@{print}!User@{User}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void IPrintable\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Print the {\ttfamily \mbox{\hyperlink{class_i_printable}{IPrintable}}} object to the stdout. 
+
+\begin{DoxyPrecond}{Precondition}
+true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The {\ttfamily \mbox{\hyperlink{class_i_printable}{IPrintable}}} object is printed to the stdout 
 \end{DoxyPostcond}
 
 

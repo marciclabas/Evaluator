@@ -1,11 +1,11 @@
 <map id="IReadable" name="IReadable">
-<area shape="rect" id="node1" title="IReadable interface." alt="" coords="599,5,698,83"/>
-<area shape="rect" id="node2" href="$class_course.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics." alt="" coords="5,160,175,311"/>
-<area shape="rect" id="node3" href="$class_course_set.html" title="Represents set of courses." alt="" coords="199,189,309,281"/>
-<area shape="rect" id="node4" href="$class_problem.html" title="Represents a problem with a unique name (id) and some statistics." alt="" coords="333,182,474,289"/>
-<area shape="rect" id="node5" href="$class_problem_collection.html" title="Represents a collection of problems." alt="" coords="499,189,652,281"/>
-<area shape="rect" id="node6" href="$class_session.html" title="Represents a session, i.e., a set of non&#45;repeated problems with prerequisites with a unique name (id)" alt="" coords="676,189,771,281"/>
-<area shape="rect" id="node7" href="$class_session_repository.html" title="Represents a repository of sessions." alt="" coords="795,189,951,281"/>
-<area shape="rect" id="node8" href="$class_user.html" title="Represents a user with a unique name (id) and some statistics." alt="" coords="975,131,1163,340"/>
-<area shape="rect" id="node9" href="$class_user_set.html" title="Represents a set of users." alt="" coords="1187,182,1299,289"/>
+<area shape="rect" id="node1" title="IReadable interface." alt="" coords="599,5,698,97"/>
+<area shape="rect" id="node2" href="$class_course.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics." alt="" coords="5,175,175,325"/>
+<area shape="rect" id="node3" href="$class_course_set.html" title="Represents set of courses." alt="" coords="199,204,309,296"/>
+<area shape="rect" id="node4" href="$class_problem.html" title="Represents a problem with a unique name (id) and some statistics." alt="" coords="333,197,474,303"/>
+<area shape="rect" id="node5" href="$class_problem_collection.html" title="Represents a collection of problems." alt="" coords="499,204,652,296"/>
+<area shape="rect" id="node6" href="$class_session.html" title="Represents a session, i.e., a set of non&#45;repeated problems with prerequisites with a unique name (id)" alt="" coords="676,204,771,296"/>
+<area shape="rect" id="node7" href="$class_session_repository.html" title="Represents a repository of sessions." alt="" coords="795,204,951,296"/>
+<area shape="rect" id="node8" href="$class_user.html" title="Represents a user with a unique name (id) and some statistics." alt="" coords="975,145,1163,355"/>
+<area shape="rect" id="node9" href="$class_user_set.html" title="Represents a set of users." alt="" coords="1187,197,1299,303"/>
 </map>

@@ -7,8 +7,7 @@ Represents a collection of problems.
 
 
 
-Inheritance diagram for Problem\+Collection\+:
-\nopagebreak
+Inheritance diagram for Problem\+Collection\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,7 +20,19 @@ Inheritance diagram for Problem\+Collection\+:
 \mbox{\hyperlink{class_problem_collection_a9c64db5612113ea8c9cf2f4756fc1abf}{Problem\+Collection}} ()
 \item 
 \mbox{\hyperlink{class_problem_collection_a315db5b8fb5f98166e1b62e7d5e6517d}{$\sim$\+Problem\+Collection}} ()
-\end{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_i_readable_a143d68bd066b688c17e06beba7145c6f}{read}} ()
+\begin{DoxyCompactList}\small\item\em Read to the {\ttfamily \mbox{\hyperlink{class_i_readable}{IReadable}}} object from the stdin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_printable_a5b00d3f39de891a4caf1837763ffe8a3}{print}} () const
+\begin{DoxyCompactList}\small\item\em Print the {\ttfamily \mbox{\hyperlink{class_i_printable}{IPrintable}}} object to the stdout. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_i_container_a1a285fa8d0202100ad3d60d78f085677}{contains\+Element}} (\mbox{\hyperlink{namespaceprb_ac73f5af4cf1ee8080561c3daea7a437f}{prb\+::\+ID}} id) const
+\begin{DoxyCompactList}\small\item\em Return wheter the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object has an element with the given id. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_problem}{Problem}} \& \mbox{\hyperlink{class_i_container_a680c9a9a75ef1f9289700e4648b8f62b}{operator\mbox{[}$\,$\mbox{]}}} (\mbox{\hyperlink{namespaceprb_ac73f5af4cf1ee8080561c3daea7a437f}{prb\+::\+ID}} id)
+\begin{DoxyCompactList}\small\item\em Returns the element with the given ID contained in the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_i_container_a3f98d7e86a90a9f521d000d776216b1f}{get\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Return the number of elements contained in the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_container_a13b37809c2489f57d670ffc1194b70cc}{add\+Element}} (\mbox{\hyperlink{namespaceprb_ac73f5af4cf1ee8080561c3daea7a437f}{prb\+::\+ID}} new\+Element\+ID)
+\begin{DoxyCompactList}\small\item\em Add a new element, given such element\textquotesingle{}s id. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -44,6 +55,105 @@ Definition at line 19 of file Problem\+Col.\+hh.
 \doxysubsubsection{\texorpdfstring{$\sim$ProblemCollection()}{~ProblemCollection()}}
 {\footnotesize\ttfamily Problem\+Collection\+::$\sim$\+Problem\+Collection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_readable_a143d68bd066b688c17e06beba7145c6f}\label{class_i_readable_a143d68bd066b688c17e06beba7145c6f}} 
+\index{ProblemCollection@{ProblemCollection}!read@{read}}
+\index{read@{read}!ProblemCollection@{ProblemCollection}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily void IReadable\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Read to the {\ttfamily \mbox{\hyperlink{class_i_readable}{IReadable}}} object from the stdin. 
+
+\begin{DoxyPrecond}{Precondition}
+true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The {\ttfamily \mbox{\hyperlink{class_i_readable}{IReadable}}} object is read from the stdin 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_i_printable_a5b00d3f39de891a4caf1837763ffe8a3}\label{class_i_printable_a5b00d3f39de891a4caf1837763ffe8a3}} 
+\index{ProblemCollection@{ProblemCollection}!print@{print}}
+\index{print@{print}!ProblemCollection@{ProblemCollection}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void IPrintable\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Print the {\ttfamily \mbox{\hyperlink{class_i_printable}{IPrintable}}} object to the stdout. 
+
+\begin{DoxyPrecond}{Precondition}
+true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The {\ttfamily \mbox{\hyperlink{class_i_printable}{IPrintable}}} object is printed to the stdout 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_i_container_a1a285fa8d0202100ad3d60d78f085677}\label{class_i_container_a1a285fa8d0202100ad3d60d78f085677}} 
+\index{ProblemCollection@{ProblemCollection}!containsElement@{containsElement}}
+\index{containsElement@{containsElement}!ProblemCollection@{ProblemCollection}}
+\doxysubsubsection{\texorpdfstring{containsElement()}{containsElement()}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_i_container}{IContainer}}$<$ \mbox{\hyperlink{namespaceprb_ac73f5af4cf1ee8080561c3daea7a437f}{prb\+::\+ID}} , \mbox{\hyperlink{class_problem}{Problem}}  $>$\+::contains\+Element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceprb_ac73f5af4cf1ee8080561c3daea7a437f}{prb\+::\+ID}}}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Return wheter the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object has an element with the given id. 
+
+\begin{DoxyPrecond}{Precondition}
+true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+{\ttfamily true} is returned if there is an element with the given id within the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object. If there is not, {\ttfamily false} is returned 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_i_container_a680c9a9a75ef1f9289700e4648b8f62b}\label{class_i_container_a680c9a9a75ef1f9289700e4648b8f62b}} 
+\index{ProblemCollection@{ProblemCollection}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!ProblemCollection@{ProblemCollection}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_problem}{Problem}} \& \mbox{\hyperlink{class_i_container}{IContainer}}$<$ \mbox{\hyperlink{namespaceprb_ac73f5af4cf1ee8080561c3daea7a437f}{prb\+::\+ID}} , \mbox{\hyperlink{class_problem}{Problem}}  $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceprb_ac73f5af4cf1ee8080561c3daea7a437f}{prb\+::\+ID}}}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Returns the element with the given ID contained in the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object. 
+
+\begin{DoxyPrecond}{Precondition}
+An element with the given id does exist within the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+An element with the given ID contained in the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object is returned 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_i_container_a3f98d7e86a90a9f521d000d776216b1f}\label{class_i_container_a3f98d7e86a90a9f521d000d776216b1f}} 
+\index{ProblemCollection@{ProblemCollection}!getCount@{getCount}}
+\index{getCount@{getCount}!ProblemCollection@{ProblemCollection}}
+\doxysubsubsection{\texorpdfstring{getCount()}{getCount()}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{class_i_container}{IContainer}}$<$ \mbox{\hyperlink{namespaceprb_ac73f5af4cf1ee8080561c3daea7a437f}{prb\+::\+ID}} , \mbox{\hyperlink{class_problem}{Problem}}  $>$\+::get\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Return the number of elements contained in the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object. 
+
+\begin{DoxyPrecond}{Precondition}
+true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The number of elements contained in the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object is returned 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_i_container_a13b37809c2489f57d670ffc1194b70cc}\label{class_i_container_a13b37809c2489f57d670ffc1194b70cc}} 
+\index{ProblemCollection@{ProblemCollection}!addElement@{addElement}}
+\index{addElement@{addElement}!ProblemCollection@{ProblemCollection}}
+\doxysubsubsection{\texorpdfstring{addElement()}{addElement()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_i_container}{IContainer}}$<$ \mbox{\hyperlink{namespaceprb_ac73f5af4cf1ee8080561c3daea7a437f}{prb\+::\+ID}} , \mbox{\hyperlink{class_problem}{Problem}}  $>$\+::add\+Element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceprb_ac73f5af4cf1ee8080561c3daea7a437f}{prb\+::\+ID}}}]{new\+Element\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Add a new element, given such element\textquotesingle{}s id. 
+
+\begin{DoxyPrecond}{Precondition}
+There is not any element with the given id within the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+A new element with {\ttfamily new\+Element\+ID} is added to the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object 
+\end{DoxyPostcond}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

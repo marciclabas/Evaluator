@@ -7,8 +7,7 @@
 
 
 
-Inheritance diagram for IReadable\+:
-\nopagebreak
+Inheritance diagram for IReadable\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -19,7 +18,9 @@ Inheritance diagram for IReadable\+:
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_i_readable_a820ad5ad2700f268e45cf79b1ea4e92e}{IReadable}} ()=delete
-\end{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_i_readable_a143d68bd066b688c17e06beba7145c6f}{read}} ()
+\begin{DoxyCompactList}\small\item\em Read to the {\ttfamily \mbox{\hyperlink{class_i_readable}{IReadable}}} object from the stdin. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
@@ -32,7 +33,7 @@ std\+::istream \& \mbox{\hyperlink{class_i_readable_a851070ee2b053b9a83e58fb0866
 
 @\+Interface \mbox{\hyperlink{class_i_readable}{IReadable}} 
 
-Definition at line 35 of file Interfaces.\+hh.
+Definition at line 42 of file Interfaces.\+hh.
 
 
 
@@ -43,6 +44,25 @@ Definition at line 35 of file Interfaces.\+hh.
 \doxysubsubsection{\texorpdfstring{IReadable()}{IReadable()}}
 {\footnotesize\ttfamily IReadable\+::\+IReadable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
 
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_readable_a143d68bd066b688c17e06beba7145c6f}\label{class_i_readable_a143d68bd066b688c17e06beba7145c6f}} 
+\index{IReadable@{IReadable}!read@{read}}
+\index{read@{read}!IReadable@{IReadable}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily void IReadable\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Read to the {\ttfamily \mbox{\hyperlink{class_i_readable}{IReadable}}} object from the stdin. 
+
+\begin{DoxyPrecond}{Precondition}
+true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The {\ttfamily \mbox{\hyperlink{class_i_readable}{IReadable}}} object is read from the stdin 
+\end{DoxyPostcond}
 
 
 \doxysubsection{Friends And Related Function Documentation}

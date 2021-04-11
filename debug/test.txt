@@ -1,0 +1,4 @@
+g++: error: test.cc: No such file or directory
+g++: fatal error: no input files
+compilation terminated.
+make: *** [Makefile:8: test] Error 1

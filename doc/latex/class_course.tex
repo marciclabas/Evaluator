@@ -7,8 +7,7 @@ Represents a course, i.\+e., a set of sessions with void intersection and some s
 
 
 
-Inheritance diagram for Course\+:
-\nopagebreak
+Inheritance diagram for Course\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -29,7 +28,11 @@ bool \mbox{\hyperlink{class_course_ada500ecbde39364e8dac698a409872e3}{get\+Sessi
 void \mbox{\hyperlink{class_course_a6047349e41149231c71d1d2307283bc9}{enroll\+User}} ()
 \begin{DoxyCompactList}\small\item\em Updates the stats regarding enrolled users adding a new user. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_course_a6a71deac55949b33c5903ed2cd71db4b}{unenroll\+User}} ()
-\begin{DoxyCompactList}\small\item\em Updates the stats regarding enrolled users removing an enrolled user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Updates the stats regarding enrolled users removing an enrolled user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_readable_a143d68bd066b688c17e06beba7145c6f}{read}} ()
+\begin{DoxyCompactList}\small\item\em Read to the {\ttfamily \mbox{\hyperlink{class_i_readable}{IReadable}}} object from the stdin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_printable_a5b00d3f39de891a4caf1837763ffe8a3}{print}} () const
+\begin{DoxyCompactList}\small\item\em Print the {\ttfamily \mbox{\hyperlink{class_i_printable}{IPrintable}}} object to the stdout. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -118,6 +121,38 @@ Updates the stats regarding enrolled users removing an enrolled user.
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
 {\ttfamily current\+Enrolled} is decremented by 1 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_i_readable_a143d68bd066b688c17e06beba7145c6f}\label{class_i_readable_a143d68bd066b688c17e06beba7145c6f}} 
+\index{Course@{Course}!read@{read}}
+\index{read@{read}!Course@{Course}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily void IReadable\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Read to the {\ttfamily \mbox{\hyperlink{class_i_readable}{IReadable}}} object from the stdin. 
+
+\begin{DoxyPrecond}{Precondition}
+true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The {\ttfamily \mbox{\hyperlink{class_i_readable}{IReadable}}} object is read from the stdin 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_i_printable_a5b00d3f39de891a4caf1837763ffe8a3}\label{class_i_printable_a5b00d3f39de891a4caf1837763ffe8a3}} 
+\index{Course@{Course}!print@{print}}
+\index{print@{print}!Course@{Course}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void IPrintable\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Print the {\ttfamily \mbox{\hyperlink{class_i_printable}{IPrintable}}} object to the stdout. 
+
+\begin{DoxyPrecond}{Precondition}
+true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The {\ttfamily \mbox{\hyperlink{class_i_printable}{IPrintable}}} object is printed to the stdout 
 \end{DoxyPostcond}
 
 
