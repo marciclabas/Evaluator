@@ -1,12 +1,12 @@
 <map id="IPrintable" name="IPrintable">
-<area shape="rect" id="node1" title="IPrintable interface." alt="" coords="5,233,89,260"/>
-<area shape="rect" id="node2" href="$classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics." alt="" coords="175,5,242,32"/>
-<area shape="rect" id="node3" href="$classCourseSet.html" title="Represents set of courses." alt="" coords="165,56,253,83"/>
-<area shape="rect" id="node4" href="$classProblem.html" title="Represents a problem with a unique name (id) and some statistics." alt="" coords="171,107,247,133"/>
-<area shape="rect" id="node5" href="$classProblemCollection.html" title="Represents a collection of problems." alt="" coords="138,157,279,184"/>
-<area shape="rect" id="node6" href="$classProblemStats.html" title="Represents the statistics of a problem related to some user." alt="" coords="154,208,263,235"/>
-<area shape="rect" id="node7" href="$classSession.html" title="Represents a session, i.e., a set of non&#45;repeated problems with prerequisites with a unique name (id)" alt="" coords="173,259,245,285"/>
-<area shape="rect" id="node8" href="$classSessionRepository.html" title="Represents a repository of sessions." alt="" coords="137,309,280,336"/>
-<area shape="rect" id="node9" href="$classUser.html" title="Represents a user with a unique name (id) and some statistics." alt="" coords="183,360,235,387"/>
-<area shape="rect" id="node10" href="$classUserSet.html" title="Represents a set of users." alt="" coords="172,411,245,437"/>
+<area shape="rect" id="node1" title="IPrintable interface." alt="" coords="5,208,83,235"/>
+<area shape="rect" id="node2" href="$classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics." alt="" coords="165,5,227,32"/>
+<area shape="rect" id="node3" href="$classCourseSet.html" title="Represents set of courses." alt="" coords="155,56,237,83"/>
+<area shape="rect" id="node4" href="$classProblem.html" title="Represents a problem with a unique name (id) and some statistics." alt="" coords="161,107,231,133"/>
+<area shape="rect" id="node5" href="$classProblemCollection.html" title="Represents a collection of problems." alt="" coords="133,157,259,184"/>
+<area shape="rect" id="node6" href="$classProblemStats.html" title="Represents the statistics of a problem related to some user." alt="" coords="145,208,247,235"/>
+<area shape="rect" id="node7" href="$classSession.html" title="Represents a session, i.e., a set of non&#45;repeated problems with prerequisites with a unique name (id)" alt="" coords="161,259,231,285"/>
+<area shape="rect" id="node8" href="$classSessionRepository.html" title="Represents a repository of sessions." alt="" coords="131,309,261,336"/>
+<area shape="rect" id="node9" href="$classUser.html" title="Represents a user with a unique name (id) and some statistics." alt="" coords="171,360,221,387"/>
+<area shape="rect" id="node10" href="$classUserSet.html" title="Represents a set of users." alt="" coords="161,411,231,437"/>
 </map>

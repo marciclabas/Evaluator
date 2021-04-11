@@ -1,11 +1,11 @@
 <map id="IContainer&lt; ID, T &gt;" name="IContainer&lt; ID, T &gt;">
-<area shape="rect" id="node1" title="IContainer interface" alt="" coords="5,111,155,138"/>
-<area shape="rect" id="node2" href="$classIContainer.html" title=" " alt="" coords="343,5,494,47"/>
-<area shape="rect" id="node4" href="$classIContainer.html" title=" " alt="" coords="343,71,495,112"/>
-<area shape="rect" id="node6" href="$classIContainer.html" title=" " alt="" coords="343,136,494,177"/>
-<area shape="rect" id="node8" href="$classIContainer.html" title=" " alt="" coords="344,201,493,243"/>
-<area shape="rect" id="node3" href="$classUserSet.html" title="Represents a set of users." alt="" coords="579,13,652,39"/>
-<area shape="rect" id="node5" href="$classSessionRepository.html" title="Represents a repository of sessions." alt="" coords="544,78,687,105"/>
-<area shape="rect" id="node7" href="$classProblemCollection.html" title="Represents a collection of problems." alt="" coords="545,143,686,170"/>
-<area shape="rect" id="node9" href="$classCourseSet.html" title="Represents set of courses." alt="" coords="571,209,659,235"/>
+<area shape="rect" id="node1" title="IContainer interface" alt="" coords="5,111,136,138"/>
+<area shape="rect" id="node2" href="$classIContainer.html" title=" " alt="" coords="305,5,439,47"/>
+<area shape="rect" id="node4" href="$classIContainer.html" title=" " alt="" coords="304,71,440,112"/>
+<area shape="rect" id="node6" href="$classIContainer.html" title=" " alt="" coords="305,136,439,177"/>
+<area shape="rect" id="node8" href="$classIContainer.html" title=" " alt="" coords="305,201,439,243"/>
+<area shape="rect" id="node3" href="$classUserSet.html" title="Represents a set of users." alt="" coords="519,13,590,39"/>
+<area shape="rect" id="node5" href="$classSessionRepository.html" title="Represents a repository of sessions." alt="" coords="489,78,620,105"/>
+<area shape="rect" id="node7" href="$classProblemCollection.html" title="Represents a collection of problems." alt="" coords="491,143,618,170"/>
+<area shape="rect" id="node9" href="$classCourseSet.html" title="Represents set of courses." alt="" coords="513,209,596,235"/>
 </map>

@@ -26,6 +26,7 @@ namespace io {
     	list_courses, write_course, list_users, write_user, end_program };
     
     typedef std::string InputCommand;
+    
     /**
 	@brief Checks whether an InputCommand corresponds to a SystemCommand
 	@pre true

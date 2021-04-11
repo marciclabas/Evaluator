@@ -1,0 +1,9 @@
+<map id="Course.hh" name="Course.hh">
+<area shape="rect" id="node1" title="File containing the specification of the Course class." alt="" coords="18,5,98,32"/>
+<area shape="rect" id="node2" href="$_interfaces_8hh.html" title="File containing the specification of multiple common interfaces." alt="" coords="15,379,112,405"/>
+<area shape="rect" id="node4" href="$_session_rep_8hh.html" title="File containing the specification of the SessionRepository class." alt="" coords="50,80,159,107"/>
+<area shape="rect" id="node3" href="$_namespaces_8hh.html" title="File containing the namespaces corresponding to Problem, Session, Course and User." alt="" coords="5,453,121,480"/>
+<area shape="rect" id="node5" href="$_session_8hh.html" title="File containing the specification of the Session class and it&#39;s corresponding namespace." alt="" coords="61,155,148,181"/>
+<area shape="rect" id="node6" href="$_problem_col_8hh.html" title="File containing the specification of the ProblemCollection class." alt="" coords="101,229,207,256"/>
+<area shape="rect" id="node7" href="$_problem_8hh.html" title="File containing the specification of the Problem class." alt="" coords="105,304,192,331"/>
+</map>

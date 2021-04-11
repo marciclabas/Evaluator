@@ -1,0 +1,126 @@
+\hypertarget{class_course}{}\doxysection{Course Class Reference}
+\label{class_course}\index{Course@{Course}}
+
+
+Represents a course, i.\+e., a set of sessions with void intersection and some statistics.  
+
+
+
+
+Inheritance diagram for Course\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{class_course__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_course_a6b959ccf15d9ceed9e9c14a701561982}{Course}} ()
+\item 
+\mbox{\hyperlink{class_course_aa9038f2e129526920037dda9e76d69d0}{$\sim$\+Course}} ()
+\item 
+int \mbox{\hyperlink{class_course_ae933e2e2c89148658d7ed35bd39335e5}{get\+Current\+Enrolled}} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of users currently enrolled on the course. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_course_ada500ecbde39364e8dac698a409872e3}{get\+Session\+By\+Problem}} (\mbox{\hyperlink{namespaceprb_ac73f5af4cf1ee8080561c3daea7a437f}{prb\+::\+ID}} problem\+ID, \mbox{\hyperlink{namespaceses_aa211e681d163eb0b0870daad6ec08fae}{ses\+::\+ID}} \&session\+ID) const
+\begin{DoxyCompactList}\small\item\em Check whether a session within the course contains a problem with the given id does exists. If it does, returs the id of such session through session\+ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_course_a6047349e41149231c71d1d2307283bc9}{enroll\+User}} ()
+\begin{DoxyCompactList}\small\item\em Updates the stats regarding enrolled users adding a new user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_course_a6a71deac55949b33c5903ed2cd71db4b}{unenroll\+User}} ()
+\begin{DoxyCompactList}\small\item\em Updates the stats regarding enrolled users removing an enrolled user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a course, i.\+e., a set of sessions with void intersection and some statistics. 
+
+Definition at line 22 of file Course.\+hh.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_course_a6b959ccf15d9ceed9e9c14a701561982}\label{class_course_a6b959ccf15d9ceed9e9c14a701561982}} 
+\index{Course@{Course}!Course@{Course}}
+\index{Course@{Course}!Course@{Course}}
+\doxysubsubsection{\texorpdfstring{Course()}{Course()}}
+{\footnotesize\ttfamily Course\+::\+Course (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_course_aa9038f2e129526920037dda9e76d69d0}\label{class_course_aa9038f2e129526920037dda9e76d69d0}} 
+\index{Course@{Course}!````~Course@{$\sim$Course}}
+\index{````~Course@{$\sim$Course}!Course@{Course}}
+\doxysubsubsection{\texorpdfstring{$\sim$Course()}{~Course()}}
+{\footnotesize\ttfamily Course\+::$\sim$\+Course (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_course_ae933e2e2c89148658d7ed35bd39335e5}\label{class_course_ae933e2e2c89148658d7ed35bd39335e5}} 
+\index{Course@{Course}!getCurrentEnrolled@{getCurrentEnrolled}}
+\index{getCurrentEnrolled@{getCurrentEnrolled}!Course@{Course}}
+\doxysubsubsection{\texorpdfstring{getCurrentEnrolled()}{getCurrentEnrolled()}}
+{\footnotesize\ttfamily int Course\+::get\+Current\+Enrolled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the number of users currently enrolled on the course. 
+
+\begin{DoxyPrecond}{Precondition}
+true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The number of currently enrolled users ($>$= 0) is returned 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_course_ada500ecbde39364e8dac698a409872e3}\label{class_course_ada500ecbde39364e8dac698a409872e3}} 
+\index{Course@{Course}!getSessionByProblem@{getSessionByProblem}}
+\index{getSessionByProblem@{getSessionByProblem}!Course@{Course}}
+\doxysubsubsection{\texorpdfstring{getSessionByProblem()}{getSessionByProblem()}}
+{\footnotesize\ttfamily bool Course\+::get\+Session\+By\+Problem (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceprb_ac73f5af4cf1ee8080561c3daea7a437f}{prb\+::\+ID}}}]{problem\+ID,  }\item[{\mbox{\hyperlink{namespaceses_aa211e681d163eb0b0870daad6ec08fae}{ses\+::\+ID}} \&}]{session\+ID }\end{DoxyParamCaption}) const}
+
+
+
+Check whether a session within the course contains a problem with the given id does exists. If it does, returs the id of such session through session\+ID. 
+
+\begin{DoxyPrecond}{Precondition}
+true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+session\+ID is the id of a session containing a problem with the given id and {\ttfamily true} is returned if such session exists within the course. If it does not, {\ttfamily false} is returned 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_course_a6047349e41149231c71d1d2307283bc9}\label{class_course_a6047349e41149231c71d1d2307283bc9}} 
+\index{Course@{Course}!enrollUser@{enrollUser}}
+\index{enrollUser@{enrollUser}!Course@{Course}}
+\doxysubsubsection{\texorpdfstring{enrollUser()}{enrollUser()}}
+{\footnotesize\ttfamily void Course\+::enroll\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the stats regarding enrolled users adding a new user. 
+
+\begin{DoxyPrecond}{Precondition}
+true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+{\ttfamily total\+Enrolled} and {\ttfamily current\+Enrolled} are incremented by 1 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_course_a6a71deac55949b33c5903ed2cd71db4b}\label{class_course_a6a71deac55949b33c5903ed2cd71db4b}} 
+\index{Course@{Course}!unenrollUser@{unenrollUser}}
+\index{unenrollUser@{unenrollUser}!Course@{Course}}
+\doxysubsubsection{\texorpdfstring{unenrollUser()}{unenrollUser()}}
+{\footnotesize\ttfamily void Course\+::unenroll\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the stats regarding enrolled users removing an enrolled user. 
+
+\begin{DoxyPrecond}{Precondition}
+{\ttfamily current\+Enrolled} $>$ 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+{\ttfamily current\+Enrolled} is decremented by 1 
+\end{DoxyPostcond}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_course_8hh}{Course.\+hh}}\end{DoxyCompactItemize}

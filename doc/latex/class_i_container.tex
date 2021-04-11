@@ -1,0 +1,116 @@
+\hypertarget{class_i_container}{}\doxysection{IContainer$<$ ID, T $>$ Interface Template Reference}
+\label{class_i_container}\index{IContainer$<$ ID, T $>$@{IContainer$<$ ID, T $>$}}
+
+
+{\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} interface  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i_container_a57bebe11003b412a4b421ef6d10a9136}{IContainer}} ()=delete
+\item 
+bool \mbox{\hyperlink{class_i_container_a1a285fa8d0202100ad3d60d78f085677}{contains\+Element}} (ID id) const
+\begin{DoxyCompactList}\small\item\em Return wheter the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object has an element with the given id. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{class_i_container_a680c9a9a75ef1f9289700e4648b8f62b}{operator\mbox{[}$\,$\mbox{]}}} (ID id)
+\begin{DoxyCompactList}\small\item\em Returns the element with the given ID contained in the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_i_container_a3f98d7e86a90a9f521d000d776216b1f}{get\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Return the number of elements contained in the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_container_a13b37809c2489f57d670ffc1194b70cc}{add\+Element}} (ID new\+Element\+ID)
+\begin{DoxyCompactList}\small\item\em Add a new element, given such element\textquotesingle{}s id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename ID, typename T$>$\newline
+interface IContainer$<$ ID, T $>$}
+
+{\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} interface 
+
+Definition at line 52 of file Interfaces.\+hh.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_i_container_a57bebe11003b412a4b421ef6d10a9136}\label{class_i_container_a57bebe11003b412a4b421ef6d10a9136}} 
+\index{IContainer$<$ ID, T $>$@{IContainer$<$ ID, T $>$}!IContainer@{IContainer}}
+\index{IContainer@{IContainer}!IContainer$<$ ID, T $>$@{IContainer$<$ ID, T $>$}}
+\doxysubsubsection{\texorpdfstring{IContainer()}{IContainer()}}
+{\footnotesize\ttfamily template$<$typename ID , typename T $>$ \\
+\mbox{\hyperlink{class_i_container}{IContainer}}$<$ ID, T $>$\+::\mbox{\hyperlink{class_i_container}{IContainer}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_container_a1a285fa8d0202100ad3d60d78f085677}\label{class_i_container_a1a285fa8d0202100ad3d60d78f085677}} 
+\index{IContainer$<$ ID, T $>$@{IContainer$<$ ID, T $>$}!containsElement@{containsElement}}
+\index{containsElement@{containsElement}!IContainer$<$ ID, T $>$@{IContainer$<$ ID, T $>$}}
+\doxysubsubsection{\texorpdfstring{containsElement()}{containsElement()}}
+{\footnotesize\ttfamily template$<$typename ID , typename T $>$ \\
+bool \mbox{\hyperlink{class_i_container}{IContainer}}$<$ ID, T $>$\+::contains\+Element (\begin{DoxyParamCaption}\item[{ID}]{id }\end{DoxyParamCaption}) const}
+
+
+
+Return wheter the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object has an element with the given id. 
+
+\begin{DoxyPrecond}{Precondition}
+true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+{\ttfamily true} is returned if there is an element with the given id within the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object. If there is not, {\ttfamily false} is returned 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_i_container_a680c9a9a75ef1f9289700e4648b8f62b}\label{class_i_container_a680c9a9a75ef1f9289700e4648b8f62b}} 
+\index{IContainer$<$ ID, T $>$@{IContainer$<$ ID, T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!IContainer$<$ ID, T $>$@{IContainer$<$ ID, T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$typename ID , typename T $>$ \\
+T\& \mbox{\hyperlink{class_i_container}{IContainer}}$<$ ID, T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{ID}]{id }\end{DoxyParamCaption})}
+
+
+
+Returns the element with the given ID contained in the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object. 
+
+\begin{DoxyPrecond}{Precondition}
+An element with the given id does exist within the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+An element with the given ID contained in the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object is returned 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_i_container_a3f98d7e86a90a9f521d000d776216b1f}\label{class_i_container_a3f98d7e86a90a9f521d000d776216b1f}} 
+\index{IContainer$<$ ID, T $>$@{IContainer$<$ ID, T $>$}!getCount@{getCount}}
+\index{getCount@{getCount}!IContainer$<$ ID, T $>$@{IContainer$<$ ID, T $>$}}
+\doxysubsubsection{\texorpdfstring{getCount()}{getCount()}}
+{\footnotesize\ttfamily template$<$typename ID , typename T $>$ \\
+int \mbox{\hyperlink{class_i_container}{IContainer}}$<$ ID, T $>$\+::get\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return the number of elements contained in the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object. 
+
+\begin{DoxyPrecond}{Precondition}
+true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The number of elements contained in the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object is returned 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_i_container_a13b37809c2489f57d670ffc1194b70cc}\label{class_i_container_a13b37809c2489f57d670ffc1194b70cc}} 
+\index{IContainer$<$ ID, T $>$@{IContainer$<$ ID, T $>$}!addElement@{addElement}}
+\index{addElement@{addElement}!IContainer$<$ ID, T $>$@{IContainer$<$ ID, T $>$}}
+\doxysubsubsection{\texorpdfstring{addElement()}{addElement()}}
+{\footnotesize\ttfamily template$<$typename ID , typename T $>$ \\
+void \mbox{\hyperlink{class_i_container}{IContainer}}$<$ ID, T $>$\+::add\+Element (\begin{DoxyParamCaption}\item[{ID}]{new\+Element\+ID }\end{DoxyParamCaption})}
+
+
+
+Add a new element, given such element\textquotesingle{}s id. 
+
+\begin{DoxyPrecond}{Precondition}
+There is not any element with the given id within the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+A new element with {\ttfamily new\+Element\+ID} is added to the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object 
+\end{DoxyPostcond}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_interfaces_8hh}{Interfaces.\+hh}}\end{DoxyCompactItemize}

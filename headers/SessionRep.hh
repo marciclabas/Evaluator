@@ -16,12 +16,10 @@
 /**
 @class SessionRepository
 @brief Represents a repository of sessions
-@invariant sessions is sorted by id
 */
 class SessionRepository : public IReadable, public IPrintable, public IContainer<ses::ID, Session> {
-	std::vector<Session> sessions;
-    
 public:
+	// constructors & destructors
 	SessionRepository(ProblemCollection & problemCollection);
 	~SessionRepository();
 };
