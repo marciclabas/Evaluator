@@ -3,10 +3,6 @@
 @brief File containing the main function
 */
 
-#include "ProblemCol.hh"
-#include "SessionRep.hh"
-#include "CourseSet.hh"
-#include "UserSet.hh"
 #include "IO.hh"
 
 #ifndef NO_DIAGRAM 
