@@ -14,6 +14,7 @@
 #include <vector>
 #endif
 
+<<<<<<< HEAD
 class User;
 
 /**
@@ -28,6 +29,8 @@ public:
 		friend class User;
 };
 
+=======
+>>>>>>> spec
 /**
 @class User
 @implements IReadable
@@ -41,6 +44,7 @@ public:
 class User : public IReadable, public IPrintable {
 	usr::ID id;
 
+<<<<<<< HEAD
 	std::vector<ProblemStats> solved; // sorted by problem ID
 	std::vector<ProblemStats> solvable; // solved and solvable have a void intersection
 
@@ -48,6 +52,21 @@ class User : public IReadable, public IPrintable {
 	
 public:
 	User();
+=======
+	/**
+	@brief Returns a vector with the stats of the problems the user has solved
+	@pre true
+	@post A vector with the stats of the problems the user has solved is returned
+	*/
+	const std::vector<IPrintable> & getSolvedStats() const;
+
+	/**
+	@brief Returns a vector with the stats of the problems the user can solve (holds the prerequisites to do so)
+	@pre true
+	@post A vector with the stats of the problems the user can solve is returned
+	*/
+	const std::vector<IPrintable> & getSolvableStats() const;
+>>>>>>> spec
 	
 	/**
 	@brief Checks wheter the user is enrolled in a course

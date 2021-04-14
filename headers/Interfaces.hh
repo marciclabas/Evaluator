@@ -28,6 +28,13 @@ public:
 	void print() const;
 
 	/**
+	@brief Print the @c IPrintable object to the stdout
+	@pre true
+	@post The @c IPrintable object is printed to the stdout
+	*/
+	void print() const;
+
+	/**
 	@brief Print the @c IPrintable object to an output stream
 	@pre true
 	@post The @c IPrintable object is printed to the given output stream
