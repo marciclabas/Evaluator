@@ -20,6 +20,8 @@
 */
 class SessionRepository : public IReadable, public IPrintable, public IContainer<ses::ID, Session> {
 	std::vector<Session> sessions;
+
+	static const ProblemCollection & problemCollection;
     
 public:
 	SessionRepository(ProblemCollection & problemCollection);
