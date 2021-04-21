@@ -16,7 +16,7 @@
 */
 namespace prb {
 	typedef std::string ID;
-	typedef bool result;
+	enum result { rejected = 0, accepted = 1};
 }
 
 /**

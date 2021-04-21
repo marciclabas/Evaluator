@@ -1,60 +1,16 @@
 /**
-@file Interfaces.hh
-@brief File containing the specification of multiple common interfaces
+@file IContainer.hh
+@brief File containing the specification of the @c IContainer interface
 */
 
-#ifndef INTERFACES_HH
-#define INTERFACES_HH
+#ifndef ICONTAINER_HH
+#define ICONTAINER_HH
 
 #include "Namespaces.hh"
 
 #ifndef NO_DIAGRAM
 #include <iostream>
 #endif
-
-/**
-@interface IPrintable
-@brief IPrintable interface
-*/
-class IPrintable {
-public:
-
-	/**
-	@brief Print the @c IPrintable object to the stdout
-	@pre true
-	@post The @c IPrintable object is printed to the stdout
-	*/
-	virtual void print() const = 0;
-
-	/**
-	@brief Print the @c IPrintable object to an output stream
-	@pre true
-	@post The @c IPrintable object is printed to the given output stream
-	*/
-	friend std::ostream& operator<< (std::ostream &out, const IPrintable &printable);
-};
-
-/**
-@Interface IReadable
-@brief IReadable interface
-*/
-class IReadable {
-public:
-	
-	/**
-	@brief Read to the @c IReadable object from the stdin
-	@pre true
-	@post The @c IReadable object is read from the stdin
-	*/
-	virtual void read() = 0;
-
-	/**
-	@brief Read to the @c IReadable object from an input stream
-	@pre true
-	@post The @c IReadable object is read from the given input stream
-	*/
-	friend std::istream& operator>> (std::istream &in, IReadable &readable);
-};
 
 /**
 @interface IContainer
@@ -94,4 +50,3 @@ public:
 };
 
 #endif
-

@@ -18,13 +18,13 @@
 @class User
 @brief Represents a user with a unique name (id) and some statistics
 */
-class User : public IReadable, public IPrintable {
+class User : public IPrintable {
 public:
-	// constructors & destructors
+	/* =========================================================constructors & destructors=========================================================*/
 	User();
 	~User();
 
-	// getters
+	/* ===================================================================getters==================================================================*/
 
 	/**
 	@brief Returns the ID of the course the user is enrolled in
@@ -61,7 +61,23 @@ public:
 	*/
 	bool completedEnrolledCourse() const;
 
-	// other functionality
+	/* ========================================================IPrintable overriden methods========================================================*/
+
+	/**
+	@brief Print the @c IPrintable object to the stdout
+	@pre true
+	@post The @c IPrintable object is printed to the stdout
+	*/
+	void print() const override;
+
+	/**
+	@brief Print the @c IPrintable object to an output stream
+	@pre true
+	@post The @c IPrintable object is printed to the given output stream
+	*/
+	friend std::ostream& operator<< (std::ostream &out, const IPrintable &printable);
+
+	/* ===========================================================other functionality===========================================================*/
 
 	/**
 	@brief Enrolls the user to a course

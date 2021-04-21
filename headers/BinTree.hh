@@ -1,12 +1,16 @@
 #ifndef BINTREE_HH
 #define BINTREE_HH
 
+#include "Interfaces"
+
 #include <cassert>
 #include <memory>
-using namespace std;
+
+using std::shared_ptr;
+using std::make_shared;
 
 // A BinTree<T> implements binary trees with values of type T.
-template <typename T> class BinTree {
+template <typename T> class BinTree : public IPrintable {
 
     struct Node {
         T x;

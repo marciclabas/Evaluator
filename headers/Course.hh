@@ -19,13 +19,13 @@
 @class Course
 @brief Represents a course, i.e., a set of sessions with void intersection and some statistics
 */
-class Course : public IReadable, public IPrintable {
+class Course : public IPrintable {
 public:
-	// constructors & destructors
+	/* =========================================================constructors & destructors=========================================================*/
 	Course();
 	~Course();
 
-	// getters
+	/* ===================================================================getters==================================================================*/
 
 	/**
 	@brief Returns the number of users currently enrolled on the course
@@ -41,7 +41,24 @@ public:
 	*/
 	bool getSessionByProblem(prb::ID problemID, ses::ID & sessionID) const;
 
-	// other functionality
+	/* ========================================================IPrintable overriden methods========================================================*/
+
+	/**
+	@brief Print the @c IPrintable object to the stdout
+	@pre true
+	@post The @c IPrintable object is printed to the stdout
+	*/
+	void print() const override;
+
+	/**
+	@brief Print the @c IPrintable object to an output stream
+	@pre true
+	@post The @c IPrintable object is printed to the given output stream
+	*/
+	friend std::ostream& operator<< (std::ostream &out, const IPrintable &printable);
+
+
+	/* ===========================================================other functionality===========================================================*/
 	
 	/**
 	@brief Updates the stats regarding enrolled users adding a new user
