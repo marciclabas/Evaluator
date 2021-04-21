@@ -6,11 +6,12 @@
 #ifndef COURSE_HH
 #define COURSE_HH
 
-#include "Interfaces.hh"
+#include "IPrintable.hh"
+#include "IReadable.hh"
 #include "SessionRep.hh"
 
 #ifndef NO_DIAGRAM
-#include <unordered_set>
+#include <list>
 #endif
 
 
@@ -19,11 +20,21 @@
 @class Course
 @brief Represents a course, i.e., a set of sessions with void intersection and some statistics
 */
-class Course : public IPrintable {
+class Course : public IPrintable, public IReadable {
+private:
+	int totalEnrolled;
+	int currentEnrolled;
+	std::list<ses::ID> sessions;
+	static SessionRepository & sessionRepository;
 public:
 	/* =========================================================constructors & destructors=========================================================*/
 	Course();
 	~Course();
+
+
+	/*===============================================================static methods===============================================================*/
+
+	static void setSessionRepository(const SessionRepository & sessionRepository);
 
 	/* ===================================================================getters==================================================================*/
 
@@ -55,7 +66,23 @@ public:
 	@pre true
 	@post The @c IPrintable object is printed to the given output stream
 	*/
-	friend std::ostream& operator<< (std::ostream &out, const IPrintable &printable);
+	friend std::ostream& operator<< (std::ostream &out, const Course & course);
+
+	/* ========================================================IReadable overriden methods========================================================*/
+
+	/**
+	@brief Read to the @c IReadable object from the stdin
+	@pre true
+	@post The @c IReadable object is read from the stdin
+	*/
+	void read() override;
+
+	/**
+	@brief Read to the @c IReadable object from an input stream
+	@pre true
+	@post The @c IReadable object is read from the given input stream
+	*/
+	friend std::istream& operator>> (std::istream & in, Course & course);
 
 
 	/* ===========================================================other functionality===========================================================*/

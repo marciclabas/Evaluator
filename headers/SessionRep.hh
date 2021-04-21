@@ -7,9 +7,12 @@
 #define SESSIONREP_HH
 
 #include "Session.hh"
+#include "IReadable.hh"
+#include "IPrintable.hh"
+#include "IContainer.hh"
 
 #ifndef NO_DIAGRAM
-#include <vector>
+#include <map>
 #include <string>
 #endif
 
@@ -17,7 +20,9 @@
 @class SessionRepository
 @brief Represents a repository of sessions
 */
-class SessionRepository : public IReadable, public IPrintable, public IContainer<ses::ses::ID, Session> {
+class SessionRepository : public IReadable, public IPrintable, public IContainer<ses::ID, Session> {
+private:
+	std::map<ses::ID, Session> sessions;
 public:
 	/* =========================================================constructors & destructors=========================================================*/
 	SessionRepository(ProblemCollection & problemCollection);
@@ -37,7 +42,7 @@ public:
 	@pre true
 	@post The @c IPrintable object is printed to the given output stream
 	*/
-	friend std::ostream& operator<< (std::ostream &out, const IPrintable &printable);
+	friend std::ostream& operator<< (std::ostream & out, const SessionRepository & sessionRepository);
 
 	/* ========================================================IReadable overriden methods========================================================*/
 
@@ -53,7 +58,7 @@ public:
 	@pre true
 	@post The @c IReadable object is read from the given input stream
 	*/
-	friend std::istream& operator>> (std::istream &in, IReadable &readable);
+	friend std::istream& operator>> (std::istream & in, SessionRepository & sessionRepository);
 
 	/* ========================================================IContainer overriden methods========================================================*/
 

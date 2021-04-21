@@ -6,7 +6,7 @@
 #ifndef PROBLEM_HH
 #define PROBLEM_HH
 
-#include "Interfaces.hh"
+#include "IPrintable.hh"
 
 /**
 @class Problem
@@ -42,7 +42,7 @@ public:
 	@pre true
 	@post The @c IPrintable object is printed to the given output stream
 	*/
-	friend std::ostream& operator<< (std::ostream & out, const IPrintable & printable);
+	friend std::ostream& operator<< (std::ostream & out, const Problem & problem);
 
 	/* ===========================================================other functionality===========================================================*/
 

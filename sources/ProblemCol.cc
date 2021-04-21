@@ -7,9 +7,7 @@
 /* =========================================================constructors & destructors=========================================================*/
     ProblemCollection::ProblemCollection(): problems() {}
 
-	ProblemCollection::~ProblemCollection() {
-
-	}
+	ProblemCollection::~ProblemCollection() {}
 
 	/* ========================================================IPrintable overriden methods========================================================*/
 
@@ -19,12 +17,11 @@
 
 
 	std::ostream& operator<< (std::ostream &out, const ProblemCollection &problemCollection) {
-		using namespace std;
-		using keyValue = pair<prb::ID, Problem>;
+		using keyValue = std::pair<prb::ID, Problem>;
 
 		// create temporary sorted by ratio list
 		
-		vector<keyValue> sortedProblems(problemCollection.problems.size());
+		std::vector<keyValue> sortedProblems(problemCollection.problems.size());
 
 		int i = 0;
 
@@ -36,7 +33,7 @@
 
 		// sort by ratio and name
 
-		sort(sortedProblems.begin(), sortedProblems.end(),
+		std::sort(sortedProblems.begin(), sortedProblems.end(),
 			[](const keyValue & a, const keyValue & b) {
 				if(a.second.getRatio() == b.second.getRatio()) return a.first < b.first;
 				else return a.second.getRatio() < b.second.getRatio();
@@ -58,7 +55,7 @@
 	std::istream& operator>> (std::istream &in, ProblemCollection &problemCollection) {
 		int P; std::cin >> P;
 		for(int i = 0; i < P; i++) {
-			prb::ID newProblemID;
+			prb::ID newProblemID; std::cin >> newProblemID;
 			problemCollection.addElement(newProblemID);
 		}
 
@@ -72,6 +69,7 @@
 	}
 
 	Problem & ProblemCollection::operator[](prb::ID id) {
+		assert(problems.count(id));
 		return problems[id];
 	}
 

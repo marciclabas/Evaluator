@@ -7,6 +7,9 @@
 #define PROBLEMCOL_HH
 
 #include "Problem.hh"
+#include "IReadable.hh"
+#include "IPrintable.hh"
+#include "IContainer.hh"
 
 #ifndef NO_DIAGRAM
 #include <string>

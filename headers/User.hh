@@ -6,7 +6,7 @@
 #ifndef USER_HH
 #define USER_HH
 
-#include "Interfaces.hh"
+#include "IPrintable.hh"
 #include "CourseSet.hh"
 
 #ifndef NO_DIAGRAM 
@@ -18,7 +18,7 @@
 @class User
 @brief Represents a user with a unique name (id) and some statistics
 */
-class User : public IPrintable {
+class User : public IPrintable, public IReadable {
 public:
 	/* =========================================================constructors & destructors=========================================================*/
 	User();
@@ -76,6 +76,22 @@ public:
 	@post The @c IPrintable object is printed to the given output stream
 	*/
 	friend std::ostream& operator<< (std::ostream &out, const IPrintable &printable);
+
+	/* ========================================================IReadable overriden methods========================================================*/
+
+	/**
+	@brief Read to the @c IReadable object from the stdin
+	@pre true
+	@post The @c IReadable object is read from the stdin
+	*/
+	void read() override;
+
+	/**
+	@brief Read to the @c IReadable object from an input stream
+	@pre true
+	@post The @c IReadable object is read from the given input stream
+	*/
+	friend std::istream& operator>> (std::istream & in, SessionRepository & sessionRepository);
 
 	/* ===========================================================other functionality===========================================================*/
 
