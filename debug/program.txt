@@ -1,0 +1,425 @@
+In file included from program.cc:8:
+./headers/CourseSet.hh:22:79: error: ‘crs’ is not a member of ‘crs’; did you mean ‘crs’?
+   22 | class CourseSet : public IReadable, public IPrintable, public IContainer<crs::crs::, Course> {
+      |                                                                               ^~~
+In file included from ./headers/IPrintable.hh:9,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from program.cc:6:
+./headers/Namespaces.hh:34:11: note: ‘crs’ declared here
+   34 | namespace crs {
+      |           ^~~
+In file included from program.cc:8:
+./headers/CourseSet.hh:22:79: error: ‘crs’ is not a member of ‘crs’; did you mean ‘crs’?
+   22 | class CourseSet : public IReadable, public IPrintable, public IContainer<crs::crs::, Course> {
+      |                                                                               ^~~
+In file included from ./headers/IPrintable.hh:9,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from program.cc:6:
+./headers/Namespaces.hh:34:11: note: ‘crs’ declared here
+   34 | namespace crs {
+      |           ^~~
+In file included from program.cc:8:
+./headers/CourseSet.hh:22:92: error: wrong number of template arguments (1, should be 2)
+   22 | class CourseSet : public IReadable, public IPrintable, public IContainer<crs::crs::, Course> {
+      |                                                                                            ^
+In file included from ./headers/ProblemCol.hh:12,
+                 from program.cc:6:
+./headers/IContainer.hh:20:7: note: provided for ‘template<class ID, class T> class IContainer’
+   20 | class IContainer {
+      |       ^~~~~~~~~~
+In file included from program.cc:8:
+./headers/CourseSet.hh:74:2: error: ‘T’ does not name a type
+   74 |  T& operator[](crs::ID id) override;
+      |  ^
+./headers/CourseSet.hh:67:7: error: ‘bool CourseSet::containsElement(crs::ID) const’ marked ‘override’, but does not override
+   67 |  bool containsElement(crs::ID id) const override;
+      |       ^~~~~~~~~~~~~~~
+./headers/CourseSet.hh:81:6: error: ‘int CourseSet::getCount() const’ marked ‘override’, but does not override
+   81 |  int getCount() const override;
+      |      ^~~~~~~~
+./headers/CourseSet.hh:88:7: error: ‘void CourseSet::addElement(crs::ID)’ marked ‘override’, but does not override
+   88 |  void addElement(crs::ID newElementID) override;
+      |       ^~~~~~~~~~
+In file included from program.cc:9:
+./headers/UserSet.hh:23:77: error: ‘usr’ is not a member of ‘usr’; did you mean ‘usr’?
+   23 | class UserSet : public IReadable, public IPrintable, public IContainer<usr::usr::ID, User> {
+      |                                                                             ^~~
+In file included from ./headers/IPrintable.hh:9,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from program.cc:6:
+./headers/Namespaces.hh:42:11: note: ‘usr’ declared here
+   42 | namespace usr {
+      |           ^~~
+In file included from program.cc:9:
+./headers/UserSet.hh:23:77: error: ‘usr’ is not a member of ‘usr’; did you mean ‘usr’?
+   23 | class UserSet : public IReadable, public IPrintable, public IContainer<usr::usr::ID, User> {
+      |                                                                             ^~~
+In file included from ./headers/IPrintable.hh:9,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from program.cc:6:
+./headers/Namespaces.hh:42:11: note: ‘usr’ declared here
+   42 | namespace usr {
+      |           ^~~
+In file included from program.cc:9:
+./headers/UserSet.hh:23:90: error: wrong number of template arguments (1, should be 2)
+   23 | class UserSet : public IReadable, public IPrintable, public IContainer<usr::usr::ID, User> {
+      |                                                                                          ^
+In file included from ./headers/ProblemCol.hh:12,
+                 from program.cc:6:
+./headers/IContainer.hh:20:7: note: provided for ‘template<class ID, class T> class IContainer’
+   20 | class IContainer {
+      |       ^~~~~~~~~~
+In file included from program.cc:9:
+./headers/UserSet.hh:77:2: error: ‘T’ does not name a type
+   77 |  T& operator[](usr::ID id) override;
+      |  ^
+./headers/UserSet.hh:91:39: error: expected ‘,’ or ‘...’ before ‘::’ token
+   91 |  void addElement(usr::ID newElementusr::ID) override;
+      |                                       ^~
+./headers/UserSet.hh:100:23: error: ‘usr::usr’ has not been declared
+  100 |  void removeUser(usr::usr::ID toRemoveUser);
+      |                       ^~~
+./headers/UserSet.hh:100:31: error: expected ‘,’ or ‘...’ before ‘toRemoveUser’
+  100 |  void removeUser(usr::usr::ID toRemoveUser);
+      |                               ^~~~~~~~~~~~
+./headers/UserSet.hh:70:7: error: ‘bool UserSet::containsElement(usr::ID) const’ marked ‘override’, but does not override
+   70 |  bool containsElement(usr::ID id) const override;
+      |       ^~~~~~~~~~~~~~~
+./headers/UserSet.hh:84:6: error: ‘int UserSet::getCount() const’ marked ‘override’, but does not override
+   84 |  int getCount() const override;
+      |      ^~~~~~~~
+./headers/UserSet.hh:91:7: error: ‘void UserSet::addElement(usr::ID)’ marked ‘override’, but does not override
+   91 |  void addElement(usr::ID newElementusr::ID) override;
+      |       ^~~~~~~~~~
+program.cc: In function ‘int main()’:
+program.cc:78:33: error: cannot convert ‘usr::ID’ {aka ‘std::__cxx11::basic_string<char>’} to ‘int’
+   78 |              userSet.removeUser(toRemoveUserID);
+      |                                 ^~~~~~~~~~~~~~
+      |                                 |
+      |                                 usr::ID {aka std::__cxx11::basic_string<char>}
+In file included from program.cc:9:
+./headers/UserSet.hh:100:28: note:   initializing argument 1 of ‘void UserSet::removeUser(int)’
+  100 |  void removeUser(usr::usr::ID toRemoveUser);
+      |                  ~~~~~~~~~~^~
+program.cc:92:26: error: no match for ‘operator[]’ (operand types are ‘UserSet’ and ‘usr::ID’ {aka ‘std::__cxx11::basic_string<char>’})
+   92 |     User & user = userSet[userID];
+      |                          ^
+program.cc:96:33: error: no match for ‘operator[]’ (operand types are ‘CourseSet’ and ‘crs::ID’ {aka ‘std::__cxx11::basic_string<char>’})
+   96 |      Course & course = courseSet[courseID];
+      |                                 ^
+program.cc:108:27: error: no match for ‘operator[]’ (operand types are ‘UserSet’ and ‘usr::ID’ {aka ‘std::__cxx11::basic_string<char>’})
+  108 |     User & user  = userSet[userID];
+      |                           ^
+program.cc:123:32: error: no match for ‘operator[]’ (operand types are ‘CourseSet’ and ‘crs::ID’ {aka ‘std::__cxx11::basic_string<char>’})
+  123 |     Course & course = courseSet[courseID];
+      |                                ^
+program.cc:137:37: error: no match for ‘operator[]’ (operand types are ‘UserSet’ and ‘usr::ID’ {aka ‘std::__cxx11::basic_string<char>’})
+  137 |     for(const auto & stats : userSet[userID].getSolvedStats()) cout << stats << endl;
+      |                                     ^
+program.cc:145:37: error: no match for ‘operator[]’ (operand types are ‘UserSet’ and ‘usr::ID’ {aka ‘std::__cxx11::basic_string<char>’})
+  145 |     for(const auto & stats : userSet[userID].getSolvableStats()) cout << stats << endl;
+      |                                     ^
+program.cc:155:31: error: no match for ‘operator>>’ (operand types are ‘std::basic_istream<char>’ and ‘prb::result’)
+  155 |    cin >> userID >> problemID >> result;
+      |    ~~~~~~~~~~~~~~~~~~~~~~~~~~ ^~ ~~~~~~
+      |                  |               |
+      |                  |               prb::result
+      |                  std::basic_istream<char>
+In file included from /usr/include/c++/10/iostream:40,
+                 from ./headers/IPrintable.hh:12,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from program.cc:6:
+/usr/include/c++/10/istream:168:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(bool&) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]’ (near match)
+  168 |       operator>>(bool& __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:168:7: note:   conversion of argument 1 would be ill-formed:
+program.cc:155:34: error: cannot bind non-const lvalue reference of type ‘bool&’ to an rvalue of type ‘bool’
+  155 |    cin >> userID >> problemID >> result;
+      |                                  ^~~~~~
+In file included from /usr/include/c++/10/iostream:40,
+                 from ./headers/IPrintable.hh:12,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from program.cc:6:
+/usr/include/c++/10/istream:172:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>& std::basic_istream<_CharT, _Traits>::operator>>(short int&) [with _CharT = char; _Traits = std::char_traits<char>]’ (near match)
+  172 |       operator>>(short& __n);
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:172:7: note:   conversion of argument 1 would be ill-formed:
+program.cc:155:34: error: cannot bind non-const lvalue reference of type ‘short int&’ to an rvalue of type ‘short int’
+  155 |    cin >> userID >> problemID >> result;
+      |                                  ^~~~~~
+In file included from /usr/include/c++/10/iostream:40,
+                 from ./headers/IPrintable.hh:12,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from program.cc:6:
+/usr/include/c++/10/istream:175:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(short unsigned int&) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]’ (near match)
+  175 |       operator>>(unsigned short& __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:175:7: note:   conversion of argument 1 would be ill-formed:
+program.cc:155:34: error: cannot bind non-const lvalue reference of type ‘short unsigned int&’ to an rvalue of type ‘short unsigned int’
+  155 |    cin >> userID >> problemID >> result;
+      |                                  ^~~~~~
+In file included from /usr/include/c++/10/iostream:40,
+                 from ./headers/IPrintable.hh:12,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from program.cc:6:
+/usr/include/c++/10/istream:179:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>& std::basic_istream<_CharT, _Traits>::operator>>(int&) [with _CharT = char; _Traits = std::char_traits<char>]’ (near match)
+  179 |       operator>>(int& __n);
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:179:7: note:   conversion of argument 1 would be ill-formed:
+program.cc:155:34: error: cannot bind non-const lvalue reference of type ‘int&’ to an rvalue of type ‘int’
+  155 |    cin >> userID >> problemID >> result;
+      |                                  ^~~~~~
+In file included from /usr/include/c++/10/iostream:40,
+                 from ./headers/IPrintable.hh:12,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from program.cc:6:
+/usr/include/c++/10/istream:182:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(unsigned int&) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]’ (near match)
+  182 |       operator>>(unsigned int& __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:182:7: note:   conversion of argument 1 would be ill-formed:
+program.cc:155:34: error: cannot bind non-const lvalue reference of type ‘unsigned int&’ to an rvalue of type ‘unsigned int’
+  155 |    cin >> userID >> problemID >> result;
+      |                                  ^~~~~~
+In file included from /usr/include/c++/10/iostream:40,
+                 from ./headers/IPrintable.hh:12,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from program.cc:6:
+/usr/include/c++/10/istream:186:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(long int&) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]’ (near match)
+  186 |       operator>>(long& __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:186:7: note:   conversion of argument 1 would be ill-formed:
+program.cc:155:34: error: cannot bind non-const lvalue reference of type ‘long int&’ to an rvalue of type ‘long int’
+  155 |    cin >> userID >> problemID >> result;
+      |                                  ^~~~~~
+In file included from /usr/include/c++/10/iostream:40,
+                 from ./headers/IPrintable.hh:12,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from program.cc:6:
+/usr/include/c++/10/istream:190:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(long unsigned int&) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]’ (near match)
+  190 |       operator>>(unsigned long& __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:190:7: note:   conversion of argument 1 would be ill-formed:
+program.cc:155:34: error: cannot bind non-const lvalue reference of type ‘long unsigned int&’ to an rvalue of type ‘long unsigned int’
+  155 |    cin >> userID >> problemID >> result;
+      |                                  ^~~~~~
+In file included from /usr/include/c++/10/iostream:40,
+                 from ./headers/IPrintable.hh:12,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from program.cc:6:
+/usr/include/c++/10/istream:195:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(long long int&) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]’ (near match)
+  195 |       operator>>(long long& __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:195:7: note:   conversion of argument 1 would be ill-formed:
+program.cc:155:34: error: cannot bind non-const lvalue reference of type ‘long long int&’ to an rvalue of type ‘long long int’
+  155 |    cin >> userID >> problemID >> result;
+      |                                  ^~~~~~
+In file included from /usr/include/c++/10/iostream:40,
+                 from ./headers/IPrintable.hh:12,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from program.cc:6:
+/usr/include/c++/10/istream:199:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(long long unsigned int&) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]’ (near match)
+  199 |       operator>>(unsigned long long& __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:199:7: note:   conversion of argument 1 would be ill-formed:
+program.cc:155:34: error: cannot bind non-const lvalue reference of type ‘long long unsigned int&’ to an rvalue of type ‘long long unsigned int’
+  155 |    cin >> userID >> problemID >> result;
+      |                                  ^~~~~~
+In file included from /usr/include/c++/10/iostream:40,
+                 from ./headers/IPrintable.hh:12,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from program.cc:6:
+/usr/include/c++/10/istream:214:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(float&) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]’ (near match)
+  214 |       operator>>(float& __f)
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:214:7: note:   conversion of argument 1 would be ill-formed:
+program.cc:155:34: error: cannot bind non-const lvalue reference of type ‘float&’ to an rvalue of type ‘float’
+  155 |    cin >> userID >> problemID >> result;
+      |                                  ^~~~~~
+In file included from /usr/include/c++/10/iostream:40,
+                 from ./headers/IPrintable.hh:12,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from program.cc:6:
+/usr/include/c++/10/istream:218:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(double&) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]’ (near match)
+  218 |       operator>>(double& __f)
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:218:7: note:   conversion of argument 1 would be ill-formed:
+program.cc:155:34: error: cannot bind non-const lvalue reference of type ‘double&’ to an rvalue of type ‘double’
+  155 |    cin >> userID >> problemID >> result;
+      |                                  ^~~~~~
+In file included from /usr/include/c++/10/iostream:40,
+                 from ./headers/IPrintable.hh:12,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from program.cc:6:
+/usr/include/c++/10/istream:222:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(long double&) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]’ (near match)
+  222 |       operator>>(long double& __f)
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:222:7: note:   conversion of argument 1 would be ill-formed:
+program.cc:155:34: error: cannot bind non-const lvalue reference of type ‘long double&’ to an rvalue of type ‘long double’
+  155 |    cin >> userID >> problemID >> result;
+      |                                  ^~~~~~
+program.cc:155:31: note: candidate: ‘operator>>(int, int)’ (built-in)
+  155 |    cin >> userID >> problemID >> result;
+      |    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+program.cc:155:31: note:   no known conversion for argument 1 from ‘std::basic_istream<char>’ to ‘int’
+In file included from /usr/include/c++/10/iostream:40,
+                 from ./headers/IPrintable.hh:12,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from program.cc:6:
+/usr/include/c++/10/istream:120:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(std::basic_istream<_CharT, _Traits>::__istream_type& (*)(std::basic_istream<_CharT, _Traits>::__istream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]’
+  120 |       operator>>(__istream_type& (*__pf)(__istream_type&))
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:120:36: note:   no known conversion for argument 1 from ‘prb::result’ to ‘std::basic_istream<char>::__istream_type& (*)(std::basic_istream<char>::__istream_type&)’ {aka ‘std::basic_istream<char>& (*)(std::basic_istream<char>&)’}
+  120 |       operator>>(__istream_type& (*__pf)(__istream_type&))
+      |                  ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/istream:124:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(std::basic_istream<_CharT, _Traits>::__ios_type& (*)(std::basic_istream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>; std::basic_istream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]’
+  124 |       operator>>(__ios_type& (*__pf)(__ios_type&))
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:124:32: note:   no known conversion for argument 1 from ‘prb::result’ to ‘std::basic_istream<char>::__ios_type& (*)(std::basic_istream<char>::__ios_type&)’ {aka ‘std::basic_ios<char>& (*)(std::basic_ios<char>&)’}
+  124 |       operator>>(__ios_type& (*__pf)(__ios_type&))
+      |                  ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/istream:131:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]’
+  131 |       operator>>(ios_base& (*__pf)(ios_base&))
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:131:30: note:   no known conversion for argument 1 from ‘prb::result’ to ‘std::ios_base& (*)(std::ios_base&)’
+  131 |       operator>>(ios_base& (*__pf)(ios_base&))
+      |                  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+/usr/include/c++/10/istream:235:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(void*&) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]’
+  235 |       operator>>(void*& __p)
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:235:25: note:   no known conversion for argument 1 from ‘prb::result’ to ‘void*&’
+  235 |       operator>>(void*& __p)
+      |                  ~~~~~~~^~~
+/usr/include/c++/10/istream:259:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>& std::basic_istream<_CharT, _Traits>::operator>>(std::basic_istream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]’
+  259 |       operator>>(__streambuf_type* __sb);
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:259:36: note:   no known conversion for argument 1 from ‘prb::result’ to ‘std::basic_istream<char>::__streambuf_type*’ {aka ‘std::basic_streambuf<char>*’}
+  259 |       operator>>(__streambuf_type* __sb);
+      |                  ~~~~~~~~~~~~~~~~~~^~~~
+In file included from /usr/include/c++/10/string:56,
+                 from ./headers/Namespaces.hh:10,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from program.cc:6:
+/usr/include/c++/10/bits/basic_string.tcc:1468:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)’
+ 1468 |     operator>>(basic_istream<_CharT, _Traits>& __in,
+      |     ^~~~~~~~
+/usr/include/c++/10/bits/basic_string.tcc:1468:5: note:   template argument deduction/substitution failed:
+program.cc:155:34: note:   mismatched types ‘std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’ and ‘prb::result’
+  155 |    cin >> userID >> problemID >> result;
+      |                                  ^~~~~~
+In file included from /usr/include/c++/10/istream:991,
+                 from /usr/include/c++/10/iostream:40,
+                 from ./headers/IPrintable.hh:12,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from program.cc:6:
+/usr/include/c++/10/bits/istream.tcc:931:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, _CharT&)’
+  931 |     operator>>(basic_istream<_CharT, _Traits>& __in, _CharT& __c)
+      |     ^~~~~~~~
+/usr/include/c++/10/bits/istream.tcc:931:5: note:   template argument deduction/substitution failed:
+program.cc:155:34: note:   deduced conflicting types for parameter ‘_CharT’ (‘char’ and ‘prb::result’)
+  155 |    cin >> userID >> problemID >> result;
+      |                                  ^~~~~~
+In file included from /usr/include/c++/10/iostream:40,
+                 from ./headers/IPrintable.hh:12,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from program.cc:6:
+/usr/include/c++/10/istream:756:5: note: candidate: ‘template<class _Traits> std::basic_istream<char, _Traits>& std::operator>>(std::basic_istream<char, _Traits>&, unsigned char&)’
+  756 |     operator>>(basic_istream<char, _Traits>& __in, unsigned char& __c)
+      |     ^~~~~~~~
+/usr/include/c++/10/istream:756:5: note:   template argument deduction/substitution failed:
+program.cc:155:34: note:   cannot convert ‘result’ (type ‘prb::result’) to type ‘unsigned char&’
+  155 |    cin >> userID >> problemID >> result;
+      |                                  ^~~~~~
+In file included from /usr/include/c++/10/iostream:40,
+                 from ./headers/IPrintable.hh:12,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from program.cc:6:
+/usr/include/c++/10/istream:761:5: note: candidate: ‘template<class _Traits> std::basic_istream<char, _Traits>& std::operator>>(std::basic_istream<char, _Traits>&, signed char&)’
+  761 |     operator>>(basic_istream<char, _Traits>& __in, signed char& __c)
+      |     ^~~~~~~~
+/usr/include/c++/10/istream:761:5: note:   template argument deduction/substitution failed:
+program.cc:155:34: note:   cannot convert ‘result’ (type ‘prb::result’) to type ‘signed char&’
+  155 |    cin >> userID >> problemID >> result;
+      |                                  ^~~~~~
+In file included from /usr/include/c++/10/istream:991,
+                 from /usr/include/c++/10/iostream:40,
+                 from ./headers/IPrintable.hh:12,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from program.cc:6:
+/usr/include/c++/10/bits/istream.tcc:963:5: note: candidate: ‘template<class _CharT2, class _Traits2> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, _CharT2*)’
+  963 |     operator>>(basic_istream<_CharT, _Traits>& __in, _CharT* __s)
+      |     ^~~~~~~~
+/usr/include/c++/10/bits/istream.tcc:963:5: note:   template argument deduction/substitution failed:
+program.cc:155:34: note:   mismatched types ‘_CharT2*’ and ‘prb::result’
+  155 |    cin >> userID >> problemID >> result;
+      |                                  ^~~~~~
+In file included from /usr/include/c++/10/iostream:40,
+                 from ./headers/IPrintable.hh:12,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from program.cc:6:
+/usr/include/c++/10/istream:803:5: note: candidate: ‘template<class _Traits> std::basic_istream<char, _Traits>& std::operator>>(std::basic_istream<char, _Traits>&, unsigned char*)’
+  803 |     operator>>(basic_istream<char, _Traits>& __in, unsigned char* __s)
+      |     ^~~~~~~~
+/usr/include/c++/10/istream:803:5: note:   template argument deduction/substitution failed:
+program.cc:155:34: note:   cannot convert ‘result’ (type ‘prb::result’) to type ‘unsigned char*’
+  155 |    cin >> userID >> problemID >> result;
+      |                                  ^~~~~~
+In file included from /usr/include/c++/10/iostream:40,
+                 from ./headers/IPrintable.hh:12,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from program.cc:6:
+/usr/include/c++/10/istream:808:5: note: candidate: ‘template<class _Traits> std::basic_istream<char, _Traits>& std::operator>>(std::basic_istream<char, _Traits>&, signed char*)’
+  808 |     operator>>(basic_istream<char, _Traits>& __in, signed char* __s)
+      |     ^~~~~~~~
+/usr/include/c++/10/istream:808:5: note:   template argument deduction/substitution failed:
+program.cc:155:34: note:   cannot convert ‘result’ (type ‘prb::result’) to type ‘signed char*’
+  155 |    cin >> userID >> problemID >> result;
+      |                                  ^~~~~~
+In file included from /usr/include/c++/10/iostream:40,
+                 from ./headers/IPrintable.hh:12,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from program.cc:6:
+/usr/include/c++/10/istream:980:5: note: candidate: ‘template<class _Istream, class _Tp> typename std::enable_if<std::__and_<std::__not_<std::is_lvalue_reference<_Tp> >, std::__is_convertible_to_basic_istream<_Istream>, std::__is_extractable<typename std::__is_convertible_to_basic_istream<_Tp>::__istream_type, _Tp&&, void> >::value, typename std::__is_convertible_to_basic_istream<_Tp>::__istream_type>::type std::operator>>(_Istream&&, _Tp&&)’
+  980 |     operator>>(_Istream&& __is, _Tp&& __x)
+      |     ^~~~~~~~
+/usr/include/c++/10/istream:980:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/10/istream: In substitution of ‘template<class _Istream, class _Tp> typename std::enable_if<std::__and_<std::__not_<std::is_lvalue_reference<_Tp> >, std::__is_convertible_to_basic_istream<_Istream>, std::__is_extractable<typename std::__is_convertible_to_basic_istream<_Tp>::__istream_type, _Tp&&, void> >::value, typename std::__is_convertible_to_basic_istream<_Tp>::__istream_type>::type std::operator>>(_Istream&&, _Tp&&) [with _Istream = std::basic_istream<char>&; _Tp = prb::result&]’:
+program.cc:155:34:   required from here
+/usr/include/c++/10/istream:980:5: error: no type named ‘type’ in ‘struct std::enable_if<false, std::basic_istream<char>&>’
+program.cc:157:25: error: no match for ‘operator[]’ (operand types are ‘UserSet’ and ‘usr::ID’ {aka ‘std::__cxx11::basic_string<char>’})
+  157 |    User & user = userSet[userID];
+      |                         ^
+program.cc:164:14: error: no match for ‘operator[]’ (operand types are ‘CourseSet’ and ‘crs::ID’ {aka ‘std::__cxx11::basic_string<char>’})
+  164 |     courseSet[user.getEnrolledCourseID()].unenrollUser();
+      |              ^
+program.cc:190:21: error: no match for ‘operator[]’ (operand types are ‘CourseSet’ and ‘crs::ID’ {aka ‘std::__cxx11::basic_string<char>’})
+  190 |    cout << courseSet[courseID] << endl;
+      |                     ^
+program.cc:197:19: error: no match for ‘operator[]’ (operand types are ‘UserSet’ and ‘usr::ID’ {aka ‘std::__cxx11::basic_string<char>’})
+  197 |    cout << userSet[userID] << endl;
+      |                   ^

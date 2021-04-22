@@ -6,11 +6,7 @@
 #ifndef PROBLEM_HH
 #define PROBLEM_HH
 
-#include "Interfaces.hh"
-
-#ifndef NO_DIAGRAM 
-#include <string>
-#endif
+#include "IPrintable.hh"
 
 /**
 @class Problem
@@ -21,6 +17,7 @@
 				<li>@c ratio = (t+1)/(e+1)</li>
 			</ol>
 */
+<<<<<<< HEAD
 class Problem : public IReadable, public IPrintable {
 	prb::ID id;
 	struct {
@@ -31,6 +28,41 @@ class Problem : public IReadable, public IPrintable {
 
 public:
 	Problem();
+=======
+class Problem : public IPrintable {
+private:
+	int t, e, r; // r = (t+1)/(e+1)
+public:
+	/* =========================================================constructors & destructors=========================================================*/
+	Problem();
+	~Problem();
+
+	/* ===================================================================getters==================================================================*/
+	/**
+	@brief Returns the problem ratio @c r
+	@pre true
+	@post Returns @c r
+	*/
+	int getRatio() const;
+
+	/* ========================================================IPrintable overriden methods========================================================*/
+
+	/**
+	@brief Print the @c IPrintable object to the stdout
+	@pre true
+	@post The @c IPrintable object is printed to the stdout
+	*/
+	void print() const override;
+
+	/**
+	@brief Print the @c IPrintable object to an output stream
+	@pre true
+	@post The @c IPrintable object is printed to the given output stream
+	*/
+	friend std::ostream& operator<< (std::ostream & out, const Problem & problem);
+
+	/* ===========================================================other functionality===========================================================*/
+>>>>>>> d492b3a069c2074d005a742334644ac2220fcab0
 
 	/**
 	@brief Updates the <tt>Problem</tt>'s stats based on the submission result

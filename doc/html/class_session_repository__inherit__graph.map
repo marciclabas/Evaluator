@@ -1,0 +1,6 @@
+<map id="SessionRepository" name="SessionRepository">
+<area shape="rect" id="node1" title="Represents a repository of sessions." alt="" coords="98,204,254,296"/>
+<area shape="rect" id="node2" href="$class_i_readable.html" title="IReadable interface." alt="" coords="5,35,104,127"/>
+<area shape="rect" id="node3" href="$class_i_printable.html" title="IPrintable interface." alt="" coords="128,35,224,127"/>
+<area shape="rect" id="node4" href="$class_i_container.html" title=" " alt="" coords="249,5,386,156"/>
+</map>

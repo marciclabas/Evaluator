@@ -3,7 +3,9 @@
 
 #include <cassert>
 #include <memory>
-using namespace std;
+
+using std::shared_ptr;
+using std::make_shared;
 
 // A BinTree<T> implements binary trees with values of type T.
 template <typename T> class BinTree {

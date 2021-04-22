@@ -1,0 +1,184 @@
+\hypertarget{class_user_set}{}\doxysection{User\+Set Class Reference}
+\label{class_user_set}\index{UserSet@{UserSet}}
+
+
+Represents a set of users.  
+
+
+
+
+Inheritance diagram for User\+Set\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_set__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_user_set_a066fa5e04436344dabe453950e3aa4bd}{User\+Set}} (const \mbox{\hyperlink{class_course_set}{Course\+Set}} \&course\+Set)
+\item 
+\mbox{\hyperlink{class_user_set_acecb88c9e7ba2b981126ae2d22c72fcc}{$\sim$\+User\+Set}} ()
+\item 
+void \mbox{\hyperlink{class_user_set_af3c0d19a1b995d71fc1e09e0655c84c3}{remove\+User}} (\mbox{\hyperlink{namespaceusr_afed849d06665ce63a85325c909efe771}{usr\+::\+ID}} to\+Remove\+User)
+\begin{DoxyCompactList}\small\item\em Removes a user from the set. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_readable_a143d68bd066b688c17e06beba7145c6f}{read}} ()
+\begin{DoxyCompactList}\small\item\em Read to the {\ttfamily \mbox{\hyperlink{class_i_readable}{IReadable}}} object from the stdin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_printable_a5b00d3f39de891a4caf1837763ffe8a3}{print}} () const
+\begin{DoxyCompactList}\small\item\em Print the {\ttfamily \mbox{\hyperlink{class_i_printable}{IPrintable}}} object to the stdout. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_i_container_a1a285fa8d0202100ad3d60d78f085677}{contains\+Element}} (\mbox{\hyperlink{namespaceusr_afed849d06665ce63a85325c909efe771}{usr\+::\+ID}} id) const
+\begin{DoxyCompactList}\small\item\em Return wheter the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object has an element with the given id. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_user}{User}} \& \mbox{\hyperlink{class_i_container_a680c9a9a75ef1f9289700e4648b8f62b}{operator\mbox{[}$\,$\mbox{]}}} (\mbox{\hyperlink{namespaceusr_afed849d06665ce63a85325c909efe771}{usr\+::\+ID}} id)
+\begin{DoxyCompactList}\small\item\em Returns the element with the given ID contained in the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_i_container_a3f98d7e86a90a9f521d000d776216b1f}{get\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Return the number of elements contained in the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_container_a13b37809c2489f57d670ffc1194b70cc}{add\+Element}} (\mbox{\hyperlink{namespaceusr_afed849d06665ce63a85325c909efe771}{usr\+::\+ID}} new\+Element\+ID)
+\begin{DoxyCompactList}\small\item\em Add a new element, given such element\textquotesingle{}s id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a set of users. 
+
+\begin{DoxyInvariant}{Invariant}
+{\ttfamily users} is sorted by id 
+\end{DoxyInvariant}
+
+
+Definition at line 20 of file User\+Set.\+hh.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_user_set_a066fa5e04436344dabe453950e3aa4bd}\label{class_user_set_a066fa5e04436344dabe453950e3aa4bd}} 
+\index{UserSet@{UserSet}!UserSet@{UserSet}}
+\index{UserSet@{UserSet}!UserSet@{UserSet}}
+\doxysubsubsection{\texorpdfstring{UserSet()}{UserSet()}}
+{\footnotesize\ttfamily User\+Set\+::\+User\+Set (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_course_set}{Course\+Set}} \&}]{course\+Set }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_user_set_acecb88c9e7ba2b981126ae2d22c72fcc}\label{class_user_set_acecb88c9e7ba2b981126ae2d22c72fcc}} 
+\index{UserSet@{UserSet}!````~UserSet@{$\sim$UserSet}}
+\index{````~UserSet@{$\sim$UserSet}!UserSet@{UserSet}}
+\doxysubsubsection{\texorpdfstring{$\sim$UserSet()}{~UserSet()}}
+{\footnotesize\ttfamily User\+Set\+::$\sim$\+User\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_user_set_af3c0d19a1b995d71fc1e09e0655c84c3}\label{class_user_set_af3c0d19a1b995d71fc1e09e0655c84c3}} 
+\index{UserSet@{UserSet}!removeUser@{removeUser}}
+\index{removeUser@{removeUser}!UserSet@{UserSet}}
+\doxysubsubsection{\texorpdfstring{removeUser()}{removeUser()}}
+{\footnotesize\ttfamily void User\+Set\+::remove\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceusr_afed849d06665ce63a85325c909efe771}{usr\+::\+ID}}}]{to\+Remove\+User }\end{DoxyParamCaption})}
+
+
+
+Removes a user from the set. 
+
+\begin{DoxyPrecond}{Precondition}
+A user with the given ID exists within the set 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The user with the given ID no longer exists within the set 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_i_readable_a143d68bd066b688c17e06beba7145c6f}\label{class_i_readable_a143d68bd066b688c17e06beba7145c6f}} 
+\index{UserSet@{UserSet}!read@{read}}
+\index{read@{read}!UserSet@{UserSet}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily void IReadable\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Read to the {\ttfamily \mbox{\hyperlink{class_i_readable}{IReadable}}} object from the stdin. 
+
+\begin{DoxyPrecond}{Precondition}
+true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The {\ttfamily \mbox{\hyperlink{class_i_readable}{IReadable}}} object is read from the stdin 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_i_printable_a5b00d3f39de891a4caf1837763ffe8a3}\label{class_i_printable_a5b00d3f39de891a4caf1837763ffe8a3}} 
+\index{UserSet@{UserSet}!print@{print}}
+\index{print@{print}!UserSet@{UserSet}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void IPrintable\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Print the {\ttfamily \mbox{\hyperlink{class_i_printable}{IPrintable}}} object to the stdout. 
+
+\begin{DoxyPrecond}{Precondition}
+true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The {\ttfamily \mbox{\hyperlink{class_i_printable}{IPrintable}}} object is printed to the stdout 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_i_container_a1a285fa8d0202100ad3d60d78f085677}\label{class_i_container_a1a285fa8d0202100ad3d60d78f085677}} 
+\index{UserSet@{UserSet}!containsElement@{containsElement}}
+\index{containsElement@{containsElement}!UserSet@{UserSet}}
+\doxysubsubsection{\texorpdfstring{containsElement()}{containsElement()}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_i_container}{IContainer}}$<$ \mbox{\hyperlink{namespaceusr_afed849d06665ce63a85325c909efe771}{usr\+::\+ID}} , \mbox{\hyperlink{class_user}{User}}  $>$\+::contains\+Element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceusr_afed849d06665ce63a85325c909efe771}{usr\+::\+ID}}}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Return wheter the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object has an element with the given id. 
+
+\begin{DoxyPrecond}{Precondition}
+true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+{\ttfamily true} is returned if there is an element with the given id within the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object. If there is not, {\ttfamily false} is returned 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_i_container_a680c9a9a75ef1f9289700e4648b8f62b}\label{class_i_container_a680c9a9a75ef1f9289700e4648b8f62b}} 
+\index{UserSet@{UserSet}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!UserSet@{UserSet}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_user}{User}} \& \mbox{\hyperlink{class_i_container}{IContainer}}$<$ \mbox{\hyperlink{namespaceusr_afed849d06665ce63a85325c909efe771}{usr\+::\+ID}} , \mbox{\hyperlink{class_user}{User}}  $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceusr_afed849d06665ce63a85325c909efe771}{usr\+::\+ID}}}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Returns the element with the given ID contained in the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object. 
+
+\begin{DoxyPrecond}{Precondition}
+An element with the given id does exist within the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+An element with the given ID contained in the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object is returned 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_i_container_a3f98d7e86a90a9f521d000d776216b1f}\label{class_i_container_a3f98d7e86a90a9f521d000d776216b1f}} 
+\index{UserSet@{UserSet}!getCount@{getCount}}
+\index{getCount@{getCount}!UserSet@{UserSet}}
+\doxysubsubsection{\texorpdfstring{getCount()}{getCount()}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{class_i_container}{IContainer}}$<$ \mbox{\hyperlink{namespaceusr_afed849d06665ce63a85325c909efe771}{usr\+::\+ID}} , \mbox{\hyperlink{class_user}{User}}  $>$\+::get\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Return the number of elements contained in the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object. 
+
+\begin{DoxyPrecond}{Precondition}
+true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The number of elements contained in the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object is returned 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_i_container_a13b37809c2489f57d670ffc1194b70cc}\label{class_i_container_a13b37809c2489f57d670ffc1194b70cc}} 
+\index{UserSet@{UserSet}!addElement@{addElement}}
+\index{addElement@{addElement}!UserSet@{UserSet}}
+\doxysubsubsection{\texorpdfstring{addElement()}{addElement()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_i_container}{IContainer}}$<$ \mbox{\hyperlink{namespaceusr_afed849d06665ce63a85325c909efe771}{usr\+::\+ID}} , \mbox{\hyperlink{class_user}{User}}  $>$\+::add\+Element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceusr_afed849d06665ce63a85325c909efe771}{usr\+::\+ID}}}]{new\+Element\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Add a new element, given such element\textquotesingle{}s id. 
+
+\begin{DoxyPrecond}{Precondition}
+There is not any element with the given id within the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+A new element with {\ttfamily new\+Element\+ID} is added to the {\ttfamily \mbox{\hyperlink{class_i_container}{IContainer}}} object 
+\end{DoxyPostcond}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_user_set_8hh}{User\+Set.\+hh}}\end{DoxyCompactItemize}
