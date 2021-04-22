@@ -20,7 +20,7 @@ int Course::getCurrentEnrolled() const {
 	return currentEnrolled;
 }
 
-bool Course::getSessionByProblem(prb::ID problemID, ses::ID & sessionID) const {		/* TODO */
+bool Course::getSessionByProblem(prb::ID problemID, ses::ID & sessionID) const {
 	for(ses::ID currentSessionID : sessions) {
 		if(Course::sessionRepository[currentSessionID].containsProblem(problemID)) {
 			sessionID = currentSessionID;

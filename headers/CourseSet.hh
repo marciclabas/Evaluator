@@ -13,13 +13,16 @@
 
 #ifndef NO_DIAGRAM
 #include <vector>
+#include <string>
 #endif
 
 /**
 @class CourseSet
 @brief Represents set of courses
 */
-class CourseSet : public IReadable, public IPrintable, public IContainer<crs::crs::, Course> {	
+class CourseSet : public IReadable, public IPrintable, public IContainer<crs::ID, Course> {
+private:
+	std::vector<Course> courses;
 public:
 	/* =========================================================constructors & destructors=========================================================*/
 	CourseSet(const SessionRepository& SessionRepository);
@@ -83,7 +86,7 @@ public:
 	/**
 	@brief Add a new element, given such element's id
 	@pre There is not any element with the given id within the @c IContainer object
-	@post A new element with @c newElementcrs::ID is added to the @c IContainer object
+	@post A new element with @c newElementID is added to the @c IContainer object
 	*/
 	void addElement(crs::ID newElementID) override;
 };
