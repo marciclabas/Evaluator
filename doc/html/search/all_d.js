@@ -18,5 +18,9 @@ var searchData=
   ['userset_77',['UserSet',['../class_user_set.html',1,'UserSet'],['../class_user_set.html#a066fa5e04436344dabe453950e3aa4bd',1,'UserSet::UserSet()']]],
   ['userset_2ehh_78',['UserSet.hh',['../_user_set_8hh.html',1,'']]],
   ['usr_79',['usr',['../namespaceusr.html',1,'']]]
+<<<<<<< HEAD
 >>>>>>> d492b3a069c2074d005a742334644ac2220fcab0
+=======
+>>>>>>> spec
+>>>>>>> a9243d702bf53f762bc01ba95a77d594935fe2df
 ];

@@ -30,7 +30,11 @@ public:
 };
 
 =======
+<<<<<<< HEAD
 >>>>>>> d492b3a069c2074d005a742334644ac2220fcab0
+=======
+>>>>>>> spec
+>>>>>>> a9243d702bf53f762bc01ba95a77d594935fe2df
 /**
 @class User
 @implements IReadable
@@ -45,6 +49,10 @@ public:
 class User : public IReadable, public IPrintable {
 	usr::ID id;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a9243d702bf53f762bc01ba95a77d594935fe2df
 	std::vector<ProblemStats> solved; // sorted by problem ID
 	std::vector<ProblemStats> solvable; // solved and solvable have a void intersection
 
@@ -53,6 +61,7 @@ class User : public IReadable, public IPrintable {
 public:
 	User();
 =======
+<<<<<<< HEAD
 class User : public IPrintable, public IReadable {
 public:
 	/* =========================================================constructors & destructors=========================================================*/
@@ -68,6 +77,8 @@ public:
 	*/
 	crs::ID getEnrolledCourseID() const;
 
+=======
+>>>>>>> a9243d702bf53f762bc01ba95a77d594935fe2df
 	/**
 	@brief Returns a vector with the stats of the problems the user has solved
 	@pre true
@@ -81,7 +92,11 @@ public:
 	@post A vector with the stats of the problems the user can solve is returned
 	*/
 	const std::vector<IPrintable> & getSolvableStats() const;
+<<<<<<< HEAD
 >>>>>>> d492b3a069c2074d005a742334644ac2220fcab0
+=======
+>>>>>>> spec
+>>>>>>> a9243d702bf53f762bc01ba95a77d594935fe2df
 	
 	/**
 	@brief Checks wheter the user is enrolled in a course

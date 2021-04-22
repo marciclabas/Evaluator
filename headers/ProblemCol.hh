@@ -19,14 +19,22 @@
 /**
 @class ProblemCollection
 @brief Represents a collection of problems
-@invariant problems is sorted by:
-@invariant 	<ol>
+
+*/
+class ProblemCollection : public IReadable, public IPrintable, public IContainer<prb::ID, Problem> {
+	/*
+	@invariant problems is sorted by:
+	@invariant 	<ol>
 				<li>@c stats.ratio</li>
 				<li>@c id</li>
 			</ol>
+<<<<<<< HEAD
 */
 class ProblemCollection : public IReadable, public IPrintable, public IContainer<prb::ID, Problem> {
 <<<<<<< HEAD
+=======
+	*/
+>>>>>>> a9243d702bf53f762bc01ba95a77d594935fe2df
 	std::vector<Problem> problems;
 
 public:

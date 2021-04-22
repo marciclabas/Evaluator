@@ -12,5 +12,9 @@ var searchData=
   ['remove_5fuser_60',['remove_user',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fa36a2a903d4d6404102cd663963dae095',1,'io']]],
   ['removeuser_61',['removeUser',['../class_user_set.html#af3c0d19a1b995d71fc1e09e0655c84c3',1,'UserSet']]],
   ['result_62',['result',['../namespaceprb.html#a72e825355fbd24713dfb8ef9875aa775',1,'prb']]]
+<<<<<<< HEAD
 >>>>>>> d492b3a069c2074d005a742334644ac2220fcab0
+=======
+>>>>>>> spec
+>>>>>>> a9243d702bf53f762bc01ba95a77d594935fe2df
 ];

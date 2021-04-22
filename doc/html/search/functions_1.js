@@ -10,5 +10,9 @@ var searchData=
   ['containselement_128',['containsElement',['../class_i_container.html#a1a285fa8d0202100ad3d60d78f085677',1,'IContainer']]],
   ['course_129',['Course',['../class_course.html#a6b959ccf15d9ceed9e9c14a701561982',1,'Course']]],
   ['courseset_130',['CourseSet',['../class_course_set.html#ac96b9d76c9e0f87784138c4086a7435b',1,'CourseSet']]]
+<<<<<<< HEAD
 >>>>>>> d492b3a069c2074d005a742334644ac2220fcab0
+=======
+>>>>>>> spec
+>>>>>>> a9243d702bf53f762bc01ba95a77d594935fe2df
 ];

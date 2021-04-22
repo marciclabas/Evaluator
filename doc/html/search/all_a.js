@@ -21,5 +21,9 @@ var searchData=
   ['problemcol_2ehh_55',['ProblemCol.hh',['../_problem_col_8hh.html',1,'']]],
   ['problemcollection_56',['ProblemCollection',['../class_problem_collection.html',1,'ProblemCollection'],['../class_problem_collection.html#a9c64db5612113ea8c9cf2f4756fc1abf',1,'ProblemCollection::ProblemCollection()']]],
   ['program_2ecc_57',['program.cc',['../program_8cc.html',1,'']]]
+<<<<<<< HEAD
 >>>>>>> d492b3a069c2074d005a742334644ac2220fcab0
+=======
+>>>>>>> spec
+>>>>>>> a9243d702bf53f762bc01ba95a77d594935fe2df
 ];

@@ -10,5 +10,9 @@ var searchData=
   ['list_5fproblems_175',['list_problems',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fadfc02d84e308cd34aa393d549d8111fc',1,'io']]],
   ['list_5fsessions_176',['list_sessions',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371faf06dfdb8b5dd745f30cf25ba431dcf47',1,'io']]],
   ['list_5fusers_177',['list_users',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fabfa87367a67f5b01e6390c18bb324e17',1,'io']]]
+<<<<<<< HEAD
 >>>>>>> d492b3a069c2074d005a742334644ac2220fcab0
+=======
+>>>>>>> spec
+>>>>>>> a9243d702bf53f762bc01ba95a77d594935fe2df
 ];

@@ -24,6 +24,8 @@
 class SessionRepository : public IReadable, public IPrintable, public IContainer<ses::ID, Session> {
 <<<<<<< HEAD
 	std::vector<Session> sessions;
+
+	static const ProblemCollection & problemCollection;
     
 public:
 =======

@@ -11,5 +11,9 @@ var searchData=
   ['print_149',['print',['../class_i_printable.html#a5b00d3f39de891a4caf1837763ffe8a3',1,'IPrintable']]],
   ['problem_150',['Problem',['../class_problem.html#ad9d44f0ef936fb62f0ce41dd200494ac',1,'Problem']]],
   ['problemcollection_151',['ProblemCollection',['../class_problem_collection.html#a9c64db5612113ea8c9cf2f4756fc1abf',1,'ProblemCollection']]]
+<<<<<<< HEAD
 >>>>>>> d492b3a069c2074d005a742334644ac2220fcab0
+=======
+>>>>>>> spec
+>>>>>>> a9243d702bf53f762bc01ba95a77d594935fe2df
 ];

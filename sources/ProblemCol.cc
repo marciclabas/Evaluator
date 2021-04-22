@@ -1,5 +1,6 @@
 #include "ProblemCol.hh"
 
+<<<<<<< HEAD
 #include <algorithm>
 #include <vector>
 #include <cassert>
@@ -80,3 +81,47 @@
 	void ProblemCollection::addElement(prb::ID newElementID) {
 		problems[newElementID];
 	}
+=======
+ProblemCollection::ProblemCollection() {
+
+}
+
+ProblemCollection::~ProblemCollection(){
+
+}
+
+
+void ProblemCollection::print() const {
+
+}
+
+/*
+std::ostream & operator<< (std::ostream & out, const ProblemCollection & printable) {
+
+}
+
+void ProblemCollection::read() override {
+
+}
+
+std::istream & operator>> (std::istream & in, ProblemCollection & readable) {
+
+}
+
+bool ProblemCollection::containsElement(prb::ID id) const override {
+
+}
+
+
+Problem & ProblemCollection::operator[](prb::ID id) override {
+
+}
+
+int ProblemCollection::getCount() const override {
+
+}
+
+void ProblemCollection::addElement(prb::ID newElementID) override {
+
+}*/
+>>>>>>> a9243d702bf53f762bc01ba95a77d594935fe2df

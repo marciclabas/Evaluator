@@ -14,5 +14,9 @@ var searchData=
   ['_7esessionrepository_89',['~SessionRepository',['../class_session_repository.html#adbef927f8d88802b2dabad68929409a6',1,'SessionRepository']]],
   ['_7euser_90',['~User',['../class_user.html#ac00b72ad64eb4149f7b21b9f5468c2b2',1,'User']]],
   ['_7euserset_91',['~UserSet',['../class_user_set.html#acecb88c9e7ba2b981126ae2d22c72fcc',1,'UserSet']]]
+<<<<<<< HEAD
 >>>>>>> d492b3a069c2074d005a742334644ac2220fcab0
+=======
+>>>>>>> spec
+>>>>>>> a9243d702bf53f762bc01ba95a77d594935fe2df
 ];

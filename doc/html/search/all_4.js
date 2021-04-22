@@ -16,5 +16,9 @@ var searchData=
   ['getsessionbyproblem_18',['getSessionByProblem',['../class_course.html#ada500ecbde39364e8dac698a409872e3',1,'Course']]],
   ['getsolvablestats_19',['getSolvableStats',['../class_user.html#a3de54afb03e5d5a2b63cab408612b201',1,'User']]],
   ['getsolvedstats_20',['getSolvedStats',['../class_user.html#a2b7c33f7766f7245225b74f2741821cc',1,'User']]]
+<<<<<<< HEAD
 >>>>>>> d492b3a069c2074d005a742334644ac2220fcab0
+=======
+>>>>>>> spec
+>>>>>>> a9243d702bf53f762bc01ba95a77d594935fe2df
 ];
