@@ -9,12 +9,7 @@
 
 	ProblemCollection::~ProblemCollection() {}
 
-	/* ========================================================IPrintable overriden methods========================================================*/
-
-	void ProblemCollection::print() const {
-		std::cout << *this;
-	}
-
+	/*==============================================================Friend functions===============================================================*/
 
 	std::ostream& operator<< (std::ostream &out, const ProblemCollection &problemCollection) {
 		using keyValue = std::pair<prb::ID, Problem>;
@@ -44,12 +39,6 @@
 		for(const keyValue & kv : sortedProblems) out << kv.first << ' ' << kv.second;
 
 		return out;
-	}
-
-	/* ========================================================IReadable overriden methods========================================================*/
-
-	void ProblemCollection::read() {
-		std::cin >> *this;
 	}
 
 	std::istream& operator>> (std::istream &in, ProblemCollection &problemCollection) {

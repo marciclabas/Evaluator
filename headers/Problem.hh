@@ -28,14 +28,7 @@ public:
 	*/
 	int getRatio() const;
 
-	/* ========================================================IPrintable overriden methods========================================================*/
-
-	/**
-	@brief Print the @c IPrintable object to the stdout
-	@pre true
-	@post The @c IPrintable object is printed to the stdout
-	*/
-	void print() const override;
+	/*==============================================================Friend functions===============================================================*/
 
 	/**
 	@brief Print the @c IPrintable object to an output stream

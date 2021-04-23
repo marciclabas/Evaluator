@@ -30,22 +30,12 @@ bool Course::getSessionByProblem(prb::ID problemID, ses::ID & sessionID) const {
 	return false;
 }
 
-/*========================================================IPrintable overriden methods========================================================*/
-
-void Course::print() const {
-	std::cout << *this;
-}
+/*==============================================================Friend functions===============================================================*/
 
 std::ostream& operator<< (std::ostream &out, const Course & course) {
 	out << course.totalEnrolled << course.currentEnrolled;
 	for(ses::ID sessionID : course.sessions) out << sessionID << std::endl;
 	return out;
-}
-
-/*========================================================IReadable overriden methods========================================================*/
-
-void Course::read() {
-	std::cin >> *this;
 }
 
 std::istream& operator>> (std::istream & in, Course & course) {

@@ -38,14 +38,7 @@ public:
 
 	static void setProblemCollection(const ProblemCollection & problemCollection);
 
-	/*========================================================IPrintable overriden methods========================================================*/
-
-	/**
-	@brief Print the @c IPrintable object to the stdout
-	@pre true
-	@post The nubmer of problems and their tree structure in postorder are printed to the stdout
-	*/
-	void print() const override;
+	/*==============================================================Friend functions===============================================================*/
 
 	/**
 	@brief Print the @c IPrintable object to an output stream
@@ -53,15 +46,6 @@ public:
 	@post The nubmer of problems and their tree structure in postorder are printed to the given output stream
 	*/
 	friend std::ostream& operator<< (std::ostream & out, const Session & session);
-
-	/*========================================================IReadable overriden methods========================================================*/
-
-	/**
-	@brief Read to the @c IReadable object from the stdin
-	@pre true
-	@post The @c IReadable object is read from the stdin
-	*/
-	void read() override;
 
 	/**
 	@brief Read to the @c IReadable object from an input stream

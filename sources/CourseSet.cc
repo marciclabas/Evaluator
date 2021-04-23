@@ -7,16 +7,7 @@ CourseSet::CourseSet(const SessionRepository& sessionRepository): courses() {
 
 CourseSet::~CourseSet() {}
 
-/* ========================================================IPrintable overriden methods========================================================*/
-
-/**
- @ brief Print the @c IPrintable object to the st*dout
- @pre true
- @post The @c IPrintable object is printed to the stdout
- */
-void CourseSet::print() const {
-	std::cout << *this;
-}
+/*==============================================================Friend functions===============================================================*/
 
 /**
  @ brief Print the @c IPrintable object to an out*put stream
@@ -25,17 +16,6 @@ void CourseSet::print() const {
  */
 std::ostream& operator<< (std::ostream & out, const CourseSet & courseSet) {
 	for(const Course & course : courseSet.courses) out << course << std::endl;
-}
-
-/* ========================================================IReadable overriden methods========================================================*/
-
-/**
- @ brief Read to the @c IReadable object from the* stdin
- @pre true
- @post The @c IReadable object is read from the stdin
- */
-void CourseSet::read() {
-	std::cin >> *this;
 }
 
 /**

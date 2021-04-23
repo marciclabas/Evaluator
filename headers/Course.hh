@@ -27,16 +27,16 @@ private:
 	std::list<ses::ID> sessions;
 	static SessionRepository & sessionRepository;
 public:
-	/* =========================================================constructors & destructors=========================================================*/
+	/*==========================================================constructors & destructors=========================================================*/
 	Course();
 	~Course();
 
 
-	/*===============================================================static methods===============================================================*/
+	/*================================================================static methods===============================================================*/
 
 	static void setSessionRepository(const SessionRepository & sessionRepository);
 
-	/* ===================================================================getters==================================================================*/
+	/*====================================================================getters==================================================================*/
 
 	/**
 	@brief Returns the number of users currently enrolled on the course
@@ -52,14 +52,7 @@ public:
 	*/
 	bool getSessionByProblem(prb::ID problemID, ses::ID & sessionID) const;
 
-	/* ========================================================IPrintable overriden methods========================================================*/
-
-	/**
-	@brief Print the @c IPrintable object to the stdout
-	@pre true
-	@post The @c IPrintable object is printed to the stdout
-	*/
-	void print() const override;
+	/*==============================================================Friend functions===============================================================*/
 
 	/**
 	@brief Print the @c IPrintable object to an output stream
@@ -67,15 +60,6 @@ public:
 	@post The @c IPrintable object is printed to the given output stream
 	*/
 	friend std::ostream& operator<< (std::ostream &out, const Course & course);
-
-	/* ========================================================IReadable overriden methods========================================================*/
-
-	/**
-	@brief Read to the @c IReadable object from the stdin
-	@pre true
-	@post The @c IReadable object is read from the stdin
-	*/
-	void read() override;
 
 	/**
 	@brief Read to the @c IReadable object from an input stream

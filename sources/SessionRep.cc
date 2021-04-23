@@ -9,21 +9,11 @@ SessionRepository::SessionRepository(ProblemCollection & problemCollection): ses
 
 SessionRepository::~SessionRepository() {}
 
-/* ========================================================IPrintable overriden methods========================================================*/
-
-void SessionRepository::print() const {
-	std::cout << *this;
-}
+/*==============================================================Friend functions===============================================================*/
 
 std::ostream& operator<< (std::ostream & out, const SessionRepository & sessionRepository) {
 	for(const std::pair<ses::ID, Session> & kv : sessionRepository.sessions) out << kv.first << ' ' << kv.second;
 	return out;
-}
-
-/* ========================================================IReadable overriden methods========================================================*/
-
-void SessionRepository::read() {
-	std::cin >> *this;
 }
 
 std::istream& operator>> (std::istream & in, SessionRepository & sessionRepository) {

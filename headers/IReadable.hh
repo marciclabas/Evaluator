@@ -24,7 +24,7 @@ public:
 	@pre true
 	@post The @c IReadable object is read from the stdin
 	*/
-	virtual void read() = 0;
+	virtual void read() { std::cin >> *this; }
 
 	/**
 	@brief Read to the @c IReadable object from an input stream

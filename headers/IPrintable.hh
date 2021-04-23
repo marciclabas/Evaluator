@@ -24,7 +24,7 @@ public:
 	@pre true
 	@post The @c IPrintable object is printed to the stdout
 	*/
-	virtual void print() const = 0;
+	virtual void print() const { std::cout << *this; }
 
 	/**
 	@brief Print the @c IPrintable object to an output stream

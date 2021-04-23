@@ -11,11 +11,7 @@ void Session::setProblemCollection(const ProblemCollection & problemCollection) 
 	Session::problemCollection = problemCollection;
 }
 
-/*========================================================IPrintable overriden methods========================================================*/
-
-void Session::print() const {
-	std::cout << *this;
-}
+/*==============================================================Friend functions===============================================================*/
 
 std::ostream& operator<< (std::ostream & out, const BinTree<prb::ID> & tree) {
 	out << tree.left() << tree.right() << tree.value();
@@ -25,12 +21,6 @@ std::ostream& operator<< (std::ostream & out, const BinTree<prb::ID> & tree) {
 std::ostream& operator<< (std::ostream & out, const Session & session) {
 	out << session.count << ' ' << session.problems;
 	return out;
-}
-
-/* ========================================================IReadable overriden methods========================================================*/
-
-void Session::read() {
-	std::cin >> *this;
 }
 
 std::istream& operator>> (std::istream & in, BinTree<prb::ID> & tree) {
