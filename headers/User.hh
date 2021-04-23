@@ -26,6 +26,8 @@ private:
 	class ProblemStats : public IPrintable {
 		prb::id problemID;
 		int submissionsCount;
+	public:
+		int getCount() const { returns submissionsCount; }
 		friend std::ostream& operator<< (std::ostream & out, const ProblemStats & stats);
 	};
 

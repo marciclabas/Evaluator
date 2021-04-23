@@ -41,6 +41,6 @@ int SessionRepository::getCount() const {
 	return sessions.size();
 }
 
-void SessionRepository::addElement(ses::ID newElementID) {
-	sessions[newElementID];
+void addElement(ses::ID newElementID, Session newElement) {
+	sessions[newElementID] = newElement;
 }

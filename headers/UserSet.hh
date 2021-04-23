@@ -12,16 +12,16 @@
 #include "IContainer.hh"
 
 #ifndef NO_DIAGRAM 
-#include <vector>
+#include <map>
+#include <string>
 #endif
 
 /**
 @class UserSet
 @brief Represents a set of users
-@invariant @c users is sorted by id
 */
 class UserSet : public IReadable, public IPrintable, public IContainer<usr::usr::ID, User> {
-	std::vector<User> users;
+	std::map<usr::ID, User> users;
 	
 public:
 	/* =========================================================constructors & destructors=========================================================*/
@@ -35,14 +35,14 @@ public:
 	@pre true
 	@post The @c IPrintable object is printed to the given output stream
 	*/
-	friend std::ostream& operator<< (std::ostream &out, const IPrintable &printable);
+	friend std::ostream& operator<< (std::ostream & out, const UserSet & userSet);
 
 	/**
 	@brief Read to the @c IReadable object from an input stream
 	@pre true
 	@post The @c IReadable object is read from the given input stream
 	*/
-	friend std::istream& operator>> (std::istream &in, IReadable &readable);
+	friend std::istream& operator>> (std::istream & in, UserSet & userSet);
 
 	/* ========================================================IContainer overriden methods========================================================*/
 
@@ -68,11 +68,11 @@ public:
 	int getCount() const override;
 
 	/**
-	@brief Add a new element, given such element's id
-	@pre There is not any element with the given id within the @c IContainer object
-	@post A new element with @c newElementusr::ID is added to the @c IContainer object
+	@brief Add a new element
+	@pre There is not any element with the given element's id within the @c IContainer object
+	@post The new element is added to the @c IContainer object
 	*/
-	void addElement(usr::ID newElementusr::ID) override;
+	void addElement(ID newElementID, T newElement) override;
 
 	/* ===========================================================other functionality===========================================================*/
 

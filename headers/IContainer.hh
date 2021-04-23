@@ -42,11 +42,11 @@ public:
 	virtual int getCount() const = 0;
 
 	/**
-	@brief Add a new element, given such element's id
-	@pre There is not any element with the given id within the @c IContainer object
-	@post A new element with @c newElementID is added to the @c IContainer object
+	@brief Add a new element
+	@pre There is not any element with the given element's id within the @c IContainer object
+	@post The new element is added to the @c IContainer object
 	*/
-	virtual void addElement(ID newElementID) = 0;
+	virtual void addElement(ID, newElement ID, T newElement) = 0;
 };
 
 #endif

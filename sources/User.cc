@@ -1,5 +1,7 @@
 #include "User.hh"
 
+#include <cassert>
+
 /* =========================================================constructors & destructors=========================================================*/
 User::User(): isEnrolled(false), enrolledCourse(), solved(), solvable() {}
 
@@ -29,39 +31,33 @@ bool completedEnrolledCourse() const {
 
 /*==============================================================Friend functions===============================================================*/
 
+// number of total submissions, number of accepted problems, number of tried problems, enrolled course or '0' if not enrolled
 std::ostream& operator<< (std::ostream & out, const User & user) {
+	int acceptedProblems = solved.size();
+	int totalSubmissions = acceptedProblems;
+	int triedProblems = acceptedProblems;
 
-}
+	for(const ProblemStats & stats : solvable)
+		if(stats.getCount()) {
+			totalSubmissions += stats.getCount();
+			triedProblems++;
+		}
 
-/**
-@brief Read to the @c IReadable object from an input stream
-@pre true
-@post The @c IReadable object is read from the given input stream
-*/
-friend std::istream& operator>> (std::istream & in, User & user) {
-	
+	out << totalSubmissions << ' ' << acceptedProblems << ' ' << triedProblems << isEnrolled ? enrollCourse : '0' << std::endl;
 }
 
 /* ===========================================================other functionality===========================================================*/
 
-/**
-@brief Enrolls the user to a course
-@pre The user is not already enrolled in any course
-@post The user is enrolled to the given course
-*/
-void enrollCourse(crs::ID courseID);
+void enrollCourse(crs::ID courseID) {
+	assert(not isEnrolled);
+	enrollCourse = courseID;
+}
 
-/**
-@brief Unenrolls the user from the current course
-@pre The user is enrolled to a course
-@post The user is not enrolled to any course
-*/
-void unenrollCourse();
+void unenrollCourse() {
+	assert(isEnrolled);
+	isEnrolled = false;
+}
 
-
-/**
-@brief Updates the user's stats according to the given result of a submission
-@pre @c p points to a valid problem whose prerequisites are held by the user
-@post If @c result (the problem is accepted) the problem is removed from solvable and added to solved. Otherwise, tho problem (contained in solvable) count is incremented by 1
-*/
-void parseSubmission(prb::ID problemID, prb::result r);
+void parseSubmission(prb::ID problemID, prb::result r) {
+	/* TODO */
+}

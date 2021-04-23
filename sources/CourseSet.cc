@@ -23,19 +23,19 @@ std::istream& operator>> (std::istream & in, CourseSet & courseSet) {
 
 /* ========================================================IContainer overriden methods========================================================*/
 
-bool containsElement(crs::ID id) const {
+bool CourseSet::containsElement(crs::ID id) const {
 	return id > 0 and id < courses.size();
 }
 
-T& operator[](crs::ID id) {
+T& CourseSet::operator[](crs::ID id) {
 	assert(id > 0 and id < courses.size());
 	return courses[id];
 }
 
-int getCount() const {
+int CourseSet::getCount() const {
 	return courses.size();
 }
 
-void addElement(crs::ID newElementID) {
-	
-}
+void CourseSet::addElement(Course newElement) { course.push_back(newElement); }
+
+void CourseSet::addElement(crs::ID newElementID, Course newElement) {}

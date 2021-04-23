@@ -66,6 +66,6 @@
 		return problems.size();
 	}
 
-	void ProblemCollection::addElement(prb::ID newElementID) {
-		problems[newElementID];
+	void void addElement(prb::ID newElementID, Problem newElement) override; {
+		problems[newElementID] = newElement;
 	}

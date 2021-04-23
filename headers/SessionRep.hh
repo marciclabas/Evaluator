@@ -68,11 +68,11 @@ public:
 	int getCount() const override;
 
 	/**
-	@brief Add a new element, given such element's id
-	@pre There is not any element with the given id within the @c IContainer object
-	@post A new element with @c newElementses::ID is added to the @c IContainer object
+	@brief Add a new element
+	@pre There is not any element with the given element's id within the @c IContainer object
+	@post The new element is added to the @c IContainer object
 	*/
-	void addElement(ses::ID newElementID) override;
+	void addElement(ID newElementID, T newElement) override;
 };
 
 #endif
