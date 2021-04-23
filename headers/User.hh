@@ -11,14 +11,27 @@
 
 #ifndef NO_DIAGRAM 
 #include <string>
-#include <vector>
+#include <list>
 #endif
 
 /**
 @class User
 @brief Represents a user with a unique name (id) and some statistics
 */
-class User : public IPrintable, public IReadable {
+class User : public IPrintable {
+private:
+	bool isEnrolled;
+	crs::ID enrolledCourse;
+
+	class ProblemStats : public IPrintable {
+		prb::id problemID;
+		int submissionsCount;
+		friend std::ostream& operator<< (std::ostream & out, const ProblemStats & stats);
+	};
+
+	std::list<ProblemStats> solved;
+	std::list<ProblemStats> solvable;
+
 public:
 	/* =========================================================constructors & destructors=========================================================*/
 	User();
@@ -34,18 +47,18 @@ public:
 	crs::ID getEnrolledCourseID() const;
 
 	/**
-	@brief Returns a vector with the stats of the problems the user has solved
+	@brief Returns a list with the stats of the problems the user has solved
 	@pre true
-	@post A vector with the stats of the problems the user has solved is returned
+	@post A list with the stats of the problems the user has solved is returned
 	*/
-	const std::vector<IPrintable> & getSolvedStats() const;
+	const std::list<IPrintable> & getSolvedStats() const;
 
 	/**
-	@brief Returns a vector with the stats of the problems the user can solve (holds the prerequisites to do so)
+	@brief Returns a list with the stats of the problems the user can solve (holds the prerequisites to do so)
 	@pre true
-	@post A vector with the stats of the problems the user can solve is returned
+	@post A list with the stats of the problems the user can solve is returned
 	*/
-	const std::vector<IPrintable> & getSolvableStats() const;
+	const std::list<IPrintable> & getSolvableStats() const;
 	
 	/**
 	@brief Checks wheter the user is enrolled in a course
@@ -68,14 +81,7 @@ public:
 	@pre true
 	@post The @c IPrintable object is printed to the given output stream
 	*/
-	friend std::ostream& operator<< (std::ostream &out, const IPrintable &printable);
-
-	/**
-	@brief Read to the @c IReadable object from an input stream
-	@pre true
-	@post The @c IReadable object is read from the given input stream
-	*/
-	friend std::istream& operator>> (std::istream & in, SessionRepository & sessionRepository);
+	friend std::ostream& operator<< (std::ostream & out, const User & user);
 
 	/* ===========================================================other functionality===========================================================*/
 

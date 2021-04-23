@@ -36,7 +36,7 @@
 		);
 
 		// for(const keyValue & [name, problem] : sortedProblems) out << name << ' ' << problem; // UPGRADE TO c++17 plz :(
-		for(const keyValue & kv : sortedProblems) out << kv.first << ' ' << kv.second;
+		for(const keyValue & kv : sortedProblems) out << kv.first << ' ' << kv.second << std::endl;
 
 		return out;
 	}

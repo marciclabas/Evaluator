@@ -134,7 +134,7 @@ int main() {
             usr::ID userID; cin >> userID;
 			
 			if(userSet.containsElement(userID))
-				for(const auto & stats : userSet[userID].getSolvedStats()) cout << stats << endl;
+				for(const IPrintable & stats : userSet[userID].getSolvedStats()) cout << stats << endl;
 			else error();
         }
        
@@ -142,7 +142,7 @@ int main() {
 			usr::ID userID; cin >> userID;
 			
 			if(userSet.containsElement(userID))
-				for(const auto & stats : userSet[userID].getSolvableStats()) cout << stats << endl;
+				for(const IPrintable & stats : userSet[userID].getSolvableStats()) cout << stats << endl;
 			else error();
         }
         /*

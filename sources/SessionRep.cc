@@ -12,7 +12,7 @@ SessionRepository::~SessionRepository() {}
 /*==============================================================Friend functions===============================================================*/
 
 std::ostream& operator<< (std::ostream & out, const SessionRepository & sessionRepository) {
-	for(const std::pair<ses::ID, Session> & kv : sessionRepository.sessions) out << kv.first << ' ' << kv.second;
+	for(const std::pair<ses::ID, Session> & kv : sessionRepository.sessions) out << kv.first << ' ' << kv.second << endl;
 	return out;
 }
 
