@@ -20,7 +20,7 @@
 @class UserSet
 @brief Represents a set of users
 */
-class UserSet : public IReadable, public IPrintable, public IContainer<usr::usr::ID, User> {
+class UserSet : public IReadable, public IPrintable, public IContainer<usr::ID, User> {
 	std::map<usr::ID, User> users;
 	
 public:
@@ -58,7 +58,7 @@ public:
 	@pre An element with the given id does exist within the @c IContainer object
 	@post An element with the given usr::ID contained in the @c IContainer object is returned
 	*/
-	T& operator[](usr::ID id) override;
+	User & operator[](usr::ID id) override;
 
 	/**
 	@brief Return the number of elements contained in the @c IContainer object
@@ -72,7 +72,7 @@ public:
 	@pre There is not any element with the given element's id within the @c IContainer object
 	@post The new element is added to the @c IContainer object
 	*/
-	void addElement(ID newElementID, T newElement) override;
+	void addElement(usr::ID newElementID, User newElement) override;
 
 	/* ===========================================================other functionality===========================================================*/
 
@@ -81,7 +81,7 @@ public:
 	@pre A user with the given usr::ID exists within the set
 	@post The user with the given usr::ID no longer exists within the set
 	*/
-	void removeUser(usr::usr::ID toRemoveUser);
+	void removeUser(usr::ID id);
 };
 
 #endif

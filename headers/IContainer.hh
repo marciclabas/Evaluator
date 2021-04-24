@@ -46,7 +46,7 @@ public:
 	@pre There is not any element with the given element's id within the @c IContainer object
 	@post The new element is added to the @c IContainer object
 	*/
-	virtual void addElement(ID, newElement ID, T newElement) = 0;
+	virtual void addElement(ID newElementID, T newElement) = 0;
 };
 
 #endif

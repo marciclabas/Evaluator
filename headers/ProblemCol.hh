@@ -41,7 +41,7 @@ public:
 	@pre true
 	@post The @c IReadable object is read from the given input stream
 	*/
-	friend std::istream& operator>> (std::istream &in, IReadable &readable);
+	friend std::istream& operator>> (std::istream & in, ProblemCollection & problemCollection);
 
 	/* ========================================================IContainer overriden methods========================================================*/
 
@@ -71,6 +71,7 @@ public:
 	@pre There is not any element with the given element's id within the @c IContainer object
 	@post The new element is added to the @c IContainer object
 	*/
-	void addElement(ID newElementID, T newElement) override;
+	void addElement(prb::ID newElementID, Problem newElement) override;
+};
 
 #endif

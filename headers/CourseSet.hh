@@ -35,14 +35,14 @@ public:
 	@pre true
 	@post The @c IPrintable object is printed to the given output stream
 	*/
-	friend std::ostream& operator<< (std::ostream &out, const IPrintable &printable);
+	friend std::ostream& operator<< (std::ostream &out, const CourseSet & courseSet);
 
 	/**
 	@brief Read to the @c IReadable object from an input stream
 	@pre true
 	@post The @c IReadable object is read from the given input stream
 	*/
-	friend std::istream& operator>> (std::istream &in, IReadable &readable);
+	friend std::istream& operator>> (std::istream &in, CourseSet & courseSet);
 
 	/* ========================================================IContainer overriden methods========================================================*/
 
@@ -58,7 +58,7 @@ public:
 	@pre An element with the given id does exist within the @c IContainer object
 	@post An element with the given crs::ID contained in the @c IContainer object is returned
 	*/
-	T& operator[](crs::ID id) override;
+	Course & operator[](crs::ID id) override;
 
 	/**
 	@brief Return the number of elements contained in the @c IContainer object
@@ -72,9 +72,7 @@ public:
 	@pre There is not any element with the given element's id within the @c IContainer object
 	@post The new element is added to the @c IContainer object
 	*/
-	void addElement(ID newElementID, T newElement) override;
-
-	void addElement(T newElement);
+	void addElement(crs::ID newElementID, Course newElement) override;
 };
 
 #endif

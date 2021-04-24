@@ -37,7 +37,7 @@ int main() {
             prb::ID newProblemID; cin >> newProblemID;
             if(problemCollection.containsElement(newProblemID)) error(); 
             else {
-            	problemCollection.addElement(newProblemID);
+            	problemCollection.addElement(newProblemID, Problem());
             	cout << problemCollection.getCount() << endl;
             }
         }
@@ -46,7 +46,8 @@ int main() {
 			ses::ID newSessionID; cin >> newSessionID;
             if(sessionRepository.containsElement(newSessionID)) error(); 
             else {
-            	sessionRepository.addElement(newSessionID);
+            	Session newSession; std::cin >> newSession;
+            	sessionRepository.addElement(newSessionID, newSession);
             	cout << sessionRepository.getCount() << endl;
             }
         }
@@ -55,8 +56,12 @@ int main() {
 			crs::ID newCourseID; cin >> newCourseID;
             if(courseSet.containsElement(newCourseID)) error(); 
             else {
-            	courseSet.addElement(newCourseID);
-            	cout << courseSet.getCount() << endl;
+            	Course newCourse; std::cin >> newCourse;
+            	if(newCourse.isValid()) {
+            		courseSet.addElement(newCourseID, newCourse);
+            		cout << courseSet.getCount() << endl;
+            	}
+            	else error();
             }
         }
         
@@ -64,7 +69,7 @@ int main() {
 			usr::ID newUserID; cin >> newUserID;
             if(userSet.containsElement(newUserID)) error(); 
             else {
-            	userSet.addElement(newUserID);
+            	userSet.addElement(newUserID, User());
             	cout << userSet.getCount() << endl;
             }
         }

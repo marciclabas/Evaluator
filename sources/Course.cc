@@ -32,7 +32,7 @@ bool Course::getSessionByProblem(prb::ID problemID, ses::ID & sessionID) const {
 
 /*==============================================================Friend functions===============================================================*/
 
-std::ostream& operator<< (std::ostream &out, const Course & course) {
+std::ostream& operator<< (std::ostream & out, const Course & course) {
 	out << course.totalEnrolled << course.currentEnrolled;
 	for(ses::ID sessionID : course.sessions) out << sessionID << std::endl;
 	return out;
@@ -57,4 +57,8 @@ void Course::enrollUser() {
 
 void Course::unenrollUser() {
 	currentEnrolled--;
+}
+
+bool Course::isValid() const {
+	return true; /* TO DO */
 }

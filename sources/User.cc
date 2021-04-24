@@ -10,34 +10,36 @@ User::~User() {}
 /* ===================================================================getters==================================================================*/
 
 crs::ID User::getEnrolledCourseID() const {
-
+	return enrolledCourse;
 }
 
-const std::vector<IPrintable> & getSolvedStats() const {
-	return solved;
+const std::list<IPrintable> & User::getSolvedStats() const {
+	const auto & foo = solved;
+	return foo;
 }
 
-const std::vector<IPrintable> & getSolvableStats() const {
+const std::list<IPrintable> & User::getSolvableStats() const {
 	return solvable;
 }
 
-bool isEnrolledInCourse() const {
+bool User::isEnrolledInCourse() const {
 	return isEnrolled;
 }
 
-bool completedEnrolledCourse() const {
+bool User::completedEnrolledCourse() const {
 	/* TODO */
+	return false;
 }
 
 /*==============================================================Friend functions===============================================================*/
 
 // number of total submissions, number of accepted problems, number of tried problems, enrolled course or '0' if not enrolled
 std::ostream& operator<< (std::ostream & out, const User & user) {
-	int acceptedProblems = solved.size();
+	int acceptedProblems = user.solved.size();
 	int totalSubmissions = acceptedProblems;
 	int triedProblems = acceptedProblems;
 
-	for(const ProblemStats & stats : solvable)
+	for(const ProblemStats & stats : user.solvable)
 		if(stats.getCount()) {
 			totalSubmissions += stats.getCount();
 			triedProblems++;
@@ -48,16 +50,16 @@ std::ostream& operator<< (std::ostream & out, const User & user) {
 
 /* ===========================================================other functionality===========================================================*/
 
-void enrollCourse(crs::ID courseID) {
+void User::enrollCourse(crs::ID courseID) {
 	assert(not isEnrolled);
 	enrollCourse = courseID;
 }
 
-void unenrollCourse() {
+void User::unenrollCourse() {
 	assert(isEnrolled);
 	isEnrolled = false;
 }
 
-void parseSubmission(prb::ID problemID, prb::result r) {
+void User::parseSubmission(prb::ID problemID, prb::result r) {
 	/* TODO */
 }

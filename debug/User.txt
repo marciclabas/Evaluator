@@ -1,0 +1,62 @@
+./sources/User.cc: In member function ‘const std::__debug::list<IPrintable>& User::getSolvedStats() const’:
+./sources/User.cc:18:9: error: invalid initialization of reference of type ‘const std::__debug::list<IPrintable>&’ from expression of type ‘const std::__debug::list<User::ProblemStats>’
+   18 |  return foo;
+      |         ^~~
+./sources/User.cc: In member function ‘const std::__debug::list<IPrintable>& User::getSolvableStats() const’:
+./sources/User.cc:22:9: error: invalid initialization of reference of type ‘const std::__debug::list<IPrintable>&’ from expression of type ‘const std::__debug::list<User::ProblemStats>’
+   22 |  return solvable;
+      |         ^~~~~~~~
+./sources/User.cc: In function ‘std::ostream& operator<<(std::ostream&, const User&)’:
+./sources/User.cc:38:25: error: ‘solved’ was not declared in this scope
+   38 |  int acceptedProblems = solved.size();
+      |                         ^~~~~~
+./sources/User.cc:42:12: error: ‘ProblemStats’ does not name a type
+   42 |  for(const ProblemStats & stats : user.solvable)
+      |            ^~~~~~~~~~~~
+./sources/User.cc:46:4: error: expected ‘;’ before ‘out’
+   46 |   }
+      |    ^
+      |    ;
+   47 | 
+   48 |  out << totalSubmissions << ' ' << acceptedProblems << ' ' << triedProblems << isEnrolled ? enrollCourse : '0' << std::endl;
+      |  ~~~
+./sources/User.cc:48:80: error: ‘isEnrolled’ was not declared in this scope
+   48 |  out << totalSubmissions << ' ' << acceptedProblems << ' ' << triedProblems << isEnrolled ? enrollCourse : '0' << std::endl;
+      |                                                                                ^~~~~~~~~~
+./sources/User.cc:48:93: error: ‘enrollCourse’ was not declared in this scope
+   48 |  out << totalSubmissions << ' ' << acceptedProblems << ' ' << triedProblems << isEnrolled ? enrollCourse : '0' << std::endl;
+      |                                                                                             ^~~~~~~~~~~~
+./sources/User.cc:48:112: error: invalid operands of types ‘char’ and ‘<unresolved overloaded function type>’ to binary ‘operator<<’
+   48 |  out << totalSubmissions << ' ' << acceptedProblems << ' ' << triedProblems << isEnrolled ? enrollCourse : '0' << std::endl;
+      |                                                                                                            ~~~~^~~~~~~~~~~~
+./sources/User.cc:49:1: error: expected primary-expression before ‘}’ token
+   49 | }
+      | ^
+./sources/User.cc:48:125: error: expected ‘)’ before ‘}’ token
+   48 |  out << totalSubmissions << ' ' << acceptedProblems << ' ' << triedProblems << isEnrolled ? enrollCourse : '0' << std::endl;
+      |                                                                                                                             ^
+      |                                                                                                                             )
+   49 | }
+      | ~                                                                                                                            
+./sources/User.cc:42:5: note: to match this ‘(’
+   42 |  for(const ProblemStats & stats : user.solvable)
+      |     ^
+./sources/User.cc:49:1: error: expected primary-expression before ‘}’ token
+   49 | }
+      | ^
+./sources/User.cc:49:1: error: no return statement in function returning non-void [-Werror=return-type]
+./sources/User.cc:37:60: error: unused parameter ‘user’ [-Werror=unused-parameter]
+   37 | std::ostream& operator<< (std::ostream & out, const User & user) {
+      |                                               ~~~~~~~~~~~~~^~~~
+./sources/User.cc: In member function ‘void User::enrollCourse(crs::ID)’:
+./sources/User.cc:55:2: error: invalid use of member function ‘void User::enrollCourse(crs::ID)’ (did you forget the ‘()’ ?)
+   55 |  enrollCourse = courseID;
+      |  ^~~~~~~~~~~~
+./sources/User.cc: In member function ‘void User::parseSubmission(prb::ID, prb::result)’:
+./sources/User.cc:63:36: error: unused parameter ‘problemID’ [-Werror=unused-parameter]
+   63 | void User::parseSubmission(prb::ID problemID, prb::result r) {
+      |                            ~~~~~~~~^~~~~~~~~
+./sources/User.cc:63:59: error: unused parameter ‘r’ [-Werror=unused-parameter]
+   63 | void User::parseSubmission(prb::ID problemID, prb::result r) {
+      |                                               ~~~~~~~~~~~~^
+cc1plus: all warnings being treated as errors

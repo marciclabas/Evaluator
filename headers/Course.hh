@@ -84,6 +84,13 @@ public:
 	@post @c currentEnrolled is decremented by 1
 	*/
 	void unenrollUser();
+
+	/**
+	@brief Checks wether the course is valid
+	@pre true
+	@post Returs @c true if there is a void intersection between the course's sessions, @c false otherwise
+	*/
+	bool isValid() const;
 };
 
 

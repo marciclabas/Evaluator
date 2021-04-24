@@ -10,51 +10,40 @@ UserSet~UserSet() {}
 /*==============================================================Friend functions===============================================================*/
 
 friend std::ostream& operator<< (std::ostream & out, const UserSet & userSet) {
-	
+	for(const std::pair<ses::ID, Users> & kv : userSet.users) out << kv.first << ' ' << kv.second << endl;
+	return out;
 }
 
-/**
-@brief Read to the @c IReadable object from an input stream
-@pre true
-@post The @c IReadable object is read from the given input stream
-*/
-friend std::istream& operator>> (std::istream & in, UserSet & userSet);
+friend std::istream& operator>> (std::istream & in, UserSet & userSet) {
+	int M; std::cin >> M;
+	for(int i = 0; i < M; i++) {
+			usr::ID newUserID; std::cin >> newUserID;
+			std::cin >> userSet.users[newUserID];
+	}
+}
 
-/* ========================================================IContainer overriden methods========================================================*/
+/*==========================================================IContainer overriden methods========================================================*/
 
-/**
-@brief Return wheter the @c IContainer object has an element with the given id
-@pre true
-@post @c true is returned if there is an element with the given id within the @c IContainer object. If there is not, @c false is returned
-*/
-bool containsElement(usr::ID id) const override;
+bool containsElement(usr::ID id) const {
+	return users.count(id);
+}
 
-/**
-@brief Returns the element with the given usr::ID contained in the @c IContainer object
-@pre An element with the given id does exist within the @c IContainer object
-@post An element with the given usr::ID contained in the @c IContainer object is returned
-*/
-T& operator[](usr::ID id) override;
+T& operator[](usr::ID id) {
+	assert(users.count(id));
+	return users[id];
+}
 
-/**
-@brief Return the number of elements contained in the @c IContainer object
-@pre true
-@post The number of elements contained in the @c IContainer object is returned
-*/
-int getCount() const override;
+int getCount() const {
+	return users.size();
+}
 
-/**
-@brief Add a new element
-@pre There is not any element with the given element's id within the @c IContainer object
-@post The new element is added to the @c IContainer object
-*/
-void addElement(ID newElementID, T newElement) override;
+void addElement(usr::ID newElementID, User newElement) {
+	users[newElementID] = newElement;
+}
 
 /* ===========================================================other functionality===========================================================*/
 
-/**
-@brief Removes a user from the set
-@pre A user with the given usr::ID exists within the set
-@post The user with the given usr::ID no longer exists within the set
-*/
-void removeUser(usr::usr::ID toRemoveUser);
+void removeUser(usr::ID id) {
+	assert(users.count(id));
+	users.erase(id);
+}

@@ -8,15 +8,26 @@
 
 #ifndef NO_DIAGRAM
 #include <string>
+#include <cassert>
+#include <iostream>
 #endif
 
 /**
 @namespace prb
 @brief namespace containing type definitions related to the Problem class
 */
+
 namespace prb {
 	using ID = std::string;
 	enum result { rejected = 0, accepted = 1};
+}
+
+std::istream& operator>>(std::istream & in, prb::result & result) {
+	int foo; std::cin >> foo;
+	assert(foo == 0 or foo == 1);
+	result = prb::result(foo);
+
+	return in;
 }
 
 /**

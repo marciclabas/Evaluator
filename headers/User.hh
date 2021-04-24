@@ -24,10 +24,10 @@ private:
 	crs::ID enrolledCourse;
 
 	class ProblemStats : public IPrintable {
-		prb::id problemID;
+		prb::ID problemID;
 		int submissionsCount;
 	public:
-		int getCount() const { returns submissionsCount; }
+		int getCount() const { return submissionsCount; }
 		friend std::ostream& operator<< (std::ostream & out, const ProblemStats & stats);
 	};
 
