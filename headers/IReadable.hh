@@ -24,14 +24,7 @@ public:
 	@pre true
 	@post The @c IReadable object is read from the stdin
 	*/
-	virtual void read() { std::cin >> *this; }
-
-	/**
-	@brief Read to the @c IReadable object from an input stream
-	@pre true
-	@post The @c IReadable object is read from the given input stream
-	*/
-	friend std::istream& operator>> (std::istream &in, IReadable &readable);
+	virtual void read() = 0;
 };
 
 #endif

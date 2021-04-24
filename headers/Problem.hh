@@ -28,15 +28,6 @@ public:
 	*/
 	int getRatio() const;
 
-	/*==============================================================Friend functions===============================================================*/
-
-	/**
-	@brief Print the @c IPrintable object to an output stream
-	@pre true
-	@post The @c IPrintable object is printed to the given output stream
-	*/
-	friend std::ostream& operator<< (std::ostream & out, const Problem & problem);
-
 	/* ===========================================================other functionality===========================================================*/
 
 	/**

@@ -28,22 +28,6 @@ public:
 	SessionRepository(ProblemCollection & problemCollection);
 	~SessionRepository();
 
-	/*==============================================================Friend functions===============================================================*/
-
-	/**
-	@brief Print the @c IPrintable object to an output stream
-	@pre true
-	@post The @c IPrintable object is printed to the given output stream
-	*/
-	friend std::ostream& operator<< (std::ostream & out, const SessionRepository & sessionRepository);
-
-	/**
-	@brief Read to the @c IReadable object from an input stream
-	@pre true
-	@post The @c IReadable object is read from the given input stream
-	*/
-	friend std::istream& operator>> (std::istream & in, SessionRepository & sessionRepository);
-
 	/* ========================================================IContainer overriden methods========================================================*/
 
 	/**

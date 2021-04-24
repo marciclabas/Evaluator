@@ -11,19 +11,16 @@ SessionRepository::~SessionRepository() {}
 
 /*==============================================================Friend functions===============================================================*/
 
-std::ostream& operator<< (std::ostream & out, const SessionRepository & sessionRepository) {
-	for(const std::pair<ses::ID, Session> & kv : sessionRepository.sessions) out << kv.first << ' ' << kv.second << endl;
-	return out;
+void SessionRepository::print() const {
+	for(const std::pair<ses::ID, Session> & kv : sessions) std::cout << kv.first << ' ' << kv.second << endl;
 }
 
-std::istream& operator>> (std::istream & in, SessionRepository & sessionRepository) {
+void SessionRepository::read() {
 	int Q; std::cin >> Q;
 	for(int i = 0; i < Q; i++) {
 			ses::ID newSessionID; std::cin >> newSessionID;
-			std::cin >> sessionRepository.sessions[newSessionID];
+			std::cin >> sessions[newSessionID];
 	}
-
-	return in;
 }
 
 /* ========================================================IContainer overriden methods========================================================*/

@@ -34,18 +34,18 @@ bool User::completedEnrolledCourse() const {
 /*==============================================================Friend functions===============================================================*/
 
 // number of total submissions, number of accepted problems, number of tried problems, enrolled course or '0' if not enrolled
-std::ostream& operator<< (std::ostream & out, const User & user) {
-	int acceptedProblems = user.solved.size();
+void User::print() const {
+	int acceptedProblems = solved.size();
 	int totalSubmissions = acceptedProblems;
 	int triedProblems = acceptedProblems;
 
-	for(const ProblemStats & stats : user.solvable)
+	for(const ProblemStats & stats : solvable)
 		if(stats.getCount()) {
 			totalSubmissions += stats.getCount();
 			triedProblems++;
 		}
 
-	out << totalSubmissions << ' ' << acceptedProblems << ' ' << triedProblems << isEnrolled ? enrollCourse : '0' << std::endl;
+	std::cout << totalSubmissions << ' ' << acceptedProblems << ' ' << triedProblems << isEnrolled ? enrollCourse : '0' << std::endl;
 }
 
 /* ===========================================================other functionality===========================================================*/

@@ -20,11 +20,10 @@ using std::cout;
 using std::endl;
 
 int main() {
-    ProblemCollection problemCollection;	
-    SessionRepository sessionRepository(problemCollection);
-    CourseSet courseSet(sessionRepository);
-    UserSet userSet(courseSet);
-	cin >> problemCollection >> sessionRepository >> courseSet >> userSet;
+    ProblemCollection problemCollection; problemCollection.read();
+    SessionRepository sessionRepository(problemCollection); sessionRepository.read();
+    CourseSet courseSet(sessionRepository); courseSet.read();
+    UserSet userSet(courseSet); userSet.read();
     
     InputCommand command;
     cin >> command;
@@ -46,17 +45,17 @@ int main() {
 			ses::ID newSessionID; cin >> newSessionID;
             if(sessionRepository.containsElement(newSessionID)) error(); 
             else {
-            	Session newSession; std::cin >> newSession;
+            	Session newSession; newSession.read();
             	sessionRepository.addElement(newSessionID, newSession);
             	cout << sessionRepository.getCount() << endl;
             }
         }
         
         else if(command == new_course) {
-			crs::ID newCourseID; cin >> newCourseID;
+			Course newCourse; cin >> newCourseID;
             if(courseSet.containsElement(newCourseID)) error(); 
             else {
-            	Course newCourse; std::cin >> newCourse;
+            	Course newCourse; newCourse.read();
             	if(newCourse.isValid()) {
             		courseSet.addElement(newCourseID, newCourse);
             		cout << courseSet.getCount() << endl;
@@ -139,7 +138,10 @@ int main() {
             usr::ID userID; cin >> userID;
 			
 			if(userSet.containsElement(userID))
-				for(const IPrintable & stats : userSet[userID].getSolvedStats()) cout << stats << endl;
+				for(const IPrintable & stats : userSet[userID].getSolvedStats()) {
+                    stats.print();
+                    cout << endl;
+                }
 			else error();
         }
        
@@ -147,7 +149,10 @@ int main() {
 			usr::ID userID; cin >> userID;
 			
 			if(userSet.containsElement(userID))
-				for(const IPrintable & stats : userSet[userID].getSolvableStats()) cout << stats << endl;
+				for(const IPrintable & stats : userSet[userID].getSolvableStats()) {
+                    stats.print();
+                    cout << endl;
+                }
 			else error();
         }
         /*
@@ -174,33 +179,40 @@ int main() {
 		 *  LISTS AND WRITES
 		 */
         else if(command == list_problems) {
-            cout << problemCollection << endl;
+            problemCollection.print();
+            cout << endl;
         }
         else if(command == write_problem) {
 			prb::ID problemID; cin >> problemID;
-			cout << problemCollection[problemID] << endl;
+			problemCollection[problemID].print();
+            cout << endl;
 		}
         else if(command == list_sessions) {
-            cout << sessionRepository << endl;
+            sessionRepository.print();
+            cout << endl;
         }
         else if(command == write_session) {
 			ses::ID sessionID; cin >> sessionID;
-			cout << sessionRepository[sessionID] << endl;
+			sessionRepository[sessionID].print();
+            cout << endl;
 		}
         else if(command == list_courses) {
-            cout << courseSet << endl;
+            courseSet.print();
+            cout << endl;
         }
         else if(command == write_course) {
 			crs::ID courseID; cin >> courseID;
-			cout << courseSet[courseID] << endl;
+			courseSet[courseID].print();
+            cout << endl;
 		}
         else if(command == list_users) {
-			cout << userSet << endl;            
+			userSet.print();
+            cout << endl;    
         }
         else if(command == write_user) {
 			usr::ID userID; cin >> userID;
-			cout << userSet[userID] << endl;
-		}
+			userSet[userID].print();
+            cout << endl;
         else assert(false);
         
         cin >> command;

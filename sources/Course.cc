@@ -30,21 +30,17 @@ bool Course::getSessionByProblem(prb::ID problemID, ses::ID & sessionID) const {
 	return false;
 }
 
-/*==============================================================Friend functions===============================================================*/
-
-std::ostream& operator<< (std::ostream & out, const Course & course) {
-	out << course.totalEnrolled << course.currentEnrolled;
-	for(ses::ID sessionID : course.sessions) out << sessionID << std::endl;
-	return out;
+void Course::print() const {
+	std::cout << course.totalEnrolled << course.currentEnrolled << std::endl;
+	for(ses::ID sessionID : course.sessions) std::cout << sessionID << std::endl;
 }
 
-std::istream& operator>> (std::istream & in, Course & course) {
-	int sessionCount; in >> sessionCount;
+void Course::read() {
+	int sessionCount; std::cin >> sessionCount;
 	for(int i = 0; i < sessionCount; i++) {
-		ses::ID sessionID; in >> sessionID;
-		course.sessions.insert(course.sessions.end(), sessionID);
+		ses::ID sessionID; std::cin >> sessionID;
+		sessions.insert(sessions.end(), sessionID);
 	}
-	return in;
 }
 
 

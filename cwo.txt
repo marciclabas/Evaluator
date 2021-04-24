@@ -1,0 +1,1 @@
+REMOVE ALL REST OF operator<< and operator>> and turn them into print() and void(), respectively

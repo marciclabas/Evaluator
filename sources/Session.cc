@@ -11,16 +11,13 @@ void Session::setProblemCollection(const ProblemCollection & problemCollection) 
 	Session::problemCollection = problemCollection;
 }
 
-/*==============================================================Friend functions===============================================================*/
-
 std::ostream& operator<< (std::ostream & out, const BinTree<prb::ID> & tree) {
 	out << tree.left() << tree.right() << tree.value();
 	return out;
 }
 
-std::ostream& operator<< (std::ostream & out, const Session & session) {
-	out << session.count << ' ' << session.problems;
-	return out;
+void Session::print() const {
+	std::cout << session.count << ' ' << session.problems;
 }
 
 std::istream& operator>> (std::istream & in, BinTree<prb::ID> & tree) {
@@ -31,9 +28,8 @@ std::istream& operator>> (std::istream & in, BinTree<prb::ID> & tree) {
 	return in;
 }
 
-std::istream& operator>> (std::istream & in, Session & session) {
-	in >> session.problems;
-	return in;
+void Session::read() {
+	std::cin >> session.problems;
 }
 
 /*===========================================================other functionality===========================================================*/

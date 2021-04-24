@@ -9,9 +9,8 @@ Problem::~Problem() {}
 
 /*==============================================================Friend functions===============================================================*/
 
-std::ostream& operator<< (std::ostream & out, const Problem & problem) {
-	out << problem.t << ' ' << problem.e << ' ' << problem.r;
-	return out;
+void Problem::print() const {
+	std::cout << problem.t << ' ' << problem.e << ' ' << problem.r;
 }
 
 /* ===========================================================other functionality===========================================================*/

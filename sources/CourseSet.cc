@@ -11,14 +11,14 @@ CourseSet::~CourseSet() {}
 
 /*==============================================================Friend functions===============================================================*/
 
-std::ostream& operator<< (std::ostream & out, const CourseSet & courseSet) {
-	for(const std::pair<crs:ID, Course> & kv : sortedProblems) out << kv.first << ' ' << kv.second << std::endl;
+void CourseSet::print() const {
+	for(const std::pair<crs:ID, Course> & kv : sortedProblems) std::cout << kv.first << ' ' << kv.second << std::endl;
 }
 
-std::istream& operator>> (std::istream & in, CourseSet & courseSet) {
+void CourseSet::read() {
 	int N; std::cin >> N;
-	courseSet.courses = std::vector<Course>(N);
-	for(Course & course : courseSet.courses) std::cin >> course;
+	courses = std::vector<Course>(N);
+	for(Course & course : courses) std::cin >> course;
 }
 
 /* ========================================================IContainer overriden methods========================================================*/

@@ -8,17 +8,15 @@ UserSet::UserSet(const CourseSet& courseSet): courses() {
 UserSet~UserSet() {}
 
 /*==============================================================Friend functions===============================================================*/
-
-friend std::ostream& operator<< (std::ostream & out, const UserSet & userSet) {
-	for(const std::pair<ses::ID, Users> & kv : userSet.users) out << kv.first << ' ' << kv.second << endl;
-	return out;
+void UserSet::print() const {
+	for(const std::pair<ses::ID, Users> & kv : users) std::cout << kv.first << ' ' << kv.second << endl;
 }
 
-friend std::istream& operator>> (std::istream & in, UserSet & userSet) {
+void UserSet::read() {
 	int M; std::cin >> M;
 	for(int i = 0; i < M; i++) {
 			usr::ID newUserID; std::cin >> newUserID;
-			std::cin >> userSet.users[newUserID];
+			std::cin >> users[newUserID];
 	}
 }
 
