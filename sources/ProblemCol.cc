@@ -5,7 +5,7 @@
 #include <cassert>
 
 /* =========================================================constructors & destructors=========================================================*/
-ProblemCollection::ProblemCollection(): problems() {}
+ProblemCollection::ProblemCollection(): IContainer(MapStrategy()) {}
 
 ProblemCollection::~ProblemCollection() {}
 
@@ -45,23 +45,4 @@ void ProblemCollection::read() {
 		prb::ID newProblemID; std::cin >> newProblemID;
 		problemCollection.addElement(newProblemID);
 	}
-}
-
-/* ========================================================IContainer overriden methods========================================================*/
-
-bool ProblemCollection::containsElement(prb::ID id) const {
-	return problems.count(id);
-}
-
-Problem & ProblemCollection::operator[](prb::ID id) {
-	assert(problems.count(id));
-	return problems[id];
-}
-
-int ProblemCollection::getCount() const {
-	return problems.size();
-}
-
-void void addElement(prb::ID newElementID, Problem newElement) override; {
-	problems[newElementID] = newElement;
 }

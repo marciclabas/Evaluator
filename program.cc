@@ -79,7 +79,7 @@ int main() {
 			usr::ID toRemoveUserID; cin >> toRemoveUserID;
             if(not userSet.containsElement(toRemoveUserID)) error(); 
             else {
-            	userSet.removeUser(toRemoveUserID);
+            	userSet.removeElement(toRemoveUserID);
             	cout << userSet.getCount() << endl;
             }
         }

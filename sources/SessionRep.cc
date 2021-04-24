@@ -5,6 +5,7 @@
 /* =========================================================constructors & destructors=========================================================*/
 SessionRepository::SessionRepository(ProblemCollection & problemCollection): sessions() {
 	Session::setProblemCollection(problemCollection);
+	container = MapStrategy();
 }
 
 SessionRepository::~SessionRepository() {}
@@ -21,23 +22,4 @@ void SessionRepository::read() {
 			ses::ID newSessionID; std::cin >> newSessionID;
 			std::cin >> sessions[newSessionID];
 	}
-}
-
-/* ========================================================IContainer overriden methods========================================================*/
-
-bool SessionRepository::containsElement(ses::ID id) const {
-	return sessions.count(id);
-}
-
-Session & SessionRepository::operator[](ses::ID id) {
-	assert(sessions.count(id));
-	return sessions[id];
-}
-
-int SessionRepository::getCount() const {
-	return sessions.size();
-}
-
-void addElement(ses::ID newElementID, Session newElement) {
-	sessions[newElementID] = newElement;
 }

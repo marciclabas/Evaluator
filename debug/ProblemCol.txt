@@ -1,0 +1,473 @@
+In file included from ./headers/ProblemCol.hh:12,
+                 from ./sources/ProblemCol.cc:1:
+./headers/IContainer.hh: In instantiation of ‘class IContainer<std::__cxx11::basic_string<char>, int>’:
+./headers/ProblemCol.hh:23:71:   required from here
+./headers/IContainer.hh:11:2: error: invalid abstract parameter type ‘ContainerStrategy<std::__cxx11::basic_string<char>, int>’
+   11 |  IContainer(ContainerStrategy<ID, T> container): container(container) {}
+      |  ^~~~~~~~~~
+In file included from ./headers/IContainer.hh:4,
+                 from ./headers/ProblemCol.hh:12,
+                 from ./sources/ProblemCol.cc:1:
+./headers/ContainerStrategy.hh:5:7: note:   because the following virtual functions are pure within ‘ContainerStrategy<std::__cxx11::basic_string<char>, int>’:
+    5 | class ContainerStrategy {
+      |       ^~~~~~~~~~~~~~~~~
+In file included from ./headers/IContainer.hh:4,
+                 from ./headers/ProblemCol.hh:12,
+                 from ./sources/ProblemCol.cc:1:
+./headers/ContainerStrategy.hh:12:15: note:     ‘bool ContainerStrategy<ID, T>::containsElement(ID) const [with ID = std::__cxx11::basic_string<char>; T = int]’
+   12 |  virtual bool containsElement(ID id) const = 0;
+      |               ^~~~~~~~~~~~~~~
+./headers/ContainerStrategy.hh:19:14: note:     ‘T& ContainerStrategy<ID, T>::operator[](ID) [with ID = std::__cxx11::basic_string<char>; T = int]’
+   19 |  virtual T & operator[](ID id) = 0;
+      |              ^~~~~~~~
+./headers/ContainerStrategy.hh:26:14: note:     ‘int ContainerStrategy<ID, T>::getCount() const [with ID = std::__cxx11::basic_string<char>; T = int]’
+   26 |  virtual int getCount() const = 0;
+      |              ^~~~~~~~
+./headers/ContainerStrategy.hh:33:15: note:     ‘void ContainerStrategy<ID, T>::addElement(ID, T) [with ID = std::__cxx11::basic_string<char>; T = int]’
+   33 |  virtual void addElement(ID newElementID, T newElement) = 0;
+      |               ^~~~~~~~~~
+In file included from ./headers/ProblemCol.hh:12,
+                 from ./sources/ProblemCol.cc:1:
+./headers/IContainer.hh:9:26: error: cannot declare field ‘IContainer<std::__cxx11::basic_string<char>, int>::container’ to be of abstract type ‘ContainerStrategy<std::__cxx11::basic_string<char>, int>’
+    9 |  ContainerStrategy<ID,T> container;
+      |                          ^~~~~~~~~
+./sources/ProblemCol.cc: In constructor ‘ProblemCollection::ProblemCollection()’:
+./sources/ProblemCol.cc:8:63: error: missing template arguments before ‘(’ token
+    8 | ProblemCollection::ProblemCollection(): IContainer(MapStrategy()) {}
+      |                                                               ^
+./sources/ProblemCol.cc: In member function ‘virtual void ProblemCollection::print() const’:
+./sources/ProblemCol.cc:19:39: error: ‘problemCollection’ was not declared in this scope; did you mean ‘ProblemCollection’?
+   19 |  std::vector<keyValue> sortedProblems(problemCollection.problems.size());
+      |                                       ^~~~~~~~~~~~~~~~~
+      |                                       ProblemCollection
+In file included from /usr/include/c++/10/bits/stl_algobase.h:64,
+                 from /usr/include/c++/10/bits/char_traits.h:39,
+                 from /usr/include/c++/10/string:40,
+                 from ./headers/Namespaces.hh:10,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from ./sources/ProblemCol.cc:1:
+/usr/include/c++/10/bits/stl_pair.h: In instantiation of ‘struct std::pair<std::__cxx11::basic_string<char>, Problem>’:
+./sources/ProblemCol.cc:25:23:   required from here
+/usr/include/c++/10/bits/stl_pair.h:218:11: error: cannot declare field ‘std::pair<std::__cxx11::basic_string<char>, Problem>::second’ to be of abstract type ‘Problem’
+  218 |       _T2 second;                ///< The second member
+      |           ^~~~~~
+In file included from ./headers/ProblemCol.hh:9,
+                 from ./sources/ProblemCol.cc:1:
+./headers/Problem.hh:15:7: note:   because the following virtual functions are pure within ‘Problem’:
+   15 | class Problem : public IPrintable {
+      |       ^~~~~~~
+In file included from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from ./sources/ProblemCol.cc:1:
+./headers/IPrintable.hh:27:15: note:     ‘virtual void IPrintable::print() const’
+   27 |  virtual void print() const = 0;
+      |               ^~~~~
+./sources/ProblemCol.cc:39:73: error: no match for ‘operator<<’ (operand types are ‘std::basic_ostream<char>’ and ‘const Problem’)
+   39 |  for(const keyValue & kv : sortedProblems) std::cout << kv.first << ' ' << kv.second << std::endl;
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^~ ~~~~~~~~~
+      |                                                                  |            |
+      |                                                                  |            const Problem
+      |                                                                  std::basic_ostream<char>
+In file included from /usr/include/c++/10/iostream:39,
+                 from ./headers/Namespaces.hh:12,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from ./sources/ProblemCol.cc:1:
+/usr/include/c++/10/ostream:108:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  108 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:108:36: note:   no known conversion for argument 1 from ‘const Problem’ to ‘std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&)’ {aka ‘std::basic_ostream<char>& (*)(std::basic_ostream<char>&)’}
+  108 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      |                  ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/ostream:117:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]’
+  117 |       operator<<(__ios_type& (*__pf)(__ios_type&))
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:117:32: note:   no known conversion for argument 1 from ‘const Problem’ to ‘std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&)’ {aka ‘std::basic_ios<char>& (*)(std::basic_ios<char>&)’}
+  117 |       operator<<(__ios_type& (*__pf)(__ios_type&))
+      |                  ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/ostream:127:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  127 |       operator<<(ios_base& (*__pf) (ios_base&))
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:127:30: note:   no known conversion for argument 1 from ‘const Problem’ to ‘std::ios_base& (*)(std::ios_base&)’
+  127 |       operator<<(ios_base& (*__pf) (ios_base&))
+      |                  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+/usr/include/c++/10/ostream:166:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  166 |       operator<<(long __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:166:23: note:   no known conversion for argument 1 from ‘const Problem’ to ‘long int’
+  166 |       operator<<(long __n)
+      |                  ~~~~~^~~
+/usr/include/c++/10/ostream:170:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  170 |       operator<<(unsigned long __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:170:32: note:   no known conversion for argument 1 from ‘const Problem’ to ‘long unsigned int’
+  170 |       operator<<(unsigned long __n)
+      |                  ~~~~~~~~~~~~~~^~~
+/usr/include/c++/10/ostream:174:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  174 |       operator<<(bool __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:174:23: note:   no known conversion for argument 1 from ‘const Problem’ to ‘bool’
+  174 |       operator<<(bool __n)
+      |                  ~~~~~^~~
+In file included from /usr/include/c++/10/ostream:784,
+                 from /usr/include/c++/10/iostream:39,
+                 from ./headers/Namespaces.hh:12,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from ./sources/ProblemCol.cc:1:
+/usr/include/c++/10/bits/ostream.tcc:91:5: note: candidate: ‘std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]’
+   91 |     basic_ostream<_CharT, _Traits>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/bits/ostream.tcc:92:22: note:   no known conversion for argument 1 from ‘const Problem’ to ‘short int’
+   92 |     operator<<(short __n)
+      |                ~~~~~~^~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from ./headers/Namespaces.hh:12,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from ./sources/ProblemCol.cc:1:
+/usr/include/c++/10/ostream:181:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  181 |       operator<<(unsigned short __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:181:33: note:   no known conversion for argument 1 from ‘const Problem’ to ‘short unsigned int’
+  181 |       operator<<(unsigned short __n)
+      |                  ~~~~~~~~~~~~~~~^~~
+In file included from /usr/include/c++/10/ostream:784,
+                 from /usr/include/c++/10/iostream:39,
+                 from ./headers/Namespaces.hh:12,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from ./sources/ProblemCol.cc:1:
+/usr/include/c++/10/bits/ostream.tcc:105:5: note: candidate: ‘std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]’
+  105 |     basic_ostream<_CharT, _Traits>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/bits/ostream.tcc:106:20: note:   no known conversion for argument 1 from ‘const Problem’ to ‘int’
+  106 |     operator<<(int __n)
+      |                ~~~~^~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from ./headers/Namespaces.hh:12,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from ./sources/ProblemCol.cc:1:
+/usr/include/c++/10/ostream:192:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  192 |       operator<<(unsigned int __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:192:31: note:   no known conversion for argument 1 from ‘const Problem’ to ‘unsigned int’
+  192 |       operator<<(unsigned int __n)
+      |                  ~~~~~~~~~~~~~^~~
+/usr/include/c++/10/ostream:201:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  201 |       operator<<(long long __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:201:28: note:   no known conversion for argument 1 from ‘const Problem’ to ‘long long int’
+  201 |       operator<<(long long __n)
+      |                  ~~~~~~~~~~^~~
+/usr/include/c++/10/ostream:205:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  205 |       operator<<(unsigned long long __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:205:37: note:   no known conversion for argument 1 from ‘const Problem’ to ‘long long unsigned int’
+  205 |       operator<<(unsigned long long __n)
+      |                  ~~~~~~~~~~~~~~~~~~~^~~
+/usr/include/c++/10/ostream:220:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  220 |       operator<<(double __f)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:220:25: note:   no known conversion for argument 1 from ‘const Problem’ to ‘double’
+  220 |       operator<<(double __f)
+      |                  ~~~~~~~^~~
+/usr/include/c++/10/ostream:224:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  224 |       operator<<(float __f)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:224:24: note:   no known conversion for argument 1 from ‘const Problem’ to ‘float’
+  224 |       operator<<(float __f)
+      |                  ~~~~~~^~~
+/usr/include/c++/10/ostream:232:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  232 |       operator<<(long double __f)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:232:30: note:   no known conversion for argument 1 from ‘const Problem’ to ‘long double’
+  232 |       operator<<(long double __f)
+      |                  ~~~~~~~~~~~~^~~
+/usr/include/c++/10/ostream:245:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  245 |       operator<<(const void* __p)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:245:30: note:   no known conversion for argument 1 from ‘const Problem’ to ‘const void*’
+  245 |       operator<<(const void* __p)
+      |                  ~~~~~~~~~~~~^~~
+In file included from /usr/include/c++/10/ostream:784,
+                 from /usr/include/c++/10/iostream:39,
+                 from ./headers/Namespaces.hh:12,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from ./sources/ProblemCol.cc:1:
+/usr/include/c++/10/bits/ostream.tcc:119:5: note: candidate: ‘std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]’
+  119 |     basic_ostream<_CharT, _Traits>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/bits/ostream.tcc:120:34: note:   no known conversion for argument 1 from ‘const Problem’ to ‘std::basic_ostream<char>::__streambuf_type*’ {aka ‘std::basic_streambuf<char>*’}
+  120 |     operator<<(__streambuf_type* __sbin)
+      |                ~~~~~~~~~~~~~~~~~~^~~~~~
+In file included from /usr/include/c++/10/string:55,
+                 from ./headers/Namespaces.hh:10,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from ./sources/ProblemCol.cc:1:
+/usr/include/c++/10/bits/basic_string.h:6468:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)’
+ 6468 |     operator<<(basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/10/bits/basic_string.h:6468:5: note:   template argument deduction/substitution failed:
+./sources/ProblemCol.cc:39:79: note:   ‘const Problem’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+   39 |  for(const keyValue & kv : sortedProblems) std::cout << kv.first << ' ' << kv.second << std::endl;
+      |                                                                               ^~~~~~
+In file included from /usr/include/c++/10/bits/ios_base.h:46,
+                 from /usr/include/c++/10/ios:42,
+                 from /usr/include/c++/10/ostream:38,
+                 from /usr/include/c++/10/iostream:39,
+                 from ./headers/Namespaces.hh:12,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from ./sources/ProblemCol.cc:1:
+/usr/include/c++/10/system_error:262:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::error_code&)’
+  262 |     operator<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
+      |     ^~~~~~~~
+/usr/include/c++/10/system_error:262:5: note:   template argument deduction/substitution failed:
+./sources/ProblemCol.cc:39:79: note:   cannot convert ‘kv.std::pair<std::__cxx11::basic_string<char>, Problem>::second’ (type ‘const Problem’) to type ‘const std::error_code&’
+   39 |  for(const keyValue & kv : sortedProblems) std::cout << kv.first << ' ' << kv.second << std::endl;
+      |                                                                            ~~~^~~~~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from ./headers/Namespaces.hh:12,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from ./sources/ProblemCol.cc:1:
+/usr/include/c++/10/ostream:506:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)’
+  506 |     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+      |     ^~~~~~~~
+/usr/include/c++/10/ostream:506:5: note:   template argument deduction/substitution failed:
+./sources/ProblemCol.cc:39:79: note:   deduced conflicting types for parameter ‘_CharT’ (‘char’ and ‘Problem’)
+   39 |  for(const keyValue & kv : sortedProblems) std::cout << kv.first << ' ' << kv.second << std::endl;
+      |                                                                               ^~~~~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from ./headers/Namespaces.hh:12,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from ./sources/ProblemCol.cc:1:
+/usr/include/c++/10/ostream:511:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)’
+  511 |     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+      |     ^~~~~~~~
+/usr/include/c++/10/ostream:511:5: note:   template argument deduction/substitution failed:
+./sources/ProblemCol.cc:39:79: note:   cannot convert ‘kv.std::pair<std::__cxx11::basic_string<char>, Problem>::second’ (type ‘const Problem’) to type ‘char’
+   39 |  for(const keyValue & kv : sortedProblems) std::cout << kv.first << ' ' << kv.second << std::endl;
+      |                                                                            ~~~^~~~~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from ./headers/Namespaces.hh:12,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from ./sources/ProblemCol.cc:1:
+/usr/include/c++/10/ostream:517:5: note: candidate: ‘template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)’
+  517 |     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+      |     ^~~~~~~~
+/usr/include/c++/10/ostream:517:5: note:   template argument deduction/substitution failed:
+./sources/ProblemCol.cc:39:79: note:   cannot convert ‘kv.std::pair<std::__cxx11::basic_string<char>, Problem>::second’ (type ‘const Problem’) to type ‘char’
+   39 |  for(const keyValue & kv : sortedProblems) std::cout << kv.first << ' ' << kv.second << std::endl;
+      |                                                                            ~~~^~~~~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from ./headers/Namespaces.hh:12,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from ./sources/ProblemCol.cc:1:
+/usr/include/c++/10/ostream:523:5: note: candidate: ‘template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)’
+  523 |     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+      |     ^~~~~~~~
+/usr/include/c++/10/ostream:523:5: note:   template argument deduction/substitution failed:
+./sources/ProblemCol.cc:39:79: note:   cannot convert ‘kv.std::pair<std::__cxx11::basic_string<char>, Problem>::second’ (type ‘const Problem’) to type ‘signed char’
+   39 |  for(const keyValue & kv : sortedProblems) std::cout << kv.first << ' ' << kv.second << std::endl;
+      |                                                                            ~~~^~~~~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from ./headers/Namespaces.hh:12,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from ./sources/ProblemCol.cc:1:
+/usr/include/c++/10/ostream:528:5: note: candidate: ‘template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)’
+  528 |     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+      |     ^~~~~~~~
+/usr/include/c++/10/ostream:528:5: note:   template argument deduction/substitution failed:
+./sources/ProblemCol.cc:39:79: note:   cannot convert ‘kv.std::pair<std::__cxx11::basic_string<char>, Problem>::second’ (type ‘const Problem’) to type ‘unsigned char’
+   39 |  for(const keyValue & kv : sortedProblems) std::cout << kv.first << ' ' << kv.second << std::endl;
+      |                                                                            ~~~^~~~~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from ./headers/Namespaces.hh:12,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from ./sources/ProblemCol.cc:1:
+/usr/include/c++/10/ostream:589:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)’
+  589 |     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+      |     ^~~~~~~~
+/usr/include/c++/10/ostream:589:5: note:   template argument deduction/substitution failed:
+./sources/ProblemCol.cc:39:79: note:   mismatched types ‘const _CharT*’ and ‘Problem’
+   39 |  for(const keyValue & kv : sortedProblems) std::cout << kv.first << ' ' << kv.second << std::endl;
+      |                                                                               ^~~~~~
+In file included from /usr/include/c++/10/ostream:784,
+                 from /usr/include/c++/10/iostream:39,
+                 from ./headers/Namespaces.hh:12,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from ./sources/ProblemCol.cc:1:
+/usr/include/c++/10/bits/ostream.tcc:321:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)’
+  321 |     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+      |     ^~~~~~~~
+/usr/include/c++/10/bits/ostream.tcc:321:5: note:   template argument deduction/substitution failed:
+./sources/ProblemCol.cc:39:79: note:   cannot convert ‘kv.std::pair<std::__cxx11::basic_string<char>, Problem>::second’ (type ‘const Problem’) to type ‘const char*’
+   39 |  for(const keyValue & kv : sortedProblems) std::cout << kv.first << ' ' << kv.second << std::endl;
+      |                                                                            ~~~^~~~~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from ./headers/Namespaces.hh:12,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from ./sources/ProblemCol.cc:1:
+/usr/include/c++/10/ostream:606:5: note: candidate: ‘template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)’
+  606 |     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+      |     ^~~~~~~~
+/usr/include/c++/10/ostream:606:5: note:   template argument deduction/substitution failed:
+./sources/ProblemCol.cc:39:79: note:   cannot convert ‘kv.std::pair<std::__cxx11::basic_string<char>, Problem>::second’ (type ‘const Problem’) to type ‘const char*’
+   39 |  for(const keyValue & kv : sortedProblems) std::cout << kv.first << ' ' << kv.second << std::endl;
+      |                                                                            ~~~^~~~~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from ./headers/Namespaces.hh:12,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from ./sources/ProblemCol.cc:1:
+/usr/include/c++/10/ostream:619:5: note: candidate: ‘template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)’
+  619 |     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+      |     ^~~~~~~~
+/usr/include/c++/10/ostream:619:5: note:   template argument deduction/substitution failed:
+./sources/ProblemCol.cc:39:79: note:   cannot convert ‘kv.std::pair<std::__cxx11::basic_string<char>, Problem>::second’ (type ‘const Problem’) to type ‘const signed char*’
+   39 |  for(const keyValue & kv : sortedProblems) std::cout << kv.first << ' ' << kv.second << std::endl;
+      |                                                                            ~~~^~~~~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from ./headers/Namespaces.hh:12,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from ./sources/ProblemCol.cc:1:
+/usr/include/c++/10/ostream:624:5: note: candidate: ‘template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)’
+  624 |     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+      |     ^~~~~~~~
+/usr/include/c++/10/ostream:624:5: note:   template argument deduction/substitution failed:
+./sources/ProblemCol.cc:39:79: note:   cannot convert ‘kv.std::pair<std::__cxx11::basic_string<char>, Problem>::second’ (type ‘const Problem’) to type ‘const unsigned char*’
+   39 |  for(const keyValue & kv : sortedProblems) std::cout << kv.first << ' ' << kv.second << std::endl;
+      |                                                                            ~~~^~~~~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from ./headers/Namespaces.hh:12,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from ./sources/ProblemCol.cc:1:
+/usr/include/c++/10/ostream:773:5: note: candidate: ‘template<class _Ostream, class _Tp> typename std::enable_if<std::__and_<std::__not_<std::is_lvalue_reference<_Tp> >, std::__is_convertible_to_basic_ostream<_Ostream>, std::__is_insertable<typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type, const _Tp&, void> >::value, typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type>::type std::operator<<(_Ostream&&, const _Tp&)’
+  773 |     operator<<(_Ostream&& __os, const _Tp& __x)
+      |     ^~~~~~~~
+/usr/include/c++/10/ostream:773:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/10/ostream: In substitution of ‘template<class _Ostream, class _Tp> typename std::enable_if<std::__and_<std::__not_<std::is_lvalue_reference<_Tp> >, std::__is_convertible_to_basic_ostream<_Ostream>, std::__is_insertable<typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type, const _Tp&, void> >::value, typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type>::type std::operator<<(_Ostream&&, const _Tp&) [with _Ostream = std::basic_ostream<char>&; _Tp = Problem]’:
+./sources/ProblemCol.cc:39:79:   required from here
+/usr/include/c++/10/ostream:773:5: error: no type named ‘type’ in ‘struct std::enable_if<false, std::basic_ostream<char>&>’
+./sources/ProblemCol.cc: In member function ‘virtual void ProblemCollection::read()’:
+./sources/ProblemCol.cc:46:3: error: ‘problemCollection’ was not declared in this scope; did you mean ‘ProblemCollection’?
+   46 |   problemCollection.addElement(newProblemID);
+      |   ^~~~~~~~~~~~~~~~~
+      |   ProblemCollection
+In file included from /usr/include/c++/10/bits/stl_algobase.h:64,
+                 from /usr/include/c++/10/bits/char_traits.h:39,
+                 from /usr/include/c++/10/string:40,
+                 from ./headers/Namespaces.hh:10,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from ./sources/ProblemCol.cc:1:
+/usr/include/c++/10/bits/stl_pair.h: In instantiation of ‘void std::pair<_T1, _T2>::swap(std::pair<_T1, _T2>&) [with _T1 = std::__cxx11::basic_string<char>; _T2 = Problem]’:
+/usr/include/c++/10/bits/stl_pair.h:535:15:   required from ‘void std::swap(std::pair<_T1, _T2>&, std::pair<_T1, _T2>&) [with _T1 = std::__cxx11::basic_string<char>; _T2 = Problem]’
+/usr/include/c++/10/bits/stl_algobase.h:182:11:   required from ‘void std::iter_swap(_ForwardIterator1, _ForwardIterator2) [with _ForwardIterator1 = __gnu_debug::_Safe_iterator<__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char>, Problem>*, std::__cxx1998::vector<std::pair<std::__cxx11::basic_string<char>, Problem>, std::allocator<std::pair<std::__cxx11::basic_string<char>, Problem> > > >, std::__debug::vector<std::pair<std::__cxx11::basic_string<char>, Problem> >, std::random_access_iterator_tag>; _ForwardIterator2 = __gnu_debug::_Safe_iterator<__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char>, Problem>*, std::__cxx1998::vector<std::pair<std::__cxx11::basic_string<char>, Problem>, std::allocator<std::pair<std::__cxx11::basic_string<char>, Problem> > > >, std::__debug::vector<std::pair<std::__cxx11::basic_string<char>, Problem> >, std::random_access_iterator_tag>]’
+/usr/include/c++/10/bits/stl_algo.h:85:20:   required from ‘void std::__move_median_to_first(_Iterator, _Iterator, _Iterator, _Iterator, _Compare) [with _Iterator = __gnu_debug::_Safe_iterator<__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char>, Problem>*, std::__cxx1998::vector<std::pair<std::__cxx11::basic_string<char>, Problem>, std::allocator<std::pair<std::__cxx11::basic_string<char>, Problem> > > >, std::__debug::vector<std::pair<std::__cxx11::basic_string<char>, Problem> >, std::random_access_iterator_tag>; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<ProblemCollection::print() const::<lambda(const keyValue&, const keyValue&)> >]’
+/usr/include/c++/10/bits/stl_algo.h:1924:34:   required from ‘_RandomAccessIterator std::__unguarded_partition_pivot(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_debug::_Safe_iterator<__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char>, Problem>*, std::__cxx1998::vector<std::pair<std::__cxx11::basic_string<char>, Problem>, std::allocator<std::pair<std::__cxx11::basic_string<char>, Problem> > > >, std::__debug::vector<std::pair<std::__cxx11::basic_string<char>, Problem> >, std::random_access_iterator_tag>; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<ProblemCollection::print() const::<lambda(const keyValue&, const keyValue&)> >]’
+/usr/include/c++/10/bits/stl_algo.h:1958:38:   required from ‘void std::__introsort_loop(_RandomAccessIterator, _RandomAccessIterator, _Size, _Compare) [with _RandomAccessIterator = __gnu_debug::_Safe_iterator<__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char>, Problem>*, std::__cxx1998::vector<std::pair<std::__cxx11::basic_string<char>, Problem>, std::allocator<std::pair<std::__cxx11::basic_string<char>, Problem> > > >, std::__debug::vector<std::pair<std::__cxx11::basic_string<char>, Problem> >, std::random_access_iterator_tag>; _Size = long int; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<ProblemCollection::print() const::<lambda(const keyValue&, const keyValue&)> >]’
+/usr/include/c++/10/bits/stl_algo.h:1974:25:   required from ‘void std::__sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_debug::_Safe_iterator<__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char>, Problem>*, std::__cxx1998::vector<std::pair<std::__cxx11::basic_string<char>, Problem>, std::allocator<std::pair<std::__cxx11::basic_string<char>, Problem> > > >, std::__debug::vector<std::pair<std::__cxx11::basic_string<char>, Problem> >, std::random_access_iterator_tag>; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<ProblemCollection::print() const::<lambda(const keyValue&, const keyValue&)> >]’
+/usr/include/c++/10/bits/stl_algo.h:4894:18:   required from ‘void std::sort(_RAIter, _RAIter, _Compare) [with _RAIter = __gnu_debug::_Safe_iterator<__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char>, Problem>*, std::__cxx1998::vector<std::pair<std::__cxx11::basic_string<char>, Problem>, std::allocator<std::pair<std::__cxx11::basic_string<char>, Problem> > > >, std::__debug::vector<std::pair<std::__cxx11::basic_string<char>, Problem> >, std::random_access_iterator_tag>; _Compare = ProblemCollection::print() const::<lambda(const keyValue&, const keyValue&)>]’
+./sources/ProblemCol.cc:36:2:   required from here
+/usr/include/c++/10/bits/stl_pair.h:445:6: error: no matching function for call to ‘swap(Problem&, Problem&)’
+  445 |  swap(second, __p.second);
+      |  ~~~~^~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/10/bits/stl_pair.h:59,
+                 from /usr/include/c++/10/bits/stl_algobase.h:64,
+                 from /usr/include/c++/10/bits/char_traits.h:39,
+                 from /usr/include/c++/10/string:40,
+                 from ./headers/Namespaces.hh:10,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from ./sources/ProblemCol.cc:1:
+/usr/include/c++/10/bits/move.h:213:5: note: candidate: ‘template<class _Tp, long unsigned int _Nm> std::__enable_if_t<std::__is_swappable<_Tp>::value> std::swap(_Tp (&)[_Nm], _Tp (&)[_Nm])’
+  213 |     swap(_Tp (&__a)[_Nm], _Tp (&__b)[_Nm])
+      |     ^~~~
+/usr/include/c++/10/bits/move.h:213:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/c++/10/bits/stl_algobase.h:64,
+                 from /usr/include/c++/10/bits/char_traits.h:39,
+                 from /usr/include/c++/10/string:40,
+                 from ./headers/Namespaces.hh:10,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from ./sources/ProblemCol.cc:1:
+/usr/include/c++/10/bits/stl_pair.h:445:6: note:   mismatched types ‘_Tp [_Nm]’ and ‘Problem’
+  445 |  swap(second, __p.second);
+      |  ~~~~^~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/10/bits/stl_pair.h:59,
+                 from /usr/include/c++/10/bits/stl_algobase.h:64,
+                 from /usr/include/c++/10/bits/char_traits.h:39,
+                 from /usr/include/c++/10/string:40,
+                 from ./headers/Namespaces.hh:10,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from ./sources/ProblemCol.cc:1:
+/usr/include/c++/10/bits/move.h:189:5: note: candidate: ‘template<class _Tp> std::_Require<std::__not_<std::__is_tuple_like<_Tp> >, std::is_move_constructible<_Tp>, std::is_move_assignable<_Tp> > std::swap(_Tp&, _Tp&)’
+  189 |     swap(_Tp& __a, _Tp& __b)
+      |     ^~~~
+/usr/include/c++/10/bits/move.h:189:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/c++/10/bits/move.h:57,
+                 from /usr/include/c++/10/bits/stl_pair.h:59,
+                 from /usr/include/c++/10/bits/stl_algobase.h:64,
+                 from /usr/include/c++/10/bits/char_traits.h:39,
+                 from /usr/include/c++/10/string:40,
+                 from ./headers/Namespaces.hh:10,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Problem.hh:9,
+                 from ./headers/ProblemCol.hh:9,
+                 from ./sources/ProblemCol.cc:1:
+/usr/include/c++/10/type_traits: In substitution of ‘template<bool _Cond, class _Tp> using __enable_if_t = typename std::enable_if::type [with bool _Cond = false; _Tp = void]’:
+/usr/include/c++/10/type_traits:2195:11:   required by substitution of ‘template<class ... _Cond> using _Require = std::__enable_if_t<std::__and_< <template-parameter-1-1> >::value> [with _Cond = {std::__not_<std::__is_tuple_like<Problem> >, std::is_move_constructible<Problem>, std::is_move_assignable<Problem>}]’
+/usr/include/c++/10/bits/move.h:189:5:   required by substitution of ‘template<class _Tp> std::_Require<std::__not_<std::__is_tuple_like<_Tp> >, std::is_move_constructible<_Tp>, std::is_move_assignable<_Tp> > std::swap(_Tp&, _Tp&) [with _Tp = Problem]’
+/usr/include/c++/10/bits/stl_pair.h:445:6:   required from ‘void std::pair<_T1, _T2>::swap(std::pair<_T1, _T2>&) [with _T1 = std::__cxx11::basic_string<char>; _T2 = Problem]’
+/usr/include/c++/10/bits/stl_pair.h:535:15:   required from ‘void std::swap(std::pair<_T1, _T2>&, std::pair<_T1, _T2>&) [with _T1 = std::__cxx11::basic_string<char>; _T2 = Problem]’
+/usr/include/c++/10/bits/stl_algobase.h:182:11:   required from ‘void std::iter_swap(_ForwardIterator1, _ForwardIterator2) [with _ForwardIterator1 = __gnu_debug::_Safe_iterator<__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char>, Problem>*, std::__cxx1998::vector<std::pair<std::__cxx11::basic_string<char>, Problem>, std::allocator<std::pair<std::__cxx11::basic_string<char>, Problem> > > >, std::__debug::vector<std::pair<std::__cxx11::basic_string<char>, Problem> >, std::random_access_iterator_tag>; _ForwardIterator2 = __gnu_debug::_Safe_iterator<__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char>, Problem>*, std::__cxx1998::vector<std::pair<std::__cxx11::basic_string<char>, Problem>, std::allocator<std::pair<std::__cxx11::basic_string<char>, Problem> > > >, std::__debug::vector<std::pair<std::__cxx11::basic_string<char>, Problem> >, std::random_access_iterator_tag>]’
+/usr/include/c++/10/bits/stl_algo.h:85:20:   required from ‘void std::__move_median_to_first(_Iterator, _Iterator, _Iterator, _Iterator, _Compare) [with _Iterator = __gnu_debug::_Safe_iterator<__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char>, Problem>*, std::__cxx1998::vector<std::pair<std::__cxx11::basic_string<char>, Problem>, std::allocator<std::pair<std::__cxx11::basic_string<char>, Problem> > > >, std::__debug::vector<std::pair<std::__cxx11::basic_string<char>, Problem> >, std::random_access_iterator_tag>; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<ProblemCollection::print() const::<lambda(const keyValue&, const keyValue&)> >]’
+/usr/include/c++/10/bits/stl_algo.h:1924:34:   required from ‘_RandomAccessIterator std::__unguarded_partition_pivot(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_debug::_Safe_iterator<__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char>, Problem>*, std::__cxx1998::vector<std::pair<std::__cxx11::basic_string<char>, Problem>, std::allocator<std::pair<std::__cxx11::basic_string<char>, Problem> > > >, std::__debug::vector<std::pair<std::__cxx11::basic_string<char>, Problem> >, std::random_access_iterator_tag>; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<ProblemCollection::print() const::<lambda(const keyValue&, const keyValue&)> >]’
+/usr/include/c++/10/bits/stl_algo.h:1958:38:   required from ‘void std::__introsort_loop(_RandomAccessIterator, _RandomAccessIterator, _Size, _Compare) [with _RandomAccessIterator = __gnu_debug::_Safe_iterator<__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char>, Problem>*, std::__cxx1998::vector<std::pair<std::__cxx11::basic_string<char>, Problem>, std::allocator<std::pair<std::__cxx11::basic_string<char>, Problem> > > >, std::__debug::vector<std::pair<std::__cxx11::basic_string<char>, Problem> >, std::random_access_iterator_tag>; _Size = long int; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<ProblemCollection::print() const::<lambda(const keyValue&, const keyValue&)> >]’
+/usr/include/c++/10/bits/stl_algo.h:1974:25:   required from ‘void std::__sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_debug::_Safe_iterator<__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char>, Problem>*, std::__cxx1998::vector<std::pair<std::__cxx11::basic_string<char>, Problem>, std::allocator<std::pair<std::__cxx11::basic_string<char>, Problem> > > >, std::__debug::vector<std::pair<std::__cxx11::basic_string<char>, Problem> >, std::random_access_iterator_tag>; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<ProblemCollection::print() const::<lambda(const keyValue&, const keyValue&)> >]’
+/usr/include/c++/10/bits/stl_algo.h:4894:18:   required from ‘void std::sort(_RAIter, _RAIter, _Compare) [with _RAIter = __gnu_debug::_Safe_iterator<__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char>, Problem>*, std::__cxx1998::vector<std::pair<std::__cxx11::basic_string<char>, Problem>, std::allocator<std::pair<std::__cxx11::basic_string<char>, Problem> > > >, std::__debug::vector<std::pair<std::__cxx11::basic_string<char>, Problem> >, std::random_access_iterator_tag>; _Compare = ProblemCollection::print() const::<lambda(const keyValue&, const keyValue&)>]’
+./sources/ProblemCol.cc:36:2:   required from here
+/usr/include/c++/10/type_traits:2192:11: error: no type named ‘type’ in ‘struct std::enable_if<false, void>’
+ 2192 |     using __enable_if_t = typename enable_if<_Cond, _Tp>::type;
+      |           ^~~~~~~~~~~~~
