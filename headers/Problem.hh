@@ -36,6 +36,8 @@ public:
 	@post stats are updated accordingly
 	*/
 	void parseSubmission(prb::result r);
+
+	void print() const override;
 };
 	
 #endif

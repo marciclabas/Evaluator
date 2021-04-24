@@ -5,7 +5,7 @@
 #include <cassert>
 
 /* =========================================================constructors & destructors=========================================================*/
-ProblemCollection::ProblemCollection(): IContainer(MapStrategy()) {}
+ProblemCollection::ProblemCollection(): problems(MapStrategy()) {}
 
 ProblemCollection::~ProblemCollection() {}
 

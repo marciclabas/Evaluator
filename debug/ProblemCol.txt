@@ -1,69 +1,37 @@
-In file included from ./headers/ProblemCol.hh:12,
+In file included from ./sources/ProblemCol.cc:1:
+./headers/ProblemCol.hh:24:38: error: cannot declare field ‘ProblemCollection::problems’ to be of abstract type ‘ContainerStrategy<std::__cxx11::basic_string<char>, Problem>’
+   24 |  ContainerStrategy<prb::ID, Problem> problems;
+      |                                      ^~~~~~~~
+In file included from ./headers/MapStrategy.hh:4,
+                 from ./headers/ProblemCol.hh:15,
                  from ./sources/ProblemCol.cc:1:
-./headers/IContainer.hh: In instantiation of ‘class IContainer<std::__cxx11::basic_string<char>, int>’:
-./headers/ProblemCol.hh:23:71:   required from here
-./headers/IContainer.hh:11:2: error: invalid abstract parameter type ‘ContainerStrategy<std::__cxx11::basic_string<char>, int>’
-   11 |  IContainer(ContainerStrategy<ID, T> container): container(container) {}
-      |  ^~~~~~~~~~
-In file included from ./headers/IContainer.hh:4,
-                 from ./headers/ProblemCol.hh:12,
-                 from ./sources/ProblemCol.cc:1:
-./headers/ContainerStrategy.hh:5:7: note:   because the following virtual functions are pure within ‘ContainerStrategy<std::__cxx11::basic_string<char>, int>’:
+./headers/ContainerStrategy.hh:5:7: note:   because the following virtual functions are pure within ‘ContainerStrategy<std::__cxx11::basic_string<char>, Problem>’:
     5 | class ContainerStrategy {
       |       ^~~~~~~~~~~~~~~~~
-In file included from ./headers/IContainer.hh:4,
-                 from ./headers/ProblemCol.hh:12,
+In file included from ./headers/MapStrategy.hh:4,
+                 from ./headers/ProblemCol.hh:15,
                  from ./sources/ProblemCol.cc:1:
-./headers/ContainerStrategy.hh:12:15: note:     ‘bool ContainerStrategy<ID, T>::containsElement(ID) const [with ID = std::__cxx11::basic_string<char>; T = int]’
+./headers/ContainerStrategy.hh:12:15: note:     ‘bool ContainerStrategy<ID, T>::containsElement(ID) const [with ID = std::__cxx11::basic_string<char>; T = Problem]’
    12 |  virtual bool containsElement(ID id) const = 0;
       |               ^~~~~~~~~~~~~~~
-./headers/ContainerStrategy.hh:19:14: note:     ‘T& ContainerStrategy<ID, T>::operator[](ID) [with ID = std::__cxx11::basic_string<char>; T = int]’
+./headers/ContainerStrategy.hh:19:14: note:     ‘T& ContainerStrategy<ID, T>::operator[](ID) [with ID = std::__cxx11::basic_string<char>; T = Problem]’
    19 |  virtual T & operator[](ID id) = 0;
       |              ^~~~~~~~
-./headers/ContainerStrategy.hh:26:14: note:     ‘int ContainerStrategy<ID, T>::getCount() const [with ID = std::__cxx11::basic_string<char>; T = int]’
+./headers/ContainerStrategy.hh:26:14: note:     ‘int ContainerStrategy<ID, T>::getCount() const [with ID = std::__cxx11::basic_string<char>; T = Problem]’
    26 |  virtual int getCount() const = 0;
       |              ^~~~~~~~
-./headers/ContainerStrategy.hh:33:15: note:     ‘void ContainerStrategy<ID, T>::addElement(ID, T) [with ID = std::__cxx11::basic_string<char>; T = int]’
+./headers/ContainerStrategy.hh:33:15: note:     ‘void ContainerStrategy<ID, T>::addElement(ID, T) [with ID = std::__cxx11::basic_string<char>; T = Problem]’
    33 |  virtual void addElement(ID newElementID, T newElement) = 0;
       |               ^~~~~~~~~~
-In file included from ./headers/ProblemCol.hh:12,
-                 from ./sources/ProblemCol.cc:1:
-./headers/IContainer.hh:9:26: error: cannot declare field ‘IContainer<std::__cxx11::basic_string<char>, int>::container’ to be of abstract type ‘ContainerStrategy<std::__cxx11::basic_string<char>, int>’
-    9 |  ContainerStrategy<ID,T> container;
-      |                          ^~~~~~~~~
 ./sources/ProblemCol.cc: In constructor ‘ProblemCollection::ProblemCollection()’:
-./sources/ProblemCol.cc:8:63: error: missing template arguments before ‘(’ token
-    8 | ProblemCollection::ProblemCollection(): IContainer(MapStrategy()) {}
-      |                                                               ^
+./sources/ProblemCol.cc:8:61: error: missing template arguments before ‘(’ token
+    8 | ProblemCollection::ProblemCollection(): problems(MapStrategy()) {}
+      |                                                             ^
 ./sources/ProblemCol.cc: In member function ‘virtual void ProblemCollection::print() const’:
 ./sources/ProblemCol.cc:19:39: error: ‘problemCollection’ was not declared in this scope; did you mean ‘ProblemCollection’?
    19 |  std::vector<keyValue> sortedProblems(problemCollection.problems.size());
       |                                       ^~~~~~~~~~~~~~~~~
       |                                       ProblemCollection
-In file included from /usr/include/c++/10/bits/stl_algobase.h:64,
-                 from /usr/include/c++/10/bits/char_traits.h:39,
-                 from /usr/include/c++/10/string:40,
-                 from ./headers/Namespaces.hh:10,
-                 from ./headers/IPrintable.hh:9,
-                 from ./headers/Problem.hh:9,
-                 from ./headers/ProblemCol.hh:9,
-                 from ./sources/ProblemCol.cc:1:
-/usr/include/c++/10/bits/stl_pair.h: In instantiation of ‘struct std::pair<std::__cxx11::basic_string<char>, Problem>’:
-./sources/ProblemCol.cc:25:23:   required from here
-/usr/include/c++/10/bits/stl_pair.h:218:11: error: cannot declare field ‘std::pair<std::__cxx11::basic_string<char>, Problem>::second’ to be of abstract type ‘Problem’
-  218 |       _T2 second;                ///< The second member
-      |           ^~~~~~
-In file included from ./headers/ProblemCol.hh:9,
-                 from ./sources/ProblemCol.cc:1:
-./headers/Problem.hh:15:7: note:   because the following virtual functions are pure within ‘Problem’:
-   15 | class Problem : public IPrintable {
-      |       ^~~~~~~
-In file included from ./headers/Problem.hh:9,
-                 from ./headers/ProblemCol.hh:9,
-                 from ./sources/ProblemCol.cc:1:
-./headers/IPrintable.hh:27:15: note:     ‘virtual void IPrintable::print() const’
-   27 |  virtual void print() const = 0;
-      |               ^~~~~
 ./sources/ProblemCol.cc:39:73: error: no match for ‘operator<<’ (operand types are ‘std::basic_ostream<char>’ and ‘const Problem’)
    39 |  for(const keyValue & kv : sortedProblems) std::cout << kv.first << ' ' << kv.second << std::endl;
       |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^~ ~~~~~~~~~
@@ -389,85 +357,3 @@ In file included from /usr/include/c++/10/iostream:39,
    46 |   problemCollection.addElement(newProblemID);
       |   ^~~~~~~~~~~~~~~~~
       |   ProblemCollection
-In file included from /usr/include/c++/10/bits/stl_algobase.h:64,
-                 from /usr/include/c++/10/bits/char_traits.h:39,
-                 from /usr/include/c++/10/string:40,
-                 from ./headers/Namespaces.hh:10,
-                 from ./headers/IPrintable.hh:9,
-                 from ./headers/Problem.hh:9,
-                 from ./headers/ProblemCol.hh:9,
-                 from ./sources/ProblemCol.cc:1:
-/usr/include/c++/10/bits/stl_pair.h: In instantiation of ‘void std::pair<_T1, _T2>::swap(std::pair<_T1, _T2>&) [with _T1 = std::__cxx11::basic_string<char>; _T2 = Problem]’:
-/usr/include/c++/10/bits/stl_pair.h:535:15:   required from ‘void std::swap(std::pair<_T1, _T2>&, std::pair<_T1, _T2>&) [with _T1 = std::__cxx11::basic_string<char>; _T2 = Problem]’
-/usr/include/c++/10/bits/stl_algobase.h:182:11:   required from ‘void std::iter_swap(_ForwardIterator1, _ForwardIterator2) [with _ForwardIterator1 = __gnu_debug::_Safe_iterator<__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char>, Problem>*, std::__cxx1998::vector<std::pair<std::__cxx11::basic_string<char>, Problem>, std::allocator<std::pair<std::__cxx11::basic_string<char>, Problem> > > >, std::__debug::vector<std::pair<std::__cxx11::basic_string<char>, Problem> >, std::random_access_iterator_tag>; _ForwardIterator2 = __gnu_debug::_Safe_iterator<__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char>, Problem>*, std::__cxx1998::vector<std::pair<std::__cxx11::basic_string<char>, Problem>, std::allocator<std::pair<std::__cxx11::basic_string<char>, Problem> > > >, std::__debug::vector<std::pair<std::__cxx11::basic_string<char>, Problem> >, std::random_access_iterator_tag>]’
-/usr/include/c++/10/bits/stl_algo.h:85:20:   required from ‘void std::__move_median_to_first(_Iterator, _Iterator, _Iterator, _Iterator, _Compare) [with _Iterator = __gnu_debug::_Safe_iterator<__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char>, Problem>*, std::__cxx1998::vector<std::pair<std::__cxx11::basic_string<char>, Problem>, std::allocator<std::pair<std::__cxx11::basic_string<char>, Problem> > > >, std::__debug::vector<std::pair<std::__cxx11::basic_string<char>, Problem> >, std::random_access_iterator_tag>; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<ProblemCollection::print() const::<lambda(const keyValue&, const keyValue&)> >]’
-/usr/include/c++/10/bits/stl_algo.h:1924:34:   required from ‘_RandomAccessIterator std::__unguarded_partition_pivot(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_debug::_Safe_iterator<__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char>, Problem>*, std::__cxx1998::vector<std::pair<std::__cxx11::basic_string<char>, Problem>, std::allocator<std::pair<std::__cxx11::basic_string<char>, Problem> > > >, std::__debug::vector<std::pair<std::__cxx11::basic_string<char>, Problem> >, std::random_access_iterator_tag>; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<ProblemCollection::print() const::<lambda(const keyValue&, const keyValue&)> >]’
-/usr/include/c++/10/bits/stl_algo.h:1958:38:   required from ‘void std::__introsort_loop(_RandomAccessIterator, _RandomAccessIterator, _Size, _Compare) [with _RandomAccessIterator = __gnu_debug::_Safe_iterator<__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char>, Problem>*, std::__cxx1998::vector<std::pair<std::__cxx11::basic_string<char>, Problem>, std::allocator<std::pair<std::__cxx11::basic_string<char>, Problem> > > >, std::__debug::vector<std::pair<std::__cxx11::basic_string<char>, Problem> >, std::random_access_iterator_tag>; _Size = long int; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<ProblemCollection::print() const::<lambda(const keyValue&, const keyValue&)> >]’
-/usr/include/c++/10/bits/stl_algo.h:1974:25:   required from ‘void std::__sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_debug::_Safe_iterator<__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char>, Problem>*, std::__cxx1998::vector<std::pair<std::__cxx11::basic_string<char>, Problem>, std::allocator<std::pair<std::__cxx11::basic_string<char>, Problem> > > >, std::__debug::vector<std::pair<std::__cxx11::basic_string<char>, Problem> >, std::random_access_iterator_tag>; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<ProblemCollection::print() const::<lambda(const keyValue&, const keyValue&)> >]’
-/usr/include/c++/10/bits/stl_algo.h:4894:18:   required from ‘void std::sort(_RAIter, _RAIter, _Compare) [with _RAIter = __gnu_debug::_Safe_iterator<__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char>, Problem>*, std::__cxx1998::vector<std::pair<std::__cxx11::basic_string<char>, Problem>, std::allocator<std::pair<std::__cxx11::basic_string<char>, Problem> > > >, std::__debug::vector<std::pair<std::__cxx11::basic_string<char>, Problem> >, std::random_access_iterator_tag>; _Compare = ProblemCollection::print() const::<lambda(const keyValue&, const keyValue&)>]’
-./sources/ProblemCol.cc:36:2:   required from here
-/usr/include/c++/10/bits/stl_pair.h:445:6: error: no matching function for call to ‘swap(Problem&, Problem&)’
-  445 |  swap(second, __p.second);
-      |  ~~~~^~~~~~~~~~~~~~~~~~~~
-In file included from /usr/include/c++/10/bits/stl_pair.h:59,
-                 from /usr/include/c++/10/bits/stl_algobase.h:64,
-                 from /usr/include/c++/10/bits/char_traits.h:39,
-                 from /usr/include/c++/10/string:40,
-                 from ./headers/Namespaces.hh:10,
-                 from ./headers/IPrintable.hh:9,
-                 from ./headers/Problem.hh:9,
-                 from ./headers/ProblemCol.hh:9,
-                 from ./sources/ProblemCol.cc:1:
-/usr/include/c++/10/bits/move.h:213:5: note: candidate: ‘template<class _Tp, long unsigned int _Nm> std::__enable_if_t<std::__is_swappable<_Tp>::value> std::swap(_Tp (&)[_Nm], _Tp (&)[_Nm])’
-  213 |     swap(_Tp (&__a)[_Nm], _Tp (&__b)[_Nm])
-      |     ^~~~
-/usr/include/c++/10/bits/move.h:213:5: note:   template argument deduction/substitution failed:
-In file included from /usr/include/c++/10/bits/stl_algobase.h:64,
-                 from /usr/include/c++/10/bits/char_traits.h:39,
-                 from /usr/include/c++/10/string:40,
-                 from ./headers/Namespaces.hh:10,
-                 from ./headers/IPrintable.hh:9,
-                 from ./headers/Problem.hh:9,
-                 from ./headers/ProblemCol.hh:9,
-                 from ./sources/ProblemCol.cc:1:
-/usr/include/c++/10/bits/stl_pair.h:445:6: note:   mismatched types ‘_Tp [_Nm]’ and ‘Problem’
-  445 |  swap(second, __p.second);
-      |  ~~~~^~~~~~~~~~~~~~~~~~~~
-In file included from /usr/include/c++/10/bits/stl_pair.h:59,
-                 from /usr/include/c++/10/bits/stl_algobase.h:64,
-                 from /usr/include/c++/10/bits/char_traits.h:39,
-                 from /usr/include/c++/10/string:40,
-                 from ./headers/Namespaces.hh:10,
-                 from ./headers/IPrintable.hh:9,
-                 from ./headers/Problem.hh:9,
-                 from ./headers/ProblemCol.hh:9,
-                 from ./sources/ProblemCol.cc:1:
-/usr/include/c++/10/bits/move.h:189:5: note: candidate: ‘template<class _Tp> std::_Require<std::__not_<std::__is_tuple_like<_Tp> >, std::is_move_constructible<_Tp>, std::is_move_assignable<_Tp> > std::swap(_Tp&, _Tp&)’
-  189 |     swap(_Tp& __a, _Tp& __b)
-      |     ^~~~
-/usr/include/c++/10/bits/move.h:189:5: note:   template argument deduction/substitution failed:
-In file included from /usr/include/c++/10/bits/move.h:57,
-                 from /usr/include/c++/10/bits/stl_pair.h:59,
-                 from /usr/include/c++/10/bits/stl_algobase.h:64,
-                 from /usr/include/c++/10/bits/char_traits.h:39,
-                 from /usr/include/c++/10/string:40,
-                 from ./headers/Namespaces.hh:10,
-                 from ./headers/IPrintable.hh:9,
-                 from ./headers/Problem.hh:9,
-                 from ./headers/ProblemCol.hh:9,
-                 from ./sources/ProblemCol.cc:1:
-/usr/include/c++/10/type_traits: In substitution of ‘template<bool _Cond, class _Tp> using __enable_if_t = typename std::enable_if::type [with bool _Cond = false; _Tp = void]’:
-/usr/include/c++/10/type_traits:2195:11:   required by substitution of ‘template<class ... _Cond> using _Require = std::__enable_if_t<std::__and_< <template-parameter-1-1> >::value> [with _Cond = {std::__not_<std::__is_tuple_like<Problem> >, std::is_move_constructible<Problem>, std::is_move_assignable<Problem>}]’
-/usr/include/c++/10/bits/move.h:189:5:   required by substitution of ‘template<class _Tp> std::_Require<std::__not_<std::__is_tuple_like<_Tp> >, std::is_move_constructible<_Tp>, std::is_move_assignable<_Tp> > std::swap(_Tp&, _Tp&) [with _Tp = Problem]’
-/usr/include/c++/10/bits/stl_pair.h:445:6:   required from ‘void std::pair<_T1, _T2>::swap(std::pair<_T1, _T2>&) [with _T1 = std::__cxx11::basic_string<char>; _T2 = Problem]’
-/usr/include/c++/10/bits/stl_pair.h:535:15:   required from ‘void std::swap(std::pair<_T1, _T2>&, std::pair<_T1, _T2>&) [with _T1 = std::__cxx11::basic_string<char>; _T2 = Problem]’
-/usr/include/c++/10/bits/stl_algobase.h:182:11:   required from ‘void std::iter_swap(_ForwardIterator1, _ForwardIterator2) [with _ForwardIterator1 = __gnu_debug::_Safe_iterator<__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char>, Problem>*, std::__cxx1998::vector<std::pair<std::__cxx11::basic_string<char>, Problem>, std::allocator<std::pair<std::__cxx11::basic_string<char>, Problem> > > >, std::__debug::vector<std::pair<std::__cxx11::basic_string<char>, Problem> >, std::random_access_iterator_tag>; _ForwardIterator2 = __gnu_debug::_Safe_iterator<__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char>, Problem>*, std::__cxx1998::vector<std::pair<std::__cxx11::basic_string<char>, Problem>, std::allocator<std::pair<std::__cxx11::basic_string<char>, Problem> > > >, std::__debug::vector<std::pair<std::__cxx11::basic_string<char>, Problem> >, std::random_access_iterator_tag>]’
-/usr/include/c++/10/bits/stl_algo.h:85:20:   required from ‘void std::__move_median_to_first(_Iterator, _Iterator, _Iterator, _Iterator, _Compare) [with _Iterator = __gnu_debug::_Safe_iterator<__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char>, Problem>*, std::__cxx1998::vector<std::pair<std::__cxx11::basic_string<char>, Problem>, std::allocator<std::pair<std::__cxx11::basic_string<char>, Problem> > > >, std::__debug::vector<std::pair<std::__cxx11::basic_string<char>, Problem> >, std::random_access_iterator_tag>; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<ProblemCollection::print() const::<lambda(const keyValue&, const keyValue&)> >]’
-/usr/include/c++/10/bits/stl_algo.h:1924:34:   required from ‘_RandomAccessIterator std::__unguarded_partition_pivot(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_debug::_Safe_iterator<__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char>, Problem>*, std::__cxx1998::vector<std::pair<std::__cxx11::basic_string<char>, Problem>, std::allocator<std::pair<std::__cxx11::basic_string<char>, Problem> > > >, std::__debug::vector<std::pair<std::__cxx11::basic_string<char>, Problem> >, std::random_access_iterator_tag>; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<ProblemCollection::print() const::<lambda(const keyValue&, const keyValue&)> >]’
-/usr/include/c++/10/bits/stl_algo.h:1958:38:   required from ‘void std::__introsort_loop(_RandomAccessIterator, _RandomAccessIterator, _Size, _Compare) [with _RandomAccessIterator = __gnu_debug::_Safe_iterator<__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char>, Problem>*, std::__cxx1998::vector<std::pair<std::__cxx11::basic_string<char>, Problem>, std::allocator<std::pair<std::__cxx11::basic_string<char>, Problem> > > >, std::__debug::vector<std::pair<std::__cxx11::basic_string<char>, Problem> >, std::random_access_iterator_tag>; _Size = long int; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<ProblemCollection::print() const::<lambda(const keyValue&, const keyValue&)> >]’
-/usr/include/c++/10/bits/stl_algo.h:1974:25:   required from ‘void std::__sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_debug::_Safe_iterator<__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char>, Problem>*, std::__cxx1998::vector<std::pair<std::__cxx11::basic_string<char>, Problem>, std::allocator<std::pair<std::__cxx11::basic_string<char>, Problem> > > >, std::__debug::vector<std::pair<std::__cxx11::basic_string<char>, Problem> >, std::random_access_iterator_tag>; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<ProblemCollection::print() const::<lambda(const keyValue&, const keyValue&)> >]’
-/usr/include/c++/10/bits/stl_algo.h:4894:18:   required from ‘void std::sort(_RAIter, _RAIter, _Compare) [with _RAIter = __gnu_debug::_Safe_iterator<__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char>, Problem>*, std::__cxx1998::vector<std::pair<std::__cxx11::basic_string<char>, Problem>, std::allocator<std::pair<std::__cxx11::basic_string<char>, Problem> > > >, std::__debug::vector<std::pair<std::__cxx11::basic_string<char>, Problem> >, std::random_access_iterator_tag>; _Compare = ProblemCollection::print() const::<lambda(const keyValue&, const keyValue&)>]’
-./sources/ProblemCol.cc:36:2:   required from here
-/usr/include/c++/10/type_traits:2192:11: error: no type named ‘type’ in ‘struct std::enable_if<false, void>’
- 2192 |     using __enable_if_t = typename enable_if<_Cond, _Tp>::type;
-      |           ^~~~~~~~~~~~~
