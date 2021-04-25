@@ -5,7 +5,7 @@
 #include <cassert>
 
 /* =========================================================constructors & destructors=========================================================*/
-ProblemCollection::ProblemCollection(): problems(MapStrategy<prb::ID, Problem>()) {}
+ProblemCollection::ProblemCollection(): Container(MapStrategy<prb::ID, Problem>()) {}
 
 ProblemCollection::~ProblemCollection() {}
 
@@ -15,11 +15,11 @@ void ProblemCollection::print() const {
 	using keyValue = std::pair<prb::ID, Problem>;
 
 	// create temporary sorted by ratio list	
-	std::vector<keyValue> sortedProblems(problems.count());
+	std::vector<keyValue> sortedProblems(count());
 
 	int i = 0;
 
-	for(const keyValue & kv : problems) {
+	for(const keyValue & kv : container) {
 		assert(i < sortedProblems.size());
 		sortedProblems[i] = kv;
 		i++;
@@ -46,7 +46,7 @@ void ProblemCollection::read() {
 	int P; std::cin >> P;
 	for(int i = 0; i < P; i++) {
 		prb::ID newProblemID; std::cin >> newProblemID;
-		problems.add(newProblemID, Problem());
+		add(newProblemID, Problem());
 	}
 }
 

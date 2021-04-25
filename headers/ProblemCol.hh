@@ -9,6 +9,7 @@
 #include "Problem.hh"
 #include "IReadable.hh"
 #include "IPrintable.hh"
+#include "Container.hh"
 
 #ifndef NO_DIAGRAM
 #include <string>
@@ -19,9 +20,8 @@
 @class ProblemCollection
 @brief Represents a collection of problems
 */
-class ProblemCollection : public IReadable, public IPrintable { 
+class ProblemCollection : public IReadable, public IPrintable, public Container<prb::ID, Problem, std::map<prb::ID, Problem>> { 
 public:
-	ContainerStrategy<prb::ID, Problem, std::map<prb::ID, Problem>> problems;
 	/*==========================================================constructors & destructors=========================================================*/
     ProblemCollection();
 	~ProblemCollection();
