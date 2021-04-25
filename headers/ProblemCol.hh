@@ -21,7 +21,7 @@
 */
 class ProblemCollection : public IReadable, public IPrintable { 
 public:
-	ContainerStrategy<prb::ID, Problem> problems;
+	ContainerStrategy<prb::ID, Problem, std::map<prb::ID, Problem>> problems;
 	/*==========================================================constructors & destructors=========================================================*/
     ProblemCollection();
 	~ProblemCollection();

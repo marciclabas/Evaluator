@@ -17,3 +17,19 @@ int VectorStrategy::count() const {
 void VectorStrategy::add(ID newElementID, Problem newElement) override {
 	container.push_back(newElement);
 }
+
+std::vector<T>::iterator VectorStrategy::begin() {
+	return container.begin();
+}
+
+std::vector<T>::iterator VectorStrategy::end() {
+	return container.end();
+}
+
+std::vector<T>::const_iterator VectorStrategy::begin() const {
+	return container.cbegin();
+}
+
+std::vector<T>::const_iterator VectorStrategy::end() const {
+	return container.cend();
+}

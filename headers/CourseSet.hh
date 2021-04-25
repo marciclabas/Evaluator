@@ -21,7 +21,7 @@
 @class CourseSet
 @brief Represents set of courses
 */
-class CourseSet : public IReadable, public IPrintable, public IContainer<crs::ID, Course> {
+class CourseSet : public IReadable, public IPrintable {
 private:
 	std::vector<Course> courses;
 public:

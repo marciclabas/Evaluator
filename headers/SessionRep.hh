@@ -21,9 +21,9 @@
 @class SessionRepository
 @brief Represents a repository of sessions
 */
-class SessionRepository : public IReadable, public IPrintable, public IContainer<ses::ID, Session> {
+class SessionRepository : public IReadable, public IPrintable {
 private:
-	std::map<ses::ID, Session> sessions;
+	ContainerStrategy<ses::ID, Session, std::map<ses::ID, Session>> sessions;
 public:
 	/* =========================================================constructors & destructors=========================================================*/
 	SessionRepository(ProblemCollection & problemCollection);

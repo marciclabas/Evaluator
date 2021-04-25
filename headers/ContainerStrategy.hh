@@ -1,12 +1,12 @@
 #ifndef CONTAINERSTRATEGY_HH
 #define CONTAINERSTRATEGY_HH
 
-template <class ID, class T>
+template <class ID, class T, class Container>
 class ContainerStrategy {
-public:
-	
-	struct iterator;
-	
+private:
+	Container container;
+
+public:	
 	/**
 	@brief Return wheter there is an element with the given id
 	@pre true
@@ -34,8 +34,14 @@ public:
 	@post The new element is added to the container
 	*/
 	virtual void add(ID newElementID, T newElement);
-	
-	virtual iterator begin();
+
+	virtual typename Container::iterator begin();
+
+	virtual typename Container::iterator end();
+
+	virtual typename Container::const_iterator begin() const;
+
+	virtual typename Container::const_iterator end() const;
 };
 
 #endif

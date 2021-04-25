@@ -17,4 +17,19 @@ int MapStrategy::count() const {
 void MapStrategy::add(ID newElementID, T newElement) override {
 	container[newElementID] = newElement;
 }
-ContainerStrategy<ID,T>::iterator MapStrategy::begin() { return container.begin(); }
+
+std::map<ID,T>::iterator MapStrategy::begin() {
+	return container.begin();
+}
+
+std::map<ID,T>::iterator MapStrategy::end() {
+	return container.end();
+}
+
+std::map<ID,T>::const_iterator MapStrategy::begin() const {
+	return container.cbegin();
+}
+
+std::map<ID,T>::const_iterator MapStrategy::end() const {
+	return container.cend();
+}

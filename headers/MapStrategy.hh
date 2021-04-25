@@ -5,7 +5,7 @@
 #include <map>
 
 template <typename ID, typename T>
-class MapStrategy : public ContainerStrategy<ID,T> {
+class MapStrategy : public ContainerStrategy<ID,T, std::map<ID,T>> {
 protected:
 	std::map<ID,T> container;
 public:
@@ -37,8 +37,14 @@ public:
 	@post The new element is added to the container
 	*/
 	void add(ID newElementID, T newElement) override;
-	
-	typename ContainerStrategy<ID,T>::iterator begin();
+
+	typename std::map<ID,T>::iterator begin() override;
+
+	typename std::map<ID,T>::iterator end() override;
+
+	typename std::map<ID,T>::const_iterator begin() const override;
+
+	typename std::map<ID,T>::const_iterator end() const override;
 };
 
 #endif

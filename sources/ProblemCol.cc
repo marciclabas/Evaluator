@@ -14,10 +14,7 @@ ProblemCollection::~ProblemCollection() {}
 void ProblemCollection::print() const {
 	using keyValue = std::pair<prb::ID, Problem>;
 
-	// create temporary sorted by ratio list
-	
-	ContainerStrategy<prb::ID, Problem>::iterator it = problems.begin();
-	
+	// create temporary sorted by ratio list	
 	std::vector<keyValue> sortedProblems(problems.count());
 
 	int i = 0;
@@ -38,13 +35,21 @@ void ProblemCollection::print() const {
 	);
 
 	// for(const keyValue & [name, problem] : sortedProblems) out << name << ' ' << problem; // UPGRADE TO c++17 plz :(
-	for(const keyValue & kv : sortedProblems) std::cout << kv.first << ' ' << kv.second << std::endl;
+	for(const keyValue & kv : sortedProblems) {
+		std::cout << kv.first << ' ';
+		kv.second.print();
+		std::cout << std::endl;
+	}
 }
 
 void ProblemCollection::read() {
 	int P; std::cin >> P;
 	for(int i = 0; i < P; i++) {
 		prb::ID newProblemID; std::cin >> newProblemID;
-		problems.add(newProblemID);
+		problems.add(newProblemID, Problem());
 	}
+}
+
+int main() {
+	return 0;
 }

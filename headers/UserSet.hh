@@ -21,7 +21,7 @@
 @class UserSet
 @brief Represents a set of users
 */
-class UserSet : public IReadable, public IPrintable, public IContainer<usr::ID, User> {
+class UserSet : public IReadable, public IPrintable {
 	
 public:
 	/* =========================================================constructors & destructors=========================================================*/
