@@ -5,7 +5,7 @@
 #include <vector>
 
 template <class T>
-class VectorStrategy : public ContainerStrategy<int,T> {
+class VectorStrategy : public ContainerStrategy<int,T,std::vector<T>> {
 protected:
 	std::vector<T> container;
 public:

@@ -27,9 +27,9 @@ std::vector<T>::iterator VectorStrategy::end() {
 }
 
 std::vector<T>::const_iterator VectorStrategy::begin() const {
-	return container.cbegin();
+	return container.begin();
 }
 
 std::vector<T>::const_iterator VectorStrategy::end() const {
-	return container.cend();
+	return container.end();
 }

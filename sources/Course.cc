@@ -31,8 +31,8 @@ bool Course::getSessionByProblem(prb::ID problemID, ses::ID & sessionID) const {
 }
 
 void Course::print() const {
-	std::cout << course.totalEnrolled << course.currentEnrolled << std::endl;
-	for(ses::ID sessionID : course.sessions) std::cout << sessionID << std::endl;
+	std::cout << totalEnrolled << currentEnrolled << std::endl;
+	for(ses::ID sessionID : sessions) std::cout << sessionID << std::endl;
 }
 
 void Course::read() {

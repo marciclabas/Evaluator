@@ -46,6 +46,9 @@ public:
 	@post Returns @c true if the session contains a @c Problem with the given id. Returns @c false if it does not
 	*/
 	bool containsProblem(prb::ID problemID) const;
+
+	void print() const override;
+	void read() override;
 };
 
 #endif

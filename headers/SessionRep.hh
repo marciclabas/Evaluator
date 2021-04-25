@@ -9,7 +9,7 @@
 #include "Session.hh"
 #include "IReadable.hh"
 #include "IPrintable.hh"
-#include "IContainer.hh"
+#include "Container.hh"
 
 #ifndef NO_DIAGRAM
 #include <map>
@@ -21,9 +21,7 @@
 @class SessionRepository
 @brief Represents a repository of sessions
 */
-class SessionRepository : public IReadable, public IPrintable {
-private:
-	ContainerStrategy<ses::ID, Session, std::map<ses::ID, Session>> sessions;
+class SessionRepository : public IReadable, public IPrintable, public Container<ses::ID, Session, std::map<ses::ID,Session>> {
 public:
 	/* =========================================================constructors & destructors=========================================================*/
 	SessionRepository(ProblemCollection & problemCollection);

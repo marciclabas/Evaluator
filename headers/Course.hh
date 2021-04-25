@@ -74,6 +74,9 @@ public:
 	@post Returs @c true if there is a void intersection between the course's sessions, @c false otherwise
 	*/
 	bool isValid() const;
+
+	void print() const override;
+	void read() override;
 };
 
 

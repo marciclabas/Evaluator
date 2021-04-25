@@ -9,7 +9,7 @@
 #include "Course.hh"
 #include "IReadable.hh"
 #include "IPrintable.hh"
-#include "IContainer.hh"
+#include "Container.hh"
 
 #ifndef NO_DIAGRAM
 #include <vector>
@@ -21,9 +21,7 @@
 @class CourseSet
 @brief Represents set of courses
 */
-class CourseSet : public IReadable, public IPrintable {
-private:
-	std::vector<Course> courses;
+class CourseSet : public IReadable, public IPrintable, public Container<crs::ID, Course, std::vector<crs::ID>> {
 public:
 	/* =========================================================constructors & destructors=========================================================*/
 	CourseSet(const SessionRepository& SessionRepository);

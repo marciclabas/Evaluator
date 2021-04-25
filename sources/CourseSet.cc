@@ -3,9 +3,8 @@
 #include <cassert>
 
 /* =========================================================constructors & destructors=========================================================*/
-CourseSet::CourseSet(const SessionRepository& sessionRepository): courses() {
+CourseSet::CourseSet(const SessionRepository& sessionRepository): Container(VectorStrategy<Course>()) {
 	Course::setSessionRepository(sessionRepository);
-	container = VectorStrategy();
 }
 
 CourseSet::~CourseSet() {}

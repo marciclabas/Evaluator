@@ -1,0 +1,281 @@
+./sources/CourseSet.cc: In constructor ‘CourseSet::CourseSet(const SessionRepository&)’:
+./sources/CourseSet.cc:6:101: error: no matching function for call to ‘Container<std::__cxx11::basic_string<char>, Course, std::__debug::vector<std::__cxx11::basic_string<char> > >::Container(VectorStrategy<Course>)’
+    6 | CourseSet::CourseSet(const SessionRepository& sessionRepository): Container(VectorStrategy<Course>()) {
+      |                                                                                                     ^
+In file included from ./headers/ProblemCol.hh:12,
+                 from ./headers/Session.hh:11,
+                 from ./headers/SessionRep.hh:9,
+                 from ./headers/Course.hh:11,
+                 from ./headers/CourseSet.hh:9,
+                 from ./sources/CourseSet.cc:1:
+./headers/Container.hh:26:2: note: candidate: ‘Container<ID, T, ContainerType>::Container(ContainerStrategy<ID, T, ContainerType>) [with ID = std::__cxx11::basic_string<char>; T = Course; ContainerType = std::__debug::vector<std::__cxx11::basic_string<char> >]’
+   26 |  Container(ContainerStrategy<ID,T,ContainerType> container): container(container) {}
+      |  ^~~~~~~~~
+./headers/Container.hh:26:50: note:   no known conversion for argument 1 from ‘VectorStrategy<Course>’ to ‘ContainerStrategy<std::__cxx11::basic_string<char>, Course, std::__debug::vector<std::__cxx11::basic_string<char> > >’
+   26 |  Container(ContainerStrategy<ID,T,ContainerType> container): container(container) {}
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+./headers/Container.hh:21:7: note: candidate: ‘Container<std::__cxx11::basic_string<char>, Course, std::__debug::vector<std::__cxx11::basic_string<char> > >::Container(const Container<std::__cxx11::basic_string<char>, Course, std::__debug::vector<std::__cxx11::basic_string<char> > >&)’
+   21 | class Container {
+      |       ^~~~~~~~~
+./headers/Container.hh:21:7: note:   no known conversion for argument 1 from ‘VectorStrategy<Course>’ to ‘const Container<std::__cxx11::basic_string<char>, Course, std::__debug::vector<std::__cxx11::basic_string<char> > >&’
+./headers/Container.hh:21:7: note: candidate: ‘Container<std::__cxx11::basic_string<char>, Course, std::__debug::vector<std::__cxx11::basic_string<char> > >::Container(Container<std::__cxx11::basic_string<char>, Course, std::__debug::vector<std::__cxx11::basic_string<char> > >&&)’
+./headers/Container.hh:21:7: note:   no known conversion for argument 1 from ‘VectorStrategy<Course>’ to ‘Container<std::__cxx11::basic_string<char>, Course, std::__debug::vector<std::__cxx11::basic_string<char> > >&&’
+./sources/CourseSet.cc: In member function ‘virtual void CourseSet::print() const’:
+./sources/CourseSet.cc:15:36: error: wrong number of template arguments (1, should be 2)
+   15 |  for(const std::pair<crs:ID, Course> & kv : sortedProblems) std::cout << kv.first << ' ' << kv.second << std::endl;
+      |                                    ^
+In file included from /usr/include/c++/10/bits/stl_algobase.h:64,
+                 from /usr/include/c++/10/bits/char_traits.h:39,
+                 from /usr/include/c++/10/string:40,
+                 from ./headers/Namespaces.hh:10,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Course.hh:9,
+                 from ./headers/CourseSet.hh:9,
+                 from ./sources/CourseSet.cc:1:
+/usr/include/c++/10/bits/stl_pair.h:211:12: note: provided for ‘template<class _T1, class _T2> struct std::pair’
+  211 |     struct pair
+      |            ^~~~
+./sources/CourseSet.cc:15:45: error: ‘sortedProblems’ was not declared in this scope
+   15 |  for(const std::pair<crs:ID, Course> & kv : sortedProblems) std::cout << kv.first << ' ' << kv.second << std::endl;
+      |                                             ^~~~~~~~~~~~~~
+./sources/CourseSet.cc:15:77: error: request for member ‘first’ in ‘kv’, which is of non-class type ‘const int’
+   15 |  for(const std::pair<crs:ID, Course> & kv : sortedProblems) std::cout << kv.first << ' ' << kv.second << std::endl;
+      |                                                                             ^~~~~
+./sources/CourseSet.cc:15:96: error: request for member ‘second’ in ‘kv’, which is of non-class type ‘const int’
+   15 |  for(const std::pair<crs:ID, Course> & kv : sortedProblems) std::cout << kv.first << ' ' << kv.second << std::endl;
+      |                                                                                                ^~~~~~
+./sources/CourseSet.cc: In member function ‘virtual void CourseSet::read()’:
+./sources/CourseSet.cc:20:2: error: ‘courses’ was not declared in this scope; did you mean ‘Course’?
+   20 |  courses = std::vector<Course>(N);
+      |  ^~~~~~~
+      |  Course
+./sources/CourseSet.cc:21:42: error: no match for ‘operator>>’ (operand types are ‘std::istream’ {aka ‘std::basic_istream<char>’} and ‘Course’)
+   21 |  for(Course & course : courses) std::cin >> course;
+      |                                 ~~~~~~~~ ^~ ~~~~~~
+      |                                      |      |
+      |                                      |      Course
+      |                                      std::istream {aka std::basic_istream<char>}
+In file included from /usr/include/c++/10/iostream:40,
+                 from ./headers/Namespaces.hh:12,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Course.hh:9,
+                 from ./headers/CourseSet.hh:9,
+                 from ./sources/CourseSet.cc:1:
+/usr/include/c++/10/istream:120:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(std::basic_istream<_CharT, _Traits>::__istream_type& (*)(std::basic_istream<_CharT, _Traits>::__istream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]’
+  120 |       operator>>(__istream_type& (*__pf)(__istream_type&))
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:120:36: note:   no known conversion for argument 1 from ‘Course’ to ‘std::basic_istream<char>::__istream_type& (*)(std::basic_istream<char>::__istream_type&)’ {aka ‘std::basic_istream<char>& (*)(std::basic_istream<char>&)’}
+  120 |       operator>>(__istream_type& (*__pf)(__istream_type&))
+      |                  ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/istream:124:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(std::basic_istream<_CharT, _Traits>::__ios_type& (*)(std::basic_istream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>; std::basic_istream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]’
+  124 |       operator>>(__ios_type& (*__pf)(__ios_type&))
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:124:32: note:   no known conversion for argument 1 from ‘Course’ to ‘std::basic_istream<char>::__ios_type& (*)(std::basic_istream<char>::__ios_type&)’ {aka ‘std::basic_ios<char>& (*)(std::basic_ios<char>&)’}
+  124 |       operator>>(__ios_type& (*__pf)(__ios_type&))
+      |                  ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/istream:131:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]’
+  131 |       operator>>(ios_base& (*__pf)(ios_base&))
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:131:30: note:   no known conversion for argument 1 from ‘Course’ to ‘std::ios_base& (*)(std::ios_base&)’
+  131 |       operator>>(ios_base& (*__pf)(ios_base&))
+      |                  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+/usr/include/c++/10/istream:168:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(bool&) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]’
+  168 |       operator>>(bool& __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:168:24: note:   no known conversion for argument 1 from ‘Course’ to ‘bool&’
+  168 |       operator>>(bool& __n)
+      |                  ~~~~~~^~~
+/usr/include/c++/10/istream:172:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>& std::basic_istream<_CharT, _Traits>::operator>>(short int&) [with _CharT = char; _Traits = std::char_traits<char>]’
+  172 |       operator>>(short& __n);
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:172:25: note:   no known conversion for argument 1 from ‘Course’ to ‘short int&’
+  172 |       operator>>(short& __n);
+      |                  ~~~~~~~^~~
+/usr/include/c++/10/istream:175:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(short unsigned int&) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]’
+  175 |       operator>>(unsigned short& __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:175:34: note:   no known conversion for argument 1 from ‘Course’ to ‘short unsigned int&’
+  175 |       operator>>(unsigned short& __n)
+      |                  ~~~~~~~~~~~~~~~~^~~
+/usr/include/c++/10/istream:179:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>& std::basic_istream<_CharT, _Traits>::operator>>(int&) [with _CharT = char; _Traits = std::char_traits<char>]’
+  179 |       operator>>(int& __n);
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:179:23: note:   no known conversion for argument 1 from ‘Course’ to ‘int&’
+  179 |       operator>>(int& __n);
+      |                  ~~~~~^~~
+/usr/include/c++/10/istream:182:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(unsigned int&) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]’
+  182 |       operator>>(unsigned int& __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:182:32: note:   no known conversion for argument 1 from ‘Course’ to ‘unsigned int&’
+  182 |       operator>>(unsigned int& __n)
+      |                  ~~~~~~~~~~~~~~^~~
+/usr/include/c++/10/istream:186:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(long int&) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]’
+  186 |       operator>>(long& __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:186:24: note:   no known conversion for argument 1 from ‘Course’ to ‘long int&’
+  186 |       operator>>(long& __n)
+      |                  ~~~~~~^~~
+/usr/include/c++/10/istream:190:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(long unsigned int&) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]’
+  190 |       operator>>(unsigned long& __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:190:33: note:   no known conversion for argument 1 from ‘Course’ to ‘long unsigned int&’
+  190 |       operator>>(unsigned long& __n)
+      |                  ~~~~~~~~~~~~~~~^~~
+/usr/include/c++/10/istream:195:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(long long int&) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]’
+  195 |       operator>>(long long& __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:195:29: note:   no known conversion for argument 1 from ‘Course’ to ‘long long int&’
+  195 |       operator>>(long long& __n)
+      |                  ~~~~~~~~~~~^~~
+/usr/include/c++/10/istream:199:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(long long unsigned int&) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]’
+  199 |       operator>>(unsigned long long& __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:199:38: note:   no known conversion for argument 1 from ‘Course’ to ‘long long unsigned int&’
+  199 |       operator>>(unsigned long long& __n)
+      |                  ~~~~~~~~~~~~~~~~~~~~^~~
+/usr/include/c++/10/istream:214:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(float&) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]’
+  214 |       operator>>(float& __f)
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:214:25: note:   no known conversion for argument 1 from ‘Course’ to ‘float&’
+  214 |       operator>>(float& __f)
+      |                  ~~~~~~~^~~
+/usr/include/c++/10/istream:218:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(double&) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]’
+  218 |       operator>>(double& __f)
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:218:26: note:   no known conversion for argument 1 from ‘Course’ to ‘double&’
+  218 |       operator>>(double& __f)
+      |                  ~~~~~~~~^~~
+/usr/include/c++/10/istream:222:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(long double&) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]’
+  222 |       operator>>(long double& __f)
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:222:31: note:   no known conversion for argument 1 from ‘Course’ to ‘long double&’
+  222 |       operator>>(long double& __f)
+      |                  ~~~~~~~~~~~~~^~~
+/usr/include/c++/10/istream:235:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(void*&) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]’
+  235 |       operator>>(void*& __p)
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:235:25: note:   no known conversion for argument 1 from ‘Course’ to ‘void*&’
+  235 |       operator>>(void*& __p)
+      |                  ~~~~~~~^~~
+/usr/include/c++/10/istream:259:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>& std::basic_istream<_CharT, _Traits>::operator>>(std::basic_istream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]’
+  259 |       operator>>(__streambuf_type* __sb);
+      |       ^~~~~~~~
+/usr/include/c++/10/istream:259:36: note:   no known conversion for argument 1 from ‘Course’ to ‘std::basic_istream<char>::__streambuf_type*’ {aka ‘std::basic_streambuf<char>*’}
+  259 |       operator>>(__streambuf_type* __sb);
+      |                  ~~~~~~~~~~~~~~~~~~^~~~
+In file included from ./headers/IPrintable.hh:9,
+                 from ./headers/Course.hh:9,
+                 from ./headers/CourseSet.hh:9,
+                 from ./sources/CourseSet.cc:1:
+./headers/Namespaces.hh:25:15: note: candidate: ‘std::istream& operator>>(std::istream&, prb::result&)’
+   25 | std::istream& operator>>(std::istream & in, prb::result & result) {
+      |               ^~~~~~~~
+./headers/Namespaces.hh:25:59: note:   no known conversion for argument 2 from ‘Course’ to ‘prb::result&’
+   25 | std::istream& operator>>(std::istream & in, prb::result & result) {
+      |                                             ~~~~~~~~~~~~~~^~~~~~
+In file included from /usr/include/c++/10/string:56,
+                 from ./headers/Namespaces.hh:10,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Course.hh:9,
+                 from ./headers/CourseSet.hh:9,
+                 from ./sources/CourseSet.cc:1:
+/usr/include/c++/10/bits/basic_string.tcc:1468:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)’
+ 1468 |     operator>>(basic_istream<_CharT, _Traits>& __in,
+      |     ^~~~~~~~
+/usr/include/c++/10/bits/basic_string.tcc:1468:5: note:   template argument deduction/substitution failed:
+./sources/CourseSet.cc:21:45: note:   ‘Course’ is not derived from ‘std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+   21 |  for(Course & course : courses) std::cin >> course;
+      |                                             ^~~~~~
+In file included from /usr/include/c++/10/istream:991,
+                 from /usr/include/c++/10/iostream:40,
+                 from ./headers/Namespaces.hh:12,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Course.hh:9,
+                 from ./headers/CourseSet.hh:9,
+                 from ./sources/CourseSet.cc:1:
+/usr/include/c++/10/bits/istream.tcc:931:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, _CharT&)’
+  931 |     operator>>(basic_istream<_CharT, _Traits>& __in, _CharT& __c)
+      |     ^~~~~~~~
+/usr/include/c++/10/bits/istream.tcc:931:5: note:   template argument deduction/substitution failed:
+./sources/CourseSet.cc:21:45: note:   deduced conflicting types for parameter ‘_CharT’ (‘char’ and ‘Course’)
+   21 |  for(Course & course : courses) std::cin >> course;
+      |                                             ^~~~~~
+In file included from /usr/include/c++/10/iostream:40,
+                 from ./headers/Namespaces.hh:12,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Course.hh:9,
+                 from ./headers/CourseSet.hh:9,
+                 from ./sources/CourseSet.cc:1:
+/usr/include/c++/10/istream:756:5: note: candidate: ‘template<class _Traits> std::basic_istream<char, _Traits>& std::operator>>(std::basic_istream<char, _Traits>&, unsigned char&)’
+  756 |     operator>>(basic_istream<char, _Traits>& __in, unsigned char& __c)
+      |     ^~~~~~~~
+/usr/include/c++/10/istream:756:5: note:   template argument deduction/substitution failed:
+./sources/CourseSet.cc:21:45: note:   cannot convert ‘course’ (type ‘Course’) to type ‘unsigned char&’
+   21 |  for(Course & course : courses) std::cin >> course;
+      |                                             ^~~~~~
+In file included from /usr/include/c++/10/iostream:40,
+                 from ./headers/Namespaces.hh:12,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Course.hh:9,
+                 from ./headers/CourseSet.hh:9,
+                 from ./sources/CourseSet.cc:1:
+/usr/include/c++/10/istream:761:5: note: candidate: ‘template<class _Traits> std::basic_istream<char, _Traits>& std::operator>>(std::basic_istream<char, _Traits>&, signed char&)’
+  761 |     operator>>(basic_istream<char, _Traits>& __in, signed char& __c)
+      |     ^~~~~~~~
+/usr/include/c++/10/istream:761:5: note:   template argument deduction/substitution failed:
+./sources/CourseSet.cc:21:45: note:   cannot convert ‘course’ (type ‘Course’) to type ‘signed char&’
+   21 |  for(Course & course : courses) std::cin >> course;
+      |                                             ^~~~~~
+In file included from /usr/include/c++/10/istream:991,
+                 from /usr/include/c++/10/iostream:40,
+                 from ./headers/Namespaces.hh:12,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Course.hh:9,
+                 from ./headers/CourseSet.hh:9,
+                 from ./sources/CourseSet.cc:1:
+/usr/include/c++/10/bits/istream.tcc:963:5: note: candidate: ‘template<class _CharT2, class _Traits2> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, _CharT2*)’
+  963 |     operator>>(basic_istream<_CharT, _Traits>& __in, _CharT* __s)
+      |     ^~~~~~~~
+/usr/include/c++/10/bits/istream.tcc:963:5: note:   template argument deduction/substitution failed:
+./sources/CourseSet.cc:21:45: note:   mismatched types ‘_CharT2*’ and ‘Course’
+   21 |  for(Course & course : courses) std::cin >> course;
+      |                                             ^~~~~~
+In file included from /usr/include/c++/10/iostream:40,
+                 from ./headers/Namespaces.hh:12,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Course.hh:9,
+                 from ./headers/CourseSet.hh:9,
+                 from ./sources/CourseSet.cc:1:
+/usr/include/c++/10/istream:803:5: note: candidate: ‘template<class _Traits> std::basic_istream<char, _Traits>& std::operator>>(std::basic_istream<char, _Traits>&, unsigned char*)’
+  803 |     operator>>(basic_istream<char, _Traits>& __in, unsigned char* __s)
+      |     ^~~~~~~~
+/usr/include/c++/10/istream:803:5: note:   template argument deduction/substitution failed:
+./sources/CourseSet.cc:21:45: note:   cannot convert ‘course’ (type ‘Course’) to type ‘unsigned char*’
+   21 |  for(Course & course : courses) std::cin >> course;
+      |                                             ^~~~~~
+In file included from /usr/include/c++/10/iostream:40,
+                 from ./headers/Namespaces.hh:12,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Course.hh:9,
+                 from ./headers/CourseSet.hh:9,
+                 from ./sources/CourseSet.cc:1:
+/usr/include/c++/10/istream:808:5: note: candidate: ‘template<class _Traits> std::basic_istream<char, _Traits>& std::operator>>(std::basic_istream<char, _Traits>&, signed char*)’
+  808 |     operator>>(basic_istream<char, _Traits>& __in, signed char* __s)
+      |     ^~~~~~~~
+/usr/include/c++/10/istream:808:5: note:   template argument deduction/substitution failed:
+./sources/CourseSet.cc:21:45: note:   cannot convert ‘course’ (type ‘Course’) to type ‘signed char*’
+   21 |  for(Course & course : courses) std::cin >> course;
+      |                                             ^~~~~~
+In file included from /usr/include/c++/10/iostream:40,
+                 from ./headers/Namespaces.hh:12,
+                 from ./headers/IPrintable.hh:9,
+                 from ./headers/Course.hh:9,
+                 from ./headers/CourseSet.hh:9,
+                 from ./sources/CourseSet.cc:1:
+/usr/include/c++/10/istream:980:5: note: candidate: ‘template<class _Istream, class _Tp> typename std::enable_if<std::__and_<std::__not_<std::is_lvalue_reference<_Tp> >, std::__is_convertible_to_basic_istream<_Istream>, std::__is_extractable<typename std::__is_convertible_to_basic_istream<_Tp>::__istream_type, _Tp&&, void> >::value, typename std::__is_convertible_to_basic_istream<_Tp>::__istream_type>::type std::operator>>(_Istream&&, _Tp&&)’
+  980 |     operator>>(_Istream&& __is, _Tp&& __x)
+      |     ^~~~~~~~
+/usr/include/c++/10/istream:980:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/10/istream: In substitution of ‘template<class _Istream, class _Tp> typename std::enable_if<std::__and_<std::__not_<std::is_lvalue_reference<_Tp> >, std::__is_convertible_to_basic_istream<_Istream>, std::__is_extractable<typename std::__is_convertible_to_basic_istream<_Tp>::__istream_type, _Tp&&, void> >::value, typename std::__is_convertible_to_basic_istream<_Tp>::__istream_type>::type std::operator>>(_Istream&&, _Tp&&) [with _Istream = std::basic_istream<char>&; _Tp = Course&]’:
+./sources/CourseSet.cc:21:45:   required from here
+/usr/include/c++/10/istream:980:5: error: no type named ‘type’ in ‘struct std::enable_if<false, std::basic_istream<char>&>’

@@ -17,7 +17,7 @@ std::ostream& operator<< (std::ostream & out, const BinTree<prb::ID> & tree) {
 }
 
 void Session::print() const {
-	std::cout << session.count << ' ' << session.problems;
+	std::cout << count << ' ' << problems;
 }
 
 std::istream& operator>> (std::istream & in, BinTree<prb::ID> & tree) {
@@ -29,7 +29,7 @@ std::istream& operator>> (std::istream & in, BinTree<prb::ID> & tree) {
 }
 
 void Session::read() {
-	std::cin >> session.problems;
+	std::cin >> problems;
 }
 
 /*===========================================================other functionality===========================================================*/
