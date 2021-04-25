@@ -1,7 +1,7 @@
 #include "MapStrategy.hh"
 
 
-bool MapStrategy::containsElement(ID id) const {
+bool MapStrategy::contains(ID id) const {
 	return container.count(id);
 }
 
@@ -10,10 +10,11 @@ T & MapStrategy::operator[](ID id) {
 	return container[id];
 }
 
-int MapStrategy::getCount() const {
+int MapStrategy::count() const {
 	return container.size();
 }
 
-void MapStrategy::addElement(ID newElementID, T newElement) override {
+void MapStrategy::add(ID newElementID, T newElement) override {
 	container[newElementID] = newElement;
 }
+ContainerStrategy<ID,T>::iterator MapStrategy::begin() { return container.begin(); }

@@ -5,7 +5,7 @@
 #include <vector>
 
 template <class ID, class T>
-class VectorStrategy : ContainerStrategy<ID,T> {
+class VectorStrategy : public ContainerStrategy<ID,T> {
 protected:
 	std::vector<T> container;
 public:
@@ -14,7 +14,7 @@ public:
 	@pre true
 	@post @c true is returned if there is an element with the given id within the container. If there is not, @c false is returned
 	*/
-	bool containsElement(ID id) const override;
+	bool contains(ID id) const override;
 
 	/**
 	@brief Returns the element with the given ID contained in the container
@@ -28,14 +28,14 @@ public:
 	@pre true
 	@post The number of elements contained in the container is returned
 	*/
-	int getCount() const override;
+	int count() const override;
 
 	/**
 	@brief Add a new element
 	@pre There is not any element with the given element's id within the container
 	@post The new element is added to the container
 	*/
-	void addElement(ID newElementID, T newElement) override;
+	void add(ID newElementID, T newElement) override;
 };
 
 #endif

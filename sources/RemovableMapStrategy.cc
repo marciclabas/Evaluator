@@ -1,6 +1,6 @@
 #include "RemovableMapStrategy.hh"
 
-void RemovableMapStrategy::removeElement(ID id) {
+void RemovableMapStrategy::remove(ID id) {
 	assert(container.count(id));
 	container.erase(id);
 }
