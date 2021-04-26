@@ -1,6 +1,9 @@
 #include "IO.hh"
 
-const static io::InputCommand systemToInput[][2] = {
+#include <vector>
+#include <list>
+
+const static std::vector<std::list<io::InputCommand>> commands {
         { "nuevo_problema", "np" },
         { "nueva_sesion", "ns" },
         { "nuevo_curso", "nc" },
@@ -20,14 +23,18 @@ const static io::InputCommand systemToInput[][2] = {
         { "escribir_curso", "ec" },
         { "listar_usuarios", "lu" },
         { "escribir_usuario", "eu" }
-    };
+};
 
-bool operator==(io::InputCommand a, io::SystemCommand b) {
-	return a == systemToInput[int(b)][0] or a == systemToInput[int(b)][1];
+bool operator==(io::InputCommand input, io::SystemCommand system) {
+	for(const io::InputCommand & command : commands[system])
+        if(command == input) return true;
+    return false;
 }
 
-bool operator!=(io::InputCommand a, io::SystemCommand b) {
-	return a != systemToInput[int(b)][0] and a != systemToInput[int(b)][1];
+bool operator!=(io::InputCommand input, io::SystemCommand system) {
+	for(const io::InputCommand & command : commands[system])
+        if(command == input) return false;
+    return true;
 }
 
 inline void error(std::string s = "default error") {

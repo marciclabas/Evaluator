@@ -19,7 +19,7 @@ int VectorStrategy::count() const {
 	return container.size();
 }
 
-void VectorStrategy::add(ID newElementID, Problem newElement) override {
+void VectorStrategy::add(ID newElementID, Problem newElement) {
 	container.push_back(newElement);
 }
 
