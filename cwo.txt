@@ -1,2 +1,1 @@
-'encapsulate what repeats itself', ie, a container strategy.
-This time, without any interface
+fix main function

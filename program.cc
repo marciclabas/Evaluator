@@ -34,31 +34,31 @@ int main() {
 		 */
         if(command == new_problem) {
             prb::ID newProblemID; cin >> newProblemID;
-            if(problemCollection.containsElement(newProblemID)) error(); 
+            if(problemCollection.contains(newProblemID)) error(); 
             else {
-            	problemCollection.addElement(newProblemID, Problem());
-            	cout << problemCollection.getCount() << endl;
+            	problemCollection.add(newProblemID, Problem());
+            	cout << problemCollection.count() << endl;
             }
         }
         
         else if(command == new_session) {
 			ses::ID newSessionID; cin >> newSessionID;
-            if(sessionRepository.containsElement(newSessionID)) error(); 
+            if(sessionRepository.contains(newSessionID)) error(); 
             else {
             	Session newSession; newSession.read();
-            	sessionRepository.addElement(newSessionID, newSession);
-            	cout << sessionRepository.getCount() << endl;
+            	sessionRepository.add(newSessionID, newSession);
+            	cout << sessionRepository.count() << endl;
             }
         }
         
         else if(command == new_course) {
-			Course newCourse; cin >> newCourseID;
-            if(courseSet.containsElement(newCourseID)) error(); 
+			crs::ID newCourseID; cin >> newCourseID;
+            if(courseSet.contains(newCourseID)) error(); 
             else {
             	Course newCourse; newCourse.read();
             	if(newCourse.isValid()) {
-            		courseSet.addElement(newCourseID, newCourse);
-            		cout << courseSet.getCount() << endl;
+            		courseSet.add(newCourseID, newCourse);
+            		cout << courseSet.count() << endl;
             	}
             	else error();
             }
@@ -66,10 +66,10 @@ int main() {
         
         else if(command == new_user) {
 			usr::ID newUserID; cin >> newUserID;
-            if(userSet.containsElement(newUserID)) error(); 
+            if(userSet.contains(newUserID)) error(); 
             else {
-            	userSet.addElement(newUserID, User());
-            	cout << userSet.getCount() << endl;
+            	userSet.add(newUserID, User());
+            	cout << userSet.count() << endl;
             }
         }
         /*
@@ -77,10 +77,10 @@ int main() {
 		 */
         else if(command == remove_user) {
 			usr::ID toRemoveUserID; cin >> toRemoveUserID;
-            if(not userSet.containsElement(toRemoveUserID)) error(); 
+            if(not userSet.contains(toRemoveUserID)) error(); 
             else {
-            	userSet.removeElement(toRemoveUserID);
-            	cout << userSet.getCount() << endl;
+            	userSet.remove(toRemoveUserID);
+            	cout << userSet.count() << endl;
             }
         }
         /*
@@ -91,7 +91,7 @@ int main() {
 			crs::ID courseID;
 			cin >> userID >> courseID;
 			
-			if(not userSet.containsElement(userID) or not courseSet.containsElement(courseID)) error();
+			if(not userSet.contains(userID) or not courseSet.contains(courseID)) error();
 			else {
 				User & user = userSet[userID];
 				if(user.isEnrolledInCourse()) error();
@@ -108,7 +108,7 @@ int main() {
 		 */
         else if(command == user_course) {
             usr::ID userID; cin >> userID;
-			if(userSet.containsElement(userID)) {
+			if(userSet.contains(userID)) {
 				User & user  = userSet[userID];
 				user.isEnrolledInCourse()? cout << user.getEnrolledCourseID(): cout << 0;
 				cout << endl;
@@ -123,7 +123,7 @@ int main() {
 			prb::ID problemID;
 			cin >> courseID >> problemID;
 			
-			if(courseSet.containsElement(courseID) and problemCollection.containsElement(problemID)){
+			if(courseSet.contains(courseID) and problemCollection.contains(problemID)){
 				Course & course = courseSet[courseID];
 				ses::ID sessionID;
 				if(course.getSessionByProblem(problemID, sessionID)) cout << sessionID << endl;
@@ -137,14 +137,14 @@ int main() {
         else if(command == solved_problems) {
             usr::ID userID; cin >> userID;
 			
-			if(userSet.containsElement(userID)) userSet[userID].getSolvedStats().print();
+			if(userSet.contains(userID)) userSet[userID].getSolvedStats().print();
 			else error();
         }
        
         else if(command == solvable_problems) {
 			usr::ID userID; cin >> userID;
 			
-			if(userSet.containsElement(userID)) userSet[userID].getSolvableStats().print();
+			if(userSet.contains(userID)) userSet[userID].getSolvableStats().print();
 			else error();
         }
         /*
@@ -205,6 +205,7 @@ int main() {
 			usr::ID userID; cin >> userID;
 			userSet[userID].print();
             cout << endl;
+        }
         else assert(false);
         
         cin >> command;

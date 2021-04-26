@@ -1,6 +1,6 @@
 #include "IO.hh"
 
-const static InputCommand systemToInput[][2] = {
+const static io::InputCommand systemToInput[][2] = {
         { "nuevo_problema", "np" },
         { "nueva_sesion", "ns" },
         { "nuevo_curso", "nc" },
@@ -22,14 +22,14 @@ const static InputCommand systemToInput[][2] = {
         { "escribir_usuario", "eu" }
     };
 
-bool operator==(InputCommand a, SystemCommand b) {
-	return a == comms[int(b)][0] or a == comms[int(b)][1];
+bool operator==(io::InputCommand a, io::SystemCommand b) {
+	return a == systemToInput[int(b)][0] or a == systemToInput[int(b)][1];
 }
 
-bool operator!=(InputCommand a, SystemCommand b) {
-	return not operator==(a, b);
+bool operator!=(io::InputCommand a, io::SystemCommand b) {
+	return a != systemToInput[int(b)][0] and a != systemToInput[int(b)][1];
 }
 
 inline void error(std::string s = "default error") {
-	
+	std::cout << "error: " << s << std::endl;
 }

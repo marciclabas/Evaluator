@@ -25,7 +25,7 @@ namespace io {
     	submit_problem, list_problems, write_problem, list_sessions, write_session,
     	list_courses, write_course, list_users, write_user, end_program };
     
-    typedef std::string InputCommand;
+    using InputCommand = std::string;
     
     /**
 	@brief Checks whether an InputCommand corresponds to a SystemCommand
