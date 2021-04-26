@@ -3,20 +3,24 @@
 #include <cassert>
 
 /* =========================================================constructors & destructors=========================================================*/
-CourseSet::CourseSet(const SessionRepository& sessionRepository): Container(VectorStrategy<Course>()) {
+CourseSet::CourseSet(const SessionRepository& sessionRepository): Container(VectorStrategy<crs::ID, Course>()) {
 	Course::setSessionRepository(sessionRepository);
 }
 
 CourseSet::~CourseSet() {}
 
-/*==============================================================Friend functions===============================================================*/
+/*==============================================================overrided IO methods============================================================*/
 
 void CourseSet::print() const {
-	for(const std::pair<crs:ID, Course> & kv : sortedProblems) std::cout << kv.first << ' ' << kv.second << std::endl;
+	for(crs::ID id = 0; id < count(); id++) {
+		std::cout << id << ' ';
+		operator[](id).print();
+		std::cout << std::endl;
+	}
 }
 
 void CourseSet::read() {
 	int N; std::cin >> N;
-	courses = std::vector<Course>(N);
-	for(Course & course : courses) std::cin >> course;
+	setSize(N);
+	for(Course & course : *this) course.read();
 }

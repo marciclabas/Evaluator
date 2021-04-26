@@ -43,7 +43,7 @@ namespace ses {
 @brief namespace containing type definitions related to the Course class
 */
 namespace crs {
-	using ID = std::string;
+	using ID = int;
 }
 
 /**

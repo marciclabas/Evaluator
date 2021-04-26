@@ -22,6 +22,13 @@ public:
 	virtual T & operator[](ID id);
 
 	/**
+	@brief Returns the element with the given ID contained in the container, const version
+	@pre An element with the given id does exist within the container
+	@post A const element with the given ID contained in the container is returned
+	*/
+	virtual const T & operator[](ID id) const;
+
+	/**
 	@brief Return the number of elements contained in the container
 	@pre true
 	@post The number of elements contained in the container is returned
@@ -34,6 +41,13 @@ public:
 	@post The new element is added to the container
 	*/
 	virtual void add(ID newElementID, T newElement);
+
+	/**
+	@brief Set the size of the container
+	@pre True
+	@post If the container is resizable, it has newSize as it's size
+	*/
+	virtual void setSize(int newSize);
 
 	virtual typename Container::iterator begin();
 

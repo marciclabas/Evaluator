@@ -4,8 +4,8 @@
 #include "ContainerStrategy.hh"
 #include <map>
 
-template <typename ID, typename T>
-class MapStrategy : public ContainerStrategy<ID,T, std::map<ID,T>> {
+template <class ID, class T>
+class MapStrategy : public ContainerStrategy<ID, T, std::map<ID,T>> {
 protected:
 	std::map<ID,T> container;
 public:
@@ -23,6 +23,13 @@ public:
 	@post An element with the given ID contained in the container is returned
 	*/
 	T & operator[](ID id) override;
+
+	/**
+	@brief Returns the element with the given ID contained in the container, const version
+	@pre An element with the given id does exist within the container
+	@post A const element with the given ID contained in the container is returned
+	*/
+	const T & operator[](ID id) const override;
 
 	/**
 	@brief Return the number of elements contained in the container

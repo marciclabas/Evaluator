@@ -10,12 +10,21 @@ T & VectorStrategy::operator[](ID id) {
 	return container[id];
 }
 
+const T & VectorStrategy::operator[](ID id) const {
+	assert(id > 0 and id < container.size());
+	return container[id];
+}
+
 int VectorStrategy::count() const {
 	return container.size();
 }
 
 void VectorStrategy::add(ID newElementID, Problem newElement) override {
 	container.push_back(newElement);
+}
+
+void setSize(int newSize) {
+	container.resize(newSize);
 }
 
 std::vector<T>::iterator VectorStrategy::begin() {

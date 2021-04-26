@@ -9,7 +9,7 @@ SessionRepository::SessionRepository(ProblemCollection & problemCollection): Con
 
 SessionRepository::~SessionRepository() {}
 
-/*==============================================================Friend functions===============================================================*/
+/*==============================================================overrided IO methods============================================================*/
 
 void SessionRepository::print() const {
 	for(const std::pair<ses::ID, Session> & kv : container) {
