@@ -1,6 +1,7 @@
 #include "RemovableMapStrategy.hh"
 
-void RemovableMapStrategy::remove(ID id) {
-	assert(container.count(id));
-	container.erase(id);
+template<class ID, class T>
+void RemovableMapStrategy<ID,T>::remove(ID id) {
+	assert(count(id));
+	this->container.erase(id);
 }

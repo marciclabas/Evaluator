@@ -5,36 +5,44 @@ bool MapStrategy<ID,T>::contains(ID id) const {
 	return container.count(id);
 }
 
+template <class ID, class T>
 T & MapStrategy<ID,T>::operator[](ID id) {
 	assert(container.count(id));
 	return container[id];
 }
 
-const T & MapStrategy::operator[](ID id) const {
+template <class ID, class T>
+const T & MapStrategy<ID,T>::operator[](ID id) const {
 	assert(container.count(id));
 	return container[id];
 }
 
-int MapStrategy::count() const {
+template <class ID, class T>
+int MapStrategy<ID,T>::count() const {
 	return container.size();
 }
 
-void MapStrategy::add(ID newElementID, T newElement) {
+template <class ID, class T>
+void MapStrategy<ID,T>::add(ID newElementID, T newElement) {
 	container[newElementID] = newElement;
 }
 
-std::map<ID,T>::iterator MapStrategy::begin() {
+template <class ID, class T>
+typename std::map<ID,T>::iterator MapStrategy<ID,T>::begin() {
 	return container.begin();
 }
 
-std::map<ID,T>::iterator MapStrategy::end() {
+template <class ID, class T>
+typename std::map<ID,T>::iterator MapStrategy<ID,T>::end() {
 	return container.end();
 }
 
-std::map<ID,T>::const_iterator MapStrategy::begin() const {
+template <class ID, class T>
+typename std::map<ID,T>::const_iterator MapStrategy<ID,T>::begin() const {
 	return container.cbegin();
 }
 
-std::map<ID,T>::const_iterator MapStrategy::end() const {
+template <class ID, class T>
+typename std::map<ID,T>::const_iterator MapStrategy<ID,T>::end() const {
 	return container.cend();
 }
