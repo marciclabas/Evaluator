@@ -14,7 +14,7 @@ CourseSet::~CourseSet() {}
 void CourseSet::print() const {
 	for(crs::ID id = 0; id < count(); id++) {
 		std::cout << id << ' ';
-		operator[](id).print();
+		(*this)[id].print();
 		std::cout << std::endl;
 	}
 }

@@ -23,21 +23,29 @@ private:
 	bool isEnrolled;
 	crs::ID enrolledCourse;
 
-	class ProblemStats : public IPrintable {
-		prb::ID problemID;
-		int submissionsCount;
-	public:
-		int getCount() const { return submissionsCount; }
-		friend std::ostream& operator<< (std::ostream & out, const ProblemStats & stats);
+	struct ProblemStatsList : public IPrintable {
+		struct ProblemStats {
+			prb::ID problemID;
+			int submissionsCount;
+		};
+
+		std::list<ProblemStats> stats;
+		void print() const override;
 	};
 
-	std::list<ProblemStats> solved;
-	std::list<ProblemStats> solvable;
+	ProblemStatsList solved;
+	ProblemStatsList solvable;
+
+	static CourseSet & courseSet;
 
 public:
 	/* =========================================================constructors & destructors=========================================================*/
 	User();
 	~User();
+
+	/*================================================================static methods===============================================================*/
+
+	static void setCourseSet(const CourseSet & courseSet);
 
 	/* ===================================================================getters==================================================================*/
 
@@ -53,14 +61,14 @@ public:
 	@pre true
 	@post A list with the stats of the problems the user has solved is returned
 	*/
-	const std::list<IPrintable> & getSolvedStats() const;
+	const IPrintable & getSolvedStats() const;
 
 	/**
 	@brief Returns a list with the stats of the problems the user can solve (holds the prerequisites to do so)
 	@pre true
 	@post A list with the stats of the problems the user can solve is returned
 	*/
-	const std::list<IPrintable> & getSolvableStats() const;
+	const IPrintable & getSolvableStats() const;
 	
 	/**
 	@brief Checks wheter the user is enrolled in a course
@@ -75,6 +83,9 @@ public:
 	@post @c true is returned if the user has completed the course he is enrolled in. If not, @c false is returned
 	*/
 	bool completedEnrolledCourse() const;
+
+	/*==============================================================overrided IO methods============================================================*/
+	void print() const override;
 
 	/* ===========================================================other functionality===========================================================*/
 

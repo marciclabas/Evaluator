@@ -9,7 +9,7 @@
 #include "User.hh"
 #include "IReadable.hh"
 #include "IPrintable.hh"
-#include "IContainer.hh"
+#include "Container.hh"
 
 #ifndef NO_DIAGRAM 
 #include <map>
@@ -21,7 +21,7 @@
 @class UserSet
 @brief Represents a set of users
 */
-class UserSet : public IReadable, public IPrintable {
+class UserSet : public IReadable, public IPrintable, public Container<usr::ID, User, std::map<usr::ID, User>> {
 	
 public:
 	/* =========================================================constructors & destructors=========================================================*/

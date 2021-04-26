@@ -137,22 +137,14 @@ int main() {
         else if(command == solved_problems) {
             usr::ID userID; cin >> userID;
 			
-			if(userSet.containsElement(userID))
-				for(const IPrintable & stats : userSet[userID].getSolvedStats()) {
-                    stats.print();
-                    cout << endl;
-                }
+			if(userSet.containsElement(userID)) userSet[userID].getSolvedStats().print();
 			else error();
         }
        
         else if(command == solvable_problems) {
 			usr::ID userID; cin >> userID;
 			
-			if(userSet.containsElement(userID))
-				for(const IPrintable & stats : userSet[userID].getSolvableStats()) {
-                    stats.print();
-                    cout << endl;
-                }
+			if(userSet.containsElement(userID)) userSet[userID].getSolvableStats().print();
 			else error();
         }
         /*

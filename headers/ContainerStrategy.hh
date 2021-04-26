@@ -43,6 +43,13 @@ public:
 	virtual void add(ID newElementID, T newElement);
 
 	/**
+	@brief Removes an element from the set
+	@pre An element with the given ID exists within the set
+	@post The element with the given ID no longer exists within the set
+	*/
+	virtual void remove(ID id);
+
+	/**
 	@brief Set the size of the container
 	@pre True
 	@post If the container is resizable, it has newSize as it's size
