@@ -22,7 +22,7 @@ const static std::vector<std::list<io::InputCommand>> commands {
         { "listar_cursos", "lc" },
         { "escribir_curso", "ec" },
         { "listar_usuarios", "lu" },
-        { "escribir_usuario", "eu" }
+        { "escribir_usuario", "eu" },
         { "fin" }
 };
 
