@@ -56,6 +56,13 @@ public:
 	*/
 	virtual void setSize(int newSize);
 
+	/**
+	@brief Add a new element at the end
+	@pre There is not any element with the given element's id within the container
+	@post The new element is added at the end of the container
+	*/
+	virtual void append(T newElement);
+
 	virtual typename Container::iterator begin();
 
 	virtual typename Container::iterator end();

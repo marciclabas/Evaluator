@@ -23,13 +23,13 @@ int VectorStrategy<ID,T>::count() const {
 }
 
 template<class ID, class T>
-void VectorStrategy<ID,T>::add(ID newElementID, T newElement) {
-	container.push_back(newElement);
+void VectorStrategy<ID,T>::setSize(int newSize) {
+	container.resize(newSize);
 }
 
 template<class ID, class T>
-void VectorStrategy<ID,T>::setSize(int newSize) {
-	container.resize(newSize);
+void VectorStrategy<ID,T>::append(T newElement) {
+	container.push_back(newElement);
 }
 
 template<class ID, class T>

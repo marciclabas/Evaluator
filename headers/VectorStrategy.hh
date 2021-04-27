@@ -38,18 +38,18 @@ public:
 	int count() const override;
 
 	/**
-	@brief Add a new element
-	@pre There is not any element with the given element's id within the container
-	@post The new element is added to the container
-	*/
-	void add(ID newElementID, T newElement) override;
-
-	/**
 	@brief Set the size of the container
 	@pre True
 	@post The container has newSize as it's size
 	*/
 	virtual void setSize(int newSize) override;
+
+	/**
+	@brief Add a new element at the end
+	@pre There is not any element with the given element's id within the container
+	@post The new element is added at the end of the container
+	*/
+	virtual void append(T newElement) override;
 
 	typename std::vector<T>::iterator begin() override;
 

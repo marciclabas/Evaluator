@@ -52,16 +52,12 @@ int main() {
         }
         
         else if(command == new_course) {
-			crs::ID newCourseID; cin >> newCourseID;
-            if(courseSet.contains(newCourseID)) error(); 
-            else {
-            	Course newCourse; newCourse.read();
-            	if(newCourse.isValid()) {
-            		courseSet.add(newCourseID, newCourse);
-            		cout << courseSet.count() << endl;
-            	}
-            	else error();
-            }
+        	Course newCourse; newCourse.read();
+        	if(newCourse.isValid()) {
+        		courseSet.append(newCourse);
+        		cout << courseSet.count() << endl;
+        	}
+        	else error();
         }
         
         else if(command == new_user) {
