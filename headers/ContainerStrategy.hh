@@ -1,6 +1,8 @@
 #ifndef CONTAINERSTRATEGY_HH
 #define CONTAINERSTRATEGY_HH
 
+#include <cassert>
+
 template <class ID, class T, class Container>
 class ContainerStrategy {
 private:

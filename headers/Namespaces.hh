@@ -22,13 +22,7 @@ namespace prb {
 	enum result { rejected = 0, accepted = 1};
 }
 
-std::istream& operator>>(std::istream & in, prb::result & result) {
-	int foo; std::cin >> foo;
-	assert(foo == 0 or foo == 1);
-	result = prb::result(foo);
-
-	return in;
-}
+std::istream& operator>>(std::istream & in, prb::result & result);
 
 /**
 @namespace ses

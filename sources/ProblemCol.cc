@@ -49,7 +49,3 @@ void ProblemCollection::read() {
 		add(newProblemID, Problem());
 	}
 }
-
-int main() {
-	return 0;
-}
