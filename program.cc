@@ -34,6 +34,7 @@ int main() {
     cin >> command;
     
     while(command != end_program) {
+    	echo(command);
 		/*
 		 * 		NEW STUFF
 		 */

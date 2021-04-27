@@ -38,6 +38,10 @@ bool operator!=(io::InputCommand input, io::SystemCommand system) {
     return true;
 }
 
-inline void error(std::string s = "default error") {
+void error(std::string s = "default error") {
 	std::cout << "error: " << s << std::endl;
+}
+
+void echo(InputCommand command) {
+
 }

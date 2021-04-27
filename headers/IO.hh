@@ -39,7 +39,10 @@ namespace io {
 	@post returns @c true if @c inputCommand does not correspond to @c systemCommand, returns @c false otherwise
 	*/
 	bool operator!=(InputCommand inputCommand, SystemCommand systemCommand);
+
 	void error();
+
+	void echo(InputCommand command);
 }
 
 #endif
