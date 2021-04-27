@@ -20,10 +20,15 @@ using std::cout;
 using std::endl;
 
 int main() {
-    ProblemCollection problemCollection; problemCollection.read();
-    SessionRepository sessionRepository(problemCollection); sessionRepository.read();
-    CourseSet courseSet(sessionRepository); courseSet.read();
-    UserSet userSet(courseSet); userSet.read();
+    ProblemCollection & problemCollection = ProblemCollection::getInstance(); 
+    SessionRepository & sessionRepository = SessionRepository::getInstance(); 
+    CourseSet & courseSet = CourseSet::getInstance(); 
+    UserSet & userSet = UserSet::getInstance(); 
+
+    problemCollection.read();
+    sessionRepository.read();
+    courseSet.read();
+    userSet.read();
     
     InputCommand command;
     cin >> command;

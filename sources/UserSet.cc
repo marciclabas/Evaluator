@@ -1,11 +1,16 @@
 #include "UserSet.hh"
 
-/* =========================================================constructors & destructors=========================================================*/
-UserSet::UserSet(const CourseSet& courseSet): Container(MapStrategy<usr::ID, User>()) {
-	User::setCourseSet(courseSet);
-}
+/*==========================================================constructors & destructors=========================================================*/
+UserSet::UserSet(): Container(MapStrategy<usr::ID, User>()) {}
 
 UserSet::~UserSet() {}
+
+/*===========================================================singleton-related methods=========================================================*/
+
+UserSet & UserSet::getInstance() {
+	static UserSet instance;
+	return instance;
+}
 
 /*==============================================================overrided IO methods============================================================*/
 

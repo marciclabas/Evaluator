@@ -23,10 +23,24 @@
 */
 class UserSet : public IReadable, public IPrintable, public Container<usr::ID, User, std::map<usr::ID, User>> {
 	
-public:
+private:
 	/* =========================================================constructors & destructors=========================================================*/
-	UserSet(const CourseSet& courseSet);
+	UserSet();
 	~UserSet();
+
+public:
+	/*===========================================================singleton-related methods=========================================================*/
+	// deleted copy constructor
+	UserSet(UserSet & copy) = delete;
+	// deleted assignment operator
+	void operator=(const UserSet &) = delete;
+
+	/**
+	@brief Returns the single instance
+	@pre True
+	@post The single instance is returned
+	*/
+	static UserSet & getInstance();
 
 	/*=============================================================overrided IO methods============================================================*/
 	void print() const override;

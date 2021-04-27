@@ -22,11 +22,24 @@
 @brief Represents a repository of sessions
 */
 class SessionRepository : public IReadable, public IPrintable, public Container<ses::ID, Session, std::map<ses::ID,Session>> {
-public:
+private:
 	/* =========================================================constructors & destructors=========================================================*/
-	SessionRepository(ProblemCollection & problemCollection);
+	SessionRepository();
 	~SessionRepository();
 
+public:
+	/*===========================================================singleton-related methods=========================================================*/
+	// deleted copy constructor
+	SessionRepository(SessionRepository & copy) = delete;
+	// deleted assignment operator
+	void operator=(const SessionRepository &) = delete;
+
+	/**
+	@brief Returns the single instance
+	@pre True
+	@post The single instance is returned
+	*/
+	static SessionRepository & getInstance();
 	/*=============================================================overrided IO methods============================================================*/
 	void print() const override;
 	void read() override;

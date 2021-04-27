@@ -3,11 +3,16 @@
 #include <cassert>
 
 /* =========================================================constructors & destructors=========================================================*/
-CourseSet::CourseSet(const SessionRepository& sessionRepository): Container(VectorStrategy<crs::ID, Course>()) {
-	Course::setSessionRepository(sessionRepository);
-}
+CourseSet::CourseSet(): Container(VectorStrategy<crs::ID, Course>()) {}
 
 CourseSet::~CourseSet() {}
+
+/*===========================================================singleton-related methods=========================================================*/
+
+CourseSet & CourseSet::getInstance() {
+	static CourseSet instance;
+	return instance;
+}
 
 /*==============================================================overrided IO methods============================================================*/
 

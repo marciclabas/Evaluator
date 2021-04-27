@@ -9,6 +9,13 @@ ProblemCollection::ProblemCollection(): Container(MapStrategy<prb::ID, Problem>(
 
 ProblemCollection::~ProblemCollection() {}
 
+/*===========================================================singleton-related methods=========================================================*/
+
+ProblemCollection & ProblemCollection::getInstance() {
+	static ProblemCollection instance;
+	return instance;
+}
+
 /*==============================================================overrided IO methods============================================================*/
 
 void ProblemCollection::print() const {

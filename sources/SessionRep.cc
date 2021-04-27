@@ -3,11 +3,17 @@
 #include <cassert>
 
 /* =========================================================constructors & destructors=========================================================*/
-SessionRepository::SessionRepository(ProblemCollection & problemCollection): Container(MapStrategy<ses::ID, Session>()) {
-	Session::setProblemCollection(problemCollection);
-}
+SessionRepository::SessionRepository(): Container(MapStrategy<ses::ID, Session>()) {}
 
 SessionRepository::~SessionRepository() {}
+
+/*===========================================================singleton-related methods=========================================================*/
+
+SessionRepository & SessionRepository::getInstance() {
+	static SessionRepository instance;
+	return instance;
+}
+
 
 /*==============================================================overrided IO methods============================================================*/
 
