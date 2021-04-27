@@ -41,17 +41,23 @@ Course.o:
 User.o:
 	g++ -o User.o  -c $(SOURCES)/User.cc -I$(INCLUDE) $(OPCIONS) 2>./debug/User.txt
 
-ProblemCol.o: Problem.o Container.o
+ProblemCol.o: Problem.o Container.o MapStrategy.o
 	g++ -o ProblemCol.o -c $(SOURCES)/ProblemCol.cc -I$(INCLUDE) $(OPCIONS) 2>./debug/ProblemCol.txt
 
-SessionRep.o: Session.o Container.o
+SessionRep.o: Session.o Container.o MapStrategy.o
 	g++ -o SessionRep.o -c $(SOURCES)/SessionRep.cc -I$(INCLUDE) $(OPCIONS) 2>./debug/SessionRep.txt
 
-CourseSet.o: Course.o Container.o
+CourseSet.o: Course.o Container.o VectorStrategy.o
 	g++ -o CourseSet.o -c $(SOURCES)/CourseSet.cc -I$(INCLUDE) $(OPCIONS) 2>./debug/CourseSet.txt
 
-UserSet.o: User.o Container.o
+UserSet.o: User.o Container.o RemovableMapStrategy.o
 	g++ -o UserSet.o -c $(SOURCES)/UserSet.cc -I$(INCLUDE) $(OPCIONS) 2>./debug/UserSet.txt
+
+testSingleton.o: ProblemCol.o
+	g++ -o testSingleton.o -c testSingleton.cc -I$(INCLUDE) $(OPCIONS) 2>./debug/testSingleton.txt
+
+testSingleton.exe: testSingleton.o
+	g++ -o testSingleton.exe testSingleton.o ProblemCol.o Problem.o Container.o 2>./debug/testSingletonExe.txt
 
 clean:
 	rm ./*.o

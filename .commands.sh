@@ -12,4 +12,7 @@ alias sets="subl headers/ProblemCol.hh sources/ProblemCol.cc \
 			headers/CourseSet.hh sources/CourseSet.cc \
 			headers/UserSet.hh sources/UserSet.cc &"
 alias cwo="cat cwo.txt"
-alias strats="subl headers/VectorStrategy.hh sources/VectorStrategy.cc headers/MapStrategy.hh sources/MapStrategy.cc headers/RemovableMapStrategy.hh sources/RemovableMapStrategy.cc &"
+alias strats="subl headers/VectorStrategy.hh sources/VectorStrategy.cc \
+				headers/MapStrategy.hh sources/MapStrategy.cc \
+				headers/RemovableMapStrategy.hh sources/RemovableMapStrategy.cc \
+				headers/ContainerStrategy.hh sources/ContainerStrategy.cc &"

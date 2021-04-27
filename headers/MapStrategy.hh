@@ -5,9 +5,7 @@
 #include <map>
 
 template <class ID, class T>
-class MapStrategy : public ContainerStrategy<ID, T, std::map<ID,T>> {
-protected:
-	std::map<ID,T> container;
+class MapStrategy : public ContainerStrategy<ID, T, typename std::map<ID,T>> {
 public:
 	
 	/**

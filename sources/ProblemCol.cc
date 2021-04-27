@@ -22,11 +22,11 @@ void ProblemCollection::print() const {
 	using keyValue = std::pair<prb::ID, Problem>;
 
 	// create temporary sorted by ratio list	
-	std::vector<keyValue> sortedProblems(count());
+	std::vector<keyValue> sortedProblems(this->count());
 
 	int i = 0;
 
-	for(const keyValue & kv : *this) {
+	for(const keyValue & kv : this->container) {
 		assert(i < sortedProblems.size());
 		sortedProblems[i] = kv;
 		i++;
@@ -53,6 +53,6 @@ void ProblemCollection::read() {
 	int P; std::cin >> P;
 	for(int i = 0; i < P; i++) {
 		prb::ID newProblemID; std::cin >> newProblemID;
-		add(newProblemID, Problem());
+		this->add(newProblemID, Problem());
 	}
 }

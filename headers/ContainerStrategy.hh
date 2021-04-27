@@ -1,14 +1,17 @@
 #ifndef CONTAINERSTRATEGY_HH
 #define CONTAINERSTRATEGY_HH
 
-#include <cassert>
+#include <map>
 
 template <class ID, class T, class Container>
 class ContainerStrategy {
-private:
+protected:
 	Container container;
 
-public:	
+public:
+
+	ContainerStrategy();
+
 	/**
 	@brief Return wheter there is an element with the given id
 	@pre true

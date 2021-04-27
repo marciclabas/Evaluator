@@ -42,6 +42,6 @@ void error(std::string s = "default error") {
 	std::cout << "error: " << s << std::endl;
 }
 
-void echo(InputCommand command) {
-
+void echo(io::InputCommand command) {
+    std::cout << '#' << command << std::endl;
 }
