@@ -5,11 +5,7 @@ Session::Session(): problems(), count(0) {}
 
 Session::~Session() {}
 
-/*===============================================================static methods===============================================================*/
-
-void Session::setProblemCollection(const ProblemCollection & problemCollection) {
-	Session::problemCollection = problemCollection;
-}
+/*==============================================================overrided IO methods============================================================*/
 
 std::ostream& operator<< (std::ostream & out, const BinTree<prb::ID> & tree) {
 	out << tree.left() << tree.right() << tree.value();

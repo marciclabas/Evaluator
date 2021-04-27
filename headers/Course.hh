@@ -25,17 +25,11 @@ private:
 	int totalEnrolled;
 	int currentEnrolled;
 	std::list<ses::ID> sessions;
-	static SessionRepository & sessionRepository;
 public:
 	/*==========================================================constructors & destructors=========================================================*/
 	Course();
 	~Course();
-
-
-	/*================================================================static methods===============================================================*/
-
-	static void setSessionRepository(const SessionRepository & sessionRepository);
-
+	
 	/*====================================================================getters==================================================================*/
 
 	/**

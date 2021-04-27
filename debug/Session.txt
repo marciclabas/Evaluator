@@ -1,9 +1,0 @@
-./sources/Session.cc: In static member function ‘static void Session::setProblemCollection(const ProblemCollection&)’:
-./sources/Session.cc:11:31: error: use of deleted function ‘void ProblemCollection::operator=(const ProblemCollection&)’
-   11 |  Session::problemCollection = problemCollection;
-      |                               ^~~~~~~~~~~~~~~~~
-In file included from ./headers/Session.hh:11,
-                 from ./sources/Session.cc:1:
-./headers/ProblemCol.hh:33:7: note: declared here
-   33 |  void operator=(const ProblemCollection &) = delete;
-      |       ^~~~~~~~

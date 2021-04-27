@@ -1,1 +1,1 @@
-singleton pattern
+remove static references from elements
