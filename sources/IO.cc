@@ -23,6 +23,7 @@ const static std::vector<std::list<io::InputCommand>> commands {
         { "escribir_curso", "ec" },
         { "listar_usuarios", "lu" },
         { "escribir_usuario", "eu" }
+        { "fin" }
 };
 
 bool operator==(io::InputCommand input, io::SystemCommand system) {
