@@ -7,13 +7,6 @@ Course::~Course() {
 
 }
 
-
-/*===============================================================static methods===============================================================*/
-
-void Course::setSessionRepository(const SessionRepository & sessionRepository) {
-	Course::sessionRepository = sessionRepository;
-}
-
 /*===================================================================getters==================================================================*/
 
 int Course::getCurrentEnrolled() const {
@@ -22,13 +15,15 @@ int Course::getCurrentEnrolled() const {
 
 bool Course::getSessionByProblem(prb::ID problemID, ses::ID & sessionID) const {
 	for(ses::ID currentSessionID : sessions) {
-		if(Course::sessionRepository[currentSessionID].containsProblem(problemID)) {
+		if(SessionRepository::getInstance()[currentSessionID].containsProblem(problemID)) {
 			sessionID = currentSessionID;
 			return true;
 		}
 	}
 	return false;
 }
+
+/*==============================================================overrided IO methods============================================================*/
 
 void Course::print() const {
 	std::cout << totalEnrolled << currentEnrolled << std::endl;

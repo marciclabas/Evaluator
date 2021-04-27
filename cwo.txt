@@ -1,1 +1,1 @@
-
+remove static references from elements

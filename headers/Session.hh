@@ -28,15 +28,11 @@ class Session : public IPrintable, public IReadable {
 private:
 	BinTree<prb::ID> problems;
 	int count; // number of problems in the tree
-	static ProblemCollection & problemCollection;
+
 public:
 	/*=========================================================constructors & destructors=========================================================*/
 	Session();
 	~Session();
-
-	/*===============================================================static methods===============================================================*/
-
-	static void setProblemCollection(const ProblemCollection & problemCollection);
 
 	/*===========================================================other functionality===========================================================*/
 
@@ -46,6 +42,8 @@ public:
 	@post Returns @c true if the session contains a @c Problem with the given id. Returns @c false if it does not
 	*/
 	bool containsProblem(prb::ID problemID) const;
+
+	/*==============================================================overrided IO methods============================================================*/
 
 	void print() const override;
 	void read() override;

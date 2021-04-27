@@ -20,12 +20,24 @@
 @class ProblemCollection
 @brief Represents a collection of problems
 */
-class ProblemCollection : public IReadable, public IPrintable, public Container<prb::ID, Problem, std::map<prb::ID, Problem>> { 
-public:
+class ProblemCollection : public IReadable, public IPrintable, public Container<prb::ID, Problem, std::map<prb::ID, Problem>> {
+private:
 	/*==========================================================constructors & destructors=========================================================*/
-    ProblemCollection();
+	ProblemCollection();
 	~ProblemCollection();
+public:
+	/*===========================================================singleton-related methods=========================================================*/
+	// deleted copy constructor
+	ProblemCollection(ProblemCollection & copy) = delete;
+	// deleted assignment operator
+	void operator=(const ProblemCollection &) = delete;
 
+	/**
+	@brief Returns the single instance
+	@pre True
+	@post The single instance is returned
+	*/
+	static ProblemCollection & getInstance();
 	/*==============================================================overrided IO methods============================================================*/
 	void print() const override;
 	void read() override;

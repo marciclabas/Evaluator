@@ -7,12 +7,6 @@ User::User(): isEnrolled(false), enrolledCourse(), solved(), solvable() {}
 
 User::~User() {}
 
-/*===============================================================static methods===============================================================*/
-
-void User::setCourseSet(const CourseSet & courseSet) {
-	User::courseSet = courseSet;
-}
-
 /* ===================================================================getters==================================================================*/
 
 crs::ID User::getEnrolledCourseID() const {

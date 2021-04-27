@@ -22,10 +22,24 @@
 @brief Represents set of courses
 */
 class CourseSet : public IReadable, public IPrintable, public Container<crs::ID, Course, std::vector<Course>> {
-public:
+private:
 	/* =========================================================constructors & destructors=========================================================*/
-	CourseSet(const SessionRepository& SessionRepository);
+	CourseSet();
 	~CourseSet();
+
+public:
+	/*===========================================================singleton-related methods=========================================================*/
+	// deleted copy constructor
+	CourseSet(CourseSet & copy) = delete;
+	// deleted assignment operator
+	void operator=(const CourseSet &) = delete;
+
+	/**
+	@brief Returns the single instance
+	@pre True
+	@post The single instance is returned
+	*/
+	static CourseSet & getInstance();
 
 	/*=============================================================overrided IO methods============================================================*/
 	void print() const override;
