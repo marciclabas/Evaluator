@@ -9,12 +9,10 @@
 #include "Course.hh"
 #include "IReadable.hh"
 #include "IPrintable.hh"
-#include "Container.hh"
 
 #ifndef NO_DIAGRAM
 #include <vector>
 #include <string>
-#include "VectorStrategy.hh"
 #endif
 
 /**
@@ -26,10 +24,10 @@ private:
 	/* =========================================================constructors & destructors=========================================================*/
 	CourseSet();
 	~CourseSet();
+	
+	std::vector<Course> courses;
 
 public:
-
-	ContainerStrategy<crs::ID, Course, std::vector<Course>> & courses;
 	/*===========================================================singleton-related methods=========================================================*/
 	// deleted copy constructor
 	CourseSet(CourseSet & copy) = delete;
@@ -44,8 +42,51 @@ public:
 	static CourseSet & getInstance();
 
 	/*=============================================================overrided IO methods============================================================*/
-	void print() const override;
-	void read() override;
+	void print() const;
+	void read();
+	
+	/*===============================================================setters & getters=============================================================*/
+	/**
+	@brief Return wheter there is an element with the given id
+	@pre true
+	@post @c true is returned if there is an element with the given id within the container. If there is not, @c false is returned
+	*/
+	bool contains(crs::ID id) const;
+
+	/**
+	@brief Returns the element with the given ID contained in the container
+	@pre An element with the given id does exist within the container
+	@post An element with the given ID contained in the container is returned
+	*/
+	Course & operator[](crs::ID id);
+
+	/*
+	@brief Returns the element with the given ID contained in the container, const version
+	@pre An element with the given id does exist within the container
+	@post A const element with the given ID contained in the container is returned
+	*
+	const Course & operator[](crs::ID id) const;*/
+
+	/**
+	@brief Return the number of elements contained in the container
+	@pre true
+	@post The number of elements contained in the container is returned
+	*/
+	int count() const;
+
+	/**
+	@brief Set the size of the container
+	@pre True
+	@post The container has newSize as it's size
+	*/
+	void setSize(int newSize);
+
+	/**
+	@brief Add a new element at the end
+	@pre There is not any element with the given element's id within the container
+	@post The new element is added at the end of the container
+	*/
+	void append(Course newElement);
 };
 
 #endif

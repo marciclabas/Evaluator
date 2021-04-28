@@ -5,7 +5,7 @@
 #include <cassert>
 
 /* =========================================================constructors & destructors=========================================================*/
-ProblemCollection::ProblemCollection(): Container(*(new MapStrategy<prb::ID, Problem>())) {}
+ProblemCollection::ProblemCollection(): problems(std::map<prb::ID, Problem>()) {}
 
 ProblemCollection::~ProblemCollection() {}
 
@@ -26,7 +26,7 @@ void ProblemCollection::print() const {
 
 	int i = 0;
 
-	for(const keyValue & kv : *this) {
+	for(const keyValue & kv : problems) {
 		assert(i < sortedProblems.size());
 		sortedProblems[i] = kv;
 		i++;
@@ -55,4 +55,29 @@ void ProblemCollection::read() {
 		prb::ID newProblemID; std::cin >> newProblemID;
 		this->add(newProblemID, Problem());
 	}
+}
+
+/*================================================================container methods=============================================================*/
+
+bool ProblemCollection::contains(prb::ID id) const {
+	return problems.count(id);
+}
+
+Problem & ProblemCollection::operator[](prb::ID id) {
+	assert(problems.count(id));
+	return problems[id];
+}
+
+/*const Problem & ProblemCollection::operator[](prb::ID id) const {
+	assert(problems.count(id));
+	return problems[id];
+}*/
+
+int ProblemCollection::count() const {
+	return problems.size();
+}
+
+
+void ProblemCollection::add(prb::ID newElementID, Problem newElement) {
+	problems[newElementID] = newElement;
 }

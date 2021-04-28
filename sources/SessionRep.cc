@@ -3,7 +3,7 @@
 #include <cassert>
 
 /* =========================================================constructors & destructors=========================================================*/
-SessionRepository::SessionRepository(): Container(*(new MapStrategy<ses::ID, Session>())) {}
+SessionRepository::SessionRepository(): sessions(std::map<ses::ID, Session>()) {}
 
 SessionRepository::~SessionRepository() {}
 
@@ -18,7 +18,7 @@ SessionRepository & SessionRepository::getInstance() {
 /*==============================================================overrided IO methods============================================================*/
 
 void SessionRepository::print() const {
-	for(const std::pair<ses::ID, Session> & kv : container) {
+	for(const std::pair<ses::ID, Session> & kv : sessions) {
 		std::cout << kv.first << ' ';
 		kv.second.print();
 		std::cout << std::endl;
@@ -31,6 +31,31 @@ void SessionRepository::read() {
 			ses::ID newSessionID; std::cin >> newSessionID;
 			Session newSession;
 			newSession.read();
-			container.add(newSessionID, newSession);
+			this->add(newSessionID, newSession);
 	}
+}
+
+/*================================================================container methods=============================================================*/
+
+bool SessionRepository::contains(ses::ID id) const {
+	return sessions.count(id);
+}
+
+Session & SessionRepository::operator[](ses::ID id) {
+	assert(sessions.count(id));
+	return sessions[id];
+}
+
+/*const Session & SessionRepository::operator[](ses::ID id) const {
+ * assert(sessions.count(id));
+ * return sessions[id];
+ } **/
+
+int SessionRepository::count() const {
+	return sessions.size();
+}
+
+
+void SessionRepository::add(ses::ID newElementID, Session newElement) {
+	sessions[newElementID] = newElement;
 }
