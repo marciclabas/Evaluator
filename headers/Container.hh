@@ -20,10 +20,10 @@
 template <class ID, class T, class ContainerType>
 class Container {
 protected:
-	ContainerStrategy<ID,T,ContainerType> container;
+	ContainerStrategy<ID,T,ContainerType> & container;
 public:
 
-	Container(ContainerStrategy<ID,T,ContainerType> container);
+	Container(ContainerStrategy<ID,T,ContainerType> & container);
 
 	/**
 	@brief Return wheter the @c Container object has an element with the given id

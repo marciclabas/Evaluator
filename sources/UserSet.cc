@@ -1,7 +1,7 @@
 #include "UserSet.hh"
 
 /*==========================================================constructors & destructors=========================================================*/
-UserSet::UserSet(): Container(MapStrategy<usr::ID, User>()) {}
+UserSet::UserSet(): Container(*(new MapStrategy<usr::ID, User>())) {}
 
 UserSet::~UserSet() {}
 

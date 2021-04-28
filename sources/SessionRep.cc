@@ -3,7 +3,7 @@
 #include <cassert>
 
 /* =========================================================constructors & destructors=========================================================*/
-SessionRepository::SessionRepository(): Container(MapStrategy<ses::ID, Session>()) {}
+SessionRepository::SessionRepository(): Container(*(new MapStrategy<ses::ID, Session>())) {}
 
 SessionRepository::~SessionRepository() {}
 

@@ -3,7 +3,7 @@
 #include <cassert>
 
 /* =========================================================constructors & destructors=========================================================*/
-CourseSet::CourseSet(): Container(VectorStrategy<crs::ID, Course>()) {}
+CourseSet::CourseSet(): courses(*(new VectorStrategy<crs::ID, Course>())) {}
 
 CourseSet::~CourseSet() {}
 
@@ -17,15 +17,15 @@ CourseSet & CourseSet::getInstance() {
 /*==============================================================overrided IO methods============================================================*/
 
 void CourseSet::print() const {
-	for(crs::ID id = 0; id < count(); id++) {
+	for(crs::ID id = 0; id < courses.count(); id++) {
 		std::cout << id << ' ';
-		(*this)[id].print();
+		courses[id].print();
 		std::cout << std::endl;
 	}
 }
 
 void CourseSet::read() {
 	int N; std::cin >> N;
-	setSize(N);
-	for(Course & course : *this) course.read();
+	courses.setSize(N);
+	for(Course & course : courses) course.read();
 }

@@ -1,7 +1,7 @@
 #include "Container.hh"
 
 template <class ID, class T, class ContainerType>
-Container<ID,T,ContainerType>::Container(ContainerStrategy<ID,T,ContainerType> container): container(container) {}
+Container<ID,T,ContainerType>::Container(ContainerStrategy<ID,T,ContainerType> & container): container(container) {}
 
 template <class ID, class T, class ContainerType>
 bool Container<ID,T,ContainerType>::contains(ID id) const { return container.contains(id); }

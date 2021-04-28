@@ -21,13 +21,15 @@
 @class CourseSet
 @brief Represents set of courses
 */
-class CourseSet : public IReadable, public IPrintable, public Container<crs::ID, Course, std::vector<Course>> {
+class CourseSet : public IReadable, public IPrintable {
 private:
 	/* =========================================================constructors & destructors=========================================================*/
 	CourseSet();
 	~CourseSet();
 
 public:
+
+	ContainerStrategy<crs::ID, Course, std::vector<Course>> & courses;
 	/*===========================================================singleton-related methods=========================================================*/
 	// deleted copy constructor
 	CourseSet(CourseSet & copy) = delete;

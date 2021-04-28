@@ -17,28 +17,28 @@ public:
 	@pre true
 	@post @c true is returned if there is an element with the given id within the container. If there is not, @c false is returned
 	*/
-	virtual bool contains(ID id) const;
+	virtual bool contains(ID id) const = 0;
 
 	/**
 	@brief Returns the element with the given ID contained in the container
 	@pre An element with the given id does exist within the container
 	@post An element with the given ID contained in the container is returned
 	*/
-	virtual T & operator[](ID id);
+	virtual T & operator[](ID id) = 0;
 
 	/**
 	@brief Returns the element with the given ID contained in the container, const version
 	@pre An element with the given id does exist within the container
 	@post A const element with the given ID contained in the container is returned
 	*/
-	virtual const T & operator[](ID id) const;
+	virtual const T & operator[](ID id) const = 0;
 
 	/**
 	@brief Return the number of elements contained in the container
 	@pre true
 	@post The number of elements contained in the container is returned
 	*/
-	virtual int count() const;
+	virtual int count() const = 0;
 
 	/**
 	@brief Add a new element
@@ -68,13 +68,13 @@ public:
 	*/
 	virtual void append(T newElement);
 
-	virtual typename Container::iterator begin();
+	virtual typename Container::iterator begin() = 0;
 
-	virtual typename Container::iterator end();
+	virtual typename Container::iterator end() = 0;
 
-	virtual typename Container::const_iterator begin() const;
+	virtual typename Container::const_iterator begin() const = 0;
 
-	virtual typename Container::const_iterator end() const;
+	virtual typename Container::const_iterator end() const = 0;
 };
 
 #endif

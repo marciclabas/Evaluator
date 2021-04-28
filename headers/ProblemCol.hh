@@ -20,7 +20,7 @@
 @class ProblemCollection
 @brief Represents a collection of problems
 */
-class ProblemCollection : public IReadable, public IPrintable, public Container<prb::ID, Problem, std::map<prb::ID, Problem>> {
+class ProblemCollection : public IReadable, public IPrintable, public Container<prb::ID, Problem, std::map<prb::ID,Problem>> {
 private:
 	/*==========================================================constructors & destructors=========================================================*/
 	ProblemCollection();
