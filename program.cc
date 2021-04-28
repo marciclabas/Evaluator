@@ -60,8 +60,8 @@ int main() {
         else if(command == new_course) {
         	Course newCourse; newCourse.read();
         	if(newCourse.isValid()) {
-        		courseSet.courses.append(newCourse);
-        		cout << courseSet.courses.count() << endl;
+        		courseSet.append(newCourse);
+        		cout << courseSet.count() << endl;
         	}
         	else error();
         }
@@ -93,13 +93,13 @@ int main() {
 			crs::ID courseID;
 			cin >> userID >> courseID;
 			
-			if(not userSet.contains(userID) or not courseSet.courses.contains(courseID)) error();
+			if(not userSet.contains(userID) or not courseSet.contains(courseID)) error();
 			else {
 				User & user = userSet[userID];
 				if(user.isEnrolledInCourse()) error();
 				else { 
 					user.enrollCourse(courseID);
-					Course & course = courseSet.courses[courseID];
+					Course & course = courseSet[courseID];
 					course.enrollUser();
 					cout << course.getCurrentEnrolled() << endl;
 				}
@@ -125,8 +125,8 @@ int main() {
 			prb::ID problemID;
 			cin >> courseID >> problemID;
 			
-			if(courseSet.courses.contains(courseID) and problemCollection.contains(problemID)){
-				Course & course = courseSet.courses[courseID];
+			if(courseSet.contains(courseID) and problemCollection.contains(problemID)){
+				Course & course = courseSet[courseID];
 				ses::ID sessionID;
 				if(course.getSessionByProblem(problemID, sessionID)) cout << sessionID << endl;
 				else error();
@@ -165,7 +165,7 @@ int main() {
 
 			// check wheter the user has finished the course and unenroll him if so
 			if(user.completedEnrolledCourse()) {
-				courseSet.courses[user.getEnrolledCourseID()].unenrollUser();
+				courseSet[user.getEnrolledCourseID()].unenrollUser();
 				user.unenrollCourse();
 			}
         }
@@ -196,7 +196,7 @@ int main() {
         }
         else if(command == write_course) {
 			crs::ID courseID; cin >> courseID;
-			courseSet.courses[courseID].print();
+			courseSet[courseID].print();
             cout << endl;
 		}
         else if(command == list_users) {

@@ -11,17 +11,20 @@ program.o: ProblemCol.o SessionRep.o CourseSet.o UserSet.o IO.o
 
 IO.o:
 	g++ -o IO.o -c $(SOURCES)/IO.cc -I$(INCLUDE) $(OPCIONS) 2>./debug/IO.txt
+	
+Namespaces.o:
+	g++ -o Namespaces.o -c $(SOURCES)/Namespaces.cc -I $(INCLUDE) $(OPCIONS) 2>./debug/Namespaces.txt
 
-Problem.o:
+Problem.o: Namespaces.o
 	g++ -o Problem.o -c $(SOURCES)/Problem.cc -I$(INCLUDE) $(OPCIONS) 2>./debug/Problem.txt
 
-Session.o:
+Session.o: Namespaces.o
 	g++ -o Session.o -c $(SOURCES)/Session.cc -I$(INCLUDE) $(OPCIONS) 2>./debug/Session.txt
 
-Course.o:
+Course.o: Namespaces.o
 	g++ -o Course.o -c $(SOURCES)/Course.cc -I$(INCLUDE) $(OPCIONS) 2>./debug/Course.txt
 
-User.o:
+User.o: Namespaces.o
 	g++ -o User.o  -c $(SOURCES)/User.cc -I$(INCLUDE) $(OPCIONS) 2>./debug/User.txt
 
 ProblemCol.o: Problem.o

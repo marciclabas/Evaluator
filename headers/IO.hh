@@ -40,7 +40,7 @@ namespace io {
 	*/
 	bool operator!=(InputCommand inputCommand, SystemCommand systemCommand);
 
-	void error();
+	void error(std::string s = "default error");
 
 	void echo(InputCommand command);
 }
