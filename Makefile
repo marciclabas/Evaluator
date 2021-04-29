@@ -3,6 +3,9 @@ INCLUDE = ./headers
 SOURCES = ./sources
 DEBUG 	= ./debug
 
+test: UserSet.o
+	g++ -o test.exe test.cc *.o -I$(INCLUDE) $(OPCIONS) 2>./debug/test.txt
+
 all: program.o
 	g++ -o evaluator.exe *.o 2>./debug/evaluator.txt
 
@@ -18,13 +21,13 @@ Namespaces.o:
 Problem.o: Namespaces.o
 	g++ -o Problem.o -c $(SOURCES)/Problem.cc -I$(INCLUDE) $(OPCIONS) 2>./debug/Problem.txt
 
-Session.o: Namespaces.o
+Session.o: ProblemCol.o
 	g++ -o Session.o -c $(SOURCES)/Session.cc -I$(INCLUDE) $(OPCIONS) 2>./debug/Session.txt
 
-Course.o: Namespaces.o
+Course.o: SessionRep.o
 	g++ -o Course.o -c $(SOURCES)/Course.cc -I$(INCLUDE) $(OPCIONS) 2>./debug/Course.txt
 
-User.o: Namespaces.o
+User.o: CourseSet.o
 	g++ -o User.o  -c $(SOURCES)/User.cc -I$(INCLUDE) $(OPCIONS) 2>./debug/User.txt
 
 ProblemCol.o: Problem.o

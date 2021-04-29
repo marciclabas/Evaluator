@@ -48,4 +48,31 @@ AlexiaPutellas
 AitanaBonmati
 JenniferHermoso
 LiekeMartens
-fin
+listar_problemas
+listar_sesiones
+listar_cursos
+listar_usuarios
+nuevo_problema S03
+np S04
+np M08
+np M09
+nueva_sesion maps
+M07 M08 0 0 M09 0 0
+ns maps_y_sets_sel 
+S02 M02 M04 0 0 M08 0 0 S04 M05 0 0 M07 M09 0 0 0
+nuevo_problema G01
+np G02
+np G03
+np G04
+np G05
+np G06
+np G07
+np G08
+np G09
+np G10
+np G11
+np G12
+nueva_sesion grafos_1
+G01 G02 G03 G05 0 0 G06 0 0 G04 0 0 0
+ns grafos_2
+G07 G08 0 0 G09 G10 G12 0 0 0 G11 0 0

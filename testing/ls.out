@@ -1,3 +1,4 @@
+#listar_problemas
 AB01(0,0,1)
 AB02(0,0,1)
 AB03(0,0,1)
@@ -75,6 +76,7 @@ V22(0,0,1)
 V23(0,0,1)
 V24(0,0,1)
 V25(0,0,1)
+#listar_sesiones
 arb_bin_1 6 ((((AB04)(AB05)AB03)AB02)(AB06)AB01)
 arb_bin_2 5 ((AB08)((AB10)(AB11)AB09)AB07)
 colas 3 (((C03)C02)C01)
@@ -92,9 +94,11 @@ vectores_1 6 (((V04)V02)((V05)(V06)V03)V01)
 vectores_2 8 ((((V10)V09)(V11)V08)(((V14)V13)V12)V07)
 vectores_3 4 (((V17)(V18)V16)V15)
 vectores_sel 8 (((V16)((V22)V24)V10)((V14)(V18)V25)V06)
+#listar_cursos
 1 0 0 2 (tuplas vectores_0)
 2 0 0 7 (tuplas vectores_1 vectores_2 vectores_3 matrices pilas colas)
 3 0 0 9 (vectores_sel pilas_y_colas_sel listas_1 listas_2 arb_bin_1 arb_bin_2 sets maps colas_prior)
+#listar_usuarios
 AitanaBonmati(0,0,0,0)
 AlexiaPutellas(0,0,0,0)
 AnsuFati(0,0,0,0)
@@ -111,3 +115,43 @@ MartaTorrejon(0,0,0,0)
 Pedri(0,0,0,0)
 SerginhoDest(0,0,0,0)
 SergioBusquets(0,0,0,0)
+#nuevo_problema S03
+error: el problema ya existe
+#np S04
+78
+#np M08
+79
+#np M09
+80
+#nueva_sesion maps
+error: la sesion ya existe
+#ns maps_y_sets_sel
+18
+#nuevo_problema G01
+81
+#np G02
+82
+#np G03
+83
+#np G04
+84
+#np G05
+85
+#np G06
+86
+#np G07
+87
+#np G08
+88
+#np G09
+89
+#np G10
+90
+#np G11
+91
+#np G12
+92
+#nueva_sesion grafos_1
+19
+#ns grafos_2
+20

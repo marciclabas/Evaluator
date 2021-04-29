@@ -25,8 +25,8 @@ int main() {
     CourseSet & courseSet = CourseSet::getInstance(); 
     UserSet & userSet = UserSet::getInstance(); 
 
-    problemCollection.read(); // tested
-    sessionRepository.read(); // tested
+    problemCollection.read();
+    sessionRepository.read();
     courseSet.read();
     userSet.read();
     
@@ -34,7 +34,7 @@ int main() {
     cin >> command;
     
     while(command != end_program) {
-    	echo(command);
+    	cout << '#' << command << ' ';
 		/*
 		 * 		NEW STUFF
 		 */
@@ -192,6 +192,8 @@ int main() {
 		 *  LISTS AND WRITES
 		 */
         else if(command == list_problems) {
+			// echo
+			cout << endl;
             problemCollection.print();
             cout << endl;
         }
@@ -204,6 +206,8 @@ int main() {
             cout << endl;
 		}
         else if(command == list_sessions) {
+			// echo
+			cout << endl;
             sessionRepository.print();
             cout << endl;
         }
@@ -216,6 +220,8 @@ int main() {
             cout << endl;
 		}
         else if(command == list_courses) {
+			// echo
+			cout << endl;
             courseSet.print();
             cout << endl;
         }
@@ -228,6 +234,8 @@ int main() {
             cout << endl;
 		}
         else if(command == list_users) {
+			// echo
+			cout << endl;
 			userSet.print();
             cout << endl;    
         }
