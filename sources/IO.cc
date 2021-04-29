@@ -44,6 +44,6 @@ namespace io {
 	}
 	
 	void echo(io::InputCommand command) {
-	    std::cout << '#' << command << std::endl;
+	    std::cout << '#' << command;
 	}
 }

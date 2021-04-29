@@ -40,6 +40,8 @@ int main() {
 		 */
         if(command == new_problem) {
             prb::ID newProblemID; cin >> newProblemID;
+			// echo
+			cout << ' ' << newProblemID << endl;
             if(problemCollection.contains(newProblemID)) error(); 
             else {
             	problemCollection.add(newProblemID, Problem());
@@ -49,6 +51,8 @@ int main() {
         
         else if(command == new_session) {
 			ses::ID newSessionID; cin >> newSessionID;
+			// echo
+			cout << ' ' << newSessionID << endl;
             if(sessionRepository.contains(newSessionID)) error(); 
             else {
             	Session newSession; newSession.read();
@@ -68,6 +72,8 @@ int main() {
         
         else if(command == new_user) {
 			usr::ID newUserID; cin >> newUserID;
+			// echo
+			cout << ' ' << newUserID << endl;
             if(userSet.contains(newUserID)) error(); 
             else {
             	userSet.add(newUserID, User());
@@ -79,6 +85,8 @@ int main() {
 		 */
         else if(command == remove_user) {
 			usr::ID toRemoveUserID; cin >> toRemoveUserID;
+			// echo
+			cout << ' '  << toRemoveUserID << endl;
             if(not userSet.contains(toRemoveUserID)) error(); 
             else {
             	userSet.remove(toRemoveUserID);
@@ -92,7 +100,9 @@ int main() {
 			usr::ID userID; 
 			crs::ID courseID;
 			cin >> userID >> courseID;
-			
+			// echo
+			cout << ' ' << userID << ' ' << courseID << endl;
+
 			if(not userSet.contains(userID) or not courseSet.contains(courseID)) error();
 			else {
 				User & user = userSet[userID];
@@ -110,6 +120,8 @@ int main() {
 		 */
         else if(command == user_course) {
             usr::ID userID; cin >> userID;
+			// echo
+			cout << ' ' << userID << endl;
 			if(userSet.contains(userID)) {
 				User & user  = userSet[userID];
 				user.isEnrolledInCourse()? cout << user.getEnrolledCourseID(): cout << 0;
@@ -124,7 +136,9 @@ int main() {
             crs::ID courseID;
 			prb::ID problemID;
 			cin >> courseID >> problemID;
-			
+			// echo
+			cout << ' ' << courseID << ' ' << problemID << endl;
+
 			if(courseSet.contains(courseID) and problemCollection.contains(problemID)){
 				Course & course = courseSet[courseID];
 				ses::ID sessionID;
@@ -138,14 +152,18 @@ int main() {
 		 */
         else if(command == solved_problems) {
             usr::ID userID; cin >> userID;
-			
+			// echo
+			cout << ' ' << userID << endl;
+
 			if(userSet.contains(userID)) userSet[userID].getSolvedStats().print();
 			else error();
         }
        
         else if(command == solvable_problems) {
 			usr::ID userID; cin >> userID;
-			
+			// echo
+			cout << ' ' << userID << endl;
+
 			if(userSet.contains(userID)) userSet[userID].getSolvableStats().print();
 			else error();
         }
@@ -157,7 +175,8 @@ int main() {
 			prb::ID problemID;
 			prb::result result;
 			cin >> userID >> problemID >> result;
-
+			// echo
+			cout << ' ' << userID << ' ' << problemID << ' ' << int(result) << endl;
 			User & user = userSet[userID];
 			
 			user.parseSubmission(problemID, result);
@@ -178,6 +197,9 @@ int main() {
         }
         else if(command == write_problem) {
 			prb::ID problemID; cin >> problemID;
+			// echo
+			cout << ' ' << problemID << endl;
+
 			problemCollection[problemID].print();
             cout << endl;
 		}
@@ -187,6 +209,9 @@ int main() {
         }
         else if(command == write_session) {
 			ses::ID sessionID; cin >> sessionID;
+			// echo
+			cout << ' ' << sessionID << endl;
+
 			sessionRepository[sessionID].print();
             cout << endl;
 		}
@@ -196,6 +221,9 @@ int main() {
         }
         else if(command == write_course) {
 			crs::ID courseID; cin >> courseID;
+			// echo
+			cout << ' ' << courseID << endl;
+
 			courseSet[courseID].print();
             cout << endl;
 		}
@@ -205,6 +233,9 @@ int main() {
         }
         else if(command == write_user) {
 			usr::ID userID; cin >> userID;
+			// echo
+			cout << ' ' << userID << endl;
+			
 			userSet[userID].print();
             cout << endl;
         }
