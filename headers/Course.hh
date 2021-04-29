@@ -11,7 +11,7 @@
 #include "SessionRep.hh"
 
 #ifndef NO_DIAGRAM
-#include <set>
+#include <list>
 #endif
 
 
@@ -24,10 +24,14 @@ class Course : public IPrintable, public IReadable {
 private:
 	int totalEnrolled;
 	int currentEnrolled;
-	std::set<ses::ID> sessions; // has to be ordered to print
+	std::list<ses::ID> sessions; // has to be ordered to print
 
 	// adds a session to the course
 	void addSession(ses::ID sessionID);
+
+	// returns the session count
+	int sessionCount() const;
+
 public:
 	/*==========================================================constructors & destructors=========================================================*/
 	Course();

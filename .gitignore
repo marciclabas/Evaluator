@@ -1,6 +1,6 @@
 debug/*
+testing/*
 *.o
 *.exe
 .*
 !/.gitignore
-testing/*

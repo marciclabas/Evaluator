@@ -3,7 +3,11 @@
 /*================================================================private methods=============================================================*/
 
 void Course::addSession(ses::ID sessionID) {
-	sessions.emplace(sessionID);
+	sessions.emplace_back(sessionID);
+}
+
+int Course::sessionCount() const {
+	return sessions.size();
 }
 
 /*=========================================================constructors & destructors=========================================================*/
@@ -33,8 +37,10 @@ bool Course::getSessionByProblem(prb::ID problemID, ses::ID & sessionID) const {
 /*==============================================================overrided IO methods============================================================*/
 
 void Course::print() const {
+	assert(sessions.begin() != sessions.end());
+
 	auto sessionIterator = sessions.begin();
-	std::cout << totalEnrolled << ' ' << currentEnrolled << " (" << *sessionIterator;
+	std::cout << totalEnrolled << ' ' << currentEnrolled << ' ' << this->sessionCount() << " (" << *sessionIterator;
 	sessionIterator++;
 
 	while(sessionIterator != sessions.end()) {
