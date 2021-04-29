@@ -25,7 +25,7 @@ int main() {
     CourseSet & courseSet = CourseSet::getInstance(); 
     UserSet & userSet = UserSet::getInstance(); 
 
-    problemCollection.read();
+    problemCollection.read(); // tested
     sessionRepository.read();
     courseSet.read();
     userSet.read();

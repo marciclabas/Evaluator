@@ -20,6 +20,7 @@
 namespace prb {
 	using ID = std::string;
 	enum result { rejected = 0, accepted = 1};
+	inline ID guard() { return "0"; }
 }
 
 std::istream& operator>>(std::istream & in, prb::result & result);

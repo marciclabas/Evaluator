@@ -6,3 +6,5 @@ std::istream& operator>>(std::istream & in, prb::result & result) {
 	result = prb::result(foo);
 	return in;
 }
+
+// prb::ID prb::guard() { return "0"; }
