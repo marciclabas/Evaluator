@@ -27,7 +27,7 @@ std::istream& operator>> (std::istream & in, BinTree<prb::ID> & tree) {
 	in >> leftChild >> rightChild;
 	tree = BinTree<prb::ID>(problemID, leftChild, rightChild);
 	return in;
-}}
+}
 
 void Session::read() {
 	std::cin >> problems;
