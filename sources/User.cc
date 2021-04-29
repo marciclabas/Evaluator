@@ -3,7 +3,7 @@
 #include <cassert>
 
 /* =========================================================constructors & destructors=========================================================*/
-User::User(): isEnrolled(false), enrolledCourse(), solved(), solvable() {}
+User::User(): isEnrolled(false), enrolledCourse(), solvedProblems(), solvableProblems() {}
 
 User::~User() {}
 
@@ -14,11 +14,11 @@ crs::ID User::getEnrolledCourseID() const {
 }
 
 const IPrintable & User::getSolvedStats() const {
-	return solved;
+	return solvedProblems;
 }
 
 const IPrintable & User::getSolvableStats() const {
-	return solvable;
+	return solvableProblems;
 }
 
 bool User::isEnrolledInCourse() const {
@@ -38,19 +38,18 @@ void User::ProblemStatsList::print() const {
 
 // number of total submissions, number of accepted problems, number of tried problems, enrolled course or '0' if not enrolled
 void User::print() const {
-	int acceptedProblems = solved.stats.size();
+	int acceptedProblems = solvedProblems.stats.size();
 	int totalSubmissions = acceptedProblems;
 	int triedProblems = acceptedProblems;
 
-	for(const ProblemStatsList::ProblemStats & problemStats : solved.stats)
+	for(const ProblemStatsList::ProblemStats & problemStats : solvedProblems.stats)
 		if(problemStats.submissionsCount > 0) {
 			totalSubmissions += problemStats.submissionsCount;
 			triedProblems++;
 		}
 
-	std::cout << totalSubmissions << ' ' << acceptedProblems << ' ' << triedProblems;
+	std::cout << totalSubmissions << ',' << acceptedProblems << ',' << triedProblems << ',';
 	isEnrolled ? std::cout << enrolledCourse : std::cout << '0';
-	std::cout << std::endl;
 }
 
 /* ===========================================================other functionality===========================================================*/

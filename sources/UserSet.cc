@@ -16,9 +16,9 @@ UserSet & UserSet::getInstance() {
 
 void UserSet::print() const {
 	for(const std::pair<usr::ID, User> & kv : users) {
-		std::cout << kv.first << ' ';
+		std::cout << kv.first << '(';
 		kv.second.print();
-		std::cout << std::endl;
+		std::cout << ')' << std::endl;
 	}
 }
 

@@ -32,9 +32,15 @@ private:
 		std::list<ProblemStats> stats;
 		void print() const override;
 	};
+	/* consider using:
+	struct UserStats {
+		int acceptedProblems;
+		int totalSubmissions;
+		int triedProblems;
+	} stats; */
 
-	ProblemStatsList solved;
-	ProblemStatsList solvable;
+	ProblemStatsList solvedProblems;
+	ProblemStatsList solvableProblems;
 
 public:
 	/* =========================================================constructors & destructors=========================================================*/

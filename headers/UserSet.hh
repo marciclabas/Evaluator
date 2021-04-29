@@ -26,7 +26,7 @@ private:
 	UserSet();
 	~UserSet();
 	
-	std::map<usr::ID, User> users;
+	std::map<usr::ID, User> users; // sorted by usr::ID
 
 public:
 	/*===========================================================singleton-related methods=========================================================*/
