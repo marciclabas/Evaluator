@@ -43,7 +43,7 @@ void ProblemCollection::print() const {
 
 	// for(const keyValue & [name, problem] : sortedProblems) out << name << ' ' << problem; // UPGRADE TO c++17 plz :(
 	for(const keyValue & kv : sortedProblems) {
-		std::cout << kv.first << ' ';
+		std::cout << kv.first;
 		kv.second.print();
 		std::cout << std::endl;
 	}
