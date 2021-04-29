@@ -7,8 +7,12 @@ Session::~Session() {}
 
 /*==============================================================overrided IO methods============================================================*/
 
+// postorder: tested!
 std::ostream& operator<< (std::ostream & out, const BinTree<prb::ID> & tree) {
-	out << tree.left() << tree.right() << tree.value();
+	if(tree.empty())
+		out << "0 " ;
+	else
+		out << tree.left() << tree.right() << tree.value() << ' ';
 	return out;
 }
 
@@ -16,13 +20,14 @@ void Session::print() const {
 	std::cout << count << ' ' << problems;
 }
 
+// preorder: tested!
 std::istream& operator>> (std::istream & in, BinTree<prb::ID> & tree) {
 	prb::ID problemID; in >> problemID;
 	BinTree<prb::ID> leftChild, rightChild;
 	in >> leftChild >> rightChild;
 	tree = BinTree<prb::ID>(problemID, leftChild, rightChild);
 	return in;
-}
+}}
 
 void Session::read() {
 	std::cin >> problems;
