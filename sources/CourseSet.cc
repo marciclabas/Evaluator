@@ -18,7 +18,7 @@ CourseSet & CourseSet::getInstance() {
 
 void CourseSet::print() const {
 	for(crs::ID id = 0; id < courses.size(); id++) {
-		std::cout << id << ' ';
+		std::cout << id+1 << ' ';
 		courses[id].print();
 		std::cout << std::endl;
 	}

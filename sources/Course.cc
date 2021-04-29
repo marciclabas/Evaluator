@@ -1,6 +1,13 @@
 #include "Course.hh"
 
+/*================================================================private methods=============================================================*/
+
+void Course::addSession(ses::ID sessionID) {
+	sessions.emplace(sessionID);
+}
+
 /*=========================================================constructors & destructors=========================================================*/
+
 Course::Course(): totalEnrolled(0), currentEnrolled(0), sessions() {}
 
 Course::~Course() {
@@ -26,15 +33,22 @@ bool Course::getSessionByProblem(prb::ID problemID, ses::ID & sessionID) const {
 /*==============================================================overrided IO methods============================================================*/
 
 void Course::print() const {
-	std::cout << totalEnrolled << currentEnrolled << std::endl;
-	for(ses::ID sessionID : sessions) std::cout << sessionID << std::endl;
+	auto sessionIterator = sessions.begin();
+	std::cout << totalEnrolled << ' ' << currentEnrolled << " (" << *sessionIterator;
+	sessionIterator++;
+
+	while(sessionIterator != sessions.end()) {
+		std::cout << ' ' << *sessionIterator;
+		sessionIterator++;
+	}
+	std::cout << ')';
 }
 
 void Course::read() {
 	int sessionCount; std::cin >> sessionCount;
 	for(int i = 0; i < sessionCount; i++) {
 		ses::ID sessionID; std::cin >> sessionID;
-		sessions.insert(sessions.end(), sessionID);
+		addSession(sessionID);
 	}
 }
 
