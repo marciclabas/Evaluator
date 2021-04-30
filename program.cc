@@ -108,18 +108,21 @@ int main() {
 			// echo
 			cout << ' ' << userID << ' ' << courseID << endl;
 
-			if(not userSet.contains(userID) or not courseSet.contains(courseID)) error();
-			else {
-				User & user = userSet[userID];
-				if(user.isEnrolledInCourse())
-					error(already_enrolled_user);
-				else { 
-					user.enrollCourse(courseID);
-					Course & course = courseSet[courseID];
-					course.enrollUser();
-					cout << course.getCurrentEnrolled() << endl;
+			if(userSet.contains(userID)) {
+				if(courseSet.contains(courseID)) {
+					User & user = userSet[userID];
+					if(user.isEnrolledInCourse())
+						error(already_enrolled_user);
+					else { 
+						user.enrollCourse(courseID);
+						Course & course = courseSet[courseID];
+						course.enrollUser();
+						cout << course.getCurrentEnrolled() << endl;
+					}
 				}
+				else error(nonexistent_course);
 			}
+			else error(nonexistent_user);
         }
         /*
 		 * 		USER COURSE
