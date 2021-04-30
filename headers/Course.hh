@@ -48,7 +48,7 @@ public:
 
 	/**
 	@brief Check whether a session within the course contains a problem with the given id does exists. If it does, returs the id of such session through sessionID
-	@pre true
+	@pre problemID is the id of a valid problem
 	@post sessionID is the id of a session containing a problem with the given id and @c true is returned if such session exists within the course. If it does not, @c false is returned
 	*/
 	bool getSessionByProblem(prb::ID problemID, ses::ID & sessionID) const;

@@ -38,12 +38,11 @@ void Session::read() {
 
 /*===========================================================other functionality===========================================================*/
 
-template <typename T>
-bool contains(T value, BinTree<T> tree) {
+static bool contains(prb::ID value, BinTree<prb::ID> tree) {
 	if(tree.empty()) return false;
 	else return tree.value() == value or contains(value, tree.left()) or contains(value, tree.right());
 }
 
 bool Session::containsProblem(prb::ID problemID) const {
-	return contains<prb::ID>(problemID, problems);
+	return contains(problemID, problems);
 }
