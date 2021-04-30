@@ -11,7 +11,7 @@
 
 #ifndef NO_DIAGRAM 
 #include <string>
-#include <list>
+#include <unordered_map>
 #endif
 
 /**
@@ -23,14 +23,12 @@ private:
 	bool isEnrolled;
 	crs::ID enrolledCourse;
 
-	struct ProblemStatsList : public IPrintable {
-		struct ProblemStats {
-			prb::ID problemID;
-			int submissionsCount;
-		};
-
-		std::list<ProblemStats> stats;
+	struct ProblemStats : public IPrintable {
+		std::unordered_map<prb::ID, int> stats;
 		void print() const override;
+
+		std::unordered_map<prb::ID, int>::iterator begin();
+		std::unordered_map<prb::ID, int>::iterator end();
 	};
 	/* consider using:
 	struct UserStats {
@@ -39,8 +37,14 @@ private:
 		int triedProblems;
 	} stats; */
 
-	ProblemStatsList solvedProblems;
-	ProblemStatsList solvableProblems;
+	/*
+		- solved and solvable have a void intersection
+		- when updating solvable, bear in mind to take those
+			whose prerequisites are already solved
+	*/
+
+	ProblemStats solvedProblems;
+	ProblemStats solvableProblems;
 
 public:
 	/* =========================================================constructors & destructors=========================================================*/
@@ -71,18 +75,25 @@ public:
 	const IPrintable & getSolvableStats() const;
 	
 	/**
-	@brief Checks wheter the user is enrolled in a course
+	@brief Checks whether the user is enrolled in a course
 	@pre true
 	@post @c true is returned if the user is enrolled in a course. If he is not, @c false is returned
 	*/
 	bool isEnrolledInCourse() const;
 
 	/**
-	@brief Checks wheter the user has actually completed the course he is enrolled in
+	@brief Checks whether the user has actually completed the course he is enrolled in
 	@pre The user is enrolled in a course
 	@post @c true is returned if the user has completed the course he is enrolled in. If not, @c false is returned
 	*/
 	bool completedEnrolledCourse() const;
+
+	/**
+	@brief Checks whether the user has solved a problem with the given id
+	@pre True
+	@post Returns @c true if has solved the problem, returns @c false otherwise
+	 */
+	bool hasSolvedProblem(prb::ID problemID) const;
 
 	/*==============================================================overrided IO methods============================================================*/
 	void print() const override;

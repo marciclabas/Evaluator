@@ -30,10 +30,14 @@ bool User::completedEnrolledCourse() const {
 	return false;
 }
 
+bool User::hasSolvedProblem(prb::ID problemID) const {
+	
+}
+
 /*==============================================================overrided IO methods============================================================*/
 
 void User::ProblemStatsList::print() const {
-	for(const ProblemStatsList::ProblemStats & problemStats : stats) std::cout << problemStats.problemID << ' ' << problemStats.submissionsCount << std::endl;
+	for(const std::pair<prb::ID, int> & kv : stats) std::cout << kv.first << '(' << kv.second << ')' << std::endl;
 }
 
 // number of total submissions, number of accepted problems, number of tried problems, enrolled course or '0' if not enrolled
@@ -42,9 +46,9 @@ void User::print() const {
 	int totalSubmissions = acceptedProblems;
 	int triedProblems = acceptedProblems;
 
-	for(const ProblemStatsList::ProblemStats & problemStats : solvedProblems.stats)
-		if(problemStats.submissionsCount > 0) {
-			totalSubmissions += problemStats.submissionsCount;
+	for(const std::pair<prb::ID, int> & kv : solvedProblems)
+		if(kv.second > 0) {
+			totalSubmissions += kv.second;
 			triedProblems++;
 		}
 
@@ -59,6 +63,7 @@ void User::enrollCourse(crs::ID courseID) {
 	assert(not isEnrolled);
 	enrolledCourse = courseID;
 	isEnrolled = true;
+
 }
 
 void User::unenrollCourse() {
@@ -69,4 +74,12 @@ void User::unenrollCourse() {
 void User::parseSubmission(prb::ID problemID, prb::result r) {
 	/* TODO */
 	if(r) problemID = "";
+}
+
+std::unordered_map<prb::ID, int>::iterator User::ProblemStatsList::begin() {
+	return stats.begin();
+}
+
+std::unordered_map<prb::ID, int>::iterator User::ProblemStatsList::end() {
+	return stats.end();
 }
