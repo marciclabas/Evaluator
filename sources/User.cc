@@ -58,6 +58,7 @@ void User::print() const {
 void User::enrollCourse(crs::ID courseID) {
 	assert(not isEnrolled);
 	enrolledCourse = courseID;
+	isEnrolled = true;
 }
 
 void User::unenrollCourse() {
