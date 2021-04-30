@@ -34,7 +34,7 @@ int main() {
     cin >> command;
     
     while(command != end_program) {
-    	cout << '#' << command << ' ';
+    	cout << '#' << command;
 		/*
 		 * 		NEW STUFF
 		 */
