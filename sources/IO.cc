@@ -50,7 +50,8 @@ namespace io {
 		{ nonexistent_user, "el usuario no existe" },
 		{ already_existing_user, "el usuario ya existe" },
 		{ already_enrolled_user, "usuario inscrito en otro curso" },
-		{ nonenrolled_user, "usuario no inscrito en ningun curso" }
+		{ nonenrolled_user, "usuario no inscrito en ningun curso" },
+        { problem_not_in_course, "el problema no pertenece al curso" }
     };
 
 	void error(io::Error er) {

@@ -52,7 +52,8 @@ namespace io {
 		nonexistent_user,
 		already_existing_user,
 		already_enrolled_user,
-		nonenrolled_user
+		nonenrolled_user,
+		problem_not_in_course
 	};
 
 	void error(Error er = default_error);
