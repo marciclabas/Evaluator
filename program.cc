@@ -11,6 +11,7 @@
 
 #ifndef NO_DIAGRAM 
 #include <cassert>
+#include <limits>
 #endif
 
 using namespace io;
@@ -54,10 +55,11 @@ int main() {
 			ses::ID newSessionID; cin >> newSessionID;
 			// echo
 			cout << ' ' << newSessionID << endl;
+			Session newSession; newSession.read();
+
             if(sessionRepository.contains(newSessionID))
-				error(already_existing_session); 
+				error(already_existing_session);
             else {
-            	Session newSession; newSession.read();
             	sessionRepository.add(newSessionID, newSession);
             	cout << sessionRepository.count() << endl;
             }

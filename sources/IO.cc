@@ -45,7 +45,7 @@ namespace io {
 		{ already_existing_problem, "el problema ya existe" },
 		{ nonexistent_problem, "el problema no existe" },
 		{ already_existing_session, "la sesion ya existe" },
-		{ nonexistent_session, "la sesion no eixste" },
+		{ nonexistent_session, "la sesion no existe" },
 		{ nonexistent_course, "el curso no existe" },
 		{ nonexistent_user, "el usuario no existe" },
 		{ already_existing_user, "el usuario ya existe" },
