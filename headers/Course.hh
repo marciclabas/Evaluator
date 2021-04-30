@@ -22,8 +22,8 @@
 */
 class Course : public IPrintable, public IReadable {
 private:
-	int totalEnrolled;
-	int currentEnrolled;
+	int usersCompleted;
+	int usersEnrolled;
 	std::list<ses::ID> sessions; // has to be ordered to print
 
 	// adds a session to the course
@@ -44,7 +44,7 @@ public:
 	@pre true
 	@post The number of currently enrolled users (>= 0) is returned
 	*/
-	int getCurrentEnrolled() const;
+	int getUsersEnrolled() const;
 
 	/**
 	@brief Check whether a session within the course contains a problem with the given id does exists. If it does, returs the id of such session through sessionID
@@ -58,16 +58,16 @@ public:
 	/**
 	@brief Updates the stats regarding enrolled users adding a new user
 	@pre true
-	@post @c totalEnrolled and @c currentEnrolled are incremented by 1
+	@post @c usersCompleted and @c usersEnrolled are incremented by 1
 	*/
 	void enrollUser();
 
 	/**
 	@brief Updates the stats regarding enrolled users removing an enrolled user
-	@pre @c currentEnrolled > 0
-	@post @c currentEnrolled is decremented by 1
+	@pre @c usersEnrolled > 0
+	@post @c usersEnrolled is decremented by 1
 	*/
-	void unenrollUser();
+	void completeCourse();
 
 	/**
 	@brief Checks wether the course is valid

@@ -12,7 +12,7 @@ int Course::sessionCount() const {
 
 /*=========================================================constructors & destructors=========================================================*/
 
-Course::Course(): totalEnrolled(0), currentEnrolled(0), sessions() {}
+Course::Course(): usersCompleted(0), usersEnrolled(0), sessions() {}
 
 Course::~Course() {
 
@@ -20,8 +20,8 @@ Course::~Course() {
 
 /*===================================================================getters==================================================================*/
 
-int Course::getCurrentEnrolled() const {
-	return currentEnrolled;
+int Course::getUsersEnrolled() const {
+	return usersEnrolled;
 }
 
 bool Course::getSessionByProblem(prb::ID problemID, ses::ID & sessionID) const {
@@ -40,7 +40,7 @@ void Course::print() const {
 	assert(sessions.begin() != sessions.end());
 
 	auto sessionIterator = sessions.begin();
-	std::cout << totalEnrolled << ' ' << currentEnrolled << ' ' << this->sessionCount() << " (" << *sessionIterator;
+	std::cout << usersCompleted << ' ' << usersEnrolled << ' ' << this->sessionCount() << " (" << *sessionIterator;
 	sessionIterator++;
 
 	while(sessionIterator != sessions.end()) {
@@ -62,12 +62,12 @@ void Course::read() {
 /*===========================================================other functionality===========================================================*/
 
 void Course::enrollUser() {
-	totalEnrolled++;
-	currentEnrolled++;
+	usersEnrolled++;
 }
 
-void Course::unenrollUser() {
-	currentEnrolled--;
+void Course::completeCourse() {
+	usersEnrolled--;
+	usersCompleted++;
 }
 
 bool Course::isValid() const {

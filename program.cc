@@ -117,7 +117,7 @@ int main() {
 						user.enrollCourse(courseID);
 						Course & course = courseSet[courseID];
 						course.enrollUser();
-						cout << course.getCurrentEnrolled() << endl;
+						cout << course.getUsersEnrolled() << endl;
 					}
 				}
 				else error(nonexistent_course);
@@ -154,7 +154,7 @@ int main() {
 					ses::ID sessionID;
 					if(course.getSessionByProblem(problemID, sessionID)) cout << sessionID << endl;
 					// [!] maybe should distinguish error by problem or by session ?
-					else error(nonexistent_session);
+					else error(problem_not_in_course);
 				}
 				else error(nonexistent_problem);
 			}
@@ -197,7 +197,7 @@ int main() {
 
 			// check wheter the user has finished the course and unenroll him if so
 			if(user.completedEnrolledCourse()) {
-				courseSet[user.getEnrolledCourseID()].unenrollUser();
+				courseSet[user.getEnrolledCourseID()].completeCourse();
 				user.unenrollCourse();
 			}
         }
