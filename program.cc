@@ -42,7 +42,8 @@ int main() {
             prb::ID newProblemID; cin >> newProblemID;
 			// echo
 			cout << ' ' << newProblemID << endl;
-            if(problemCollection.contains(newProblemID)) error(); 
+            if(problemCollection.contains(newProblemID))
+				error(already_existing_problem);
             else {
             	problemCollection.add(newProblemID, Problem());
             	cout << problemCollection.count() << endl;
@@ -53,7 +54,8 @@ int main() {
 			ses::ID newSessionID; cin >> newSessionID;
 			// echo
 			cout << ' ' << newSessionID << endl;
-            if(sessionRepository.contains(newSessionID)) error(); 
+            if(sessionRepository.contains(newSessionID))
+				error(already_existing_session); 
             else {
             	Session newSession; newSession.read();
             	sessionRepository.add(newSessionID, newSession);
@@ -74,7 +76,8 @@ int main() {
 			usr::ID newUserID; cin >> newUserID;
 			// echo
 			cout << ' ' << newUserID << endl;
-            if(userSet.contains(newUserID)) error(); 
+            if(userSet.contains(newUserID))
+				error(already_existing_user); 
             else {
             	userSet.add(newUserID, User());
             	cout << userSet.count() << endl;
@@ -87,11 +90,11 @@ int main() {
 			usr::ID toRemoveUserID; cin >> toRemoveUserID;
 			// echo
 			cout << ' '  << toRemoveUserID << endl;
-            if(not userSet.contains(toRemoveUserID)) error(); 
-            else {
-            	userSet.remove(toRemoveUserID);
+            if(userSet.contains(toRemoveUserID)) {
+				userSet.remove(toRemoveUserID);
             	cout << userSet.count() << endl;
-            }
+			} 
+            else error(nonexistent_user);
         }
         /*
 		 * 		ENROLL USER
@@ -106,7 +109,8 @@ int main() {
 			if(not userSet.contains(userID) or not courseSet.contains(courseID)) error();
 			else {
 				User & user = userSet[userID];
-				if(user.isEnrolledInCourse()) error();
+				if(user.isEnrolledInCourse())
+					error(already_enrolled_user);
 				else { 
 					user.enrollCourse(courseID);
 					Course & course = courseSet[courseID];
@@ -127,7 +131,7 @@ int main() {
 				user.isEnrolledInCourse()? cout << user.getEnrolledCourseID(): cout << 0;
 				cout << endl;
 			}
-			else error();
+			else error(nonexistent_user);
         }
         /*
 		 * 		PROBLEM SESSION
@@ -139,13 +143,17 @@ int main() {
 			// echo
 			cout << ' ' << courseID << ' ' << problemID << endl;
 
-			if(courseSet.contains(courseID) and problemCollection.contains(problemID)){
-				Course & course = courseSet[courseID];
-				ses::ID sessionID;
-				if(course.getSessionByProblem(problemID, sessionID)) cout << sessionID << endl;
-				else error();
+			if(courseSet.contains(courseID)) {
+				if(problemCollection.contains(problemID)) {
+					Course & course = courseSet[courseID];
+					ses::ID sessionID;
+					if(course.getSessionByProblem(problemID, sessionID)) cout << sessionID << endl;
+					// [!] maybe should distinguish error by problem or by session ?
+					else error(nonexistent_session);
+				}
+				else error(nonexistent_problem);
 			}
-			else error();
+			else error(nonexistent_course);
         }
         /*
 		 * 		SOLVED / SOLVABLE PROBLEMS
@@ -156,7 +164,7 @@ int main() {
 			cout << ' ' << userID << endl;
 
 			if(userSet.contains(userID)) userSet[userID].getSolvedStats().print();
-			else error();
+			else error(nonexistent_user);
         }
        
         else if(command == solvable_problems) {
@@ -165,7 +173,7 @@ int main() {
 			cout << ' ' << userID << endl;
 
 			if(userSet.contains(userID)) userSet[userID].getSolvableStats().print();
-			else error();
+			else error(nonexistent_user);
         }
         /*
 		 * 		SUBMIT PROBLEM
@@ -195,13 +203,13 @@ int main() {
 			// echo
 			cout << endl;
             problemCollection.print();
-            cout << endl;
         }
         else if(command == write_problem) {
 			prb::ID problemID; cin >> problemID;
 			// echo
 			cout << ' ' << problemID << endl;
 
+			cout << problemID;
 			problemCollection[problemID].print();
             cout << endl;
 		}
@@ -209,44 +217,53 @@ int main() {
 			// echo
 			cout << endl;
             sessionRepository.print();
-            cout << endl;
         }
         else if(command == write_session) {
 			ses::ID sessionID; cin >> sessionID;
 			// echo
 			cout << ' ' << sessionID << endl;
 
-			sessionRepository[sessionID].print();
-            cout << endl;
+			if(sessionRepository.contains(sessionID)) {
+				cout << sessionID << ' ';
+				sessionRepository[sessionID].print();
+            	cout << endl;
+			}
+			else error(nonexistent_session);
 		}
         else if(command == list_courses) {
 			// echo
 			cout << endl;
             courseSet.print();
-            cout << endl;
         }
         else if(command == write_course) {
 			crs::ID courseID; cin >> courseID;
 			// echo
 			cout << ' ' << courseID << endl;
 
-			courseSet[courseID].print();
-            cout << endl;
-		}
+			if(courseSet.contains(courseID)) {
+				cout << courseID << ' ';
+				courseSet[courseID].print();
+            	cout << endl;
+			}
+			else error(nonexistent_course);
+		}	
         else if(command == list_users) {
 			// echo
 			cout << endl;
-			userSet.print();
-            cout << endl;    
+			userSet.print();  
         }
         else if(command == write_user) {
 			usr::ID userID; cin >> userID;
 			// echo
 			cout << ' ' << userID << endl;
-			
-			userSet[userID].print();
-            cout << endl;
-        }
+
+			if(userSet.contains(userID)) {	
+				cout << userID;
+				userSet[userID].print();
+            	cout << endl;
+			}
+			else error(nonexistent_user);
+        }	
         else assert(false);
         
         cin >> command;
