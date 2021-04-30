@@ -48,8 +48,9 @@ void User::print() const {
 			triedProblems++;
 		}
 
-	std::cout << totalSubmissions << ',' << acceptedProblems << ',' << triedProblems << ',';
+	std::cout << '(' << totalSubmissions << ',' << acceptedProblems << ',' << triedProblems << ',';
 	isEnrolled ? std::cout << enrolledCourse : std::cout << '0';
+	std::cout << ')';
 }
 
 /* ===========================================================other functionality===========================================================*/
