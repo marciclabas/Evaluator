@@ -20,10 +20,12 @@ namespace io {
     /**
 	@brief All system commands supported
     */
-    enum SystemCommand { new_problem, new_session, new_course, new_user, remove_user,
+    enum SystemCommand {
+		new_problem, new_session, new_course, new_user, remove_user,
     	enroll_user, user_course, problem_session, solved_problems, solvable_problems,
     	submit_problem, list_problems, write_problem, list_sessions, write_session,
-    	list_courses, write_course, list_users, write_user, end_program };
+    	list_courses, write_course, list_users, write_user, end_program
+	};
     
     using InputCommand = std::string;
     
@@ -40,7 +42,20 @@ namespace io {
 	*/
 	bool operator!=(InputCommand inputCommand, SystemCommand systemCommand);
 
-	void error(std::string s = "default error");
+	enum Error {
+		default_error,
+		already_existing_problem,
+		nonexistent_problem,
+		already_existing_session,
+		nonexistent_session,
+		nonexistent_course,
+		nonexistent_user,
+		already_existing_user,
+		already_enrolled_user,
+		nonenrolled_user
+	};
+
+	void error(Error er = default_error);
 
 	void echo(InputCommand command);
 }
