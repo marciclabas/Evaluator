@@ -9,6 +9,7 @@
 #include "IPrintable.hh"
 #include "IReadable.hh"
 #include "ProblemCol.hh"
+#include "ICanSolveProblems.hh"
 
 
 #ifndef NO_DIAGRAM 
@@ -42,6 +43,8 @@ public:
 	@post Returns @c true if the session contains a @c Problem with the given id. Returns @c false if it does not
 	*/
 	bool containsProblem(prb::ID problemID) const;
+
+	std::list<prb::ID> getSolvableProblems(const ICanSolveProblems & solverObject) const;
 
 	/*==============================================================overrided IO methods============================================================*/
 

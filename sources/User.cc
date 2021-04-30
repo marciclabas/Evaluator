@@ -31,7 +31,11 @@ bool User::completedEnrolledCourse() const {
 }
 
 bool User::hasSolvedProblem(prb::ID problemID) const {
-	
+	return solvedProblems.contains(problemID);
+}
+
+int User::ProblemStats::contains(prb::ID problemID) const {
+	return stats.count(problemID);
 }
 
 /*==============================================================overrided IO methods============================================================*/
@@ -64,6 +68,11 @@ void User::enrollCourse(crs::ID courseID) {
 	enrolledCourse = courseID;
 	isEnrolled = true;
 
+	for(ses::ID sessionID : CourseSet::getInstance()[courseID]) {
+		const Session & session = SessionRepository::getInstance()[sessionID];
+		std::list<prb::ID> newSolvableProblems = session.getSolvableProblems(*this);
+		solvableProblems.addProblems(newSolvableProblems);
+	}
 }
 
 void User::unenrollCourse() {
@@ -82,4 +91,11 @@ std::unordered_map<prb::ID, int>::iterator User::ProblemStatsList::begin() {
 
 std::unordered_map<prb::ID, int>::iterator User::ProblemStatsList::end() {
 	return stats.end();
+}
+
+void User::ProblemStats::addProblems(const std::list<prb::ID> & newProblemsList) {
+	for(const prb::ID & problemID : newProblemsList) {
+		assert(stats.count(problemID) == 0);
+		stats[problemID];
+	}
 }

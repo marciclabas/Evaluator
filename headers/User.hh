@@ -8,6 +8,7 @@
 
 #include "IPrintable.hh"
 #include "CourseSet.hh"
+#include "ICanSolveProblems.hh"
 
 #ifndef NO_DIAGRAM 
 #include <string>
@@ -18,17 +19,19 @@
 @class User
 @brief Represents a user with a unique name (id) and some statistics
 */
-class User : public IPrintable {
+class User : public IPrintable, public ICanSolveProblems {
 private:
 	bool isEnrolled;
 	crs::ID enrolledCourse;
 
 	struct ProblemStats : public IPrintable {
 		std::map<prb::ID, int> stats;
-		void print() const override;
 
+		void print() const override;
 		std::map<prb::ID, int>::iterator begin();
 		std::map<prb::ID, int>::iterator end();
+		bool contains(prb::ID problemID) const;
+		void addProblems(const std::list<prb::ID> & newProblemsList);
 	};
 	/* consider using:
 	struct UserStats {

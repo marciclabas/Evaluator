@@ -46,3 +46,7 @@ static bool contains(prb::ID value, BinTree<prb::ID> tree) {
 bool Session::containsProblem(prb::ID problemID) const {
 	return contains(problemID, problems);
 }
+
+std::list<prb::ID> Session::getSolvableProblems(const ICanSolveProblems & solverObject) const {
+	
+}

@@ -53,6 +53,10 @@ public:
 	*/
 	bool getSessionByProblem(prb::ID problemID, ses::ID & sessionID) const;
 
+	/*=============================================================overrided IO methods============================================================*/
+	void print() const override;
+	void read() override;
+
 	/* ===========================================================other functionality===========================================================*/
 	
 	/**
@@ -76,9 +80,9 @@ public:
 	*/
 	bool isValid() const;
 
-	/*=============================================================overrided IO methods============================================================*/
-	void print() const override;
-	void read() override;
+	std::list<ses::ID>::const_iterator begin() const;
+	std::list<ses::ID>::const_iterator end() const;
+
 };
 
 
