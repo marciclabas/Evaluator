@@ -1,2 +1,0 @@
-1. print() never prints and endl
-2. define a concrete tasks before starting to work and make a new branch. Every commit must have a single purpose

@@ -7,7 +7,7 @@ test: UserSet.o
 	g++ -o test.exe test.cc *.o -I$(INCLUDE) $(OPCIONS) 2>./debug/test.txt
 
 all: program.o
-	g++ -o evaluator.exe *.o 2>./debug/evaluator.txt
+	g++ -o program.exe *.o 2>./debug/evaluator.txt
 
 program.o: ProblemCol.o SessionRep.o CourseSet.o UserSet.o IO.o
 	g++ -o program.o -c program.cc -I$(INCLUDE) $(OPCIONS) 2>./debug/program.txt
