@@ -17,9 +17,9 @@ CourseSet & CourseSet::getInstance() {
 /*==============================================================overrided IO methods============================================================*/
 
 void CourseSet::print() const {
-	for(crs::ID id = 0; id < courses.size(); id++) {
-		std::cout << id+1 << ' ';
-		courses[id].print();
+	for(crs::ID id = 1; id <= courses.size(); id++) {
+		std::cout << id << ' ';
+		courses[id-1].print();
 		std::cout << std::endl;
 	}
 }
@@ -33,13 +33,13 @@ void CourseSet::read() {
 /*===============================================================setters & getters=============================================================*/
 
 bool CourseSet::contains(crs::ID id) const {
-	return id > 0 and id < courses.size();
+	return id >= 1 and id <= courses.size();
 }
 
 
 Course & CourseSet::operator[](crs::ID id) {
-	assert(id > 0 and id < courses.size());
-	return courses[id];
+	assert(id >= 1 and id <= courses.size());
+	return courses[id-1];
 }
 /*
 const Course & CourseSet::operator[](crs::ID id) const {
