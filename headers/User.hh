@@ -11,7 +11,7 @@
 
 #ifndef NO_DIAGRAM 
 #include <string>
-#include <unordered_map>
+#include <map>
 #endif
 
 /**
@@ -24,11 +24,11 @@ private:
 	crs::ID enrolledCourse;
 
 	struct ProblemStats : public IPrintable {
-		std::unordered_map<prb::ID, int> stats;
+		std::map<prb::ID, int> stats;
 		void print() const override;
 
-		std::unordered_map<prb::ID, int>::iterator begin();
-		std::unordered_map<prb::ID, int>::iterator end();
+		std::map<prb::ID, int>::iterator begin();
+		std::map<prb::ID, int>::iterator end();
 	};
 	/* consider using:
 	struct UserStats {
