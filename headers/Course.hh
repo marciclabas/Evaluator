@@ -25,17 +25,17 @@ class Course : public IPrintable, public IReadable {
 private:
 	int usersCompleted;
 	int usersEnrolled;
-	std::vector<ses::ID> sessions; // has to be ordered to print
+	std::vector<ses::ID> sessions; // has to be ordered by antiquity to print
 	std::map<prb::ID, int> problemSession;
 
-	// adds a session to the course
-	void addSession(ses::ID sessionID);
+	// adds a session to the course and returns the index its stored in
+	int addSession(ses::ID sessionID);
 
 	// returns the session count
 	int sessionCount() const;
 
 	// returns true if contains the given problem in some session, false otherwise
-	bool containsProblems(prb::ID problemID) const;
+	bool containsProblem(prb::ID problemID) const;
 
 public:
 	/*==========================================================constructors & destructors=========================================================*/

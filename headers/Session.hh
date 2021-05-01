@@ -36,6 +36,11 @@ public:
 	Session();
 	~Session();
 
+	/*==============================================================overrided IO methods============================================================*/
+
+	void print() const override;
+	void read() override;
+
 	/*===========================================================other functionality===========================================================*/
 
 	/**
@@ -47,10 +52,8 @@ public:
 
 	std::list<prb::ID> getSolvableProblems(const ICanSolveProblems & solverObject, prb::ID lastSolvedProblem = prb::invalidID) const;
 
-	/*==============================================================overrided IO methods============================================================*/
-
-	void print() const override;
-	void read() override;
+	const std::vector<prb::ID>::const_iterator begin() const;
+	const std::vector<prb::ID>::const_iterator end() const;
 };
 
 #endif

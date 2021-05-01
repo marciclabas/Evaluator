@@ -3,7 +3,7 @@
 /*================================================================private methods=============================================================*/
 
 void Course::addSession(ses::ID sessionID) {
-	sessions.emplace_back(sessionID);
+	sessions.push_back(sessionID);
 }
 
 int Course::sessionCount() const {
@@ -30,7 +30,7 @@ bool Course::getSessionByProblem(prb::ID problemID, ses::ID & sessionID) const {
 	return false;
 }
 
-bool Course::containsProblems(prb::ID problemID) const {
+bool Course::containsProblem(prb::ID problemID) const {
 	return problemSession.count(problemID);
 }
 
@@ -71,7 +71,12 @@ void Course::read() {
 	int sessionCount; std::cin >> sessionCount;
 	for(int i = 0; i < sessionCount; i++) {
 		ses::ID sessionID; std::cin >> sessionID;
-		addSession(sessionID);
+		int sessionIndex = addSession(sessionID);
+		const Session & session = SessionRepository::getInstance()[sessionID];
+		for(prb::ID problemID : session) {
+			assert(not containsProblem(problemID));
+			problemSession[problemID] = sessionIndex;
+		}
 	}
 }
 
