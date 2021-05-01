@@ -11,7 +11,8 @@
 #include "SessionRep.hh"
 
 #ifndef NO_DIAGRAM
-#include <list>
+#include <vector>
+#include <map>
 #endif
 
 
@@ -24,7 +25,8 @@ class Course : public IPrintable, public IReadable {
 private:
 	int usersCompleted;
 	int usersEnrolled;
-	std::list<ses::ID> sessions; // has to be ordered to print
+	std::vector<ses::ID> sessions; // has to be ordered to print
+	std::map<prb::ID, int> problemSession();
 
 	// adds a session to the course
 	void addSession(ses::ID sessionID);
