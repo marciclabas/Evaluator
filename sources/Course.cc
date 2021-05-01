@@ -24,7 +24,7 @@ int Course::getUsersEnrolled() const {
 
 bool Course::getSessionByProblem(prb::ID problemID, ses::ID & sessionID) const {
 	if(containsProblems(problemID)) {
-		sessionID = sessions[problemSession[problemID]];
+		sessionID = sessions[problemSession.at(problemID)];
 		return true;
 	}
 	return false;
@@ -34,20 +34,20 @@ bool Course::containsProblems(prb::ID problemID) const {
 	return problemSession.count(problemID);
 }
 
-std::list<prb::ID> Course::getSolvableProblems(prb::ID lastSolvedProblem, const User & user) const {
+std::list<prb::ID> Course::getSolvableProblems(prb::ID lastSolvedProblem, const ICanSolveProblems & solverObject) const {
 	if(lastSolvedProblem == prb::invalidID) {
 		std::list<prb::ID> solvableProblems;
 		for(ses::ID sessionID : sessions) {
 			const Session & session = SessionRepository::getInstance()[sessionID];
-			solvableProblems.splice(solvableProblems.end(), session.getSolvableProblems(user));
+			solvableProblems.splice(solvableProblems.end(), session.getSolvableProblems(solverObject));
 		}
 		return solvableProblems;
 	}
 	else {
 		// check the session lastProblemSolved is contained in
-		ses::ID sessionID = sessions[problemSession[problemID];
+		ses::ID sessionID = sessions[problemSession.at(lastSolvedProblem)];
 		const Session & session = SessionRepository::getInstance()[sessionID];
-		return session.getSolvableProblems(user, problemID);
+		return session.getSolvableProblems(solverObject, lastSolvedProblem);
 	}
 }
 

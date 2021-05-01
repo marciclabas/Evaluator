@@ -1,3 +1,6 @@
+#ifndef ICANSOLVEPROBLEMS_HH
+#define ICANSOLVEPROBLEMS_HH
+
 #include "Namespaces.hh"
 
 class ICanSolveProblems {
@@ -9,3 +12,5 @@ public:
     */
     virtual bool hasSolvedProblem(prb::ID problemID) const = 0;
 };
+
+#endif

@@ -43,4 +43,5 @@ UserSet.o: User.o
 	g++ -o UserSet.o -c $(SOURCES)/UserSet.cc -I$(INCLUDE) $(OPCIONS) 2>./debug/UserSet.txt
 clean:
 	rm ./*.o
-	rm ./debug/*.txt
+	rm ./*.exe
+	rm debug/*.txt

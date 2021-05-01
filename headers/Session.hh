@@ -45,7 +45,7 @@ public:
 	*/
 	bool containsProblem(prb::ID problemID) const;
 
-	std::list<prb::ID> getSolvableProblems(const ICanSolveProblems & solverObject, prb::ID lastSolvedProblem = prb::invalidID) const;
+	std::list<prb::ID> getSolvableProblems(const ICanSolveProblems & solverObject, prb::ID lastSolvedProblem = 0) const;
 
 	/*==============================================================overrided IO methods============================================================*/
 

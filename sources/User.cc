@@ -34,13 +34,13 @@ bool User::hasSolvedProblem(prb::ID problemID) const {
 	return solvedProblems.contains(problemID);
 }
 
-int User::ProblemStats::contains(prb::ID problemID) const {
+bool User::ProblemStats::contains(prb::ID problemID) const {
 	return stats.count(problemID);
 }
 
 /*==============================================================overrided IO methods============================================================*/
 
-void User::ProblemStatsList::print() const {
+void User::ProblemStats::print() const {
 	for(const std::pair<prb::ID, int> & kv : stats) std::cout << kv.first << '(' << kv.second << ')' << std::endl;
 }
 
@@ -67,12 +67,7 @@ void User::enrollCourse(crs::ID courseID) {
 	assert(not isEnrolled);
 	enrolledCourse = courseID;
 	isEnrolled = true;
-
-	for(ses::ID sessionID : CourseSet::getInstance()[courseID]) {
-		const Session & session = SessionRepository::getInstance()[sessionID];
-		std::list<prb::ID> newSolvableProblems = session.getSolvableProblems(*this);
-		solvableProblems.addProblems(newSolvableProblems);
-	}
+	updateSolvableProblems();
 }
 
 void User::unenrollCourse() {
@@ -85,12 +80,20 @@ void User::parseSubmission(prb::ID problemID, prb::result r) {
 	if(r) problemID = "";
 }
 
-std::unordered_map<prb::ID, int>::iterator User::ProblemStatsList::begin() {
+std::map<prb::ID, int>::iterator User::ProblemStats::begin() {
 	return stats.begin();
 }
 
-std::unordered_map<prb::ID, int>::iterator User::ProblemStatsList::end() {
+std::map<prb::ID, int>::iterator User::ProblemStats::end() {
 	return stats.end();
+}
+
+std::map<prb::ID, int>::const_iterator User::ProblemStats::begin() const {
+	return stats.cbegin();
+}
+
+std::map<prb::ID, int>::const_iterator User::ProblemStats::end() const {
+	return stats.cend();
 }
 
 void User::ProblemStats::addProblem(prb::ID newProblemID) {
@@ -98,8 +101,8 @@ void User::ProblemStats::addProblem(prb::ID newProblemID) {
 	stats[newProblemID];
 }
 
-void User::updateSolvableProblems(prb::ID lastSolvedProblem = prb::invalidID) {
+void User::updateSolvableProblems(prb::ID lastSolvedProblem) {
 	const Course & enrolledCourse = CourseSet::getInstance()[getEnrolledCourseID()];
-	for(prb::ID problemID : enrolledCourse.getSolvableProblems(lastProblemSolved))
-		solvableProblems.addProblem(lastProblemSolved);
+	for(prb::ID problemID : enrolledCourse.getSolvableProblems(lastSolvedProblem, *this))
+		solvableProblems.addProblem(lastSolvedProblem);
 }

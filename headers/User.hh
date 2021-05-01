@@ -30,6 +30,8 @@ private:
 		void print() const override;
 		std::map<prb::ID, int>::iterator begin();
 		std::map<prb::ID, int>::iterator end();
+		std::map<prb::ID, int>::const_iterator begin() const;
+		std::map<prb::ID, int>::const_iterator end() const;
 		bool contains(prb::ID problemID) const;
 		void addProblem(prb::ID newProblemID);
 	};
@@ -51,10 +53,10 @@ private:
 
 	/**
 	@brief Updates the solvable problems after solving a problem with the given id
-	@pre The @c User has solved lastSolvedProblem last, which is part of the course he is enrolled in
+	@pre The @c User has solved lastSolvedProblem last, which is part of the course he is enrolled in, or has not solved any problem
 	@post @c solvableProblems is updated accordingly
 	*/
-	void updateSolvableProblems(prb::ID lastSolvedProblem);
+	void updateSolvableProblems(prb::ID lastSolvedProblem = prb::invalidID);
 
 public:
 	/* =========================================================constructors & destructors=========================================================*/
