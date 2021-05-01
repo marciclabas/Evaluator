@@ -34,6 +34,23 @@ bool Course::containsProblems(prb::ID problemID) const {
 	return problemSession.count(problemID);
 }
 
+std::list<prb::ID> Course::getSolvableProblems(prb::ID lastSolvedProblem, const User & user) const {
+	if(lastSolvedProblem == prb::invalidID) {
+		std::list<prb::ID> solvableProblems;
+		for(ses::ID sessionID : sessions) {
+			const Session & session = SessionRepository::getInstance()[sessionID];
+			solvableProblems.splice(solvableProblems.end(), session.getSolvableProblems(user));
+		}
+		return solvableProblems;
+	}
+	else {
+		// check the session lastProblemSolved is contained in
+		ses::ID sessionID = sessions[problemSession[problemID];
+		const Session & session = SessionRepository::getInstance()[sessionID];
+		return session.getSolvableProblems(user, problemID);
+	}
+}
+
 /*==============================================================overrided IO methods============================================================*/
 
 void Course::print() const {
