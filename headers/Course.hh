@@ -61,9 +61,9 @@ public:
 	/**
 	@brief Get a list of the problems the given @c ICanSolveProblems can solve, after having solved the given problem
 	@pre The given @c ICanSolveProblems is enrolled in the course and has solved the given problem
-	@post A list with the problems @c ICanSolveProblems user can solve is returned
+	@post A list with the problems @c ICanSolveProblems user can solve is returned by reference (appended to whatever was in the list)
 	*/
-	std::list<prb::ID> getSolvableProblems(prb::ID lastSolvedProblem, const ICanSolveProblems & solverObject) const;
+	void getSolvableProblems(const ICanSolveProblems & solverObject, std::list<prb::ID> & solvableProblems, prb::ID lastSolvedProblem) const;
 
 	/*=============================================================overrided IO methods============================================================*/
 	void print() const override;
