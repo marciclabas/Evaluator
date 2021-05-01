@@ -31,7 +31,7 @@ private:
 		std::map<prb::ID, int>::iterator begin();
 		std::map<prb::ID, int>::iterator end();
 		bool contains(prb::ID problemID) const;
-		void addProblems(const std::list<prb::ID> & newProblemsList);
+		void addProblem(prb::ID newProblemID);
 	};
 	/* consider using:
 	struct UserStats {
@@ -55,13 +55,6 @@ private:
 	@post @c solvableProblems is updated accordingly
 	*/
 	void updateSolvableProblems(prb::ID lastSolvedProblem);
-
-	/**
-	@brief Updates the solvable problems
-	@pre The @c User is enrolled in some course
-	@post @ solvableProblems is updated accordingly
-	*/
-	void updateSolvableProblems();
 
 public:
 	/* =========================================================constructors & destructors=========================================================*/

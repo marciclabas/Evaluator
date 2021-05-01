@@ -93,9 +93,13 @@ std::unordered_map<prb::ID, int>::iterator User::ProblemStatsList::end() {
 	return stats.end();
 }
 
-void User::ProblemStats::addProblems(const std::list<prb::ID> & newProblemsList) {
-	for(const prb::ID & problemID : newProblemsList) {
-		assert(stats.count(problemID) == 0);
-		stats[problemID];
-	}
+void User::ProblemStats::addProblem(prb::ID newProblemID) {
+	assert(stats.count(newProblemID) == 0);
+	stats[newProblemID];
+}
+
+void User::updateSolvableProblems(prb::ID lastSolvedProblem = prb::invalidID) {
+	const Course & enrolledCourse = CourseSet::getInstance()[getEnrolledCourseID()];
+	for(prb::ID problemID : enrolledCourse.getSolvableProblems(lastProblemSolved))
+		solvableProblems.addProblem(lastProblemSolved);
 }
