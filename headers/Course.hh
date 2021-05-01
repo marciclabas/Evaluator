@@ -34,6 +34,8 @@ private:
 	// returns the session count
 	int sessionCount() const;
 
+	bool containsProblems(prb::ID problemID) const;
+
 public:
 	/*==========================================================constructors & destructors=========================================================*/
 	Course();
@@ -61,15 +63,6 @@ public:
 	@post A list with the problems the user can solve is returned
 	*/
 	std::list<prb::ID> getSolvableProblems(prb::ID lastSolvedProblem, const User & solver) const;
-
-	/**
-	@brief Get a list of the problems the given user can solve
-	@pre The given user is enrolled in the course
-	@post A list with the problems the user can solve is returned
-	*/
-	std::list<prb::ID> getSolvableProblems(const User & solver) const;
-
-
 
 	/*=============================================================overrided IO methods============================================================*/
 	void print() const override;

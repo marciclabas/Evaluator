@@ -12,11 +12,9 @@ int Course::sessionCount() const {
 
 /*=========================================================constructors & destructors=========================================================*/
 
-Course::Course(): usersCompleted(0), usersEnrolled(0), sessions() {}
+Course::Course(): usersCompleted(0), usersEnrolled(0), sessions(), problemSession() {}
 
-Course::~Course() {
-
-}
+Course::~Course() {}
 
 /*===================================================================getters==================================================================*/
 
@@ -25,13 +23,15 @@ int Course::getUsersEnrolled() const {
 }
 
 bool Course::getSessionByProblem(prb::ID problemID, ses::ID & sessionID) const {
-	for(ses::ID currentSessionID : sessions) {
-		if(SessionRepository::getInstance()[currentSessionID].containsProblem(problemID)) {
-			sessionID = currentSessionID;
-			return true;
-		}
+	if(containsProblems(problemID)) {
+		sessionID = sessions[problemSession[problemID]];
+		return true;
 	}
 	return false;
+}
+
+bool Course::containsProblems(prb::ID problemID) const {
+	return problemSession.count(problemID);
 }
 
 /*==============================================================overrided IO methods============================================================*/
