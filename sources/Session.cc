@@ -47,13 +47,20 @@ bool Session::containsProblem(prb::ID problemID) const {
 	return contains(problemID, problems);
 }
 
-static void getSolvableProblemsImmersion(const ICanSolveProblems & solver, const BinTree<prb::ID> & tree, std::list<prb::ID> solvableProblems) {
-
+// tested: some cases (i'd say 90% sure works fine)
+static void getSolvableProblemsImmersion(const ICanSolveProblems & solver, const BinTree<prb::ID> & tree, std::list<prb::ID> & solvableProblems) {
+	if(not tree.empty()) {
+		if(solver.hasSolvedProblem(tree.value())) {
+			getSolvableProblemsImmersion(solver, tree.left(), solvableProblems);
+			getSolvableProblemsImmersion(solver, tree.right(), solvableProblems);
+		}
+		else solvableProblems.insert(solvableProblems.end(), tree.value());
+	}
 }
 
 // pre: problemID is contained in the session, tree contains problemID
 // post: tree contains problemID
-// tested: some cases (i'd say 90% sure works fine)
+// tested: some cases (i'd say 80% sure works fine)
 static bool getProblemSubTree(prb::ID problemID, BinTree<prb::ID> & tree) {
 	if(tree.empty()) return false;
 	if(tree.value() == problemID) return true;
