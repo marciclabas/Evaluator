@@ -98,11 +98,11 @@ std::map<prb::ID, int>::const_iterator User::ProblemStats::end() const {
 
 void User::ProblemStats::addProblem(prb::ID newProblemID) {
 	assert(stats.count(newProblemID) == 0);
-	stats[newProblemID];
+	stats[newProblemID] = 0;
 }
 
 void User::updateSolvableProblems(prb::ID lastSolvedProblem) {
 	const Course & enrolledCourse = CourseSet::getInstance()[getEnrolledCourseID()];
 	for(prb::ID problemID : enrolledCourse.getSolvableProblems(lastSolvedProblem, *this))
-		solvableProblems.addProblem(lastSolvedProblem);
+		solvableProblems.addProblem(problemID);
 }
