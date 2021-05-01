@@ -55,6 +55,22 @@ public:
 	*/
 	bool getSessionByProblem(prb::ID problemID, ses::ID & sessionID) const;
 
+	/**
+	@brief Get a list of the problems the given iser can solve, after having solved the given problem
+	@pre The given user is enrolled in the course and has solved the given problem
+	@post A list with the problems the user can solve is returned
+	*/
+	std::list<prb::ID> getSolvableProblems(prb::ID lastSolvedProblem, const User & solver) const;
+
+	/**
+	@brief Get a list of the problems the given user can solve
+	@pre The given user is enrolled in the course
+	@post A list with the problems the user can solve is returned
+	*/
+	std::list<prb::ID> getSolvableProblems(const User & solver) const;
+
+
+
 	/*=============================================================overrided IO methods============================================================*/
 	void print() const override;
 	void read() override;
