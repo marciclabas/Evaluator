@@ -177,7 +177,12 @@ int main() {
 			// echo
 			cout << ' ' << userID << endl;
 
-			if(userSet.contains(userID)) userSet[userID].getSolvableStats().print();
+			if(userSet.contains(userID)) {
+				const User & user = userSet[userID];
+				if(user.isEnrolledInCourse())
+					user.getSolvableStats().print();
+				else error(nonenrolled_user);
+			}
 			else error(nonexistent_user);
         }
         /*
