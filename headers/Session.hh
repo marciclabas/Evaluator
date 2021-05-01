@@ -15,6 +15,7 @@
 #ifndef NO_DIAGRAM 
 #include <vector>
 #include <string>
+#include <list>
 #include "BinTree.hh"
 #endif
 

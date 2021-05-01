@@ -53,7 +53,7 @@ public:
 	bool contains(ses::ID id) const;
 	
 	/**
-	 @brief Returns the element with the gi*ven ID contained in the container
+	 @brief Returns the element with the given ID contained in the container
 	 @pre An element with the given id does exist within the container
 	 @post An element with the given ID contained in the container is returned
 	 */
