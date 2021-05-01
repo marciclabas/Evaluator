@@ -219,9 +219,12 @@ int main() {
 			// echo
 			cout << ' ' << problemID << endl;
 
-			cout << problemID;
-			problemCollection[problemID].print();
-            cout << endl;
+			if(problemCollection.contains(problemID)) {
+				cout << problemID;
+				problemCollection[problemID].print();
+            	cout << endl;
+			}
+			else error(nonexistent_problem);
 		}
         else if(command == list_sessions) {
 			// echo
