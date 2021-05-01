@@ -7,4 +7,4 @@ std::istream& operator>>(std::istream & in, prb::result & result) {
 	return in;
 }
 
-// prb::ID prb::guard() { return "0"; }
+//prb::invalidID = "0";

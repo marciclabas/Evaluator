@@ -18,9 +18,9 @@
 */
 
 namespace prb {
-	using ID = std::string;
+	using ID = std::string; // "0" is invalid
 	enum result { rejected = 0, accepted = 1};
-	inline ID guard() { return "0"; }
+	const ID invalidID = "0";
 }
 
 std::istream& operator>>(std::istream & in, prb::result & result);
