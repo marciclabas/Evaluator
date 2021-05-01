@@ -49,6 +49,20 @@ private:
 	ProblemStats solvedProblems;
 	ProblemStats solvableProblems;
 
+	/**
+	@brief Updates the solvable problems after solving a problem with the given id
+	@pre The @c User has solved lastSolvedProblem last, which is part of the course he is enrolled in
+	@post @c solvableProblems is updated accordingly
+	*/
+	void updateSolvableProblems(prb::ID lastSolvedProblem);
+
+	/**
+	@brief Updates the solvable problems
+	@pre The @c User is enrolled in some course
+	@post @ solvableProblems is updated accordingly
+	*/
+	void updateSolvableProblems();
+
 public:
 	/* =========================================================constructors & destructors=========================================================*/
 	User();
