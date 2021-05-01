@@ -73,7 +73,9 @@ void Course::read() {
 		ses::ID sessionID; std::cin >> sessionID;
 		int sessionIndex = addSession(sessionID);
 		const Session & session = SessionRepository::getInstance()[sessionID];
-		for(prb::ID problemID : session) {
+		std::list<prb::ID> problems;
+		session.getProblems(problems);
+		for(prb::ID problemID : problems) {
 			assert(not containsProblem(problemID));
 			problemSession[problemID] = sessionIndex;
 		}

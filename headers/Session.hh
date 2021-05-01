@@ -41,19 +41,29 @@ public:
 	void print() const override;
 	void read() override;
 
-	/*===========================================================other functionality===========================================================*/
+	/*===============================================================getters & setters=============================================================*/
 
 	/**
 	@brief Checks wether the sesssion contains a @c Problem with the given id
-	@pre true
+	@pre True
 	@post Returns @c true if the session contains a @c Problem with the given id. Returns @c false if it does not
 	*/
 	bool containsProblem(prb::ID problemID) const;
 
-	std::list<prb::ID> getSolvableProblems(const ICanSolveProblems & solverObject, prb::ID lastSolvedProblem = prb::invalidID) const;
+	/**
+	@brief Returns the problems contained in the session
+	@pre True
+	@post A list with the problems contained in the session is returned by reference
+	*/
+	void getProblems(std::list<prb::ID> & problems) const;
 
-	const std::vector<prb::ID>::const_iterator begin() const;
-	const std::vector<prb::ID>::const_iterator end() const;
+	/**
+	@brief Returns the problems a @c ICanSolveProblems can solve
+	@pre @c lastSolvedProblem is invalid or is contained in the session
+	@post A list with the problems @c ICanSolveProblems can solve is returned by reference
+	*/
+	void getSolvableProblems(const ICanSolveProblems & solverObject, std::list<prb::ID> & solvableProblems, prb::ID lastSolvedProblem = prb::invalidID) const;
+
 };
 
 #endif

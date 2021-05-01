@@ -77,14 +77,24 @@ static bool getProblemSubTree(prb::ID problemID, BinTree<prb::ID> & tree) {
     return false;
 }
 
+static void getProblemsImmersion(std::list<prb::ID> & problems, const BinTree<prb::ID> & tree) {
+	if(not tree.empty()) {
+		problems.insert(problems.end(), tree.value());
+		getProblemsImmersion(problems, tree.left());
+		getProblemsImmersion(problems, tree.right());
+	}
+}
+
+void Session::getProblems(std::list<prb::ID> & problems) const {
+	getProblemsImmersion(problems, this->problems);
+}
+
 // pre: lastProblemSolved is contained in the session
 // post: returns a list of the problems the userObject can solve after lastSolvedProblem
-std::list<prb::ID> Session::getSolvableProblems(const ICanSolveProblems & solverObject, prb::ID lastSolvedProblem) const {
-	std::list<prb::ID> solvableProblems;
+void Session::getSolvableProblems(const ICanSolveProblems & solverObject, std::list<prb::ID> & solvableProblems, prb::ID lastSolvedProblem) const {
 	BinTree<prb::ID> problems = this->problems;
 	if(lastSolvedProblem == prb::invalidID)
 		getProblemSubTree(lastSolvedProblem, problems);
-
 	getSolvableProblemsImmersion(solverObject, problems, solvableProblems);
-	return solvableProblems;
 }
+
