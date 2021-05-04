@@ -46,7 +46,7 @@ int main() {
             if(problemCollection.contains(newProblemID))
 				error(already_existing_problem);
             else {
-            	problemCollection.add(newProblemID, Problem());
+            	problemCollection.add(newProblemID);
             	cout << problemCollection.count() << endl;
             }
         }
@@ -81,7 +81,7 @@ int main() {
             if(userSet.contains(newUserID))
 				error(already_existing_user); 
             else {
-            	userSet.add(newUserID, User());
+            	userSet.add(newUserID);
             	cout << userSet.count() << endl;
             }
         }

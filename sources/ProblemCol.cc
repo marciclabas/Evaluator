@@ -78,6 +78,6 @@ int ProblemCollection::count() const {
 }
 
 
-void ProblemCollection::add(prb::ID newElementID, Problem newElement) {
-	problems[newElementID] = newElement;
+void ProblemCollection::add(prb::ID newElementID) {
+	problems[newElementID];
 }
