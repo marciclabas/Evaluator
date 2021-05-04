@@ -3,10 +3,7 @@ INCLUDE = ./headers
 SOURCES = ./sources
 DEBUG 	= ./debug
 
-test: UserSet.o
-	g++ -o test.exe test.cc *.o -I$(INCLUDE) $(OPCIONS) 2>./debug/test.txt
-
-all: program.o
+program.exe: program.o
 	g++ -o program.exe *.o 2>./debug/evaluator.txt
 
 program.o: ProblemCol.o SessionRep.o CourseSet.o UserSet.o IO.o
