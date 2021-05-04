@@ -38,7 +38,7 @@ private:
 	bool containsProblem(prb::ID problemID) const;
 
 public:
-	using const_iterator = std::vector<ses::ID>;
+	using const_iterator = std::vector<ses::ID>::const_iterator;
 	/*==========================================================constructors & destructors=========================================================*/
 	Course();
 	~Course();
@@ -64,7 +64,7 @@ public:
 	@pre The given @c ICanSolveProblems is enrolled in the course and has solved the given problem
 	@post Updates the problems @c ICanSolveProblems can solve
 	*/
-	void updateSolvableProblems(const ICanSolveProblems & solverObject, prb::ID lastSolvedProblem) const;
+	void updateSolvableProblems(ICanSolveProblems & solverObject, prb::ID lastSolvedProblem = prb::invalidID) const;
 
 	/*=============================================================overrided IO methods============================================================*/
 	void print() const override;

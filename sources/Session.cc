@@ -48,13 +48,13 @@ bool Session::containsProblem(prb::ID problemID) const {
 }
 
 // tested: some cases (i'd say 90% sure works fine)
-static void updateSolvableProblemsImmersion(const ICanSolveProblems & solver, const BinTree<prb::ID> & tree, std::list<prb::ID> & solvableProblems) {
+static void updateSolvableProblemsImmersion(ICanSolveProblems & solver, const BinTree<prb::ID> & tree) {
 	if(not tree.empty()) {
 		if(solver.hasSolvedProblem(tree.value())) {
 			updateSolvableProblemsImmersion(solver, tree.left());
 			updateSolvableProblemsImmersion(solver, tree.right());
 		}
-		solver.addSolvableProblem(tree.value);
+		solver.addSolvableProblem(tree.value());
 	}
 }
 
@@ -91,7 +91,7 @@ void Session::getProblems(std::list<prb::ID> & problems) const {
 
 // pre: lastProblemSolved is contained in the session
 // post: returns a list of the problems the userObject can solve after lastSolvedProblem
-void Session::updateSolvableProblems(const ICanSolveProblems & solverObject prb::ID lastSolvedProblem) const {
+void Session::updateSolvableProblems(ICanSolveProblems & solverObject, prb::ID lastSolvedProblem) const {
 	BinTree<prb::ID> problems = this->problems;
 	if(lastSolvedProblem != prb::invalidID) // bugfix: == -> !=
 		getProblemSubTree(lastSolvedProblem, problems);

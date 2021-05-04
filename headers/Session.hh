@@ -62,7 +62,7 @@ public:
 	@pre @c lastSolvedProblem is invalid or is contained in the session
 	@post The problems @c ICanSolveProblems can solve are updated
 	*/
-	void updateSolvableProblems(const ICanSolveProblems & solverObject, prb::ID lastSolvedProblem = prb::invalidID) const;
+	void updateSolvableProblems(ICanSolveProblems & solverObject, prb::ID lastSolvedProblem = prb::invalidID) const;
 
 };
 

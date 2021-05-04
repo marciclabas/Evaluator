@@ -104,7 +104,7 @@ void User::ProblemStats::addProblem(prb::ID newProblemID) {
 }
 
 void User::updateSolvableProblems(prb::ID lastSolvedProblem) {
-	CourseSet::getInstance()[getEnrolledCourseID()].updateSolvableProblems(*this);
+	CourseSet::getInstance()[getEnrolledCourseID()].updateSolvableProblems(*this, lastSolvedProblem);
 }
 
 void User::addSolvableProblem(prb::ID problemID) {

@@ -35,7 +35,7 @@ bool Course::containsProblem(prb::ID problemID) const {
 	return problemSession.count(problemID);
 }
 
-void Course::updateSolvableProblems(const ICanSolveProblems & solverObject, prb::ID lastSolvedProblem) const {
+void Course::updateSolvableProblems(ICanSolveProblems & solverObject, prb::ID lastSolvedProblem) const {
 	if(lastSolvedProblem == prb::invalidID) {
 		for(ses::ID sessionID : sessions)
 			SessionRepository::getInstance()[sessionID].updateSolvableProblems(solverObject);
