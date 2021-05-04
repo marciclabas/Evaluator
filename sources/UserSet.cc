@@ -26,7 +26,7 @@ void UserSet::read() {
 	int M; std::cin >> M;
 	for(int i = 0; i < M; i++) {
 			usr::ID newUserID; std::cin >> newUserID;
-			this->add(newUserID, User());
+			this->add(newUserID);
 	}
 }
 
@@ -51,8 +51,8 @@ int UserSet::count() const {
 }
 
 
-void UserSet::add(usr::ID newElementID, User newElement) {
-	users[newElementID] = newElement;
+void UserSet::add(usr::ID newElementID) {
+	users[newElementID];
 }
 
 void UserSet::remove(usr::ID id) {

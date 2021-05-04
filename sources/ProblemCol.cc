@@ -53,7 +53,7 @@ void ProblemCollection::read() {
 	int P; std::cin >> P;
 	for(int i = 0; i < P; i++) {
 		prb::ID newProblemID; std::cin >> newProblemID;
-		this->add(newProblemID, Problem());
+		this->add(newProblemID);
 	}
 }
 

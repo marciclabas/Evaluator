@@ -77,7 +77,7 @@ public:
 	 @pre There is not any element with the given element's id within the container
 	 @post The new element is added to the container
 	 */
-	void add(prb::ID newElementID, Problem newElement);
+	void add(prb::ID newElementID);
 };
 
 #endif

@@ -80,7 +80,7 @@ public:
 	 @pre There is not any element with the given element's id within the container
 	 @post The new element is added to the container
 	 */
-	void add(usr::ID newElementID, User newElement);
+	void add(usr::ID newElementID);
 	
 	/**
 	 @ brief Removes an e*lement from the set
