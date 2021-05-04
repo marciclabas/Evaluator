@@ -58,11 +58,11 @@ public:
 	void getProblems(std::list<prb::ID> & problems) const;
 
 	/**
-	@brief Returns the problems a @c ICanSolveProblems can solve
+	@brief Updates the problems a @c ICanSolveProblems can solve
 	@pre @c lastSolvedProblem is invalid or is contained in the session
-	@post A list with the problems @c ICanSolveProblems can solve is returned by reference (appended to whathever was in the list)
+	@post The problems @c ICanSolveProblems can solve are updated
 	*/
-	void getSolvableProblems(const ICanSolveProblems & solverObject, std::list<prb::ID> & solvableProblems, prb::ID lastSolvedProblem = prb::invalidID) const;
+	void updateSolvableProblems(const ICanSolveProblems & solverObject, prb::ID lastSolvedProblem = prb::invalidID) const;
 
 };
 

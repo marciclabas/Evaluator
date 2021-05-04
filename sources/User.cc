@@ -102,9 +102,9 @@ void User::ProblemStats::addProblem(prb::ID newProblemID) {
 }
 
 void User::updateSolvableProblems(prb::ID lastSolvedProblem) {
-	const Course & enrolledCourse = CourseSet::getInstance()[getEnrolledCourseID()];
-	std::list<prb::ID> newSolvableProblems;
-	enrolledCourse.getSolvableProblems(*this, newSolvableProblems, lastSolvedProblem);
-	for(prb::ID problemID : newSolvableProblems)
-		this->solvableProblems.addProblem(problemID);
+	CourseSet::getInstance()[getEnrolledCourseID()].updateSolvableProblems(*this);
+}
+
+void User::addSolvableProblem(prb::ID problemID) {
+	solvableProblems.addProblem(problemID);
 }

@@ -59,11 +59,11 @@ public:
 	bool getSessionByProblem(prb::ID problemID, ses::ID & sessionID) const;
 
 	/**
-	@brief Get a list of the problems the given @c ICanSolveProblems can solve, after having solved the given problem
+	@brief Updates the problems the given @c ICanSolveProblems can solve, after having solved the given problem
 	@pre The given @c ICanSolveProblems is enrolled in the course and has solved the given problem
-	@post A list with the problems @c ICanSolveProblems user can solve is returned by reference (appended to whatever was in the list)
+	@post Updates the problems @c ICanSolveProblems can solve
 	*/
-	void getSolvableProblems(const ICanSolveProblems & solverObject, std::list<prb::ID> & solvableProblems, prb::ID lastSolvedProblem) const;
+	void updateSolvableProblems(const ICanSolveProblems & solverObject, prb::ID lastSolvedProblem) const;
 
 	/*=============================================================overrided IO methods============================================================*/
 	void print() const override;

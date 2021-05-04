@@ -105,7 +105,9 @@ public:
 	@pre True
 	@post Returns @c true if has solved the problem, returns @c false otherwise
 	 */
-	bool hasSolvedProblem(prb::ID problemID) const;
+	bool hasSolvedProblem(prb::ID problemID) const override;
+
+	void addSolvableProblem(prb::ID problemID) override;
 
 	/*==============================================================overrided IO methods============================================================*/
 	void print() const override;

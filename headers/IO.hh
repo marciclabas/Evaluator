@@ -56,6 +56,9 @@ namespace io {
 		problem_not_in_course
 	};
 
+	/**
+	@brief
+	*/
 	void error(Error er = default_error);
 
 	void echo(InputCommand command);
