@@ -11,7 +11,8 @@
 #include "SessionRep.hh"
 
 #ifndef NO_DIAGRAM
-#include <list>
+#include <vector>
+#include <map>
 #endif
 
 
@@ -19,122 +20,88 @@
 /**
 @class Course
 @brief Represents a course, i.e., a set of sessions with void intersection and some statistics
-@invariant <ol>
-				<li>@c totalEnrolled >= currentEnrolled</li>
-				<li>@c currentEnrolled >= 0</li>
-			</ol>
 */
-<<<<<<< HEAD
-class Course : public IReadable, public IPrintable {
-	crs::ID id;
-	std::unordered_set<ses::ID> sessions;
-	struct {
-		int totalEnrolled; // number of users that are or have been enrolled
-		int currentEnrolled; // number of users that are enrolled
-	} stats;
-
-public:
-=======
 class Course : public IPrintable, public IReadable {
 private:
-	int totalEnrolled;
-	int currentEnrolled;
-	std::list<ses::ID> sessions;
-	static SessionRepository & sessionRepository;
+	int usersCompleted;
+	int usersEnrolled;
+	std::vector<ses::ID> sessions; // has to be ordered by antiquity to print
+	std::map<prb::ID, int> problemSession;
+
+	// adds a session to the course and returns the index its stored in
+	int addSession(ses::ID sessionID);
+
+	// returns the session count
+	int sessionCount() const;
+
+	// returns true if contains the given problem in some session, false otherwise
+	bool containsProblem(prb::ID problemID) const;
+
 public:
-	/* =========================================================constructors & destructors=========================================================*/
->>>>>>> d492b3a069c2074d005a742334644ac2220fcab0
+	using const_iterator = std::vector<ses::ID>::const_iterator;
+	/*==========================================================constructors & destructors=========================================================*/
 	Course();
+	~Course();
 	
-	/**
-	@brief Updates the stats regarding enrolled users adding a new user
-	@pre true
-	@post @c totalEnrolled and @c currentEnrolled are incremented by 1
-	*/
-	void enrollUser();
-
-<<<<<<< HEAD
-	/**
-	@brief Updates the stats regarding enrolled users removing an enrolled user
-	@pre @c currentEnrolled > 0
-	@post @c currentEnrolled is decremented by 1
-	*/
-	void unenrollUser();
-=======
-
-	/*===============================================================static methods===============================================================*/
-
-	static void setSessionRepository(const SessionRepository & sessionRepository);
-
-	/* ===================================================================getters==================================================================*/
->>>>>>> d492b3a069c2074d005a742334644ac2220fcab0
+	/*====================================================================getters==================================================================*/
 
 	/**
 	@brief Returns the number of users currently enrolled on the course
 	@pre true
-	@post The number of currently enrolled users (@c currentEnrolled) is returned
+	@post The number of currently enrolled users (>= 0) is returned
 	*/
-	int getCurrentEnrolled() const;
+	int getUsersEnrolled() const;
 
 	/**
 	@brief Check whether a session within the course contains a problem with the given id does exists. If it does, returs the id of such session through sessionID
-	@pre true
+	@pre problemID is the id of a valid problem
 	@post sessionID is the id of a session containing a problem with the given id and @c true is returned if such session exists within the course. If it does not, @c false is returned
 	*/
 	bool getSessionByProblem(prb::ID problemID, ses::ID & sessionID) const;
 
-<<<<<<< HEAD
-	//bool operator<(const Course & course);
-=======
-	/* ========================================================IPrintable overriden methods========================================================*/
-
 	/**
-	@brief Print the @c IPrintable object to the stdout
-	@pre true
-	@post The @c IPrintable object is printed to the stdout
+	@brief Updates the problems the given @c ICanSolveProblems can solve, after having solved the given problem
+	@pre The given @c ICanSolveProblems is enrolled in the course and has solved the given problem
+	@post Updates the problems @c ICanSolveProblems can solve
 	*/
+	void updateSolvableProblems(ICanSolveProblems & solverObject, prb::ID lastSolvedProblem = prb::invalidID) const;
+
+	/*=============================================================overrided IO methods============================================================*/
 	void print() const override;
-
-	/**
-	@brief Print the @c IPrintable object to an output stream
-	@pre true
-	@post The @c IPrintable object is printed to the given output stream
-	*/
-	friend std::ostream& operator<< (std::ostream &out, const Course & course);
-
-	/* ========================================================IReadable overriden methods========================================================*/
-
-	/**
-	@brief Read to the @c IReadable object from the stdin
-	@pre true
-	@post The @c IReadable object is read from the stdin
-	*/
 	void read() override;
-
-	/**
-	@brief Read to the @c IReadable object from an input stream
-	@pre true
-	@post The @c IReadable object is read from the given input stream
-	*/
-	friend std::istream& operator>> (std::istream & in, Course & course);
-
 
 	/* ===========================================================other functionality===========================================================*/
 	
 	/**
 	@brief Updates the stats regarding enrolled users adding a new user
 	@pre true
-	@post @c totalEnrolled and @c currentEnrolled are incremented by 1
+	@post @c usersCompleted and @c usersEnrolled are incremented by 1
 	*/
 	void enrollUser();
 
 	/**
-	@brief Updates the stats regarding enrolled users removing an enrolled user
-	@pre @c currentEnrolled > 0
-	@post @c currentEnrolled is decremented by 1
+	@brief Updates the stats regarding enrolled users removing a user
+	@pre true
+	@post  @c usersEnrolled is decremented by 1
 	*/
 	void unenrollUser();
->>>>>>> d492b3a069c2074d005a742334644ac2220fcab0
+
+	/**
+	@brief Updates the stats regarding enrolled users removing an enrolled user
+	@pre @c usersEnrolled > 0
+	@post @c usersEnrolled is decremented by 1
+	*/
+	void completeCourse();
+
+	/**
+	@brief Checks wether the course is valid
+	@pre true
+	@post Returs @c true if there is a void intersection between the course's sessions, @c false otherwise
+	*/
+	bool isValid() const;
+
+	const_iterator cbegin() const;
+	const_iterator cend() const;
 };
 
 

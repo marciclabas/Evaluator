@@ -25,13 +25,6 @@ public:
 	@post The @c IPrintable object is printed to the stdout
 	*/
 	virtual void print() const = 0;
-
-	/**
-	@brief Print the @c IPrintable object to an output stream
-	@pre true
-	@post The @c IPrintable object is printed to the given output stream
-	*/
-	friend std::ostream& operator<< (std::ostream &out, const IPrintable &printable);
 };
 
 #endif

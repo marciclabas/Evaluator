@@ -1,70 +1,107 @@
 #include "Course.hh"
 
+/*================================================================private methods=============================================================*/
+
+int Course::addSession(ses::ID sessionID) {
+	sessions.push_back(sessionID);
+	return sessions.size() - 1;
+}
+
+int Course::sessionCount() const {
+	return sessions.size();
+}
+
 /*=========================================================constructors & destructors=========================================================*/
-Course::Course(): totalEnrolled(0), currentEnrolled(0), sessions() {}
 
-Course::~Course() {
+Course::Course(): usersCompleted(0), usersEnrolled(0), sessions(), problemSession() {}
 
-}
-
-
-/*===============================================================static methods===============================================================*/
-
-void Course::setSessionRepository(const SessionRepository & sessionRepository) {
-	Course::sessionRepository = sessionRepository;
-}
+Course::~Course() {}
 
 /*===================================================================getters==================================================================*/
 
-int Course::getCurrentEnrolled() const {
-	return currentEnrolled;
+int Course::getUsersEnrolled() const {
+	return usersEnrolled;
 }
 
-bool Course::getSessionByProblem(prb::ID problemID, ses::ID & sessionID) const {		/* TODO */
-	for(ses::ID currentSessionID : sessions) {
-		if(Course::sessionRepository[currentSessionID].containsProblem(problemID)) {
-			sessionID = currentSessionID;
-			return true;
-		}
+bool Course::getSessionByProblem(prb::ID problemID, ses::ID & sessionID) const {
+	if(containsProblem(problemID)) {
+		sessionID = sessions[problemSession.at(problemID)];
+		return true;
 	}
 	return false;
 }
 
-/*========================================================IPrintable overriden methods========================================================*/
+bool Course::containsProblem(prb::ID problemID) const {
+	return problemSession.count(problemID);
+}
+
+void Course::updateSolvableProblems(ICanSolveProblems & solverObject, prb::ID lastSolvedProblem) const {
+	if(lastSolvedProblem == prb::invalidID) {
+		for(ses::ID sessionID : sessions)
+			SessionRepository::getInstance()[sessionID].updateSolvableProblems(solverObject);
+	}
+	else {
+		// check the session lastProblemSolved is contained in
+		ses::ID sessionID = sessions[problemSession.at(lastSolvedProblem)];
+		SessionRepository::getInstance()[sessionID].updateSolvableProblems(solverObject, lastSolvedProblem);
+	}
+}
+
+Course::const_iterator Course::cbegin() const {
+	return sessions.cbegin();
+}
+
+Course::const_iterator Course::cend() const {
+	return sessions.cend();
+}
+
+/*==============================================================overrided IO methods============================================================*/
 
 void Course::print() const {
-	std::cout << *this;
-}
+	assert(sessions.begin() != sessions.end());
 
-std::ostream& operator<< (std::ostream &out, const Course & course) {
-	out << course.totalEnrolled << course.currentEnrolled;
-	for(ses::ID sessionID : course.sessions) out << sessionID << std::endl;
-	return out;
-}
+	auto sessionIterator = sessions.begin();
+	std::cout << usersCompleted << ' ' << usersEnrolled << ' ' << this->sessionCount() << " (" << *sessionIterator;
+	sessionIterator++;
 
-/*========================================================IReadable overriden methods========================================================*/
+	while(sessionIterator != sessions.end()) {
+		std::cout << ' ' << *sessionIterator;
+		sessionIterator++;
+	}
+	std::cout << ')';
+}
 
 void Course::read() {
-	std::cin >> *this;
-}
-
-std::istream& operator>> (std::istream & in, Course & course) {
-	int sessionCount; in >> sessionCount;
+	int sessionCount; std::cin >> sessionCount;
 	for(int i = 0; i < sessionCount; i++) {
-		ses::ID sessionID; in >> sessionID;
-		course.sessions.insert(course.sessions.end(), sessionID);
+		ses::ID sessionID; std::cin >> sessionID;
+		int sessionIndex = addSession(sessionID);
+		const Session & session = SessionRepository::getInstance()[sessionID];
+		std::list<prb::ID> problems;
+		session.getProblems(problems);
+		for(prb::ID problemID : problems) {
+			assert(not containsProblem(problemID));
+			problemSession[problemID] = sessionIndex;
+		}
 	}
-	return in;
 }
 
 
 /*===========================================================other functionality===========================================================*/
 
 void Course::enrollUser() {
-	totalEnrolled++;
-	currentEnrolled++;
+	usersEnrolled++;
 }
 
 void Course::unenrollUser() {
-	currentEnrolled--;
+	usersEnrolled--;
+}
+
+void Course::completeCourse() {
+	usersEnrolled--;
+	usersCompleted++;
+}
+
+bool Course::isValid() const {
+	return true; /* TO DO */
 }

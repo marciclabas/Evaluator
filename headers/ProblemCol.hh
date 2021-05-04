@@ -9,7 +9,6 @@
 #include "Problem.hh"
 #include "IReadable.hh"
 #include "IPrintable.hh"
-#include "IContainer.hh"
 
 #ifndef NO_DIAGRAM
 #include <string>
@@ -19,94 +18,66 @@
 /**
 @class ProblemCollection
 @brief Represents a collection of problems
-
 */
-class ProblemCollection : public IReadable, public IPrintable, public IContainer<prb::ID, Problem> {
-	/*
-	@invariant problems is sorted by:
-	@invariant 	<ol>
-				<li>@c stats.ratio</li>
-				<li>@c id</li>
-			</ol>
-<<<<<<< HEAD
-*/
-class ProblemCollection : public IReadable, public IPrintable, public IContainer<prb::ID, Problem> {
-<<<<<<< HEAD
-=======
-	*/
->>>>>>> a9243d702bf53f762bc01ba95a77d594935fe2df
-	std::vector<Problem> problems;
-
-public:
-=======
-	std::map<prb::ID, Problem> problems;
-public:
-	/* =========================================================constructors & destructors=========================================================*/
->>>>>>> d492b3a069c2074d005a742334644ac2220fcab0
-    ProblemCollection();
+class ProblemCollection : public IReadable, public IPrintable  {
+private:
+	/*==========================================================constructors & destructors=========================================================*/
+	ProblemCollection();
 	~ProblemCollection();
-
-	/* ========================================================IPrintable overriden methods========================================================*/
-
-	/**
-	@brief Print the @c IPrintable object to the stdout
-	@pre true
-	@post The @c IPrintable object is printed to the stdout
-	*/
-	void print() const override;
+	std::map<prb::ID,Problem> problems;
+public:
+	/*===========================================================singleton-related methods=========================================================*/
+	// deleted copy constructor
+	ProblemCollection(ProblemCollection & copy) = delete;
+	// deleted assignment operator
+	void operator=(const ProblemCollection &) = delete;
 
 	/**
-	@brief Print the @c IPrintable object to an output stream
-	@pre true
-	@post The @c IPrintable object is printed to the given output stream
+	@brief Returns the single instance
+	@pre True
+	@post The single instance is returned
 	*/
-	friend std::ostream& operator<< (std::ostream & out, const ProblemCollection & problemCollection);
-
-	/* ========================================================IReadable overriden methods========================================================*/
-
+	static ProblemCollection & getInstance();
+	
+	/*==============================================================overrided IO methods============================================================*/
+	void print() const;
+	void read();
+	
+	/*================================================================container methods=============================================================*/
 	/**
-	@brief Read to the @c IReadable object from the stdin
-	@pre true
-	@post The @c IReadable object is read from the stdin
-	*/
-	void read() override;
-
+	 @brief Return wheter there is an element with the given id
+	 @pre true
+	 @post @c true is returned if there is an element with the given id within the container. If there is not, @c false is returned
+	 */
+	bool contains(prb::ID id) const;
+	
 	/**
-	@brief Read to the @c IReadable object from an input stream
-	@pre true
-	@post The @c IReadable object is read from the given input stream
-	*/
-	friend std::istream& operator>> (std::istream &in, IReadable &readable);
-
-	/* ========================================================IContainer overriden methods========================================================*/
-
+	 @ brief Returns the element with the given ID contained in the container
+	 @pre An element with the given id does exist within the container
+	 @post An element with the given ID contained in the container is returned
+	 */
+	Problem & operator[](prb::ID id);
+	
+	/*
+	 @ brief Returns the element with the given ID contained in the container, const version
+	 @pre An element with the given id does exist within the container
+	 @post A const element with the given ID contained in the container is returned
+	 
+	const Problem & operator[](prb::ID id) const;*/
+	
 	/**
-	@brief Return wheter the @c IContainer object has an element with the given id
-	@pre true
-	@post @c true is returned if there is an element with the given id within the @c IContainer object. If there is not, @c false is returned
-	*/
-	bool containsElement(prb::ID id) const override;
-
+	 @ brief Return the number of elements contained in the contain*er
+	 @pre true
+	 @post The number of elements contained in the container is returned
+	 */
+	int count() const;
+	
 	/**
-	@brief Returns the element with the given ID contained in the @c IContainer object
-	@pre An element with the given id does exist within the @c IContainer object
-	@post An element with the given ID contained in the @c IContainer object is returned
-	*/
-	Problem & operator[](prb::ID id) override;
-
-	/**
-	@brief Return the number of elements contained in the @c IContainer object
-	@pre true
-	@post The number of elements contained in the @c IContainer object is returned
-	*/
-	int getCount() const override;
-
-	/**
-	@brief Add a new element, given such element's id
-	@pre There is not any element with the given id within the @c IContainer object
-	@post A new element with @c newElementID is added to the @c IContainer object
-	*/
-	void addElement(prb::ID newElementID) override;
+	 @ brief Add a new element                                     *
+	 @pre There is not any element with the given element's id within the container
+	 @post The new element is added to the container
+	 */
+	void add(prb::ID newElementID);
 };
 
 #endif

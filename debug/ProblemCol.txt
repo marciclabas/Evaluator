@@ -1,8 +1,0 @@
-./sources/ProblemCol.cc:12:6: error: no declaration matches ‘void ProblemCollection::print() const’
-   12 | void ProblemCollection::print() const {
-      |      ^~~~~~~~~~~~~~~~~
-./sources/ProblemCol.cc:12:6: note: no functions named ‘void ProblemCollection::print() const’
-In file included from ./sources/ProblemCol.cc:1:
-./headers/ProblemCol.hh:20:7: note: ‘class ProblemCollection’ defined here
-   20 | class ProblemCollection : public IReadable, public IPrintable, public IContainer<prb::ID, Problem> {
-      |       ^~~~~~~~~~~~~~~~~

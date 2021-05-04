@@ -7,15 +7,10 @@ Problem::Problem(): t(0), e(0), r(1) {}
 
 Problem::~Problem() {}
 
-/* ========================================================IPrintable overriden methods========================================================*/
+/*==============================================================Friend functions===============================================================*/
 
 void Problem::print() const {
-	std::cout << *this;
-}
-
-std::ostream& operator<< (std::ostream & out, const Problem & problem) {
-	out << problem.t << ' ' << problem.e << ' ' << problem.r;
-	return out;
+	std::cout << '(' << t << ',' << e << ',' << r << ')';
 }
 
 /* ===========================================================other functionality===========================================================*/

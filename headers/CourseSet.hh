@@ -9,91 +9,84 @@
 #include "Course.hh"
 #include "IReadable.hh"
 #include "IPrintable.hh"
-#include "IContainer.hh"
 
 #ifndef NO_DIAGRAM
 #include <vector>
+#include <string>
 #endif
 
 /**
 @class CourseSet
 @brief Represents set of courses
-@invariant courses is sorted by id
 */
-<<<<<<< HEAD
-class CourseSet : public IReadable, public IPrintable, public IContainer<crs::ID, Course> {
-	std::vector<Course> courses;
-	
-public:
-=======
-class CourseSet : public IReadable, public IPrintable, public IContainer<crs::crs::, Course> {	
-public:
+class CourseSet : public IReadable, public IPrintable {
+private:
 	/* =========================================================constructors & destructors=========================================================*/
->>>>>>> d492b3a069c2074d005a742334644ac2220fcab0
-	CourseSet(const SessionRepository& SessionRepository);
+	CourseSet();
 	~CourseSet();
+	
+	std::vector<Course> courses;
 
-	/* ========================================================IPrintable overriden methods========================================================*/
+public:
+	/*===========================================================singleton-related methods=========================================================*/
+	// deleted copy constructor
+	CourseSet(CourseSet & copy) = delete;
+	// deleted assignment operator
+	void operator=(const CourseSet &) = delete;
 
 	/**
-	@brief Print the @c IPrintable object to the stdout
+	@brief Returns the single instance
+	@pre True
+	@post The single instance is returned
+	*/
+	static CourseSet & getInstance();
+
+	/*=============================================================overrided IO methods============================================================*/
+	void print() const;
+	void read();
+	
+	/*===============================================================setters & getters=============================================================*/
+	/**
+	@brief Return wheter there is an element with the given id
 	@pre true
-	@post The @c IPrintable object is printed to the stdout
+	@post @c true is returned if there is an element with the given id within the container. If there is not, @c false is returned
 	*/
-	void print() const override;
+	bool contains(crs::ID id) const;
 
 	/**
-	@brief Print the @c IPrintable object to an output stream
+	@brief Returns the element with the given ID contained in the container
+	@pre An element with the given id does exist within the container
+	@post An element with the given ID contained in the container is returned
+	*/
+	Course & operator[](crs::ID id);
+
+	/*
+	@brief Returns the element with the given ID contained in the container, const version
+	@pre An element with the given id does exist within the container
+	@post A const element with the given ID contained in the container is returned
+	*
+	const Course & operator[](crs::ID id) const;*/
+
+	/**
+	@brief Return the number of elements contained in the container
 	@pre true
-	@post The @c IPrintable object is printed to the given output stream
+	@post The number of elements contained in the container is returned
 	*/
-	friend std::ostream& operator<< (std::ostream &out, const IPrintable &printable);
-
-	/* ========================================================IReadable overriden methods========================================================*/
+	int count() const;
 
 	/**
-	@brief Read to the @c IReadable object from the stdin
-	@pre true
-	@post The @c IReadable object is read from the stdin
+	@brief Set the size of the container
+	@pre True
+	@post The container has newSize as it's size
 	*/
-	void read() override;
+	void setSize(int newSize);
 
 	/**
-	@brief Read to the @c IReadable object from an input stream
-	@pre true
-	@post The @c IReadable object is read from the given input stream
+	@brief Add a new element at the end
+	@pre There is not any element with the given element's id within the container
+	@post The new element is added at the end of the container
 	*/
-	friend std::istream& operator>> (std::istream &in, IReadable &readable);
-
-	/* ========================================================IContainer overriden methods========================================================*/
-
-	/**
-	@brief Return wheter the @c IContainer object has an element with the given id
-	@pre true
-	@post @c true is returned if there is an element with the given id within the @c IContainer object. If there is not, @c false is returned
-	*/
-	bool containsElement(crs::ID id) const override;
-
-	/**
-	@brief Returns the element with the given crs::ID contained in the @c IContainer object
-	@pre An element with the given id does exist within the @c IContainer object
-	@post An element with the given crs::ID contained in the @c IContainer object is returned
-	*/
-	T& operator[](crs::ID id) override;
-
-	/**
-	@brief Return the number of elements contained in the @c IContainer object
-	@pre true
-	@post The number of elements contained in the @c IContainer object is returned
-	*/
-	int getCount() const override;
-
-	/**
-	@brief Add a new element, given such element's id
-	@pre There is not any element with the given id within the @c IContainer object
-	@post A new element with @c newElementcrs::ID is added to the @c IContainer object
-	*/
-	void addElement(crs::ID newElementID) override;
+	void append(Course newElement);
 };
 
 #endif

@@ -8,16 +8,22 @@
 
 #ifndef NO_DIAGRAM
 #include <string>
+#include <cassert>
+#include <iostream>
 #endif
 
 /**
 @namespace prb
 @brief namespace containing type definitions related to the Problem class
 */
+
 namespace prb {
-	using ID = std::string;
+	using ID = std::string; // "0" is invalid
 	enum result { rejected = 0, accepted = 1};
+	const ID invalidID = "0";
 }
+
+std::istream& operator>>(std::istream & in, prb::result & result);
 
 /**
 @namespace ses
@@ -32,7 +38,7 @@ namespace ses {
 @brief namespace containing type definitions related to the Course class
 */
 namespace crs {
-	using ID = std::string;
+	using ID = int;
 }
 
 /**

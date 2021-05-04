@@ -9,7 +9,6 @@
 #include "Session.hh"
 #include "IReadable.hh"
 #include "IPrintable.hh"
-#include "IContainer.hh"
 
 #ifndef NO_DIAGRAM
 #include <map>
@@ -19,85 +18,67 @@
 /**
 @class SessionRepository
 @brief Represents a repository of sessions
-@invariant sessions is sorted by id
 */
-class SessionRepository : public IReadable, public IPrintable, public IContainer<ses::ID, Session> {
-<<<<<<< HEAD
-	std::vector<Session> sessions;
-
-	static const ProblemCollection & problemCollection;
-    
-public:
-=======
+class SessionRepository : public IReadable, public IPrintable {
 private:
-	std::map<ses::ID, Session> sessions;
-public:
 	/* =========================================================constructors & destructors=========================================================*/
->>>>>>> d492b3a069c2074d005a742334644ac2220fcab0
-	SessionRepository(ProblemCollection & problemCollection);
+	SessionRepository();
 	~SessionRepository();
+	
+	std::map<ses::ID,Session> sessions;
 
-	/* ========================================================IPrintable overriden methods========================================================*/
+public:
+	/*===========================================================singleton-related methods=========================================================*/
+	// deleted copy constructor
+	SessionRepository(SessionRepository & copy) = delete;
+	// deleted assignment operator
+	void operator=(const SessionRepository &) = delete;
 
 	/**
-	@brief Print the @c IPrintable object to the stdout
-	@pre true
-	@post The @c IPrintable object is printed to the stdout
+	@brief Returns the single instance
+	@pre True
+	@post The single instance is returned
 	*/
+	static SessionRepository & getInstance();
+	/*=============================================================overrided IO methods============================================================*/
 	void print() const override;
-
-	/**
-	@brief Print the @c IPrintable object to an output stream
-	@pre true
-	@post The @c IPrintable object is printed to the given output stream
-	*/
-	friend std::ostream& operator<< (std::ostream & out, const SessionRepository & sessionRepository);
-
-	/* ========================================================IReadable overriden methods========================================================*/
-
-	/**
-	@brief Read to the @c IReadable object from the stdin
-	@pre true
-	@post The @c IReadable object is read from the stdin
-	*/
 	void read() override;
-
+	
+	/*================================================================container methods=============================================================*/
 	/**
-	@brief Read to the @c IReadable object from an input stream
-	@pre true
-	@post The @c IReadable object is read from the given input stream
-	*/
-	friend std::istream& operator>> (std::istream & in, SessionRepository & sessionRepository);
-
-	/* ========================================================IContainer overriden methods========================================================*/
-
+	 @brief Return wheter there is an elemen*t with the given id
+	 @pre true
+	 @post @c true is returned if there is an element with the given id within the container. If there is not, @c false is returned
+	 */
+	bool contains(ses::ID id) const;
+	
 	/**
-	@brief Return wheter the @c IContainer object has an element with the given id
-	@pre true
-	@post @c true is returned if there is an element with the given id within the @c IContainer object. If there is not, @c false is returned
-	*/
-	bool containsElement(ses::ID id) const override;
-
+	 @brief Returns the element with the given ID contained in the container
+	 @pre An element with the given id does exist within the container
+	 @post An element with the given ID contained in the container is returned
+	 */
+	Session & operator[](ses::ID id);
+	
+	/*
+	 @brief Returns the element with the gi*ven ID contained in the container, const version
+	 @pre An element with the given id does exist within the container
+	 @post A const element with the given ID contained in the container is returned
+	 *
+	const Session & operator[](ses::ID id) const;*/
+	
 	/**
-	@brief Returns the element with the given ses::ID contained in the @c IContainer object
-	@pre An element with the given id does exist within the @c IContainer object
-	@post An element with the given ses::ID contained in the @c IContainer object is returned
-	*/
-	Session & operator[](ses::ID id) override;
-
+	 @brief Return the number of elements c*ontained in the contain*er
+	 @pre true
+	 @post The number of elements contained in the container is returned
+	 */
+	int count() const;
+	
 	/**
-	@brief Return the number of elements contained in the @c IContainer object
-	@pre true
-	@post The number of elements contained in the @c IContainer object is returned
-	*/
-	int getCount() const override;
-
-	/**
-	@brief Add a new element, given such element's id
-	@pre There is not any element with the given id within the @c IContainer object
-	@post A new element with @c newElementses::ID is added to the @c IContainer object
-	*/
-	void addElement(ses::ID newElementID) override;
+	 @brief Add a new element
+	 @pre There is not any element with the given element's id within the container
+	 @post The new element is added to the container
+	 */
+	void add(ses::ID newElementID, Session newElement);
 };
 
 #endif
