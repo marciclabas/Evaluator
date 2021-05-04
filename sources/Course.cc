@@ -85,6 +85,10 @@ void Course::enrollUser() {
 	usersEnrolled++;
 }
 
+void Course::unenrollUser() {
+	usersEnrolled--;
+}
+
 void Course::completeCourse() {
 	usersEnrolled--;
 	usersCompleted++;

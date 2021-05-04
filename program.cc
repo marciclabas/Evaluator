@@ -93,6 +93,10 @@ int main() {
 			// echo
 			cout << ' '  << toRemoveUserID << endl;
             if(userSet.contains(toRemoveUserID)) {
+				const User & user = userSet[toRemoveUserID];
+				// unenroll user from course (if enrolled in any)
+				if(user.isEnrolledInCourse())
+					courseSet[user.getEnrolledCourseID()].unenrollUser();
 				userSet.remove(toRemoveUserID);
             	cout << userSet.count() << endl;
 			} 

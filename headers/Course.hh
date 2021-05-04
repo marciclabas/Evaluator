@@ -79,6 +79,13 @@ public:
 	void enrollUser();
 
 	/**
+	@brief Updates the stats regarding enrolled users removing a user
+	@pre true
+	@post  @c usersEnrolled is decremented by 1
+	*/
+	void unenrollUser();
+
+	/**
 	@brief Updates the stats regarding enrolled users removing an enrolled user
 	@pre @c usersEnrolled > 0
 	@post @c usersEnrolled is decremented by 1

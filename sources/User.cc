@@ -5,7 +5,9 @@
 /* =========================================================constructors & destructors=========================================================*/
 User::User(): isEnrolled(false), enrolledCourse(), solvedProblems(), solvableProblems() {}
 
-User::~User() {}
+User::~User() {
+	/* if(isEnrolledInCourse()) CourseSet::getInstance()[getEnrolledCourseID()].unenrollUser(); */
+}
 
 /* ===================================================================getters==================================================================*/
 
