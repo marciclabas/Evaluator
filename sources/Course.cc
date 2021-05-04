@@ -47,6 +47,14 @@ void Course::updateSolvableProblems(const ICanSolveProblems & solverObject, prb:
 	}
 }
 
+Course::const_iterator Course::cbegin() const {
+	return sessions.cbegin();
+}
+
+Course::const_iterator Course::cend() const {
+	return sessions.cend();
+}
+
 /*==============================================================overrided IO methods============================================================*/
 
 void Course::print() const {

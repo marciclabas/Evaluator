@@ -38,6 +38,7 @@ private:
 	bool containsProblem(prb::ID problemID) const;
 
 public:
+	using const_iterator = std::vector<ses::ID>;
 	/*==========================================================constructors & destructors=========================================================*/
 	Course();
 	~Course();
@@ -99,9 +100,8 @@ public:
 	*/
 	bool isValid() const;
 
-	std::list<ses::ID>::const_iterator begin() const;
-	std::list<ses::ID>::const_iterator end() const;
-
+	const_iterator cbegin() const;
+	const_iterator cend() const;
 };
 
 
