@@ -71,7 +71,7 @@ int main() {
         		courseSet.append(newCourse);
         		cout << courseSet.count() << endl;
         	}
-        	else error();
+        	else error(malformed_course);
         }
         
         else if(command == new_user) {

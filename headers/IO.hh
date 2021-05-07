@@ -53,7 +53,8 @@ namespace io {
 		already_existing_user,
 		already_enrolled_user,
 		nonenrolled_user,
-		problem_not_in_course
+		problem_not_in_course,
+		malformed_course
 	};
 
 	/**
