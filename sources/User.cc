@@ -28,8 +28,7 @@ bool User::isEnrolledInCourse() const {
 }
 
 bool User::completedEnrolledCourse() const {
-	/* TODO */
-	return false;
+	return solvableProblems.empty();
 }
 
 bool User::hasSolvedProblem(prb::ID problemID) const {
@@ -38,6 +37,10 @@ bool User::hasSolvedProblem(prb::ID problemID) const {
 
 bool User::ProblemStats::contains(prb::ID problemID) const {
 	return stats.count(problemID);
+}
+
+bool User::ProblemStats::empty() const {
+	return stats.empty();
 }
 
 /*==============================================================overrided IO methods============================================================*/

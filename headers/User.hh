@@ -34,6 +34,7 @@ private:
 		std::map<prb::ID, int>::const_iterator end() const;
 		bool contains(prb::ID problemID) const;
 		void addProblem(prb::ID newProblemID);
+		bool empty() const;
 	};
 	/* consider using:
 	struct UserStats {
