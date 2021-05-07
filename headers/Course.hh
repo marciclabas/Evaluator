@@ -26,7 +26,7 @@ private:
 	int usersCompleted;
 	int usersEnrolled;
 	std::vector<ses::ID> sessions; // has to be ordered by antiquity to print
-	std::map<prb::ID, int> problemSession;
+	std::map<prb::ID, int> problemSessionIndex;
 
 	// adds a session to the course and returns the index its stored in
 	int addSession(ses::ID sessionID);

@@ -29,9 +29,12 @@
 class Session : public IPrintable, public IReadable {
 private:
 	BinTree<prb::ID> problems;
+	std::list<prb::ID> problemsList;
 	int count; // number of problems in the tree
 
 public:
+	using const_iterator = std::list<prb::ID>::const_iterator;
+
 	/*=========================================================constructors & destructors=========================================================*/
 	Session();
 	~Session();
@@ -51,18 +54,15 @@ public:
 	bool containsProblem(prb::ID problemID) const;
 
 	/**
-	@brief Returns the problems contained in the session
-	@pre True
-	@post A list with the problems contained in the session is returned by reference
-	*/
-	void getProblems(std::list<prb::ID> & problems) const;
-
-	/**
 	@brief Updates the problems a @c ICanSolveProblems can solve
 	@pre @c lastSolvedProblem is invalid or is contained in the session
 	@post The problems @c ICanSolveProblems can solve are updated
 	*/
 	void updateSolvableProblems(ICanSolveProblems & solverObject, prb::ID lastSolvedProblem = prb::invalidID) const;
+
+	const_iterator cbegin() const;
+
+	const_iterator cend() const;
 
 };
 

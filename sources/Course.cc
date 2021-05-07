@@ -13,7 +13,7 @@ int Course::sessionCount() const {
 
 /*=========================================================constructors & destructors=========================================================*/
 
-Course::Course(): usersCompleted(0), usersEnrolled(0), sessions(), problemSession() {}
+Course::Course(): usersCompleted(0), usersEnrolled(0), sessions(), problemSessionIndex() {}
 
 Course::~Course() {}
 
@@ -25,14 +25,14 @@ int Course::getUsersEnrolled() const {
 
 bool Course::getSessionByProblem(prb::ID problemID, ses::ID & sessionID) const {
 	if(containsProblem(problemID)) {
-		sessionID = sessions[problemSession.at(problemID)];
+		sessionID = sessions[problemSessionIndex.at(problemID)];
 		return true;
 	}
 	return false;
 }
 
 bool Course::containsProblem(prb::ID problemID) const {
-	return problemSession.count(problemID);
+	return problemSessionIndex.count(problemID);
 }
 
 void Course::updateSolvableProblems(ICanSolveProblems & solverObject, prb::ID lastSolvedProblem) const {
@@ -42,7 +42,7 @@ void Course::updateSolvableProblems(ICanSolveProblems & solverObject, prb::ID la
 	}
 	else {
 		// check the session lastProblemSolved is contained in
-		ses::ID sessionID = sessions[problemSession.at(lastSolvedProblem)];
+		ses::ID sessionID = sessions[problemSessionIndex.at(lastSolvedProblem)];
 		SessionRepository::getInstance()[sessionID].updateSolvableProblems(solverObject, lastSolvedProblem);
 	}
 }
@@ -77,11 +77,9 @@ void Course::read() {
 		ses::ID sessionID; std::cin >> sessionID;
 		int sessionIndex = addSession(sessionID);
 		const Session & session = SessionRepository::getInstance()[sessionID];
-		std::list<prb::ID> problems;
-		session.getProblems(problems);
-		for(prb::ID problemID : problems) {
+		for(prb::ID problemID : session) {
 			assert(not containsProblem(problemID));
-			problemSession[problemID] = sessionIndex;
+			problemSessionIndex[problemID] = sessionIndex;
 		}
 	}
 }

@@ -21,9 +21,10 @@ void Session::print() const {
 
 // pre: tree is empty
 // post: tree is read from in in preorder
-static void readImmersion(BinTree<prb::ID> & tree, int & count) {
+static void readImmersion(BinTree<prb::ID> & tree, std::list<prb::ID> pList, int & count) {
 	prb::ID problemID; std::cin >> problemID;
 	if(problemID != prb::invalidID) {
+		pList.insert(pList.end(), problemID);
 		count++;
 		BinTree<prb::ID> leftChild, rightChild;
 		readImmersion(leftChild, count);
@@ -33,7 +34,7 @@ static void readImmersion(BinTree<prb::ID> & tree, int & count) {
 }
 
 void Session::read() {
-	readImmersion(problems, count);
+	readImmersion(problems, problemsList, count);
 }
 
 /*===========================================================other functionality===========================================================*/
@@ -77,18 +78,6 @@ static bool getProblemSubTree(prb::ID problemID, BinTree<prb::ID> & tree) {
     return false;
 }
 
-static void getProblemsImmersion(std::list<prb::ID> & problems, const BinTree<prb::ID> & tree) {
-	if(not tree.empty()) {
-		problems.insert(problems.end(), tree.value());
-		getProblemsImmersion(problems, tree.left());
-		getProblemsImmersion(problems, tree.right());
-	}
-}
-
-void Session::getProblems(std::list<prb::ID> & problems) const {
-	getProblemsImmersion(problems, this->problems);
-}
-
 // pre: lastProblemSolved is contained in the session
 // post: returns a list of the problems the userObject can solve after lastSolvedProblem
 void Session::updateSolvableProblems(ICanSolveProblems & solverObject, prb::ID lastSolvedProblem) const {
@@ -96,5 +85,13 @@ void Session::updateSolvableProblems(ICanSolveProblems & solverObject, prb::ID l
 	if(lastSolvedProblem != prb::invalidID) // bugfix: == -> !=
 		getProblemSubTree(lastSolvedProblem, problems);
 	updateSolvableProblemsImmersion(solverObject, problems);
+}
+
+Session::const_iterator Session::cbegin() const {
+	return problemsList.cbegin();
+}
+
+Session::const_iterator Session::cend() const {
+	return problemsList.cend();
 }
 
