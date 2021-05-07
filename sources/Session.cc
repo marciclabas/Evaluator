@@ -27,8 +27,8 @@ static void readImmersion(BinTree<prb::ID> & tree, std::list<prb::ID> pList, int
 		pList.insert(pList.end(), problemID);
 		count++;
 		BinTree<prb::ID> leftChild, rightChild;
-		readImmersion(leftChild, count);
-		readImmersion(rightChild, count);
+		readImmersion(leftChild, pList, count);
+		readImmersion(rightChild, pList, count);
 		tree = BinTree<prb::ID>(problemID, leftChild, rightChild);
 	}
 }
@@ -87,11 +87,11 @@ void Session::updateSolvableProblems(ICanSolveProblems & solverObject, prb::ID l
 	updateSolvableProblemsImmersion(solverObject, problems);
 }
 
-Session::const_iterator Session::cbegin() const {
+Session::const_iterator Session::begin() const {
 	return problemsList.cbegin();
 }
 
-Session::const_iterator Session::cend() const {
+Session::const_iterator Session::end() const {
 	return problemsList.cend();
 }
 

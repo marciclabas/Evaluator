@@ -47,11 +47,11 @@ void Course::updateSolvableProblems(ICanSolveProblems & solverObject, prb::ID la
 	}
 }
 
-Course::const_iterator Course::cbegin() const {
+Course::const_iterator Course::begin() const {
 	return sessions.cbegin();
 }
 
-Course::const_iterator Course::cend() const {
+Course::const_iterator Course::end() const {
 	return sessions.cend();
 }
 
@@ -77,7 +77,7 @@ void Course::read() {
 		ses::ID sessionID; std::cin >> sessionID;
 		int sessionIndex = addSession(sessionID);
 		const Session & session = SessionRepository::getInstance()[sessionID];
-		for(prb::ID problemID : session) {
+		for(const prb::ID problemID : session) {
 			assert(not containsProblem(problemID));
 			problemSessionIndex[problemID] = sessionIndex;
 		}
