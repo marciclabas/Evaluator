@@ -29,8 +29,13 @@
 class Session : public IPrintable, public IReadable {
 private:
 	BinTree<prb::ID> problems;
-	std::list<prb::ID> problemsList;
+	std::list<prb::ID> problemsList; // sorted by ID
 	int count; // number of problems in the tree
+
+	/**
+	@brief add problem to list while keeping it ordered by id
+	*/
+	void addProblemToList(prb::ID problemID);
 
 public:
 	using const_iterator = std::list<prb::ID>::const_iterator;
@@ -64,6 +69,10 @@ public:
 
 	const_iterator end() const;
 
+	/**
+	@brief Checks wether the given session is equal (i.e., has the same problems in any order) to the implicit parameter 
+	*/
+	bool operator==(const Session & otherSession()) const;
 };
 
 #endif

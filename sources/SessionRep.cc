@@ -59,3 +59,8 @@ int SessionRepository::count() const {
 void SessionRepository::add(ses::ID newElementID, Session newElement) {
 	sessions[newElementID] = newElement;
 }
+
+bool SessionRepository::contains(const Session & toCheckSession) const {
+	for(const Session & currentSession : sessions)
+		if(currentSession == toCheckSession) return true;
+}

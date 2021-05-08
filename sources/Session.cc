@@ -24,7 +24,8 @@ void Session::print() const {
 static void readImmersion(BinTree<prb::ID> & tree, std::list<prb::ID> pList, int & count) {
 	prb::ID problemID; std::cin >> problemID;
 	if(problemID != prb::invalidID) {
-		pList.insert(pList.end(), problemID);
+		// pList.insert(pList.end(), problemID);
+		addProblemToList(problemID);
 		count++;
 		BinTree<prb::ID> leftChild, rightChild;
 		readImmersion(leftChild, pList, count);
@@ -95,3 +96,23 @@ Session::const_iterator Session::end() const {
 	return problemsList.cend();
 }
 
+bool Session::operator==(const Session & otherSession) {
+	Session::const_iterator thisIt = begin();
+	Session::const_iterator otherIt = otherSession.begin();
+
+	while(thisIt != end() and otherIt != otherSession.end()) {
+		if(*thisIt != *otherIt) return false;
+		thisIt++;
+		otherIt++;
+	}
+
+	return thisIt == end() and otherIt == otherSession.end();
+}
+
+void Session::addProblemToList(prb::ID problemID) {
+	Session::const_iterator it = begin();
+
+	while(it != end and *it < problemID) it++;
+
+	problemsList.insert(it, problemID);
+}

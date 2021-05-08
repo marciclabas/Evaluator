@@ -7,4 +7,6 @@ std::istream& operator>>(std::istream & in, prb::result & result) {
 	return in;
 }
 
-//prb::invalidID = "0";
+bool operator<(prb::ID foo, prb::ID bar) {
+	return foo < bar;
+}

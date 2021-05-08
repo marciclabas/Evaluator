@@ -57,7 +57,7 @@ int main() {
 			cout << ' ' << newSessionID << endl;
 			Session newSession; newSession.read();
 
-            if(sessionRepository.contains(newSessionID))
+            if(sessionRepository.contains(newSessionID) or sessionRepository.contains(newSession))
 				error(already_existing_session);
             else {
             	sessionRepository.add(newSessionID, newSession);

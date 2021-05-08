@@ -46,11 +46,18 @@ public:
 	
 	/*================================================================container methods=============================================================*/
 	/**
-	 @brief Return wheter there is an elemen*t with the given id
+	 @brief Checks wheter there is an element with the given id
 	 @pre true
 	 @post @c true is returned if there is an element with the given id within the container. If there is not, @c false is returned
 	 */
 	bool contains(ses::ID id) const;
+
+	/**
+	@brief Checks wheter there is a Session equal to the given one
+	@pre true
+	@post Returns @c true if there is a Session equal to the given one, false otherwise
+	*/
+	bool contains(const Session & toCheckSession) const;
 	
 	/**
 	 @brief Returns the element with the given ID contained in the container
