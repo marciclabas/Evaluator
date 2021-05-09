@@ -66,6 +66,8 @@ int main() {
         }
         
         else if(command == new_course) {
+			// echo
+			cout << endl;
         	Course newCourse; newCourse.read();
         	if(newCourse.isValid() and not courseSet.contains(newCourse)) {
         		courseSet.append(newCourse);

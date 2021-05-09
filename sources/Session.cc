@@ -56,7 +56,7 @@ static void updateSolvableProblemsImmersion(ICanSolveProblems & solver, const Bi
 			updateSolvableProblemsImmersion(solver, tree.left());
 			updateSolvableProblemsImmersion(solver, tree.right());
 		}
-		solver.addSolvableProblem(tree.value());
+		else solver.addSolvableProblem(tree.value());
 	}
 }
 

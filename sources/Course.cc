@@ -41,7 +41,7 @@ void Course::updateSolvableProblems(ICanSolveProblems & solverObject, prb::ID la
 			SessionRepository::getInstance()[sessionID].updateSolvableProblems(solverObject);
 	}
 	else {
-		// check the session lastProblemSolved is contained in
+		// check only the session lastProblemSolved is contained in
 		ses::ID sessionID = sessions[problemSessionIndex.at(lastSolvedProblem)];
 		SessionRepository::getInstance()[sessionID].updateSolvableProblems(solverObject, lastSolvedProblem);
 	}
