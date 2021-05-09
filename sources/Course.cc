@@ -13,7 +13,7 @@ int Course::sessionCount() const {
 
 /*=========================================================constructors & destructors=========================================================*/
 
-Course::Course(): usersCompleted(0), usersEnrolled(0), sessions(), problemSessionIndex() {}
+Course::Course(): usersCompleted(0), usersEnrolled(0), sessions(), problemSessionIndex(), valid(true) {}
 
 Course::~Course() {}
 
@@ -71,15 +71,27 @@ void Course::print() const {
 	std::cout << ')';
 }
 
+static void flush_sessionIDs(int n) {
+	for(int i = 0; i < n; i++) {
+		ses::ID foo;
+		std::cin >> foo;
+	}
+}
+
 void Course::read() {
 	int sessionCount; std::cin >> sessionCount;
 	for(int i = 0; i < sessionCount; i++) {
 		ses::ID sessionID; std::cin >> sessionID;
 		int sessionIndex = addSession(sessionID);
 		const Session & session = SessionRepository::getInstance()[sessionID];
+
 		for(const prb::ID problemID : session) {
-			assert(not containsProblem(problemID));
-			problemSessionIndex[problemID] = sessionIndex;
+			if(containsProblem(problemID)) {
+				valid = false;
+				flush_sessionIDs(sessionCount - i - 1);
+				return;
+			}
+			else problemSessionIndex[problemID] = sessionIndex;
 		}
 	}
 }
@@ -101,7 +113,7 @@ void Course::completeCourse() {
 }
 
 bool Course::isValid() const {
-	return true; /* TO DO */
+	return valid;
 }
 
 // overkill initial implementation: O(n^2)
