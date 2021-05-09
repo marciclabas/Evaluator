@@ -33,8 +33,15 @@ private:
 		std::map<prb::ID, int>::const_iterator begin() const;
 		std::map<prb::ID, int>::const_iterator end() const;
 		bool contains(prb::ID problemID) const;
-		void addProblem(prb::ID newProblemID);
+		// pre: does not contain newProblemID
+		void addProblem(prb::ID newProblemID, int count = 0);
+		// pre: contains problemID
+		void addSubmission(prb::ID problemID);
+		// pre: contains problemID
+		void removeProblem(prb::ID problemID);
 		bool empty() const;
+		// returns the number of times problemID has been submitted
+		int submissionsCount(prb::ID problemID) const;
 	};
 	/* consider using:
 	struct UserStats {

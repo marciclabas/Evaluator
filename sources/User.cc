@@ -81,8 +81,13 @@ void User::unenrollCourse() {
 }
 
 void User::parseSubmission(prb::ID problemID, prb::result r) {
-	/* TODO */
-	if(r) problemID = "";
+	solvableProblems.addSubmission(problemID);
+
+	if(r == prb::result::accepted) {
+		solvedProblems.addProblem(problemID, solvableProblems.submissionsCount(problemID));
+		solvableProblems.removeProblem(problemID);
+		updateSolvableProblems(problemID);
+	}
 }
 
 std::map<prb::ID, int>::iterator User::ProblemStats::begin() {
@@ -101,9 +106,24 @@ std::map<prb::ID, int>::const_iterator User::ProblemStats::end() const {
 	return stats.cend();
 }
 
-void User::ProblemStats::addProblem(prb::ID newProblemID) {
+void User::ProblemStats::addProblem(prb::ID newProblemID, int count) {
 	assert(stats.count(newProblemID) == 0);
-	stats[newProblemID] = 0;
+	stats[newProblemID] = count;
+}
+
+void User::ProblemStats::addSubmission(prb::ID problemID) {
+	assert(stats.count(problemID));
+	stats[problemID]++;
+}
+
+void User::ProblemStats::removeProblem(prb::ID problemID) {
+	assert(stats.count(problemID));
+	stats.erase(problemID);
+}
+
+int User::ProblemStats::submissionsCount(prb::ID problemID) const {
+	assert(stats.count(problemID));
+	return stats.at(problemID);
 }
 
 void User::updateSolvableProblems(prb::ID lastSolvedProblem) {
