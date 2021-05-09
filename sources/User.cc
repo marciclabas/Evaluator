@@ -3,7 +3,17 @@
 #include <cassert>
 
 /* =========================================================constructors & destructors=========================================================*/
-User::User(): isEnrolled(false), enrolledCourse(), solvedProblems(), solvableProblems() {}
+User::User()
+:	isEnrolled(false), enrolledCourse(), stats(), solvedProblems(), solvableProblems()
+{	}
+
+User::UserStats::UserStats()
+:	acceptedProblems(0), totalSubmissions(0), triedProblems(0)
+{	}
+
+User::ProblemStats::ProblemStats()
+:	stats()
+{	}
 
 User::~User() {
 	/* if(isEnrolledInCourse()) CourseSet::getInstance()[getEnrolledCourseID()].unenrollUser(); */
@@ -51,17 +61,7 @@ void User::ProblemStats::print() const {
 
 // number of total submissions, number of accepted problems, number of tried problems, enrolled course or '0' if not enrolled
 void User::print() const {
-	int acceptedProblems = solvedProblems.stats.size();
-	int totalSubmissions = acceptedProblems;
-	int triedProblems = acceptedProblems;
-
-	for(const std::pair<prb::ID, int> & kv : solvedProblems)
-		if(kv.second > 0) {
-			totalSubmissions += kv.second;
-			triedProblems++;
-		}
-
-	std::cout << '(' << totalSubmissions << ',' << acceptedProblems << ',' << triedProblems << ',';
+	std::cout << '(' << stats.totalSubmissions << ',' << stats.acceptedProblems << ',' << stats.triedProblems << ',';
 	isEnrolled ? std::cout << enrolledCourse : std::cout << '0';
 	std::cout << ')';
 }
@@ -82,11 +82,15 @@ void User::unenrollCourse() {
 
 void User::parseSubmission(prb::ID problemID, prb::result r) {
 	solvableProblems.addSubmission(problemID);
+	stats.totalSubmissions++;
+	// if solved for the first time, update total problems tried
+	if(solvableProblems.submissionsCount(problemID) == 1) stats.triedProblems++;
 
 	if(r == prb::result::accepted) {
 		solvedProblems.addProblem(problemID, solvableProblems.submissionsCount(problemID));
 		solvableProblems.removeProblem(problemID);
 		updateSolvableProblems(problemID);
+		stats.acceptedProblems++;
 	}
 }
 

@@ -14,7 +14,8 @@
 */
 class Problem : public IPrintable {
 private:
-	int t, e, r; // r = (t+1)/(e+1)
+	int t, e;
+	double r; // r = (t+1)/(e+1)
 public:
 	/* =========================================================constructors & destructors=========================================================*/
 	Problem();
@@ -26,7 +27,7 @@ public:
 	@pre true
 	@post Returns @c r
 	*/
-	int getRatio() const;
+	double getRatio() const;
 
 	/* ===========================================================other functionality===========================================================*/
 
@@ -35,7 +36,7 @@ public:
 	@pre true
 	@post stats are updated accordingly
 	*/
-	void parseSubmission(prb::result r);
+	void parseSubmission(prb::result res);
 
 	void print() const override;
 };

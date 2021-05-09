@@ -15,12 +15,12 @@ void Problem::print() const {
 
 /* ===========================================================other functionality===========================================================*/
 
-void Problem::parseSubmission(prb::result r) {
+void Problem::parseSubmission(prb::result res) {
 	t++;
-	if(r == prb::accepted) e++;
-	t = (t+1)/(e+1);
+	if(res == prb::accepted) e++;
+	r = double((t+1))/(e+1);
 }
 
-int Problem::getRatio() const {
+double Problem::getRatio() const {
 	return r;
 }

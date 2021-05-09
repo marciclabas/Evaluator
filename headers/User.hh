@@ -24,6 +24,14 @@ private:
 	bool isEnrolled;
 	crs::ID enrolledCourse;
 
+	struct UserStats {
+		int acceptedProblems;
+		int totalSubmissions;
+		int triedProblems;
+
+		UserStats();
+	} stats;
+
 	struct ProblemStats : public IPrintable {
 		std::map<prb::ID, int> stats;
 
@@ -42,13 +50,9 @@ private:
 		bool empty() const;
 		// returns the number of times problemID has been submitted
 		int submissionsCount(prb::ID problemID) const;
+
+		ProblemStats();
 	};
-	/* consider using:
-	struct UserStats {
-		int acceptedProblems;
-		int totalSubmissions;
-		int triedProblems;
-	} stats; */
 
 	/*
 		- solved and solvable have a void intersection
