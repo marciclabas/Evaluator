@@ -36,6 +36,12 @@ bool CourseSet::contains(crs::ID id) const {
 	return id >= 1 and id <= courses.size();
 }
 
+bool CourseSet::contains(const Course & toCheckCourse) const {
+	for(const Course & currentCourse : courses)
+		if(currentCourse == toCheckCourse) return true;
+	return false;
+}
+
 
 Course & CourseSet::operator[](crs::ID id) {
 	assert(id >= 1 and id <= courses.size());

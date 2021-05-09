@@ -102,6 +102,11 @@ public:
 
 	const_iterator begin() const;
 	const_iterator end() const;
+
+	/**
+	@brief Checks whether otherCourse is equal to the implicit parameter (same sessions)
+	*/
+	bool operator==(const Course & otherCourse) const;
 };
 
 

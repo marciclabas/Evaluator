@@ -103,3 +103,11 @@ void Course::completeCourse() {
 bool Course::isValid() const {
 	return true; /* TO DO */
 }
+
+// overkill initial implementation: O(n^2)
+bool Course::operator==(const Course & otherCourse) const {
+	for(ses::ID sessionID : *this)
+		for(ses::ID otherSessionID : otherCourse)
+			if(sessionID != otherSessionID) return false;
+	return true;
+}

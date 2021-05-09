@@ -37,6 +37,8 @@ private:
 	*/
 	void addProblemToList(prb::ID problemID);
 
+	void readImmersion(BinTree<prb::ID> & tree);
+
 public:
 	using const_iterator = std::list<prb::ID>::const_iterator;
 
@@ -72,7 +74,7 @@ public:
 	/**
 	@brief Checks wether the given session is equal (i.e., has the same problems in any order) to the implicit parameter 
 	*/
-	bool operator==(const Session & otherSession()) const;
+	bool operator==(const Session & otherSession) const;
 };
 
 #endif

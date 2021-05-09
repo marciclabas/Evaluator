@@ -47,11 +47,16 @@ public:
 	
 	/*===============================================================setters & getters=============================================================*/
 	/**
-	@brief Return wheter there is an element with the given id
+	@brief Checks whether there is an element with the given id
 	@pre true
 	@post @c true is returned if there is an element with the given id within the container. If there is not, @c false is returned
 	*/
 	bool contains(crs::ID id) const;
+
+	/**
+	@brief Checks whether the set contains a Course equal to the given toCheckCourse (same sessions)
+	*/
+	bool contains(const Course & toCheckCourse) const;
 
 	/**
 	@brief Returns the element with the given ID contained in the container

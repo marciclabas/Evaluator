@@ -67,7 +67,7 @@ int main() {
         
         else if(command == new_course) {
         	Course newCourse; newCourse.read();
-        	if(newCourse.isValid()) {
+        	if(newCourse.isValid() and not courseSet.contains(newCourse)) {
         		courseSet.append(newCourse);
         		cout << courseSet.count() << endl;
         	}

@@ -61,6 +61,7 @@ void SessionRepository::add(ses::ID newElementID, Session newElement) {
 }
 
 bool SessionRepository::contains(const Session & toCheckSession) const {
-	for(const Session & currentSession : sessions)
-		if(currentSession == toCheckSession) return true;
+	for(const auto & kv : sessions)
+		if(kv.second == toCheckSession) return true;
+	return false;
 }
