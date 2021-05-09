@@ -20,22 +20,22 @@ void Session::print() const {
 }
 
 // pre: tree is empty
-// post: tree is read from in in preorder
-static void readImmersion(BinTree<prb::ID> & tree, std::list<prb::ID> pList, int & count) {
+// post: tree is read from stdin in preorder
+void Session::readImmersion(BinTree<prb::ID> & tree) {
 	prb::ID problemID; std::cin >> problemID;
 	if(problemID != prb::invalidID) {
 		// pList.insert(pList.end(), problemID);
 		addProblemToList(problemID);
 		count++;
 		BinTree<prb::ID> leftChild, rightChild;
-		readImmersion(leftChild, pList, count);
-		readImmersion(rightChild, pList, count);
+		readImmersion(leftChild);
+		readImmersion(rightChild);
 		tree = BinTree<prb::ID>(problemID, leftChild, rightChild);
 	}
 }
 
 void Session::read() {
-	readImmersion(problems, problemsList, count);
+	readImmersion(problems);
 }
 
 /*===========================================================other functionality===========================================================*/
@@ -96,7 +96,7 @@ Session::const_iterator Session::end() const {
 	return problemsList.cend();
 }
 
-bool Session::operator==(const Session & otherSession) {
+bool Session::operator==(const Session & otherSession) const {
 	Session::const_iterator thisIt = begin();
 	Session::const_iterator otherIt = otherSession.begin();
 
@@ -112,7 +112,7 @@ bool Session::operator==(const Session & otherSession) {
 void Session::addProblemToList(prb::ID problemID) {
 	Session::const_iterator it = begin();
 
-	while(it != end and *it < problemID) it++;
+	while(it != end() and *it < problemID) it++;
 
 	problemsList.insert(it, problemID);
 }
