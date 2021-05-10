@@ -1,7 +1,6 @@
 #ifndef BINTREE_HH
 #define BINTREE_HH
 
-#include <cassert>
 #include <memory>
 
 using std::shared_ptr;

@@ -1,4 +1,0 @@
-program.cc:21:1: error: ‘haha’ does not name a type
-   21 | haha
-      | ^~~~
-make: *** [Makefile:5: program.o] Error 1

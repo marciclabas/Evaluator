@@ -6,6 +6,8 @@
 #ifndef IO_HH
 #define IO_HH
 
+#define NDEBUG
+
 #ifndef NO_DIAGRAM
 #include <string>
 #include <iostream>

@@ -15,7 +15,7 @@
 #ifndef NO_DIAGRAM 
 #include <vector>
 #include <string>
-#include <list>
+#include <set>
 #include "BinTree.hh"
 #endif
 
@@ -29,18 +29,18 @@
 class Session : public IPrintable, public IReadable {
 private:
 	BinTree<prb::ID> problems;
-	std::list<prb::ID> problemsList; // sorted by ID
+	std::set<prb::ID> problemsSet; // sorted by ID
 	int count; // number of problems in the tree
 
 	/**
-	@brief add problem to list while keeping it ordered by id
+	@brief add problem to set while keeping it ordered by id
 	*/
-	void addProblemToList(prb::ID problemID);
+	void addProblemToSet(prb::ID problemID);
 
 	void readImmersion(BinTree<prb::ID> & tree);
 
 public:
-	using const_iterator = std::list<prb::ID>::const_iterator;
+	using const_iterator = std::set<prb::ID>::const_iterator;
 
 	/*=========================================================constructors & destructors=========================================================*/
 	Session();
@@ -66,6 +66,11 @@ public:
 	@post The problems @c ICanSolveProblems can solve are updated
 	*/
 	void updateSolvableProblems(ICanSolveProblems & solverObject, prb::ID lastSolvedProblem = prb::invalidID) const;
+
+	/**
+	@brief Return the number of problems contained in the Session
+	*/
+	int getCount() const;
 
 	const_iterator begin() const;
 

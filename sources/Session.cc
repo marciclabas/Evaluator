@@ -25,7 +25,7 @@ void Session::readImmersion(BinTree<prb::ID> & tree) {
 	prb::ID problemID; std::cin >> problemID;
 	if(problemID != prb::invalidID) {
 		// pList.insert(pList.end(), problemID);
-		addProblemToList(problemID);
+		addProblemToSet(problemID);
 		count++;
 		BinTree<prb::ID> leftChild, rightChild;
 		readImmersion(leftChild);
@@ -40,7 +40,7 @@ void Session::read() {
 
 /*===========================================================other functionality===========================================================*/
 
-static bool contains(prb::ID value, BinTree<prb::ID> tree) {
+static bool contains(prb::ID value, const BinTree<prb::ID> & tree) {
 	if(tree.empty()) return false;
 	else return tree.value() == value or contains(value, tree.left()) or contains(value, tree.right());
 }
@@ -89,14 +89,17 @@ void Session::updateSolvableProblems(ICanSolveProblems & solverObject, prb::ID l
 }
 
 Session::const_iterator Session::begin() const {
-	return problemsList.cbegin();
+	return problemsSet.cbegin();
 }
 
 Session::const_iterator Session::end() const {
-	return problemsList.cend();
+	return problemsSet.cend();
 }
 
 bool Session::operator==(const Session & otherSession) const {
+
+	if(otherSession.getCount() != getCount()) return false;
+
 	Session::const_iterator thisIt = begin();
 	Session::const_iterator otherIt = otherSession.begin();
 
@@ -109,10 +112,11 @@ bool Session::operator==(const Session & otherSession) const {
 	return thisIt == end() and otherIt == otherSession.end();
 }
 
-void Session::addProblemToList(prb::ID problemID) {
-	Session::const_iterator it = begin();
+void Session::addProblemToSet(prb::ID problemID) {
+	assert(problemsSet.count(problemID) == 0);
+	problemsSet.emplace(problemID);
+}
 
-	while(it != end() and *it < problemID) it++;
-
-	problemsList.insert(it, problemID);
+int Session::getCount() const {
+	return count;
 }

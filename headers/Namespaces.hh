@@ -6,6 +6,8 @@
 #ifndef NAMESPACES_HH
 #define NAMESPACES_HH
 
+#define NDEBUG
+
 #ifndef NO_DIAGRAM
 #include <string>
 #include <cassert>

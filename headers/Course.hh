@@ -32,8 +32,11 @@ private:
 	// adds a session to the course and returns the index its stored in
 	int addSession(ses::ID sessionID);
 
-	// returns the session count
+	// returns the sessions count
 	int sessionCount() const;
+
+	// returns the problems count
+	int problemCount() const;
 
 	// returns true if contains the given problem in some session, false otherwise
 	bool containsProblem(prb::ID problemID) const;
