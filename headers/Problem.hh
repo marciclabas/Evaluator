@@ -38,6 +38,9 @@ public:
 	*/
 	void parseSubmission(prb::result res);
 
+	/**
+	@brief Prints the Problem
+	*/
 	void print() const override;
 };
 	
