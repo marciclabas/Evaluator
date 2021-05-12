@@ -20,9 +20,9 @@ class IReadable {
 public:
 	
 	/**
-	@brief Read to the @c IReadable object from the stdin
-	@pre true
-	@post The @c IReadable object is read from the stdin
+	@brief Reads to the implicit parameter
+	@pre True
+	@post Reads to the implicit parameter from the stdin
 	*/
 	virtual void read() = 0;
 };

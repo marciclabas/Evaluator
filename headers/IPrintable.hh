@@ -20,9 +20,9 @@ class IPrintable {
 public:
 
 	/**
-	@brief Print the @c IPrintable object to the stdout
-	@pre true
-	@post The @c IPrintable object is printed to the stdout
+	@brief Prints the implicit parameter
+	@pre True
+	@post Prints the implicit parameter to the stdout
 	*/
 	virtual void print() const = 0;
 };

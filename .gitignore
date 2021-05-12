@@ -3,3 +3,5 @@ debug/*
 *.exe
 .*
 !/.gitignore
+doc/*
+doc/html/*

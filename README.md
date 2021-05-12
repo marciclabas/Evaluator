@@ -12,9 +12,9 @@ conjunt de problemes.
 ### Arquitectura de dades
 
 El programa està organitzat en 4 classes úniques principals. Una col.lecció de problemes (<tt>ProblemCollection</tt>), un
-repositori de sessions (SessionRepository), un conjunt de cursos (<tt>CourseSet</tt>) i un conjunt d'usuaris (<tt>UserSet</tt>),
+repositori de sessions (<tt>SessionRepository</tt>), un conjunt de cursos (<tt>CourseSet</tt>) i un conjunt d'usuaris (<tt>UserSet</tt>),
 cadascun d'ells contenint tots els elements del tipus corresponent disponibles dins la plataforma, i.e., problemes
-(<tt>Problem</tt>s), sessions (<tt>Session</tt>s), cursos (<tt>Course</tt>s) i usuaris (<tt>User</tt>s), respectivament.
+(<tt>Problem</tt>), sessions (<tt>Session</tt>), cursos (<tt>Course</tt>) i usuaris (<tt>User</tt>), respectivament.
 
 ### Arquitectura de funcionalitats
 
@@ -34,12 +34,12 @@ in turn, contain several problems.
 ### Data architecture
 
 The program data is structured in 4 main singleton classes. A <tt>ProblemCollection</tt>, a <tt>SessionRepository</tt>, a <tt>CourseSet</tt> and a <tt>UserSet</tt>, each of them containing all elements
-of their kind available in the platform, i.e., <tt>Problem</tt>s, <tt>Session</tt>s,
-<tt>Course</tt>s and <tt>User</tt>s, respectively.
+of their kind available in the platform, i.e., <tt>Problem</tt>, <tt>Session</tt>,
+<tt>Course</tt> and <tt>User</tt>, respectively.
 
 ### Functionality architecture
 
 The program functionality is controlled through the standard input/output. All available
-commands (<tt>SystemCommand</tt>s) are defined within the <tt>io <em>namespace</em>, and all the handling logic
-of such commands is implemented in the <em>main</em> function.
+commands (<tt>SystemCommand</tt>) are defined within the <tt>io</tt> <em>namespace</em>, and all the logic handling
+said commands is implemented in the <em>main</em> function.
 

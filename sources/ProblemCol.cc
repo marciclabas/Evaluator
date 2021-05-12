@@ -59,25 +59,20 @@ void ProblemCollection::read() {
 
 /*================================================================container methods=============================================================*/
 
-bool ProblemCollection::contains(prb::ID id) const {
-	return problems.count(id);
+bool ProblemCollection::contains(prb::ID problemID) const {
+	return problems.count(problemID);
 }
 
-Problem & ProblemCollection::operator[](prb::ID id) {
-	assert(problems.count(id));
-	return problems[id];
+Problem & ProblemCollection::operator[](prb::ID problemID) {
+	assert(problems.count(problemID));
+	return problems[problemID];
 }
-
-/*const Problem & ProblemCollection::operator[](prb::ID id) const {
-	assert(problems.count(id));
-	return problems[id];
-}*/
 
 int ProblemCollection::count() const {
 	return problems.size();
 }
 
 
-void ProblemCollection::add(prb::ID newElementID) {
-	problems[newElementID];
+void ProblemCollection::add(prb::ID newProblemID) {
+	problems[newProblemID];
 }
