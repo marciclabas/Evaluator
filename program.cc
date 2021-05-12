@@ -124,6 +124,11 @@ int main() {
 						Course & course = courseSet[courseID];
 						course.enrollUser();
 						cout << course.getUsersEnrolled() << endl;
+
+						if(user.completedEnrolledCourse()) {
+							courseSet[user.getEnrolledCourseID()].completeCourse();
+							user.unenrollCourse();
+						}
 					}
 				}
 				else error(nonexistent_course);
