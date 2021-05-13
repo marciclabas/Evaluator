@@ -1,0 +1,9 @@
+[submodule "competencia_transversal/CompetenciaTransversal"]
+	path = competencia_transversal/CompetenciaTransversal
+	url = https://github.com/marciclabas/CompetenciaTransversal.git
+[submodule "CompetenciaTransversal"]
+	path = CompetenciaTransversal
+	url = https://github.com/marciclabas/CompetenciaTransversal.git
+[submodule "TestingEvaluator"]
+	path = TestingEvaluator
+	url = git@github.com:marciclabas/TestingEvaluator.git
