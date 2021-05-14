@@ -6,11 +6,11 @@
 #ifndef COURSE_HH
 #define COURSE_HH
 
-#include "IPrintable.hh"
-#include "IReadable.hh"
 #include "SessionRep.hh"
 
 #ifndef NO_DIAGRAM
+#include "IPrintable.hh"
+#include "IReadable.hh"
 #include <vector>
 #include <map>
 #endif
@@ -42,22 +42,40 @@ private:
 	bool containsProblem(prb::ID problemID) const;
 
 public:
+	/**
+	@typedef const_iterator
+	@brief a constant iterator pointing to a ses::ID contained in the course
+	*/
 	using const_iterator = std::vector<ses::ID>::const_iterator;
+
 	/*==========================================================constructors & destructors=========================================================*/
+
+	/**
+	@brief Default constructor
+	@pre True
+	@post Creates an empty Course
+	*/
 	Course();
+
+	/**
+	@brief Default destructor
+	@pre True
+	@post Deletes the Session
+	*/
 	~Course();
 	
 	/*====================================================================getters==================================================================*/
 
 	/**
 	@brief Returns the number of users currently enrolled on the course
-	@pre true
-	@post The number of currently enrolled users (>= 0) is returned
+	@pre True
+	@post The number of currently enrolled users is returned
+	@return An integer representing the number of enrolled users
 	*/
 	int getUsersEnrolled() const;
 
 	/**
-	@brief Check whether a session within the course contains a problem with the given id does exists. If it does, returs the id of such session through sessionID
+	@brief Returns whether a session within the course contains a problem with the given id exists. If it does, returs the id of such session through sessionID
 	@pre problemID is the id of a valid problem
 	@post sessionID is the id of a session containing a problem with the given id and @c true is returned if such session exists within the course. If it does not, @c false is returned
 	*/

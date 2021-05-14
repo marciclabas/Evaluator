@@ -37,27 +37,22 @@ void SessionRepository::read() {
 
 /*================================================================container methods=============================================================*/
 
-bool SessionRepository::contains(ses::ID id) const {
-	return sessions.count(id);
+bool SessionRepository::contains(ses::ID sessionID) const {
+	return sessions.count(sessionID);
 }
 
-Session & SessionRepository::operator[](ses::ID id) {
-	assert(sessions.count(id));
-	return sessions[id];
+Session & SessionRepository::operator[](ses::ID sessionID) {
+	assert(sessions.count(sessionID));
+	return sessions[sessionID];
 }
-
-/*const Session & SessionRepository::operator[](ses::ID id) const {
- * assert(sessions.count(id));
- * return sessions[id];
- } **/
 
 int SessionRepository::count() const {
 	return sessions.size();
 }
 
 
-void SessionRepository::add(ses::ID newElementID, Session newElement) {
-	sessions[newElementID] = newElement;
+void SessionRepository::add(ses::ID newSessionID, const Session & newSession) {
+	sessions[newSessionID] = newSession;
 }
 
 bool SessionRepository::contains(const Session & toCheckSession) const {

@@ -15,9 +15,9 @@ void Problem::print() const {
 
 /* ===========================================================other functionality===========================================================*/
 
-void Problem::parseSubmission(prb::result res) {
+void Problem::parseSubmission(prb::result result) {
 	t++;
-	if(res == prb::accepted) e++;
+	if(result == prb::accepted) e++;
 	r = double((t+1))/(e+1);
 }
 

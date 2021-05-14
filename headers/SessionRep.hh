@@ -29,63 +29,75 @@ private:
 
 public:
 	/*===========================================================singleton-related methods=========================================================*/
-	// deleted copy constructor
+	
+	/**
+	@brief Deleted copy constructor
+	*/
 	SessionRepository(SessionRepository & copy) = delete;
-	// deleted assignment operator
+	
+	/**
+	@brief Deleted assignment operator
+	*/
 	void operator=(const SessionRepository &) = delete;
 
 	/**
-	@brief Returns the single instance
+	@brief Returns the single instance of the class
 	@pre True
-	@post The single instance is returned
+	@post The single instance of the class is returned
+	@return a reference to the single instance
 	*/
 	static SessionRepository & getInstance();
+
 	/*=============================================================overrided IO methods============================================================*/
+
 	void print() const override;
 	void read() override;
 	
 	/*================================================================container methods=============================================================*/
+	
 	/**
-	 @brief Checks wheter there is an element with the given id
-	 @pre true
-	 @post @c true is returned if there is an element with the given id within the container. If there is not, @c false is returned
+	 @brief Returns wheter the repository contains a Session with the given id
+	 @pre True
+	 @post Returns @c true if there is Session with the given id within the implicit parameter. Returns @c false otherwise
+	 @param sessionID a ses::ID
+	 @return A boolean representing whether the implicit parameter contains the given Session
 	 */
-	bool contains(ses::ID id) const;
+	bool contains(ses::ID sessionID) const;
 
 	/**
-	@brief Checks wheter there is a Session equal to the given one
-	@pre true
-	@post Returns @c true if there is a Session equal to the given one, false otherwise
-	*/
+	 @brief Returns wheter the repository contains a Session equal to the given one
+	 @pre True
+	 @post Returns @c true if there is Session equal to the given one within the implicit parameter. Returns @c false otherwise
+	 @param toCheckSession a Session
+	 @return A boolean representing whether the implicit parameter contains a Session equal to the given one
+	 */
 	bool contains(const Session & toCheckSession) const;
 	
 	/**
-	 @brief Returns the element with the given ID contained in the container
-	 @pre An element with the given id does exist within the container
-	 @post An element with the given ID contained in the container is returned
+	 @brief Returns the Session with the given id contained in the repository
+	 @pre A Session with the given id does exist within the implicit parameter
+	 @post Returns the Session with the given id
+	 @param sessionID a ses::ID
+	 @return A reference to the Session with the given id
 	 */
-	Session & operator[](ses::ID id);
-	
-	/*
-	 @brief Returns the element with the gi*ven ID contained in the container, const version
-	 @pre An element with the given id does exist within the container
-	 @post A const element with the given ID contained in the container is returned
-	 *
-	const Session & operator[](ses::ID id) const;*/
+	Session & operator[](ses::ID sessionID);
 	
 	/**
-	 @brief Return the number of elements c*ontained in the contain*er
-	 @pre true
-	 @post The number of elements contained in the container is returned
+	 @brief Returns the number of sessions contained in the repository
+	 @pre True
+	 @post Returns the number of sessions contained in the implicit parameter
+	 @return An integer representing the number of sessions contained
 	 */
 	int count() const;
 	
-	/**
-	 @brief Add a new element
-	 @pre There is not any element with the given element's id within the container
-	 @post The new element is added to the container
+		/**
+	 @brief Adds a given Session to the collection
+	 @pre There is not any Session with the given id within the implicit parameter
+	 @post The given Session is added to the implicit parameter with the given id
+	 @param newSessionID a ses::ID
+	 @param newSession a Session
 	 */
-	void add(ses::ID newElementID, Session newElement);
+	void add(ses::ID newSessionID, const Session & newSession);
 };
 
 #endif

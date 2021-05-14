@@ -35,12 +35,13 @@ public:
 	/**
 	@brief Deleted assignment operator
 	*/
-	void operator=(const ProblemCollection &) = delete;
+	void operator=(const ProblemCollection & problemCollection) = delete;
 
 	/**
 	@brief Returns the single instance of the class
 	@pre True
 	@post The single instance of the class is returned
+	@return a reference to the single instance
 	*/
 	static ProblemCollection & getInstance();
 	
@@ -50,33 +51,40 @@ public:
 	void read();
 	
 	/*====================================================================getters===================================================================*/
+	
 	/**
-	 @brief Returns wheter the collection contains a @c Problem with the given id
+	 @brief Returns wheter the collection contains a Problem with the given id
 	 @pre True
-	 @post Returns @c true if there is @c Problem with the given id within the implicit parameter. Returns @c false otherwise
+	 @post Returns @c true if there is Problem with the given id within the implicit parameter. Returns @c false otherwise
+	 @param problemID a prb::ID
+	 @return A boolean representing whether the implicit parameter contains the given problem
 	 */
 	bool contains(prb::ID problemID) const;
 	
 	/**
-	 @ brief Returns the @c Problem with the given id contained in the collection
-	 @pre A @c Problem with the given id does exist within the implicit parameter
-	 @post Returns the @c Problem with the given id
+	 @brief Returns the Problem with the given id contained in the collection
+	 @pre A Problem with the given id does exist within the implicit parameter
+	 @post Returns the Problem with the given id
+	 @param problemID a prb::ID
+	 @return A reference to the Problem with the given id
 	 */
 	Problem & operator[](prb::ID problemID);
 	
 	/**
-	 @brief Returns the number of problems (@c Problem) contained in the collection
+	 @brief Returns the number of problems contained in the collection
 	 @pre True
-	 @post Returns the number of problems (@c Problem) contained in the implicit parameter
+	 @post Returns the number of problems contained in the implicit parameter
+	 @return An integer representing the number of problems contained
 	 */
 	int count() const;
 
 	/*====================================================================setters===================================================================*/
 	
 	/**
-	 @brief Adds a new @c Problem to the collection
-	 @pre There is not any @c Oroblem with the given id within the implicit parameter
-	 @post A new @c Problem is added to the implicit parameter with the given id
+	 @brief Adds a new Problem to the collection
+	 @pre There is not any Problem with the given id within the implicit parameter
+	 @post A new Problem is added to the implicit parameter with the given id
+	 @param newProblemID a prb::ID
 	 */
 	void add(prb::ID newProblemID);
 };

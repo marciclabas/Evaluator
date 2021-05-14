@@ -17,7 +17,7 @@ int Course::problemCount() const {
 
 /*=========================================================constructors & destructors=========================================================*/
 
-Course::Course(): usersCompleted(0), usersEnrolled(0), sessions(), problemSessionIndex(), valid(true) {}
+Course::Course(): usersCompleted(0), usersEnrolled(0), sessions(), problemSessionIndex(), valid(false) {}
 
 Course::~Course() {}
 
@@ -83,6 +83,7 @@ static void flush_sessionIDs(int n) {
 }
 
 void Course::read() {
+	valid = true;
 	int sessionCount; std::cin >> sessionCount;
 	for(int i = 0; i < sessionCount; i++) {
 		ses::ID sessionID; std::cin >> sessionID;
