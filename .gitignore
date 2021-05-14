@@ -1,7 +1,6 @@
 debug/*
+doc/*
 *.o
 *.exe
 .*
 !/.gitignore
-doc/*
-doc/html/*
