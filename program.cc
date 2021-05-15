@@ -124,11 +124,6 @@ int main() {
 						Course & course = courseSet[courseID];
 						course.enrollUser();
 						cout << course.getUsersEnrolled() << endl;
-
-						if(user.completedEnrolledCourse()) {
-							courseSet[user.getEnrolledCourseID()].completeCourse();
-							user.unenrollCourse();
-						}
 					}
 				}
 				else error(nonexistent_course);
@@ -210,12 +205,6 @@ int main() {
 			
 			user.parseSubmission(problemID, result);
 			problemCollection[problemID].parseSubmission(result);
-
-			// check wheter the user has finished the course and unenroll him if so
-			if(user.completedEnrolledCourse()) {
-				courseSet[user.getEnrolledCourseID()].completeCourse();
-				user.unenrollCourse();
-			}
         }
         /*
 		 *  LISTS AND WRITES

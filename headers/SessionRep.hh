@@ -7,10 +7,10 @@
 #define SESSIONREP_HH
 
 #include "Session.hh"
-#include "IReadable.hh"
-#include "IPrintable.hh"
 
 #ifndef NO_DIAGRAM
+#include "IPrintable.hh"
+#include "IReadable.hh"
 #include <map>
 #include <string>
 #endif

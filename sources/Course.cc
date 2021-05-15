@@ -88,6 +88,7 @@ void Course::read() {
 	for(int i = 0; i < sessionCount; i++) {
 		ses::ID sessionID; std::cin >> sessionID;
 		const Session & session = SessionRepository::getInstance()[sessionID];
+		int sessionIndex = addSessionToVector(sessionID);
 
 		for(const prb::ID problemID : session) {
 			if(containsProblem(problemID)) {
@@ -95,8 +96,7 @@ void Course::read() {
 				flush_sessionIDs(sessionCount - i - 1);
 				return;
 			}
-			else {
-				int sessionIndex = addSessionToVector(sessionID);
+			else { 
 				problemSessionIndex[problemID] = sessionIndex;
 			}
 		}

@@ -6,11 +6,11 @@
 #ifndef USER_HH
 #define USER_HH
 
-#include "IPrintable.hh"
 #include "CourseSet.hh"
-#include "ICanSolveProblems.hh"
 
 #ifndef NO_DIAGRAM 
+#include "ICanSolveProblems.hh"
+#include "IPrintable.hh"
 #include <string>
 #include <map>
 #endif
@@ -134,10 +134,17 @@ private:
 	/**
 	@brief Updates the solvable problems after solving the given problem
 	@pre The user has solved lastSolvedProblem last, which is part of the course he is enrolled in, or has not solved any problem
-	@post solvableProblems is updated accordingly
+	@post solvableProblems is updated accordingly. If empty, the user unenrolls the course (and notifies the course)
 	@param lastSolvedProblem a prb::ID
 	*/
 	void updateSolvableProblems(prb::ID lastSolvedProblem = prb::invalidID);
+	
+	/**
+	@brief Unenrolls the user from the current course
+	@pre The user is enrolled to a course
+	@post The user is not enrolled to any course
+	*/
+	void unenrollCourse();
 
 public:
 	/* =========================================================constructors & destructors=========================================================*/
@@ -149,7 +156,12 @@ public:
 	*/
 	User();
 
-	//~User();
+	/**
+	@brief Default destructor
+	@pre True
+	@post If the user was enrolled in a course, it is now unenrolled
+	*/
+	~User();
 
 	/* ===================================================================getters==================================================================*/
 
@@ -184,12 +196,6 @@ public:
 	*/
 	bool isEnrolledInCourse() const;
 
-	/**
-	@brief Returns whether the user has completed the course he is enrolled in
-	@pre The user is enrolled in a course
-	@post @c true is returned if the user has completed the course he is enrolled in. If not, @c false is returned
-	*/
-	bool completedEnrolledCourse() const;
 
 	/**
 	@brief Checks whether the user has solved a problem with the given id
@@ -212,12 +218,6 @@ public:
 	*/
 	void enrollCourse(crs::ID courseID);
 
-	/**
-	@brief Unenrolls the user from the current course
-	@pre The user is enrolled to a course
-	@post The user is not enrolled to any course
-	*/
-	void unenrollCourse();
 
 
 	/**

@@ -37,10 +37,6 @@ bool User::isEnrolledInCourse() const {
 	return isEnrolled;
 }
 
-bool User::completedEnrolledCourse() const {
-	return solvableProblems.empty();
-}
-
 bool User::hasSolvedProblem(prb::ID problemID) const {
 	return solvedProblems.contains(problemID);
 }
@@ -87,10 +83,11 @@ void User::parseSubmission(prb::ID problemID, prb::result r) {
 	if(solvableProblems.submissionsCount(problemID) == 1) stats.triedProblems++;
 
 	if(r == prb::result::accepted) {
+		// update stats
 		solvedProblems.addProblem(problemID, solvableProblems.submissionsCount(problemID));
 		solvableProblems.removeProblem(problemID);
-		updateSolvableProblems(problemID);
 		stats.acceptedProblems++;
+		updateSolvableProblems(problemID);
 	}
 }
 
@@ -115,7 +112,14 @@ int User::ProblemStats::submissionsCount(prb::ID problemID) const {
 }
 
 void User::updateSolvableProblems(prb::ID lastSolvedProblem) {
-	CourseSet::getInstance()[getEnrolledCourseID()].updateSolvableProblems(*this, lastSolvedProblem);
+	Course & enrolledCourse = CourseSet::getInstance()[getEnrolledCourseID()];
+	enrolledCourse.updateSolvableProblems(*this, lastSolvedProblem);
+	
+	// check if finished course and unenroll if so
+	if(solvableProblems.empty()) {
+		enrolledCourse.completeCourse();
+		unenrollCourse();
+	}
 }
 
 void User::addSolvableProblem(prb::ID problemID) {
