@@ -43,7 +43,7 @@ private:
 
 	/**
 	@brief Map of integers representing a position of this->sessions accessed by ID's
-	@invariant 0 <= problemSessionIndex[id] < sessions.size(), where problemsSessionIndex.count(id) == 1, i.e., id is a key of the map
+	@invariant 0 <= problemSessionIndex[id] < sessions.size(), where problemSessionIndex.count(id) == 1, i.e., id is a key of the map
 	*/
 	std::map<prb::ID, int> problemSessionIndex;
 

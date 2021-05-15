@@ -8,7 +8,7 @@ User::User()
 {	}
 
 User::UserStats::UserStats()
-:	acceptedProblems(0), totalSubmissions(0), triedProblems(0)
+:	totalSubmissions(0), acceptedProblems(0), triedProblems(0)
 {	}
 
 User::ProblemStats::ProblemStats()
@@ -92,22 +92,6 @@ void User::parseSubmission(prb::ID problemID, prb::result r) {
 		updateSolvableProblems(problemID);
 		stats.acceptedProblems++;
 	}
-}
-
-std::map<prb::ID, int>::iterator User::ProblemStats::begin() {
-	return stats.begin();
-}
-
-std::map<prb::ID, int>::iterator User::ProblemStats::end() {
-	return stats.end();
-}
-
-std::map<prb::ID, int>::const_iterator User::ProblemStats::begin() const {
-	return stats.cbegin();
-}
-
-std::map<prb::ID, int>::const_iterator User::ProblemStats::end() const {
-	return stats.cend();
 }
 
 void User::ProblemStats::addProblem(prb::ID newProblemID, int count) {

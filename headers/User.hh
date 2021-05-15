@@ -24,89 +24,168 @@ private:
 	bool isEnrolled;
 	crs::ID enrolledCourse;
 
+	/**
+	@struct UserStats
+	@brief Holds the user's global stats
+	@invariant totalSubmissions >= triedProblems >= acceptedProblems
+	*/
 	struct UserStats {
-		int acceptedProblems;
+		/**
+		@brief Total number of submissions issued by the user
+		*/
 		int totalSubmissions;
+
+		/**
+		@brief Number of accepted submissions issued by the user, i.e., number of solved problems
+		*/
+		int acceptedProblems;
+
+		/**
+		@brief Number of different problems the user has issued submissions to
+		*/ 
 		int triedProblems;
 
 		UserStats();
 	} stats;
 
+	/**
+	@struct ProblemStats
+	@brief Holds the user's problem-related stats
+	*/
 	struct ProblemStats : public IPrintable {
+		/**
+		@brief Map of integers representing the number of times a problem has been submitted, accessed by problem ID's
+		@invariant stats[id] >= 0, where stats.count(id) == 1, i.e., id is a key of the map
+		*/
 		std::map<prb::ID, int> stats;
 
 		void print() const override;
-		std::map<prb::ID, int>::iterator begin();
-		std::map<prb::ID, int>::iterator end();
-		std::map<prb::ID, int>::const_iterator begin() const;
-		std::map<prb::ID, int>::const_iterator end() const;
+
+		/**
+		@brief Returns whether the stats contain a given problem
+		@pre True
+		@post Returns @c true if contains the given problem. Returns @c false otherwise
+		@param problemID a prb::ID
+		@return A boolean representing whether the given problem is contained
+		*/
 		bool contains(prb::ID problemID) const;
-		// pre: does not contain newProblemID
+
+		/**
+		@brief Adds a problem to the stats
+		@pre The implicit parameter does not contain the given problem
+		@post The implicit parameter contains the given problem and the given submission count
+		@param newProblemID a prb::ID
+		@param count an integer representing the number of times the problem has been submitted
+		*/
 		void addProblem(prb::ID newProblemID, int count = 0);
-		// pre: contains problemID
+
+		/**
+		@brief Adds a submission (increments the count by 1) to the given problem
+		@pre The implicit parameter does contain the given problem
+		@post The given problem has an extra submission
+		@param problemID a prb::ID
+		*/
 		void addSubmission(prb::ID problemID);
-		// pre: contains problemID
+
+		/**
+		@brief Removes the given problem from the stats
+		@pre The implicit parameter does contain the given problem
+		@post The implicit parameter does not contain the given problem
+		@param problemID a prb::ID
+		*/
 		void removeProblem(prb::ID problemID);
+
+		/**
+		@brief Returns whether the stats are empty
+		@pre True
+		@post Returns @c true if the stats are empty. Returns @c false otherwise
+		@return A boolean representing whether the implicit parameter is empty
+		*/
 		bool empty() const;
-		// returns the number of times problemID has been submitted
+
+		/**
+		@brief Returns the number of times the given problem has been submitted
+		@pre The implicit parameter does contain the given problem
+		@post Returns the number of times the given problem has been submitted
+		@return An integer representin the problem's submission count
+		*/
 		int submissionsCount(prb::ID problemID) const;
 
+		/**
+		@brief Default constructor
+		@pre True
+		@post Creates an empty ProblemStats
+		*/
 		ProblemStats();
 	};
 
-	/*
-		- solved and solvable have a void intersection
-		- when updating solvable, bear in mind to take those
-			whose prerequisites are already solved
+	/**
+	@brief Holds the stats of the problems solved by the user
+	@invariant solvedProblems and solvableProblems have a void intersection
 	*/
-
 	ProblemStats solvedProblems;
+
+	/**
+	@brief Holds the stats of the problems the user can solve (has the prerequisites to do so)
+	@invariant solvedProblems and solvableProblems have a void intersection
+	*/
 	ProblemStats solvableProblems;
 
 	/**
-	@brief Updates the solvable problems after solving a problem with the given id
-	@pre The @c User has solved lastSolvedProblem last, which is part of the course he is enrolled in, or has not solved any problem
-	@post @c solvableProblems is updated accordingly
+	@brief Updates the solvable problems after solving the given problem
+	@pre The user has solved lastSolvedProblem last, which is part of the course he is enrolled in, or has not solved any problem
+	@post solvableProblems is updated accordingly
+	@param lastSolvedProblem a prb::ID
 	*/
 	void updateSolvableProblems(prb::ID lastSolvedProblem = prb::invalidID);
 
 public:
 	/* =========================================================constructors & destructors=========================================================*/
+	
+	/**
+	@brief Default constructor
+	@pre True
+	@post Creates an empty User
+	*/
 	User();
-	~User();
+
+	//~User();
 
 	/* ===================================================================getters==================================================================*/
 
 	/**
 	@brief Returns the ID of the course the user is enrolled in
 	@pre The user is enrolled in some course
-	@post The ID of the course the user is enrolled in is returned
+	@post Returns the ID of the course the user is enrolled in
+	@return The crs::ID of the course the user is enrolled in
 	*/
 	crs::ID getEnrolledCourseID() const;
 
 	/**
-	@brief Returns a list with the stats of the problems the user has solved
-	@pre true
-	@post A list with the stats of the problems the user has solved is returned
+	@brief Returns the printable stats of the problems the user has solved
+	@pre True
+	@post Returns the printable stats of the problems the user has solved
+	@return An IPrintable
 	*/
 	const IPrintable & getSolvedStats() const;
 
 	/**
 	@brief Returns a list with the stats of the problems the user can solve (holds the prerequisites to do so)
-	@pre true
-	@post A list with the stats of the problems the user can solve is returned
+	@pre True
+	@post Returns the printable stats of the problems the user can solve
+	@return An IPrintable
 	*/
 	const IPrintable & getSolvableStats() const;
 	
 	/**
-	@brief Checks whether the user is enrolled in a course
-	@pre true
-	@post @c true is returned if the user is enrolled in a course. If he is not, @c false is returned
+	@brief Returns whether the user is enrolled in a course
+	@pre True
+	@post Returns @c true if the user is enrolled in a course. Returns @c false otherwise
 	*/
 	bool isEnrolledInCourse() const;
 
 	/**
-	@brief Checks whether the user has actually completed the course he is enrolled in
+	@brief Returns whether the user has completed the course he is enrolled in
 	@pre The user is enrolled in a course
 	@post @c true is returned if the user has completed the course he is enrolled in. If not, @c false is returned
 	*/

@@ -50,7 +50,7 @@ void UserSet::add(usr::ID newUserID) {
 	users[newUserID];
 }
 
-void UserSet::remove(usr::ID iuserID) {
+void UserSet::remove(usr::ID userID) {
 	assert(users.count(userID));
 	users.erase(userID);
 }
