@@ -32,8 +32,8 @@ void CourseSet::read() {
 
 /*===============================================================setters & getters=============================================================*/
 
-bool CourseSet::contains(crs::ID id) const {
-	return id >= 1 and id <= courses.size();
+bool CourseSet::contains(crs::ID courseID) const {
+	return courseID >= 1 and courseID <= courses.size();
 }
 
 bool CourseSet::contains(const Course & toCheckCourse) const {
@@ -43,24 +43,15 @@ bool CourseSet::contains(const Course & toCheckCourse) const {
 }
 
 
-Course & CourseSet::operator[](crs::ID id) {
-	assert(id >= 1 and id <= courses.size());
-	return courses[id-1];
+Course & CourseSet::operator[](crs::ID courseID) {
+	assert(courseID >= 1 and courseID <= courses.size());
+	return courses[courseID-1];
 }
-/*
-const Course & CourseSet::operator[](crs::ID id) const {
-	assert(id > 0 and id < courses.size());
-	return courses[id];
-}*/
 
 int CourseSet::count() const {
 	return courses.size();
 }
 
-void CourseSet::setSize(int newSize) {
-	courses.resize(newSize);
-}
-
-void CourseSet::append(Course newElement) {
-	courses.push_back(newElement);
+void CourseSet::append(Course newCourse) {
+	courses.push_back(newCourse);
 }

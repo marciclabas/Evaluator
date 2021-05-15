@@ -7,10 +7,10 @@
 #define COURSESET_HH
 
 #include "Course.hh"
-#include "IReadable.hh"
-#include "IPrintable.hh"
 
 #ifndef NO_DIAGRAM
+#include "IReadable.hh"
+#include "IPrintable.hh"
 #include <vector>
 #include <string>
 #endif
@@ -25,73 +25,82 @@ private:
 	CourseSet();
 	~CourseSet();
 	
+	/**
+	@brief Vector of courses accessed by implicit ID's (i.e., integers from 0 to size-1)
+	@invariant There are not two courses with the same sessions
+	*/
 	std::vector<Course> courses;
 
 public:
 	/*===========================================================singleton-related methods=========================================================*/
-	// deleted copy constructor
+	
+	/**
+	@brief Deleted copy constructor
+	*/
 	CourseSet(CourseSet & copy) = delete;
-	// deleted assignment operator
-	void operator=(const CourseSet &) = delete;
+	
+	/**
+	@brief Deleted assignment operator
+	*/
+	void operator=(const CourseSet & courseSet) = delete;
 
 	/**
-	@brief Returns the single instance
+	@brief Returns the single instance of the class
 	@pre True
-	@post The single instance is returned
+	@post The single instance of the class is returned
+	@return a reference to the single instance
 	*/
 	static CourseSet & getInstance();
 
 	/*=============================================================overrided IO methods============================================================*/
+
 	void print() const;
 	void read();
 	
 	/*===============================================================setters & getters=============================================================*/
-	/**
-	@brief Checks whether there is an element with the given id
-	@pre true
-	@post @c true is returned if there is an element with the given id within the container. If there is not, @c false is returned
-	*/
-	bool contains(crs::ID id) const;
 
 	/**
-	@brief Checks whether the set contains a Course equal to the given toCheckCourse (same sessions)
-	*/
+	 @brief Returns wheter the set contains a Course with the given id
+	 @pre True
+	 @post Returns @c true if there is Course with the given id within the implicit parameter. Returns @c false otherwise
+	 @param courseID a crs::ID
+	 @return A boolean representing whether the implicit parameter contains the given Course
+	 */
+	bool contains(crs::ID courseID) const;
+
+	/**
+	 @brief Returns wheter the set contains a Course equal to the given one
+	 @pre True
+	 @post Returns @c true if there is Course equal to the given one within the implicit parameter. Returns @c false otherwise
+	 @param toCheckSession a Course
+	 @return A boolean representing whether the implicit parameter contains a Course equal to the given one
+	 */
 	bool contains(const Course & toCheckCourse) const;
 
 	/**
-	@brief Returns the element with the given ID contained in the container
-	@pre An element with the given id does exist within the container
-	@post An element with the given ID contained in the container is returned
-	*/
-	Course & operator[](crs::ID id);
-
-	/*
-	@brief Returns the element with the given ID contained in the container, const version
-	@pre An element with the given id does exist within the container
-	@post A const element with the given ID contained in the container is returned
-	*
-	const Course & operator[](crs::ID id) const;*/
+	 @brief Returns the Course with the given id contained in the set
+	 @pre A Course with the given id does exist within the implicit parameter
+	 @post Returns the Course with the given id
+	 @param courseID a crs::ID
+	 @return A reference to the Course with the given id
+	 */
+	Course & operator[](crs::ID courseID);
 
 	/**
-	@brief Return the number of elements contained in the container
-	@pre true
-	@post The number of elements contained in the container is returned
-	*/
+	 @brief Returns the number of courses contained in the set
+	 @pre True
+	 @post Returns the number of courses contained in the implicit parameter
+	 @return An integer representing the number of courses contained
+	 */
 	int count() const;
 
 	/**
-	@brief Set the size of the container
-	@pre True
-	@post The container has newSize as it's size
-	*/
-	void setSize(int newSize);
-
-	/**
-	@brief Add a new element at the end
-	@pre There is not any element with the given element's id within the container
-	@post The new element is added at the end of the container
-	*/
-	void append(Course newElement);
+	 @brief Adds a given Course to the set
+	 @pre There is not any Course with the given id or the same sessions as the given Course within the implicit parameter
+	 @post The given Course is added to the implicit parameter
+	 @param newCourse a Course
+	 */
+	void append(Course newCourse);
 };
 
 #endif

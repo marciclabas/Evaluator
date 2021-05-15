@@ -32,30 +32,25 @@ void UserSet::read() {
 
 /*================================================================container methods=============================================================*/
 
-bool UserSet::contains(usr::ID id) const {
-	return users.count(id);
+bool UserSet::contains(usr::ID userID) const {
+	return users.count(userID);
 }
 
-User & UserSet::operator[](usr::ID id) {
-	assert(users.count(id));
-	return users[id];
+User & UserSet::operator[](usr::ID userID) {
+	assert(users.count(userID));
+	return users[userID];
 }
-
-/*const User & UserSet::operator[](usr::ID id) const {
- * assert(users.count(id));
- * return users[id];
- } **/
 
 int UserSet::count() const {
 	return users.size();
 }
 
 
-void UserSet::add(usr::ID newElementID) {
-	users[newElementID];
+void UserSet::add(usr::ID newUserID) {
+	users[newUserID];
 }
 
-void UserSet::remove(usr::ID id) {
-	assert(users.count(id));
-	users.erase(id);
+void UserSet::remove(usr::ID iuserID) {
+	assert(users.count(userID));
+	users.erase(userID);
 }

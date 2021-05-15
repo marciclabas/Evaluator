@@ -1,14 +1,19 @@
 #include "Session.hh"
 
 /*=========================================================constructors & destructors=========================================================*/
-Session::Session(): problems(), count(0) {}
+Session::Session(): problemsTree(), problemsSet() {}
 
 Session::~Session() {}
 
 /*==============================================================overrided IO methods============================================================*/
 
-// pre: tree is not empty
-// post: tree is printed in postorder (and correct format)
+/**
+@brief Prints a binary tree in postorder
+@pre tree is not empty
+@post tree is printed in postorder (and correct format)
+@param out an output stream
+@param tree a binary tree of prb::ID
+*/
 static std::ostream& operator<<(std::ostream & out, const BinTree<prb::ID> & tree) {
 	if(not tree.empty())
 		out << '(' << tree.left() << tree.right() << tree.value() << ')';
@@ -16,17 +21,14 @@ static std::ostream& operator<<(std::ostream & out, const BinTree<prb::ID> & tre
 }
 
 void Session::print() const {
-	std::cout << count << ' ' << problems;
+	std::cout << problemsSet.size() << ' ' << problemsTree;
 }
 
-// pre: tree is empty
-// post: tree is read from stdin in preorder
+
 void Session::readImmersion(BinTree<prb::ID> & tree) {
 	prb::ID problemID; std::cin >> problemID;
 	if(problemID != prb::invalidID) {
-		// pList.insert(pList.end(), problemID);
 		addProblemToSet(problemID);
-		count++;
 		BinTree<prb::ID> leftChild, rightChild;
 		readImmersion(leftChild);
 		readImmersion(rightChild);
@@ -35,21 +37,35 @@ void Session::readImmersion(BinTree<prb::ID> & tree) {
 }
 
 void Session::read() {
-	readImmersion(problems);
+	readImmersion(problemsTree);
 }
 
 /*===========================================================other functionality===========================================================*/
 
+/**
+@brief Returns whether a given binary tree of prb::ID contains a given id
+@pre True
+@post Returns @c true if the given id is contained in the tree. Returns @c false otherwise
+@param value a problem ID
+@param tree a binary tree of problem ID's
+@return A boolean representing whether the tree contains the problem
+*/
 static bool contains(prb::ID value, const BinTree<prb::ID> & tree) {
 	if(tree.empty()) return false;
 	else return tree.value() == value or contains(value, tree.left()) or contains(value, tree.right());
 }
 
 bool Session::containsProblem(prb::ID problemID) const {
-	return contains(problemID, problems);
+	return contains(problemID, problemsTree);
 }
 
-// tested: some cases (i'd say 90% sure works fine)
+/**
+@brief Updates the problems contained in a given tree the given ICanSolveProblems can solve
+@pre True
+@post The problems contained in the given tree the given ICanSolveProblems can solve are updated
+@param solverObject a reference to the object whose solvable problems are to be updated
+@param tree a tree containing problem ID's in a prerequisite structure
+*/
 static void updateSolvableProblemsImmersion(ICanSolveProblems & solver, const BinTree<prb::ID> & tree) {
 	if(not tree.empty()) {
 		if(solver.hasSolvedProblem(tree.value())) {
@@ -60,9 +76,10 @@ static void updateSolvableProblemsImmersion(ICanSolveProblems & solver, const Bi
 	}
 }
 
-// pre: problemID is contained in the session, tree contains problemID
-// post: tree contains problemID
-// tested: some cases (i'd say 80% sure works fine)
+/**
+@pre problemID is contained in the session, tree contains problemID
+@post tree contains problemID
+*/
 static bool getProblemSubTree(prb::ID problemID, BinTree<prb::ID> & tree) {
 	if(tree.empty()) return false;
 	if(tree.value() == problemID) return true;
@@ -79,11 +96,9 @@ static bool getProblemSubTree(prb::ID problemID, BinTree<prb::ID> & tree) {
     return false;
 }
 
-// pre: lastProblemSolved is contained in the session
-// post: returns a list of the problems the userObject can solve after lastSolvedProblem
 void Session::updateSolvableProblems(ICanSolveProblems & solverObject, prb::ID lastSolvedProblem) const {
-	BinTree<prb::ID> problems = this->problems;
-	if(lastSolvedProblem != prb::invalidID) // bugfix: == -> !=
+	BinTree<prb::ID> problems = this->problemsTree;
+	if(lastSolvedProblem != prb::invalidID)
 		getProblemSubTree(lastSolvedProblem, problems);
 	updateSolvableProblemsImmersion(solverObject, problems);
 }
@@ -118,5 +133,5 @@ void Session::addProblemToSet(prb::ID problemID) {
 }
 
 int Session::getCount() const {
-	return count;
+	return problemsSet.size();
 }

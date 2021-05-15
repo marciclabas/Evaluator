@@ -16,8 +16,23 @@
 */
 class Problem : public IPrintable {
 private:
-	int t, e;
-	double r; // r = (t+1)/(e+1)
+	/**
+	@brief Total number of submissions issued
+	@invariant t >= 0
+	*/
+	int t;
+
+	/**
+	@brief Number of accepted submissions
+	@invariant e >= t
+	*/
+	int e;
+
+	/**
+	@brief Ratio of total submissions vs accepted submissions
+	@invariant r = (t+1)/(e+1)
+	*/
+	double r;
 public:
 	/* =========================================================constructors & destructors=========================================================*/
 	/**
@@ -30,7 +45,7 @@ public:
 	/**
 	@brief Default destructor
 	@pre True
-	@post Deletes the Problem
+	@post Deletes the problem
 	*/
 	~Problem();
 
@@ -52,6 +67,8 @@ public:
 	@param result a prb::result representing the result of the submission
 	*/
 	void parseSubmission(prb::result result);
+
+	/*==============================================================overrided IO methods============================================================*/
 
 	void print() const override;
 };

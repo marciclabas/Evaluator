@@ -2,7 +2,7 @@
 
 /*================================================================private methods=============================================================*/
 
-int Course::addSession(ses::ID sessionID) {
+int Course::addSessionToVector(ses::ID sessionID) {
 	sessions.push_back(sessionID);
 	return sessions.size() - 1;
 }
@@ -87,7 +87,6 @@ void Course::read() {
 	int sessionCount; std::cin >> sessionCount;
 	for(int i = 0; i < sessionCount; i++) {
 		ses::ID sessionID; std::cin >> sessionID;
-		int sessionIndex = addSession(sessionID);
 		const Session & session = SessionRepository::getInstance()[sessionID];
 
 		for(const prb::ID problemID : session) {
@@ -96,7 +95,10 @@ void Course::read() {
 				flush_sessionIDs(sessionCount - i - 1);
 				return;
 			}
-			else problemSessionIndex[problemID] = sessionIndex;
+			else {
+				int sessionIndex = addSessionToVector(sessionID);
+				problemSessionIndex[problemID] = sessionIndex;
+			}
 		}
 	}
 }

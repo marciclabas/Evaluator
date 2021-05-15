@@ -26,15 +26,31 @@
 */
 class Session : public IPrintable, public IReadable {
 private:
-	BinTree<prb::ID> problems;
-	std::set<prb::ID> problemsSet; // sorted by ID
-	int count; // number of problems in the tree
+	/**
+	@brief Binary tree containing the session's problem's in their prerequisite structure
+	@invariant 	1. There is not any node with value prb::invalidID
+				2. Has the same problems as problemsSet does
+	*/
+	BinTree<prb::ID> problemsTree;
 
 	/**
-	@brief add problem to set while keeping it ordered by id
+	@brief Set containing the session's problem's
+	@invariant 	1. There is not any element with value prb::invalidID
+				2. Has the same problems as problemsTree does
+				3. Is sorted by the elements themselves, i.e., by ID's
+	*/
+	std::set<prb::ID> problemsSet;
+
+	/**
+	@brief Adds a problem to the set while keeping it ordered by id
 	*/
 	void addProblemToSet(prb::ID problemID);
 
+	/**
+	@brief Reads a tree from the stdin in preorder and initializes this->problemsSet with the same input
+	@pre tree is empty
+	@post tree is read from stdin in preorder, this->problemsSet is initialized with the same input
+	*/
 	void readImmersion(BinTree<prb::ID> & tree);
 
 public:
@@ -56,7 +72,7 @@ public:
 	/**
 	@brief Default destructor
 	@pre True
-	@post Deletes the Session
+	@post Deletes the session
 	*/
 	~Session();
 

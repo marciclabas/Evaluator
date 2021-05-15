@@ -22,9 +22,25 @@
 class SessionRepository : public IReadable, public IPrintable {
 private:
 	/* =========================================================constructors & destructors=========================================================*/
+
+	/**
+	@brief Private default constructor
+	@pre True
+	@post Creates an empty SessionRepository
+	*/
 	SessionRepository();
+
+	/**
+	@brief Private default destructor
+	@pre True
+	@post Deletes the implicit parameter
+	*/
 	~SessionRepository();
 	
+	/**
+	@brief Map of sessions accessed by ID's
+	@invariant There are not two sessions with the same problems
+	*/
 	std::map<ses::ID,Session> sessions;
 
 public:
@@ -38,7 +54,7 @@ public:
 	/**
 	@brief Deleted assignment operator
 	*/
-	void operator=(const SessionRepository &) = delete;
+	void operator=(const SessionRepository & sessionRepository) = delete;
 
 	/**
 	@brief Returns the single instance of the class
@@ -90,9 +106,9 @@ public:
 	 */
 	int count() const;
 	
-		/**
-	 @brief Adds a given Session to the collection
-	 @pre There is not any Session with the given id within the implicit parameter
+	/**
+	 @brief Adds a given Session to the repository
+	 @pre There is not any Session with the given id or the same problems as the given Session within the implicit parameter
 	 @post The given Session is added to the implicit parameter with the given id
 	 @param newSessionID a ses::ID
 	 @param newSession a Session

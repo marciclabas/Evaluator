@@ -22,11 +22,30 @@
 class ProblemCollection : public IReadable, public IPrintable  {
 private:
 	/*==========================================================constructors & destructors=========================================================*/
+
+	/**
+	@brief Private default constructor
+	@pre True
+	@post Creates an empty ProblemCollection
+	*/
 	ProblemCollection();
+
+	/**
+	@brief Private default destructor
+	@pre True
+	@post Deletes the implicit parameter
+	*/
 	~ProblemCollection();
+
+	/**
+	@brief Map of problems accessed by ID's
+	@invariant There is not a key with value prb::invalidID
+	*/
 	std::map<prb::ID,Problem> problems;
+
 public:
 	/*===========================================================singleton-related methods=========================================================*/
+
 	/**
 	@brief Deleted copy constructor
 	*/
