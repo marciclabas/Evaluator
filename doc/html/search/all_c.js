@@ -1,19 +1,10 @@
 var searchData=
 [
-  ['parsesubmission_83',['parseSubmission',['../classProblem.html#ab5522d13d71c4bdf1ea4f8a4cd891f9c',1,'Problem::parseSubmission()'],['../classUser.html#ad7d1e5f0aa6e6a489b2379511082350f',1,'User::parseSubmission()']]],
-  ['prb_84',['prb',['../namespaceprb.html',1,'']]],
-  ['print_85',['print',['../classCourse.html#a7fd61bcbad5041fc50642f1a8e7b1194',1,'Course::print()'],['../classUser.html#a7e3a3b397add1d7969213ee07afa6e30',1,'User::print()'],['../structUser_1_1ProblemStats.html#a303357e728bcb58a1c8a5c1ce318c037',1,'User::ProblemStats::print()'],['../classSessionRepository.html#afa26909ce41c3a4b17a49eb0e56dd4f6',1,'SessionRepository::print()'],['../classSession.html#aa378fcde1f8e4572b9599c975dc8d354',1,'Session::print()'],['../classProblemCollection.html#ad49395eb1c71357fdc6130058b39d414',1,'ProblemCollection::print()'],['../classProblem.html#a743af7c886c13ce185a988b2d3e7d789',1,'Problem::print()'],['../classIPrintable.html#addc8a495860e3d637a25f0806409bc0a',1,'IPrintable::print()'],['../classCourseSet.html#ab793aad6427d5f2bba5df5e5727dd33a',1,'CourseSet::print()'],['../classUserSet.html#aedfbf2444bdfff40d062334b26e36438',1,'UserSet::print()']]],
-  ['problem_86',['Problem',['../classProblem.html#ad9d44f0ef936fb62f0ce41dd200494ac',1,'Problem::Problem()'],['../classProblem.html',1,'Problem']]],
-  ['problem_2ehh_87',['Problem.hh',['../Problem_8hh.html',1,'']]],
-  ['problem_5fnot_5fin_5fcourse_88',['problem_not_in_course',['../namespaceio.html#adbb419c9c9a584444a295d1738727daea6e1d02c9662dd24c5e4ff3cd975373a2',1,'io']]],
-  ['problem_5fsession_89',['problem_session',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fad11e2a92f84842f2d7cc143ecbd338e0',1,'io']]],
-  ['problemcol_2ehh_90',['ProblemCol.hh',['../ProblemCol_8hh.html',1,'']]],
-  ['problemcollection_91',['ProblemCollection',['../classProblemCollection.html#a9c64db5612113ea8c9cf2f4756fc1abf',1,'ProblemCollection::ProblemCollection()'],['../classProblemCollection.html#a7bbc4a1a9504512671c1c1369fbf4239',1,'ProblemCollection::ProblemCollection(ProblemCollection &amp;copy)=delete'],['../classProblemCollection.html',1,'ProblemCollection']]],
-  ['problemcount_92',['problemCount',['../classCourse.html#a615c5ea821a233723768409605e63b26',1,'Course']]],
-  ['problems_93',['problems',['../classProblemCollection.html#a2294b1ea5899056d21064469ea1af1f1',1,'ProblemCollection']]],
-  ['problemsessionindex_94',['problemSessionIndex',['../classCourse.html#abf815fafbd4ab96cb817e964457f721a',1,'Course']]],
-  ['problemsset_95',['problemsSet',['../classSession.html#a1d7fdb77a86c4fd4b49367c4e6d4149e',1,'Session']]],
-  ['problemstats_96',['ProblemStats',['../structUser_1_1ProblemStats.html#a74da848ee400fd2120f7e9de33ca0fb3',1,'User::ProblemStats::ProblemStats()'],['../structUser_1_1ProblemStats.html',1,'User::ProblemStats']]],
-  ['problemstree_97',['problemsTree',['../classSession.html#a204150ed58c0d3857521c6b3bd841247',1,'Session']]],
-  ['program_2ecc_98',['program.cc',['../program_8cc.html',1,'']]]
+  ['operator_21_3d_87',['operator!=',['../namespaceio.html#a179f625f3125b22f8d3e5e28cf6e141e',1,'io']]],
+  ['operator_3c_88',['operator&lt;',['../Namespaces_8cc.html#a70009e52156510a23e6fb78da96634f2',1,'Namespaces.cc']]],
+  ['operator_3c_3c_89',['operator&lt;&lt;',['../Session_8cc.html#a1fd8968549d39d533b6d1158f1b0cd41',1,'Session.cc']]],
+  ['operator_3d_90',['operator=',['../classCourseSet.html#aa53d03c0eb0dd23ee0e81d9a245b5312',1,'CourseSet::operator=()'],['../classProblemCollection.html#a47b4c57020982feafa72ed61816e96f0',1,'ProblemCollection::operator=()'],['../classSessionRepository.html#ae2ed0c0b9b334f7c4e954bb619ce1915',1,'SessionRepository::operator=()'],['../classUserSet.html#a5eebe50f59b88c1a575baa2d3392deb6',1,'UserSet::operator=()']]],
+  ['operator_3d_3d_91',['operator==',['../classCourse.html#a903d8640ea2f7fc37aa773838357bbe5',1,'Course::operator==()'],['../classSession.html#a8baa3a14784e12bdfb1f668f4e3fd6e2',1,'Session::operator==()'],['../namespaceio.html#af19e1eafa940755e7af9aa8113c163ca',1,'io::operator==()']]],
+  ['operator_3e_3e_92',['operator&gt;&gt;',['../Namespaces_8hh.html#af062eca1dc6f82dbfb822d510fd6d8f9',1,'operator&gt;&gt;(std::istream &amp;in, prb::result &amp;result):&#160;Namespaces.cc'],['../Namespaces_8cc.html#af062eca1dc6f82dbfb822d510fd6d8f9',1,'operator&gt;&gt;(std::istream &amp;in, prb::result &amp;result):&#160;Namespaces.cc']]],
+  ['operator_5b_5d_93',['operator[]',['../classCourseSet.html#a1e2504f78780c8eabb844ca6335ca92f',1,'CourseSet::operator[]()'],['../classProblemCollection.html#a2cdc980e1ca7cb6087ac07f5ffe38bcd',1,'ProblemCollection::operator[]()'],['../classSessionRepository.html#a3ee661c2b3a1e7c43ebf99e9d1c30732',1,'SessionRepository::operator[]()'],['../classUserSet.html#a1bb02fec3dd9410105b1bb22102ab9a1',1,'UserSet::operator[]()']]]
 ];

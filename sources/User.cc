@@ -1,8 +1,14 @@
+/**
+@file User.cc
+@brief File containing the implementation of the User class
+*/
+
 #include "User.hh"
 
 #include <cassert>
 
 /* =========================================================constructors & destructors=========================================================*/
+
 User::User()
 :	isEnrolled(false), enrolledCourse(), stats(), solvedProblems(), solvableProblems()
 {	}
@@ -20,6 +26,7 @@ User::ProblemStats::ProblemStats()
 /* ===================================================================getters==================================================================*/
 
 crs::ID User::getEnrolledCourseID() const {
+	assert(isEnrolled);
 	return enrolledCourse;
 }
 

@@ -1,0 +1,8 @@
+<map id="Course.cc" name="Course.cc">
+<area shape="rect" id="node1" title="File containing the implementation of the Course class." alt="" coords="21,5,107,32"/>
+<area shape="rect" id="node2" href="$Course_8hh.html" title="File containing the specification of the Course class." alt="" coords="21,80,107,107"/>
+<area shape="rect" id="node3" href="$SessionRep_8hh.html" title="File containing the specification of the SessionRepository class." alt="" coords="5,155,123,181"/>
+<area shape="rect" id="node4" href="$Session_8hh.html" title="File containing the specification of the Session class and it&#39;s corresponding namespace." alt="" coords="18,229,110,256"/>
+<area shape="rect" id="node5" href="$ProblemCol_8hh.html" title="File containing the specification of the ProblemCollection class." alt="" coords="5,304,123,331"/>
+<area shape="rect" id="node6" href="$Problem_8hh.html" title="File containing the specification of the Problem class." alt="" coords="16,379,112,405"/>
+</map>

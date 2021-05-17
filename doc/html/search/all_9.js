@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['main_65',['main',['../program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'program.cc']]],
-  ['malformed_5fcourse_66',['malformed_course',['../namespaceio.html#adbb419c9c9a584444a295d1738727daea0e91ec7889f754ba7a611e102c2a74d5',1,'io']]]
+  ['list_5fcourses_69',['list_courses',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fad3d5f416a30fff985404406332cef72c',1,'io']]],
+  ['list_5fproblems_70',['list_problems',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fadfc02d84e308cd34aa393d549d8111fc',1,'io']]],
+  ['list_5fsessions_71',['list_sessions',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371faf06dfdb8b5dd745f30cf25ba431dcf47',1,'io']]],
+  ['list_5fusers_72',['list_users',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fabfa87367a67f5b01e6390c18bb324e17',1,'io']]]
 ];

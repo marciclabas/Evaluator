@@ -1,8 +1,17 @@
+/**
+@file ICanSolveProblems.hh
+@brief File containing the specification of the ICanSolveProblems interface
+*/
+
 #ifndef ICANSOLVEPROBLEMS_HH
 #define ICANSOLVEPROBLEMS_HH
 
 #include "Namespaces.hh"
 
+/**
+@interface ICanSolveProblems
+@brief ICanSolveProblems interface
+*/
 class ICanSolveProblems {
 public:
     /**

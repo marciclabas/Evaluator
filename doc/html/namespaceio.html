@@ -68,7 +68,8 @@ $(function() {
   <div class="summary">
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">io Namespace Reference</div>  </div>
 </div><!--header-->
@@ -130,6 +131,7 @@ Enumerations</h2></td></tr>
 , <a class="el" href="namespaceio.html#adbb419c9c9a584444a295d1738727daea0e91ec7889f754ba7a611e102c2a74d5">malformed_course</a>
 <br />
  }</td></tr>
+<tr class="memdesc:adbb419c9c9a584444a295d1738727dae"><td class="mdescLeft">&#160;</td><td class="mdescRight">All system error messages available.  <a href="namespaceio.html#adbb419c9c9a584444a295d1738727dae">More...</a><br /></td></tr>
 <tr class="separator:adbb419c9c9a584444a295d1738727dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -143,6 +145,18 @@ Functions</h2></td></tr>
 <tr class="memitem:ab9ec7118a920a99ec162d689e90c0ce7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceio.html#ab9ec7118a920a99ec162d689e90c0ce7">error</a> (<a class="el" href="namespaceio.html#adbb419c9c9a584444a295d1738727dae">Error</a> er=<a class="el" href="namespaceio.html#adbb419c9c9a584444a295d1738727daea5f68ff264f89ab8ac3172891aacec52c">default_error</a>)</td></tr>
 <tr class="memdesc:ab9ec7118a920a99ec162d689e90c0ce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the given error message.  <a href="namespaceio.html#ab9ec7118a920a99ec162d689e90c0ce7">More...</a><br /></td></tr>
 <tr class="separator:ab9ec7118a920a99ec162d689e90c0ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4e65fa47214d732dfd840f97d8a11d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceio.html#ae4e65fa47214d732dfd840f97d8a11d5">echo</a> (<a class="el" href="namespaceio.html#a91256296d27891eb56958d80d5d9d1d9">InputCommand</a> command)</td></tr>
+<tr class="memdesc:ae4e65fa47214d732dfd840f97d8a11d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Echoes the given command.  <a href="namespaceio.html#ae4e65fa47214d732dfd840f97d8a11d5">More...</a><br /></td></tr>
+<tr class="separator:ae4e65fa47214d732dfd840f97d8a11d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:acc7650ad61c6c1eb62c22cee17c54ac0"><td class="memItemLeft" align="right" valign="top">static const std::unordered_map&lt; <a class="el" href="namespaceio.html#a05d02c08bcfc0805d39733aac0f0371f">io::SystemCommand</a>, std::list&lt; <a class="el" href="namespaceio.html#a91256296d27891eb56958d80d5d9d1d9">io::InputCommand</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceio.html#acc7650ad61c6c1eb62c22cee17c54ac0">commands</a></td></tr>
+<tr class="memdesc:acc7650ad61c6c1eb62c22cee17c54ac0"><td class="mdescLeft">&#160;</td><td class="mdescRight">unordered map of SystemCommand's and a list of their corresponding InputCommand's  <a href="namespaceio.html#acc7650ad61c6c1eb62c22cee17c54ac0">More...</a><br /></td></tr>
+<tr class="separator:acc7650ad61c6c1eb62c22cee17c54ac0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66d12d70109aabffcdb7eed671543b92"><td class="memItemLeft" align="right" valign="top">static const std::unordered_map&lt; <a class="el" href="namespaceio.html#adbb419c9c9a584444a295d1738727dae">io::Error</a>, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceio.html#a66d12d70109aabffcdb7eed671543b92">errors</a></td></tr>
+<tr class="memdesc:a66d12d70109aabffcdb7eed671543b92"><td class="mdescLeft">&#160;</td><td class="mdescRight">unordered map of Error's and their corresponding strings to be logged  <a href="namespaceio.html#a66d12d70109aabffcdb7eed671543b92">More...</a><br /></td></tr>
+<tr class="separator:a66d12d70109aabffcdb7eed671543b92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>namespace containing type definitions and some input/output functions </p>
@@ -241,6 +255,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>All system error messages available. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="adbb419c9c9a584444a295d1738727daea5f68ff264f89ab8ac3172891aacec52c"></a>default_error&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="adbb419c9c9a584444a295d1738727daea4212adc88e82eba84cd284d97bec8445"></a>already_existing_problem&#160;</td><td class="fielddoc"></td></tr>
@@ -256,33 +272,33 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="adbb419c9c9a584444a295d1738727daea0e91ec7889f754ba7a611e102c2a74d5"></a>malformed_course&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="IO_8hh_source.html#l00045">45</a> of file <a class="el" href="IO_8hh_source.html">IO.hh</a>.</p>
-<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;               {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daea5f68ff264f89ab8ac3172891aacec52c">default_error</a>,</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daea4212adc88e82eba84cd284d97bec8445">already_existing_problem</a>,</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daea73de562c73630dcd8997729ab97b1e09">nonexistent_problem</a>,</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daea43ab05a5404f65c8bf54c4166ec8e6a5">already_existing_session</a>,</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daeafdd530a7ad1f912ca847848cfeebc168">nonexistent_session</a>,</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daeaafb30d031b094858f4ee9fde14d68563">nonexistent_course</a>,</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daea70a59be58c0cabfcfc69fb395b4d1cdb">nonexistent_user</a>,</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daeaff725f336d8a983f0fb2238aee957cda">already_existing_user</a>,</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daea41796c73d06498981f86c782bdcdec19">already_enrolled_user</a>,</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daea86c78e783ad08cabfa804b96d769c427">nonenrolled_user</a>,</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daea6e1d02c9662dd24c5e4ff3cd975373a2">problem_not_in_course</a>,</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daea0e91ec7889f754ba7a611e102c2a74d5">malformed_course</a></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    };</div>
-<div class="ttc" id="anamespaceio_html_adbb419c9c9a584444a295d1738727daea0e91ec7889f754ba7a611e102c2a74d5"><div class="ttname"><a href="namespaceio.html#adbb419c9c9a584444a295d1738727daea0e91ec7889f754ba7a611e102c2a74d5">io::malformed_course</a></div><div class="ttdeci">@ malformed_course</div><div class="ttdef"><b>Definition:</b> <a href="IO_8hh_source.html#l00058">IO.hh:57</a></div></div>
-<div class="ttc" id="anamespaceio_html_adbb419c9c9a584444a295d1738727daea41796c73d06498981f86c782bdcdec19"><div class="ttname"><a href="namespaceio.html#adbb419c9c9a584444a295d1738727daea41796c73d06498981f86c782bdcdec19">io::already_enrolled_user</a></div><div class="ttdeci">@ already_enrolled_user</div><div class="ttdef"><b>Definition:</b> <a href="IO_8hh_source.html#l00054">IO.hh:54</a></div></div>
-<div class="ttc" id="anamespaceio_html_adbb419c9c9a584444a295d1738727daea4212adc88e82eba84cd284d97bec8445"><div class="ttname"><a href="namespaceio.html#adbb419c9c9a584444a295d1738727daea4212adc88e82eba84cd284d97bec8445">io::already_existing_problem</a></div><div class="ttdeci">@ already_existing_problem</div><div class="ttdef"><b>Definition:</b> <a href="IO_8hh_source.html#l00047">IO.hh:47</a></div></div>
-<div class="ttc" id="anamespaceio_html_adbb419c9c9a584444a295d1738727daea43ab05a5404f65c8bf54c4166ec8e6a5"><div class="ttname"><a href="namespaceio.html#adbb419c9c9a584444a295d1738727daea43ab05a5404f65c8bf54c4166ec8e6a5">io::already_existing_session</a></div><div class="ttdeci">@ already_existing_session</div><div class="ttdef"><b>Definition:</b> <a href="IO_8hh_source.html#l00049">IO.hh:49</a></div></div>
-<div class="ttc" id="anamespaceio_html_adbb419c9c9a584444a295d1738727daea5f68ff264f89ab8ac3172891aacec52c"><div class="ttname"><a href="namespaceio.html#adbb419c9c9a584444a295d1738727daea5f68ff264f89ab8ac3172891aacec52c">io::default_error</a></div><div class="ttdeci">@ default_error</div><div class="ttdef"><b>Definition:</b> <a href="IO_8hh_source.html#l00046">IO.hh:46</a></div></div>
-<div class="ttc" id="anamespaceio_html_adbb419c9c9a584444a295d1738727daea6e1d02c9662dd24c5e4ff3cd975373a2"><div class="ttname"><a href="namespaceio.html#adbb419c9c9a584444a295d1738727daea6e1d02c9662dd24c5e4ff3cd975373a2">io::problem_not_in_course</a></div><div class="ttdeci">@ problem_not_in_course</div><div class="ttdef"><b>Definition:</b> <a href="IO_8hh_source.html#l00056">IO.hh:56</a></div></div>
-<div class="ttc" id="anamespaceio_html_adbb419c9c9a584444a295d1738727daea70a59be58c0cabfcfc69fb395b4d1cdb"><div class="ttname"><a href="namespaceio.html#adbb419c9c9a584444a295d1738727daea70a59be58c0cabfcfc69fb395b4d1cdb">io::nonexistent_user</a></div><div class="ttdeci">@ nonexistent_user</div><div class="ttdef"><b>Definition:</b> <a href="IO_8hh_source.html#l00052">IO.hh:52</a></div></div>
-<div class="ttc" id="anamespaceio_html_adbb419c9c9a584444a295d1738727daea73de562c73630dcd8997729ab97b1e09"><div class="ttname"><a href="namespaceio.html#adbb419c9c9a584444a295d1738727daea73de562c73630dcd8997729ab97b1e09">io::nonexistent_problem</a></div><div class="ttdeci">@ nonexistent_problem</div><div class="ttdef"><b>Definition:</b> <a href="IO_8hh_source.html#l00048">IO.hh:48</a></div></div>
-<div class="ttc" id="anamespaceio_html_adbb419c9c9a584444a295d1738727daea86c78e783ad08cabfa804b96d769c427"><div class="ttname"><a href="namespaceio.html#adbb419c9c9a584444a295d1738727daea86c78e783ad08cabfa804b96d769c427">io::nonenrolled_user</a></div><div class="ttdeci">@ nonenrolled_user</div><div class="ttdef"><b>Definition:</b> <a href="IO_8hh_source.html#l00055">IO.hh:55</a></div></div>
-<div class="ttc" id="anamespaceio_html_adbb419c9c9a584444a295d1738727daeaafb30d031b094858f4ee9fde14d68563"><div class="ttname"><a href="namespaceio.html#adbb419c9c9a584444a295d1738727daeaafb30d031b094858f4ee9fde14d68563">io::nonexistent_course</a></div><div class="ttdeci">@ nonexistent_course</div><div class="ttdef"><b>Definition:</b> <a href="IO_8hh_source.html#l00051">IO.hh:51</a></div></div>
-<div class="ttc" id="anamespaceio_html_adbb419c9c9a584444a295d1738727daeafdd530a7ad1f912ca847848cfeebc168"><div class="ttname"><a href="namespaceio.html#adbb419c9c9a584444a295d1738727daeafdd530a7ad1f912ca847848cfeebc168">io::nonexistent_session</a></div><div class="ttdeci">@ nonexistent_session</div><div class="ttdef"><b>Definition:</b> <a href="IO_8hh_source.html#l00050">IO.hh:50</a></div></div>
-<div class="ttc" id="anamespaceio_html_adbb419c9c9a584444a295d1738727daeaff725f336d8a983f0fb2238aee957cda"><div class="ttname"><a href="namespaceio.html#adbb419c9c9a584444a295d1738727daeaff725f336d8a983f0fb2238aee957cda">io::already_existing_user</a></div><div class="ttdeci">@ already_existing_user</div><div class="ttdef"><b>Definition:</b> <a href="IO_8hh_source.html#l00053">IO.hh:53</a></div></div>
+<p class="definition">Definition at line <a class="el" href="IO_8hh_source.html#l00048">48</a> of file <a class="el" href="IO_8hh_source.html">IO.hh</a>.</p>
+<div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;               {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daea5f68ff264f89ab8ac3172891aacec52c">default_error</a>,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daea4212adc88e82eba84cd284d97bec8445">already_existing_problem</a>,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daea73de562c73630dcd8997729ab97b1e09">nonexistent_problem</a>,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daea43ab05a5404f65c8bf54c4166ec8e6a5">already_existing_session</a>,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daeafdd530a7ad1f912ca847848cfeebc168">nonexistent_session</a>,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daeaafb30d031b094858f4ee9fde14d68563">nonexistent_course</a>,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daea70a59be58c0cabfcfc69fb395b4d1cdb">nonexistent_user</a>,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daeaff725f336d8a983f0fb2238aee957cda">already_existing_user</a>,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daea41796c73d06498981f86c782bdcdec19">already_enrolled_user</a>,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daea86c78e783ad08cabfa804b96d769c427">nonenrolled_user</a>,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daea6e1d02c9662dd24c5e4ff3cd975373a2">problem_not_in_course</a>,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daea0e91ec7889f754ba7a611e102c2a74d5">malformed_course</a></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    };</div>
+<div class="ttc" id="anamespaceio_html_adbb419c9c9a584444a295d1738727daea0e91ec7889f754ba7a611e102c2a74d5"><div class="ttname"><a href="namespaceio.html#adbb419c9c9a584444a295d1738727daea0e91ec7889f754ba7a611e102c2a74d5">io::malformed_course</a></div><div class="ttdeci">@ malformed_course</div><div class="ttdef"><b>Definition:</b> <a href="IO_8hh_source.html#l00061">IO.hh:60</a></div></div>
+<div class="ttc" id="anamespaceio_html_adbb419c9c9a584444a295d1738727daea41796c73d06498981f86c782bdcdec19"><div class="ttname"><a href="namespaceio.html#adbb419c9c9a584444a295d1738727daea41796c73d06498981f86c782bdcdec19">io::already_enrolled_user</a></div><div class="ttdeci">@ already_enrolled_user</div><div class="ttdef"><b>Definition:</b> <a href="IO_8hh_source.html#l00057">IO.hh:57</a></div></div>
+<div class="ttc" id="anamespaceio_html_adbb419c9c9a584444a295d1738727daea4212adc88e82eba84cd284d97bec8445"><div class="ttname"><a href="namespaceio.html#adbb419c9c9a584444a295d1738727daea4212adc88e82eba84cd284d97bec8445">io::already_existing_problem</a></div><div class="ttdeci">@ already_existing_problem</div><div class="ttdef"><b>Definition:</b> <a href="IO_8hh_source.html#l00050">IO.hh:50</a></div></div>
+<div class="ttc" id="anamespaceio_html_adbb419c9c9a584444a295d1738727daea43ab05a5404f65c8bf54c4166ec8e6a5"><div class="ttname"><a href="namespaceio.html#adbb419c9c9a584444a295d1738727daea43ab05a5404f65c8bf54c4166ec8e6a5">io::already_existing_session</a></div><div class="ttdeci">@ already_existing_session</div><div class="ttdef"><b>Definition:</b> <a href="IO_8hh_source.html#l00052">IO.hh:52</a></div></div>
+<div class="ttc" id="anamespaceio_html_adbb419c9c9a584444a295d1738727daea5f68ff264f89ab8ac3172891aacec52c"><div class="ttname"><a href="namespaceio.html#adbb419c9c9a584444a295d1738727daea5f68ff264f89ab8ac3172891aacec52c">io::default_error</a></div><div class="ttdeci">@ default_error</div><div class="ttdef"><b>Definition:</b> <a href="IO_8hh_source.html#l00049">IO.hh:49</a></div></div>
+<div class="ttc" id="anamespaceio_html_adbb419c9c9a584444a295d1738727daea6e1d02c9662dd24c5e4ff3cd975373a2"><div class="ttname"><a href="namespaceio.html#adbb419c9c9a584444a295d1738727daea6e1d02c9662dd24c5e4ff3cd975373a2">io::problem_not_in_course</a></div><div class="ttdeci">@ problem_not_in_course</div><div class="ttdef"><b>Definition:</b> <a href="IO_8hh_source.html#l00059">IO.hh:59</a></div></div>
+<div class="ttc" id="anamespaceio_html_adbb419c9c9a584444a295d1738727daea70a59be58c0cabfcfc69fb395b4d1cdb"><div class="ttname"><a href="namespaceio.html#adbb419c9c9a584444a295d1738727daea70a59be58c0cabfcfc69fb395b4d1cdb">io::nonexistent_user</a></div><div class="ttdeci">@ nonexistent_user</div><div class="ttdef"><b>Definition:</b> <a href="IO_8hh_source.html#l00055">IO.hh:55</a></div></div>
+<div class="ttc" id="anamespaceio_html_adbb419c9c9a584444a295d1738727daea73de562c73630dcd8997729ab97b1e09"><div class="ttname"><a href="namespaceio.html#adbb419c9c9a584444a295d1738727daea73de562c73630dcd8997729ab97b1e09">io::nonexistent_problem</a></div><div class="ttdeci">@ nonexistent_problem</div><div class="ttdef"><b>Definition:</b> <a href="IO_8hh_source.html#l00051">IO.hh:51</a></div></div>
+<div class="ttc" id="anamespaceio_html_adbb419c9c9a584444a295d1738727daea86c78e783ad08cabfa804b96d769c427"><div class="ttname"><a href="namespaceio.html#adbb419c9c9a584444a295d1738727daea86c78e783ad08cabfa804b96d769c427">io::nonenrolled_user</a></div><div class="ttdeci">@ nonenrolled_user</div><div class="ttdef"><b>Definition:</b> <a href="IO_8hh_source.html#l00058">IO.hh:58</a></div></div>
+<div class="ttc" id="anamespaceio_html_adbb419c9c9a584444a295d1738727daeaafb30d031b094858f4ee9fde14d68563"><div class="ttname"><a href="namespaceio.html#adbb419c9c9a584444a295d1738727daeaafb30d031b094858f4ee9fde14d68563">io::nonexistent_course</a></div><div class="ttdeci">@ nonexistent_course</div><div class="ttdef"><b>Definition:</b> <a href="IO_8hh_source.html#l00054">IO.hh:54</a></div></div>
+<div class="ttc" id="anamespaceio_html_adbb419c9c9a584444a295d1738727daeafdd530a7ad1f912ca847848cfeebc168"><div class="ttname"><a href="namespaceio.html#adbb419c9c9a584444a295d1738727daeafdd530a7ad1f912ca847848cfeebc168">io::nonexistent_session</a></div><div class="ttdeci">@ nonexistent_session</div><div class="ttdef"><b>Definition:</b> <a href="IO_8hh_source.html#l00053">IO.hh:53</a></div></div>
+<div class="ttc" id="anamespaceio_html_adbb419c9c9a584444a295d1738727daeaff725f336d8a983f0fb2238aee957cda"><div class="ttname"><a href="namespaceio.html#adbb419c9c9a584444a295d1738727daeaff725f336d8a983f0fb2238aee957cda">io::already_existing_user</a></div><div class="ttdeci">@ already_existing_user</div><div class="ttdef"><b>Definition:</b> <a href="IO_8hh_source.html#l00056">IO.hh:56</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -296,14 +312,14 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">bool io::operator== </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceio.html#a91256296d27891eb56958d80d5d9d1d9">InputCommand</a>&#160;</td>
-          <td class="paramname"><em>inputCommand</em>, </td>
+          <td class="paramtype"><a class="el" href="namespaceio.html#a91256296d27891eb56958d80d5d9d1d9">io::InputCommand</a>&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespaceio.html#a05d02c08bcfc0805d39733aac0f0371f">SystemCommand</a>&#160;</td>
-          <td class="paramname"><em>systemCommand</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespaceio.html#a05d02c08bcfc0805d39733aac0f0371f">io::SystemCommand</a>&#160;</td>
+          <td class="paramname"><em>system</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -317,6 +333,16 @@ Functions</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd>true </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>returns <code>true</code> if <code>inputCommand</code> corresponds to <code>systemCommand</code>, returns <code>false</code> otherwise </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="IO_8cc_source.html#l00039">39</a> of file <a class="el" href="IO_8cc_source.html">IO.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                                                                  {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="comment">// check all possible syntaxes equivalent to the system command</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">const</span> <a class="code" href="namespaceio.html#a91256296d27891eb56958d80d5d9d1d9">io::InputCommand</a> &amp; command : <a class="code" href="namespaceio.html#acc7650ad61c6c1eb62c22cee17c54ac0">commands</a>.at(system))</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordflow">if</span>(command == input) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+<div class="ttc" id="anamespaceio_html_a91256296d27891eb56958d80d5d9d1d9"><div class="ttname"><a href="namespaceio.html#a91256296d27891eb56958d80d5d9d1d9">io::InputCommand</a></div><div class="ttdeci">std::string InputCommand</div><div class="ttdef"><b>Definition:</b> <a href="IO_8hh_source.html#l00030">IO.hh:30</a></div></div>
+<div class="ttc" id="anamespaceio_html_acc7650ad61c6c1eb62c22cee17c54ac0"><div class="ttname"><a href="namespaceio.html#acc7650ad61c6c1eb62c22cee17c54ac0">io::commands</a></div><div class="ttdeci">static const std::unordered_map&lt; io::SystemCommand, std::list&lt; io::InputCommand &gt; &gt; commands</div><div class="ttdoc">unordered map of SystemCommand's and a list of their corresponding InputCommand's</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cc_source.html#l00016">IO.cc:16</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a179f625f3125b22f8d3e5e28cf6e141e"></a>
@@ -328,14 +354,14 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">bool io::operator!= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceio.html#a91256296d27891eb56958d80d5d9d1d9">InputCommand</a>&#160;</td>
-          <td class="paramname"><em>inputCommand</em>, </td>
+          <td class="paramtype"><a class="el" href="namespaceio.html#a91256296d27891eb56958d80d5d9d1d9">io::InputCommand</a>&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespaceio.html#a05d02c08bcfc0805d39733aac0f0371f">SystemCommand</a>&#160;</td>
-          <td class="paramname"><em>systemCommand</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespaceio.html#a05d02c08bcfc0805d39733aac0f0371f">io::SystemCommand</a>&#160;</td>
+          <td class="paramname"><em>system</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -349,6 +375,14 @@ Functions</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd>true </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>returns <code>true</code> if <code>inputCommand</code> does not correspond to <code>systemCommand</code>, returns <code>false</code> otherwise </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="IO_8cc_source.html#l00046">46</a> of file <a class="el" href="IO_8cc_source.html">IO.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                                                                  {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="comment">// check all possible syntaxes equivalent to the system command</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">const</span> <a class="code" href="namespaceio.html#a91256296d27891eb56958d80d5d9d1d9">io::InputCommand</a> &amp; command : <a class="code" href="namespaceio.html#acc7650ad61c6c1eb62c22cee17c54ac0">commands</a>.at(system))</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">if</span>(command == input) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab9ec7118a920a99ec162d689e90c0ce7"></a>
@@ -360,7 +394,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void io::error </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceio.html#adbb419c9c9a584444a295d1738727dae">Error</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespaceio.html#adbb419c9c9a584444a295d1738727dae">io::Error</a>&#160;</td>
           <td class="paramname"><em>er</em> = <code><a class="el" href="namespaceio.html#adbb419c9c9a584444a295d1738727daea5f68ff264f89ab8ac3172891aacec52c">default_error</a></code></td><td>)</td>
           <td></td>
         </tr>
@@ -368,6 +402,126 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Prints the given error message. </p>
+
+<p class="definition">Definition at line <a class="el" href="IO_8cc_source.html#l00071">71</a> of file <a class="el" href="IO_8cc_source.html">IO.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                           {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;error: &quot;</span> &lt;&lt; <a class="code" href="namespaceio.html#a66d12d70109aabffcdb7eed671543b92">errors</a>.at(er) &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
+<div class="ttc" id="anamespaceio_html_a66d12d70109aabffcdb7eed671543b92"><div class="ttname"><a href="namespaceio.html#a66d12d70109aabffcdb7eed671543b92">io::errors</a></div><div class="ttdeci">static const std::unordered_map&lt; io::Error, std::string &gt; errors</div><div class="ttdoc">unordered map of Error's and their corresponding strings to be logged</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cc_source.html#l00056">IO.cc:56</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae4e65fa47214d732dfd840f97d8a11d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4e65fa47214d732dfd840f97d8a11d5">&#9670;&nbsp;</a></span>echo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void io::echo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceio.html#a91256296d27891eb56958d80d5d9d1d9">io::InputCommand</a>&#160;</td>
+          <td class="paramname"><em>command</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Echoes the given command. </p>
+
+<p class="definition">Definition at line <a class="el" href="IO_8cc_source.html#l00075">75</a> of file <a class="el" href="IO_8cc_source.html">IO.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                                      {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        std::cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; command;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="acc7650ad61c6c1eb62c22cee17c54ac0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc7650ad61c6c1eb62c22cee17c54ac0">&#9670;&nbsp;</a></span>commands</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::unordered_map&lt;<a class="el" href="namespaceio.html#a05d02c08bcfc0805d39733aac0f0371f">io::SystemCommand</a>, std::list&lt;<a class="el" href="namespaceio.html#a91256296d27891eb56958d80d5d9d1d9">io::InputCommand</a>&gt; &gt; io::commands</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">        { <a class="code" href="namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fa929bc2e79e7f8ec1874cf5ae7dd137fd">new_problem</a>, { <span class="stringliteral">&quot;nuevo_problema&quot;</span>, <span class="stringliteral">&quot;np&quot;</span> }},</div>
+<div class="line">        { <a class="code" href="namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fa5e4356ead8e86e8bfe9241eea1fa1918">new_session</a>, { <span class="stringliteral">&quot;nueva_sesion&quot;</span>, <span class="stringliteral">&quot;ns&quot;</span> }},</div>
+<div class="line">        { <a class="code" href="namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fa5661adf5a352d5288bb7a428e9ea8fd7">new_course</a>, { <span class="stringliteral">&quot;nuevo_curso&quot;</span>, <span class="stringliteral">&quot;nc&quot;</span> }},</div>
+<div class="line">        { <a class="code" href="namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fa5e68784cda2e9dd50c654728f0245248">new_user</a>, { <span class="stringliteral">&quot;alta_usuario&quot;</span>, <span class="stringliteral">&quot;a&quot;</span> }},</div>
+<div class="line">        { <a class="code" href="namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fa36a2a903d4d6404102cd663963dae095">remove_user</a>, { <span class="stringliteral">&quot;baja_usuario&quot;</span>, <span class="stringliteral">&quot;b&quot;</span> }},</div>
+<div class="line">        { <a class="code" href="namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fab056421040352f8435ecb74c178d7f1e">enroll_user</a>, { <span class="stringliteral">&quot;inscribir_curso&quot;</span>, <span class="stringliteral">&quot;i&quot;</span> }},</div>
+<div class="line">        { <a class="code" href="namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fae7561e8140df0a1dc0b64cce2099a2b4">user_course</a>, { <span class="stringliteral">&quot;curso_usuario&quot;</span>, <span class="stringliteral">&quot;cu&quot;</span> }},</div>
+<div class="line">        { <a class="code" href="namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fad11e2a92f84842f2d7cc143ecbd338e0">problem_session</a>, { <span class="stringliteral">&quot;sesion_problema&quot;</span>, <span class="stringliteral">&quot;sp&quot;</span> }},</div>
+<div class="line">        { <a class="code" href="namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fa42bc44d5ed13ce51ba47eca921d20dd5">solved_problems</a>, { <span class="stringliteral">&quot;problemas_resueltos&quot;</span>, <span class="stringliteral">&quot;pr&quot;</span> }},</div>
+<div class="line">        { <a class="code" href="namespaceio.html#a05d02c08bcfc0805d39733aac0f0371facac1bb20d2360831a85fa1024c77ba42">solvable_problems</a>, { <span class="stringliteral">&quot;problemas_enviables&quot;</span>, <span class="stringliteral">&quot;pe&quot;</span> }},</div>
+<div class="line">        { <a class="code" href="namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fa9e7cd84a2cd3664c33f80b6e7b9434fa">submit_problem</a>, { <span class="stringliteral">&quot;envio&quot;</span>, <span class="stringliteral">&quot;e&quot;</span> }},</div>
+<div class="line">        { <a class="code" href="namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fadfc02d84e308cd34aa393d549d8111fc">list_problems</a>, { <span class="stringliteral">&quot;listar_problemas&quot;</span>, <span class="stringliteral">&quot;lp&quot;</span> }},</div>
+<div class="line">        { <a class="code" href="namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fab6ccf452d135ce6fe165ce3b6af79f70">write_problem</a>, { <span class="stringliteral">&quot;escribir_problema&quot;</span>, <span class="stringliteral">&quot;ep&quot;</span> }},</div>
+<div class="line">        { <a class="code" href="namespaceio.html#a05d02c08bcfc0805d39733aac0f0371faf06dfdb8b5dd745f30cf25ba431dcf47">list_sessions</a>, { <span class="stringliteral">&quot;listar_sesiones&quot;</span>, <span class="stringliteral">&quot;ls&quot;</span> }},</div>
+<div class="line">        { <a class="code" href="namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fa7aa216364725a73f83dcfabefd77a1b5">write_session</a>, { <span class="stringliteral">&quot;escribir_sesion&quot;</span>, <span class="stringliteral">&quot;es&quot;</span> }},</div>
+<div class="line">        { <a class="code" href="namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fad3d5f416a30fff985404406332cef72c">list_courses</a>, { <span class="stringliteral">&quot;listar_cursos&quot;</span>, <span class="stringliteral">&quot;lc&quot;</span> }},</div>
+<div class="line">        { <a class="code" href="namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fac26eeb2d811417256dff9ec877ab2a4a">write_course</a>, { <span class="stringliteral">&quot;escribir_curso&quot;</span>, <span class="stringliteral">&quot;ec&quot;</span> }},</div>
+<div class="line">        { <a class="code" href="namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fabfa87367a67f5b01e6390c18bb324e17">list_users</a>, { <span class="stringliteral">&quot;listar_usuarios&quot;</span>, <span class="stringliteral">&quot;lu&quot;</span> }},</div>
+<div class="line">        { <a class="code" href="namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fa392abf161f8f14388c8548d806a3f181">write_user</a>, { <span class="stringliteral">&quot;escribir_usuario&quot;</span>, <span class="stringliteral">&quot;eu&quot;</span> }},</div>
+<div class="line">        { <a class="code" href="namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fa5e2cb507ee5d7460547559578ac229c5">end_program</a>, { <span class="stringliteral">&quot;fin&quot;</span> }}</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p>unordered map of SystemCommand's and a list of their corresponding InputCommand's </p>
+
+<p class="definition">Definition at line <a class="el" href="IO_8cc_source.html#l00016">16</a> of file <a class="el" href="IO_8cc_source.html">IO.cc</a>.</p>
+
+</div>
+</div>
+<a id="a66d12d70109aabffcdb7eed671543b92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66d12d70109aabffcdb7eed671543b92">&#9670;&nbsp;</a></span>errors</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::unordered_map&lt;<a class="el" href="namespaceio.html#adbb419c9c9a584444a295d1738727dae">io::Error</a>, std::string&gt; io::errors</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">        { <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daea5f68ff264f89ab8ac3172891aacec52c">default_error</a>, <span class="stringliteral">&quot;error por defecto&quot;</span> },</div>
+<div class="line">        { <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daea4212adc88e82eba84cd284d97bec8445">already_existing_problem</a>, <span class="stringliteral">&quot;el problema ya existe&quot;</span> },</div>
+<div class="line">        { <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daea73de562c73630dcd8997729ab97b1e09">nonexistent_problem</a>, <span class="stringliteral">&quot;el problema no existe&quot;</span> },</div>
+<div class="line">        { <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daea43ab05a5404f65c8bf54c4166ec8e6a5">already_existing_session</a>, <span class="stringliteral">&quot;la sesion ya existe&quot;</span> },</div>
+<div class="line">        { <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daeafdd530a7ad1f912ca847848cfeebc168">nonexistent_session</a>, <span class="stringliteral">&quot;la sesion no existe&quot;</span> },</div>
+<div class="line">        { <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daeaafb30d031b094858f4ee9fde14d68563">nonexistent_course</a>, <span class="stringliteral">&quot;el curso no existe&quot;</span> },</div>
+<div class="line">        { <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daea70a59be58c0cabfcfc69fb395b4d1cdb">nonexistent_user</a>, <span class="stringliteral">&quot;el usuario no existe&quot;</span> },</div>
+<div class="line">        { <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daeaff725f336d8a983f0fb2238aee957cda">already_existing_user</a>, <span class="stringliteral">&quot;el usuario ya existe&quot;</span> },</div>
+<div class="line">        { <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daea41796c73d06498981f86c782bdcdec19">already_enrolled_user</a>, <span class="stringliteral">&quot;usuario inscrito en otro curso&quot;</span> },</div>
+<div class="line">        { <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daea86c78e783ad08cabfa804b96d769c427">nonenrolled_user</a>, <span class="stringliteral">&quot;usuario no inscrito en ningun curso&quot;</span> },</div>
+<div class="line">        { <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daea6e1d02c9662dd24c5e4ff3cd975373a2">problem_not_in_course</a>, <span class="stringliteral">&quot;el problema no pertenece al curso&quot;</span> },</div>
+<div class="line">        { <a class="code" href="namespaceio.html#adbb419c9c9a584444a295d1738727daea0e91ec7889f754ba7a611e102c2a74d5">malformed_course</a>, <span class="stringliteral">&quot;curso mal formado&quot;</span> }</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p>unordered map of Error's and their corresponding strings to be logged </p>
+
+<p class="definition">Definition at line <a class="el" href="IO_8cc_source.html#l00056">56</a> of file <a class="el" href="IO_8cc_source.html">IO.cc</a>.</p>
 
 </div>
 </div>

@@ -1,6 +1,6 @@
 /**
 @file IReadable.hh
-@brief File containing the specification the @c IReadable interface
+@brief File containing the specification the IReadable interface
 */
 
 #ifndef IREADABLE_HH
@@ -13,7 +13,7 @@
 #endif
 
 /**
-@Interface IReadable
+@interface IReadable
 @brief IReadable interface
 */
 class IReadable {

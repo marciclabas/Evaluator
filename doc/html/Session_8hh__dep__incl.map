@@ -1,9 +1,0 @@
-<map id="Session.hh" name="Session.hh">
-<area shape="rect" id="node1" title="File containing the specification of the Session class and it&#39;s corresponding namespace." alt="" coords="65,5,157,32"/>
-<area shape="rect" id="node2" href="$SessionRep_8hh.html" title="File containing the specification of the SessionRepository class." alt="" coords="53,80,170,107"/>
-<area shape="rect" id="node3" href="$Course_8hh.html" title="File containing the specification of the Course class." alt="" coords="28,155,115,181"/>
-<area shape="rect" id="node5" href="$program_8cc.html" title="File containing the main function." alt="" coords="27,453,121,480"/>
-<area shape="rect" id="node4" href="$CourseSet_8hh.html" title="File containing the specification of the CourseSet class." alt="" coords="12,229,120,256"/>
-<area shape="rect" id="node6" href="$User_8hh.html" title="File containing the specification of the User class." alt="" coords="34,304,106,331"/>
-<area shape="rect" id="node7" href="$UserSet_8hh.html" title="File containing the specification of the UserSet class." alt="" coords="27,379,121,405"/>
-</map>

@@ -1,3 +1,8 @@
+/**
+@file Course.cc
+@brief File containing the implementation of the Course class
+*/
+
 #include "Course.hh"
 
 /*================================================================private methods=============================================================*/
@@ -41,6 +46,7 @@ bool Course::containsProblem(prb::ID problemID) const {
 
 void Course::updateSolvableProblems(ICanSolveProblems & solverObject, prb::ID lastSolvedProblem) const {
 	if(lastSolvedProblem == prb::invalidID) {
+		// check all sessions
 		for(ses::ID sessionID : sessions)
 			SessionRepository::getInstance()[sessionID].updateSolvableProblems(solverObject);
 	}
@@ -64,7 +70,7 @@ Course::const_iterator Course::end() const {
 void Course::print() const {
 	assert(sessions.begin() != sessions.end());
 
-	auto sessionIterator = begin();
+	const_iterator sessionIterator = begin();
 	std::cout << usersCompleted << ' ' << usersEnrolled << ' ' << this->sessionCount() << " (" << *sessionIterator;
 	sessionIterator++;
 
@@ -75,6 +81,12 @@ void Course::print() const {
 	std::cout << ')';
 }
 
+/**
+@brief Flushes n ses::ID's from the stdin
+@pre There are n ses::ID's in the stdin
+@post n ses::ID's have been removed from the stdin
+@param n an integer
+*/
 static void flush_sessionIDs(int n) {
 	for(int i = 0; i < n; i++) {
 		ses::ID foo;
@@ -87,16 +99,21 @@ void Course::read() {
 	int sessionCount; std::cin >> sessionCount;
 	for(int i = 0; i < sessionCount; i++) {
 		ses::ID sessionID; std::cin >> sessionID;
-		const Session & session = SessionRepository::getInstance()[sessionID];
+		// add the session to the vector and store its index
 		int sessionIndex = addSessionToVector(sessionID);
+		const Session & session = SessionRepository::getInstance()[sessionID];
 
+		// check if any problem contained in the session is already in the course
 		for(const prb::ID problemID : session) {
 			if(containsProblem(problemID)) {
+				// set the course as non valid and stop reading
 				valid = false;
+				// flush the stdin before stopping the process
 				flush_sessionIDs(sessionCount - i - 1);
 				return;
 			}
 			else { 
+				// add the problem to the course and assign it to the corresponding ses::ID
 				problemSessionIndex[problemID] = sessionIndex;
 			}
 		}
@@ -123,28 +140,19 @@ bool Course::isValid() const {
 	return valid;
 }
 
-/* overkill initial implementation: O(n^2)
-bool Course::operator==(const Course & otherCourse) const {
-	for(ses::ID sessionID : *this)
-		for(ses::ID otherSessionID : otherCourse)
-			if(sessionID != otherSessionID) return false;
-	return true;
-}
-*/
-
-// better implementation (in large cases): O(n)
 bool Course::operator==(const Course & otherCourse) const {
 	// return false if have different number of sessions or problems
 	if(sessionCount() != otherCourse.sessionCount() or problemCount() != otherCourse.problemCount()) return false;
 	
-	// both maps have the same size here
-	auto thisIt = problemSessionIndex.begin();
-	auto otherIt = otherCourse.problemSessionIndex.begin();
+	// both maps have the same size
+	std::map<prb::ID, int>::const_iterator thisIt = problemSessionIndex.cbegin();
+	std::map<prb::ID, int>::const_iterator otherIt = otherCourse.problemSessionIndex.cbegin();
 
 	while(thisIt != problemSessionIndex.end()) {
-		if(*thisIt != *otherIt) return false;
+		if(thisIt->first != otherIt->first) return false;
 		thisIt++;
 		otherIt++;
 	}
+	// both iterators have reached the ebd
 	return true;
 }

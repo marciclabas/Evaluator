@@ -1,5 +1,0 @@
-<map id="User" name="User">
-<area shape="rect" id="node1" title="Represents a user with a unique name (id) and some statistics." alt="" coords="21,145,209,355"/>
-<area shape="rect" id="node2" href="$class_i_readable.html" title="IReadable interface." alt="" coords="5,5,104,97"/>
-<area shape="rect" id="node3" href="$class_i_printable.html" title="IPrintable interface." alt="" coords="128,5,224,97"/>
-</map>

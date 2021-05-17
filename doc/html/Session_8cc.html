@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -23,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Evaluator
-   &#160;<span id="projectnumber">1.0 Specification</span>
+   &#160;<span id="projectnumber">2.0 Implementation</span>
    </div>
    <div id="projectbrief">pro2 lab pracs: problem-evaluator-like platform</div>
   </td>
@@ -62,12 +63,281 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_08d237fc27d4ecd563f71c5d52f2fecc.html">sources</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Session.cc File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>File containing the implementation of the <a class="el" href="classSession.html" title="Represents a session, i.e., a set of non-repeated problems sorted in a binary tree-like prerequisite ...">Session</a> class.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="Session_8hh_source.html">Session.hh</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for Session.cc:</div>
+<div class="dyncontent">
+<div class="center"><img src="Session_8cc__incl.png" border="0" usemap="#aSession_8cc" alt=""/></div>
+<map name="aSession_8cc" id="aSession_8cc">
+<area shape="rect" title="File containing the implementation of the Session class." alt="" coords="19,5,109,32"/>
+<area shape="rect" href="Session_8hh.html" title="File containing the specification of the Session class and it&#39;s corresponding namespace." alt="" coords="18,80,110,107"/>
+<area shape="rect" href="ProblemCol_8hh.html" title="File containing the specification of the ProblemCollection class." alt="" coords="5,155,123,181"/>
+<area shape="rect" href="Problem_8hh.html" title="File containing the specification of the Problem class." alt="" coords="16,229,112,256"/>
+</map>
+</div>
+</div>
+<p><a href="Session_8cc_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a1fd8968549d39d533b6d1158f1b0cd41"><td class="memItemLeft" align="right" valign="top">static std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Session_8cc.html#a1fd8968549d39d533b6d1158f1b0cd41">operator&lt;&lt;</a> (std::ostream &amp;out, const BinTree&lt; <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> &gt; &amp;tree)</td></tr>
+<tr class="memdesc:a1fd8968549d39d533b6d1158f1b0cd41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a binary tree in postorder.  <a href="Session_8cc.html#a1fd8968549d39d533b6d1158f1b0cd41">More...</a><br /></td></tr>
+<tr class="separator:a1fd8968549d39d533b6d1158f1b0cd41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2da5603a72f22d40c198f10a678e232d"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Session_8cc.html#a2da5603a72f22d40c198f10a678e232d">contains</a> (<a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> value, const BinTree&lt; <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> &gt; &amp;tree)</td></tr>
+<tr class="memdesc:a2da5603a72f22d40c198f10a678e232d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a given binary tree of <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> contains a given id.  <a href="Session_8cc.html#a2da5603a72f22d40c198f10a678e232d">More...</a><br /></td></tr>
+<tr class="separator:a2da5603a72f22d40c198f10a678e232d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a175157a62846d5ef90e2f20846ad2d73"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Session_8cc.html#a175157a62846d5ef90e2f20846ad2d73">updateSolvableProblemsImmersion</a> (<a class="el" href="classICanSolveProblems.html">ICanSolveProblems</a> &amp;solver, const BinTree&lt; <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> &gt; &amp;tree)</td></tr>
+<tr class="memdesc:a175157a62846d5ef90e2f20846ad2d73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the problems contained in a given tree the given <a class="el" href="classICanSolveProblems.html" title="ICanSolveProblems interface.">ICanSolveProblems</a> can solve.  <a href="Session_8cc.html#a175157a62846d5ef90e2f20846ad2d73">More...</a><br /></td></tr>
+<tr class="separator:a175157a62846d5ef90e2f20846ad2d73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab7e65356dbb775700d308fecddf90c9"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Session_8cc.html#aab7e65356dbb775700d308fecddf90c9">getProblemSubTree</a> (<a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> problemID, BinTree&lt; <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> &gt; &amp;tree)</td></tr>
+<tr class="separator:aab7e65356dbb775700d308fecddf90c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>File containing the implementation of the <a class="el" href="classSession.html" title="Represents a session, i.e., a set of non-repeated problems sorted in a binary tree-like prerequisite ...">Session</a> class. </p>
+
+<p class="definition">Definition in file <a class="el" href="Session_8cc_source.html">Session.cc</a>.</p>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a1fd8968549d39d533b6d1158f1b0cd41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fd8968549d39d533b6d1158f1b0cd41">&#9670;&nbsp;</a></span>operator&lt;&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const BinTree&lt; <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>tree</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prints a binary tree in postorder. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>tree is not empty </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>tree is printed in postorder (and correct format) </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>an output stream </td></tr>
+    <tr><td class="paramname">tree</td><td>a binary tree of <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="Session_8cc_source.html#l00022">22</a> of file <a class="el" href="Session_8cc_source.html">Session.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                                                                             {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">if</span>(not tree.empty())</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        out &lt;&lt; <span class="charliteral">&#39;(&#39;</span> &lt;&lt; tree.left() &lt;&lt; tree.right() &lt;&lt; tree.value() &lt;&lt; <span class="charliteral">&#39;)&#39;</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">return</span> out;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2da5603a72f22d40c198f10a678e232d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2da5603a72f22d40c198f10a678e232d">&#9670;&nbsp;</a></span>contains()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool contains </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a>&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const BinTree&lt; <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>tree</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns whether a given binary tree of <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> contains a given id. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Returns <code>true</code> if the given id is contained in the tree. Returns <code>false</code> otherwise </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>a problem ID </td></tr>
+    <tr><td class="paramname">tree</td><td>a binary tree of problem ID's </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A boolean representing whether the tree contains the problem </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Session_8cc_source.html#l00058">58</a> of file <a class="el" href="Session_8cc_source.html">Session.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                                                               {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">if</span>(tree.empty()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">return</span> tree.value() == value or <a class="code" href="Session_8cc.html#a2da5603a72f22d40c198f10a678e232d">contains</a>(value, tree.left()) or <a class="code" href="Session_8cc.html#a2da5603a72f22d40c198f10a678e232d">contains</a>(value, tree.right());</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<div class="ttc" id="aSession_8cc_html_a2da5603a72f22d40c198f10a678e232d"><div class="ttname"><a href="Session_8cc.html#a2da5603a72f22d40c198f10a678e232d">contains</a></div><div class="ttdeci">static bool contains(prb::ID value, const BinTree&lt; prb::ID &gt; &amp;tree)</div><div class="ttdoc">Returns whether a given binary tree of prb::ID contains a given id.</div><div class="ttdef"><b>Definition:</b> <a href="Session_8cc_source.html#l00058">Session.cc:58</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a175157a62846d5ef90e2f20846ad2d73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a175157a62846d5ef90e2f20846ad2d73">&#9670;&nbsp;</a></span>updateSolvableProblemsImmersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void updateSolvableProblemsImmersion </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classICanSolveProblems.html">ICanSolveProblems</a> &amp;&#160;</td>
+          <td class="paramname"><em>solver</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const BinTree&lt; <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>tree</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Updates the problems contained in a given tree the given <a class="el" href="classICanSolveProblems.html" title="ICanSolveProblems interface.">ICanSolveProblems</a> can solve. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The problems contained in the given tree the given <a class="el" href="classICanSolveProblems.html" title="ICanSolveProblems interface.">ICanSolveProblems</a> can solve are updated </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">solverObject</td><td>a reference to the object whose solvable problems are to be updated </td></tr>
+    <tr><td class="paramname">tree</td><td>a tree containing problem ID's in a prerequisite structure </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="Session_8cc_source.html#l00074">74</a> of file <a class="el" href="Session_8cc_source.html">Session.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                                                                                                     {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">if</span>(not tree.empty()) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">if</span>(solver.<a class="code" href="classICanSolveProblems.html#a3c66ab6e449a42b0ae996a6b8993eb07">hasSolvedProblem</a>(tree.value())) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <a class="code" href="Session_8cc.html#a175157a62846d5ef90e2f20846ad2d73">updateSolvableProblemsImmersion</a>(solver, tree.left());</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <a class="code" href="Session_8cc.html#a175157a62846d5ef90e2f20846ad2d73">updateSolvableProblemsImmersion</a>(solver, tree.right());</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">else</span> solver.<a class="code" href="classICanSolveProblems.html#ad25562b94fa70f83a0724da142f92ef0">addSolvableProblem</a>(tree.value());</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
+<div class="ttc" id="aSession_8cc_html_a175157a62846d5ef90e2f20846ad2d73"><div class="ttname"><a href="Session_8cc.html#a175157a62846d5ef90e2f20846ad2d73">updateSolvableProblemsImmersion</a></div><div class="ttdeci">static void updateSolvableProblemsImmersion(ICanSolveProblems &amp;solver, const BinTree&lt; prb::ID &gt; &amp;tree)</div><div class="ttdoc">Updates the problems contained in a given tree the given ICanSolveProblems can solve.</div><div class="ttdef"><b>Definition:</b> <a href="Session_8cc_source.html#l00074">Session.cc:74</a></div></div>
+<div class="ttc" id="aclassICanSolveProblems_html_a3c66ab6e449a42b0ae996a6b8993eb07"><div class="ttname"><a href="classICanSolveProblems.html#a3c66ab6e449a42b0ae996a6b8993eb07">ICanSolveProblems::hasSolvedProblem</a></div><div class="ttdeci">virtual bool hasSolvedProblem(prb::ID problemID) const =0</div><div class="ttdoc">Returns whether the ICanSolveProblems object has solved a problem with the given ID.</div></div>
+<div class="ttc" id="aclassICanSolveProblems_html_ad25562b94fa70f83a0724da142f92ef0"><div class="ttname"><a href="classICanSolveProblems.html#ad25562b94fa70f83a0724da142f92ef0">ICanSolveProblems::addSolvableProblem</a></div><div class="ttdeci">virtual void addSolvableProblem(prb::ID problemID)=0</div><div class="ttdoc">Adds a solvable problem to the ICanSolveProblems objects.</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aab7e65356dbb775700d308fecddf90c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab7e65356dbb775700d308fecddf90c9">&#9670;&nbsp;</a></span>getProblemSubTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool getProblemSubTree </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a>&#160;</td>
+          <td class="paramname"><em>problemID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinTree&lt; <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>tree</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section pre"><dt>Precondition</dt><dd>problemID is contained in the session, tree = T contains problemID </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>tree is the subtree of T that has problemID as root </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Session_8cc_source.html#l00088">88</a> of file <a class="el" href="Session_8cc_source.html">Session.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                                                                      {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">if</span>(tree.empty()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">if</span>(tree.value() == problemID) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    BinTree&lt;prb::ID&gt; leftChild = tree.left();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="Session_8cc.html#aab7e65356dbb775700d308fecddf90c9">getProblemSubTree</a>(problemID, leftChild)) {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        tree = leftChild;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    BinTree&lt;prb::ID&gt; rightChild = tree.right();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="Session_8cc.html#aab7e65356dbb775700d308fecddf90c9">getProblemSubTree</a>(problemID, rightChild)) {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        tree = rightChild;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div>
+<div class="ttc" id="aSession_8cc_html_aab7e65356dbb775700d308fecddf90c9"><div class="ttname"><a href="Session_8cc.html#aab7e65356dbb775700d308fecddf90c9">getProblemSubTree</a></div><div class="ttdeci">static bool getProblemSubTree(prb::ID problemID, BinTree&lt; prb::ID &gt; &amp;tree)</div><div class="ttdef"><b>Definition:</b> <a href="Session_8cc_source.html#l00088">Session.cc:88</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

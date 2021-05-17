@@ -1,8 +1,14 @@
+/**
+@file CourseSet.cc
+@brief File containing the implementation of the CourseSet class
+*/
+
 #include "CourseSet.hh"
 
 #include <cassert>
 
 /* =========================================================constructors & destructors=========================================================*/
+
 CourseSet::CourseSet(): courses(std::vector<Course>()) {}
 
 CourseSet::~CourseSet() {}
@@ -10,6 +16,7 @@ CourseSet::~CourseSet() {}
 /*===========================================================singleton-related methods=========================================================*/
 
 CourseSet & CourseSet::getInstance() {
+	// gets created the first time (lazy instantiation) and referenced afterwardss
 	static CourseSet instance;
 	return instance;
 }
@@ -19,6 +26,7 @@ CourseSet & CourseSet::getInstance() {
 void CourseSet::print() const {
 	for(crs::ID id = 1; id <= courses.size(); id++) {
 		std::cout << id << ' ';
+		// translate from vector printing 1-indexed id's to 0-indexed id's
 		courses[id-1].print();
 		std::cout << std::endl;
 	}

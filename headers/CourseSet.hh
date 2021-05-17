@@ -22,7 +22,19 @@
 class CourseSet : public IReadable, public IPrintable {
 private:
 	/* =========================================================constructors & destructors=========================================================*/
+	
+	/**
+	@brief Private default constructor
+	@pre True
+	@post Creates an empty CourseSet
+	*/
 	CourseSet();
+
+	/**
+	@brief Private default destructor
+	@pre True
+	@post Deletes the implicit parameter
+	*/
 	~CourseSet();
 	
 	/**
@@ -72,7 +84,7 @@ public:
 	 @brief Returns wheter the set contains a Course equal to the given one
 	 @pre True
 	 @post Returns @c true if there is Course equal to the given one within the implicit parameter. Returns @c false otherwise
-	 @param toCheckSession a Course
+	 @param toCheckCourse a Course
 	 @return A boolean representing whether the implicit parameter contains a Course equal to the given one
 	 */
 	bool contains(const Course & toCheckCourse) const;

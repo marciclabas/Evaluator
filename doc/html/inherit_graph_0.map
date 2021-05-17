@@ -1,5 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classICanSolveProblems.html" title=" " alt="" coords="5,5,153,32"/>
+<area shape="rect" id="node1" href="$classICanSolveProblems.html" title="ICanSolveProblems interface." alt="" coords="5,5,153,32"/>
 <area shape="rect" id="node2" href="$classUser.html" title="Represents a user with a unique name (id) and some statistics." alt="" coords="249,5,301,32"/>
 <area shape="rect" id="node3" href="$classIPrintable.html" title="IPrintable interface." alt="" coords="37,208,121,235"/>
 <area shape="rect" id="node4" href="$classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics." alt="" coords="241,309,308,336"/>

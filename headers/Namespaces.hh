@@ -1,6 +1,6 @@
 /**
 @file Namespaces.hh
-@brief File containing the namespaces corresponding to Problem, Session, Course and User
+@brief File containing the namespaces specification corresponding to Problem, Session, Course and User
 */
 
 #ifndef NAMESPACES_HH

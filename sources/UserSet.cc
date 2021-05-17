@@ -1,3 +1,8 @@
+/**
+@file UserSet.cc
+@brief File containing the implementation of the UserSet class
+*/
+
 #include "UserSet.hh"
 
 /*==========================================================constructors & destructors=========================================================*/
@@ -8,6 +13,7 @@ UserSet::~UserSet() {}
 /*===========================================================singleton-related methods=========================================================*/
 
 UserSet & UserSet::getInstance() {
+	// gets created the first time (lazy instantiation) and referenced afterwards
 	static UserSet instance;
 	return instance;
 }

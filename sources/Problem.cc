@@ -1,3 +1,8 @@
+/**
+@file Problem.cc
+@brief File containing the implementation of the Problem class
+*/
+
 #include "Problem.hh"
 
 

@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -23,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Evaluator
-   &#160;<span id="projectnumber">1.0 Specification</span>
+   &#160;<span id="projectnumber">2.0 Implementation</span>
    </div>
    <div id="projectbrief">pro2 lab pracs: problem-evaluator-like platform</div>
   </td>
@@ -62,12 +63,94 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_08d237fc27d4ecd563f71c5d52f2fecc.html">sources</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Course.cc File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>File containing the implementation of the <a class="el" href="classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics.">Course</a> class.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="Course_8hh_source.html">Course.hh</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for Course.cc:</div>
+<div class="dyncontent">
+<div class="center"><img src="Course_8cc__incl.png" border="0" usemap="#aCourse_8cc" alt=""/></div>
+<map name="aCourse_8cc" id="aCourse_8cc">
+<area shape="rect" title="File containing the implementation of the Course class." alt="" coords="21,5,107,32"/>
+<area shape="rect" href="Course_8hh.html" title="File containing the specification of the Course class." alt="" coords="21,80,107,107"/>
+<area shape="rect" href="SessionRep_8hh.html" title="File containing the specification of the SessionRepository class." alt="" coords="5,155,123,181"/>
+<area shape="rect" href="Session_8hh.html" title="File containing the specification of the Session class and it&#39;s corresponding namespace." alt="" coords="18,229,110,256"/>
+<area shape="rect" href="ProblemCol_8hh.html" title="File containing the specification of the ProblemCollection class." alt="" coords="5,304,123,331"/>
+<area shape="rect" href="Problem_8hh.html" title="File containing the specification of the Problem class." alt="" coords="16,379,112,405"/>
+</map>
+</div>
+</div>
+<p><a href="Course_8cc_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ae710a1f4ccbd820c1a2e2d8df0d00675"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Course_8cc.html#ae710a1f4ccbd820c1a2e2d8df0d00675">flush_sessionIDs</a> (int n)</td></tr>
+<tr class="memdesc:ae710a1f4ccbd820c1a2e2d8df0d00675"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flushes n <a class="el" href="namespaceses.html#a3e27309376c2c29f777924e38b232b46">ses::ID</a>'s from the stdin.  <a href="Course_8cc.html#ae710a1f4ccbd820c1a2e2d8df0d00675">More...</a><br /></td></tr>
+<tr class="separator:ae710a1f4ccbd820c1a2e2d8df0d00675"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>File containing the implementation of the <a class="el" href="classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics.">Course</a> class. </p>
+
+<p class="definition">Definition in file <a class="el" href="Course_8cc_source.html">Course.cc</a>.</p>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="ae710a1f4ccbd820c1a2e2d8df0d00675"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae710a1f4ccbd820c1a2e2d8df0d00675">&#9670;&nbsp;</a></span>flush_sessionIDs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void flush_sessionIDs </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Flushes n <a class="el" href="namespaceses.html#a3e27309376c2c29f777924e38b232b46">ses::ID</a>'s from the stdin. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>There are n <a class="el" href="namespaceses.html#a3e27309376c2c29f777924e38b232b46">ses::ID</a>'s in the stdin </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>n <a class="el" href="namespaceses.html#a3e27309376c2c29f777924e38b232b46">ses::ID</a>'s have been removed from the stdin </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>an integer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="Course_8cc_source.html#l00090">90</a> of file <a class="el" href="Course_8cc_source.html">Course.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                                    {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <a class="code" href="namespaceses.html#a3e27309376c2c29f777924e38b232b46">ses::ID</a> foo;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        std::cin &gt;&gt; foo;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+<div class="ttc" id="anamespaceses_html_a3e27309376c2c29f777924e38b232b46"><div class="ttname"><a href="namespaceses.html#a3e27309376c2c29f777924e38b232b46">ses::ID</a></div><div class="ttdeci">std::string ID</div><div class="ttdef"><b>Definition:</b> <a href="Namespaces_8hh_source.html#l00035">Namespaces.hh:35</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

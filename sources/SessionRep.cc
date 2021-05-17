@@ -1,3 +1,8 @@
+/**
+@file SessionRep.cc
+@brief File containing the implementation of the SessionRepository class
+*/
+
 #include "SessionRep.hh"
 
 #include <cassert>
@@ -10,6 +15,7 @@ SessionRepository::~SessionRepository() {}
 /*===========================================================singleton-related methods=========================================================*/
 
 SessionRepository & SessionRepository::getInstance() {
+	// gets created the first time (lazy instantiation) and referenced afterwards
 	static SessionRepository instance;
 	return instance;
 }
@@ -18,6 +24,8 @@ SessionRepository & SessionRepository::getInstance() {
 /*==============================================================overrided IO methods============================================================*/
 
 void SessionRepository::print() const {
+	// again, update to c++ 17 plz, we need structured bindings :(
+	// for(const std::pair<ses::ID, Session> [id, session]) std::cout << id << session;
 	for(const std::pair<ses::ID, Session> & kv : sessions) {
 		std::cout << kv.first << ' ';
 		kv.second.print();

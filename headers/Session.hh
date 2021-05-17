@@ -28,16 +28,21 @@ class Session : public IPrintable, public IReadable {
 private:
 	/**
 	@brief Binary tree containing the session's problem's in their prerequisite structure
-	@invariant 	1. There is not any node with value prb::invalidID
-				2. Has the same problems as problemsSet does
+	@invariant 	<ol>
+					<li>There is not any node with value prb::invalidID</li>
+					<li>Has the same problems as problemsSet does</li>
+				</ol>
+				
 	*/
 	BinTree<prb::ID> problemsTree;
 
 	/**
 	@brief Set containing the session's problem's
-	@invariant 	1. There is not any element with value prb::invalidID
-				2. Has the same problems as problemsTree does
-				3. Is sorted by the elements themselves, i.e., by ID's
+	@invariant 	<ol>
+					<li>There is not any element with value prb::invalidID</li>
+					<li>Has the same problems as problemsTree does</li>
+					<li>Is sorted by the elements themselves, i.e., by ID's</li>
+				</ol>
 	*/
 	std::set<prb::ID> problemsSet;
 
@@ -97,7 +102,7 @@ public:
 	@pre lastSolvedProblem is invalid or is contained in the session
 	@post The problems contained in the implicit parameter the given ICanSolveProblems can solve are updated
 	@param solverObject a reference to the object whose solvable problems are to be updated
-	@param lastSolvedProblem the prb::ID of the problem solverObject solved last
+	@param lastSolvedProblem the prb::ID of the problem solverObject solved last (if any)
 	*/
 	void updateSolvableProblems(ICanSolveProblems & solverObject, prb::ID lastSolvedProblem = prb::invalidID) const;
 

@@ -135,7 +135,7 @@ public:
 	@pre The given ICanSolveProblems is enrolled in the course and has solved the given problem
 	@post The problems ICanSolveProblems can solve are updated
 	@param solverObject a reference to the object whose solvable problems are to be updated
-	@param lastSolvedProblem the prb::ID of the problem solverObject solved last
+	@param lastSolvedProblem the prb::ID of the problem solverObject solved last (if any)
 	*/
 	void updateSolvableProblems(ICanSolveProblems & solverObject, prb::ID lastSolvedProblem = prb::invalidID) const;
 

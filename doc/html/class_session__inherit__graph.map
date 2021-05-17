@@ -1,5 +1,0 @@
-<map id="Session" name="Session">
-<area shape="rect" id="node1" title="Represents a session, i.e., a set of non&#45;repeated problems with prerequisites with a unique name (id)" alt="" coords="67,145,162,237"/>
-<area shape="rect" id="node2" href="$class_i_readable.html" title="IReadable interface." alt="" coords="5,5,104,97"/>
-<area shape="rect" id="node3" href="$class_i_printable.html" title="IPrintable interface." alt="" coords="128,5,224,97"/>
-</map>

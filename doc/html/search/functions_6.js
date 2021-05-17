@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['isenrolledincourse_214',['isEnrolledInCourse',['../classUser.html#afab0e9d7bbd0acc257f4b747c404e231',1,'User']]],
-  ['isvalid_215',['isValid',['../classCourse.html#a1a76f8038858c2253766bf6b5cacf5e1',1,'Course']]]
+  ['hassolvedproblem_244',['hasSolvedProblem',['../classICanSolveProblems.html#a3c66ab6e449a42b0ae996a6b8993eb07',1,'ICanSolveProblems::hasSolvedProblem()'],['../classUser.html#a8b48f850b7a1457454233a250e87929d',1,'User::hasSolvedProblem()']]]
 ];

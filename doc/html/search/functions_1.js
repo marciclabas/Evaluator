@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['begin_193',['begin',['../classCourse.html#aadcbf642ecfd6b21118873350d8df79a',1,'Course::begin()'],['../classSession.html#a0735755f0145dbd9d8d3a37dd6ea617d',1,'Session::begin()']]]
+  ['begin_221',['begin',['../classCourse.html#addcea1f88dbd690ccb661a98e33df496',1,'Course::begin()'],['../classSession.html#a990db731c584fa5c6643a181a98653e0',1,'Session::begin()']]]
 ];

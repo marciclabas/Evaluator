@@ -1,3 +1,8 @@
+/**
+@file IO.cc
+@brief File containing the specification of some IO operations and types within the io namespace
+*/
+
 #include "IO.hh"
 
 #include <unordered_map>
@@ -5,6 +10,9 @@
 
 namespace io {
 
+    /**
+    @brief unordered map of SystemCommand's and a list of their corresponding InputCommand's
+    */
    const static std::unordered_map<io::SystemCommand, std::list<io::InputCommand>> commands = {
         { new_problem, { "nuevo_problema", "np" }},
         { new_session, { "nueva_sesion", "ns" }},
@@ -29,17 +37,22 @@ namespace io {
     };
     
 	bool operator==(io::InputCommand input, io::SystemCommand system) {
+        // check all possible syntaxes equivalent to the system command
 		for(const io::InputCommand & command : commands.at(system))
 	        if(command == input) return true;
 	    return false;
 	}
 	
 	bool operator!=(io::InputCommand input, io::SystemCommand system) {
+        // check all possible syntaxes equivalent to the system command
 		for(const io::InputCommand & command : commands.at(system))
 	        if(command == input) return false;
 	    return true;
 	}
 	
+    /**
+    @brief unordered map of Error's and their corresponding strings to be logged
+    */
     const static std::unordered_map<io::Error, std::string> errors = {
         { default_error, "error por defecto" },
 		{ already_existing_problem, "el problema ya existe" },
@@ -59,7 +72,7 @@ namespace io {
         std::cout << "error: " << errors.at(er) << std::endl;
 	}
 	
-	/*void echo(io::InputCommand command) {
+	void echo(io::InputCommand command) {
 	    std::cout << '#' << command;
-	}*/
+	}
 }

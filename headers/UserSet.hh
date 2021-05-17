@@ -75,7 +75,7 @@ public:
 	 @brief Returns wheter the set contains a User with the given id
 	 @pre True
 	 @post Returns @c true if there is User with the given id within the implicit parameter. Returns @c false otherwise
-	 @param sessionID a usr::ID
+	 @param userID a usr::ID
 	 @return A boolean representing whether the implicit parameter contains the given User
 	 */
 	bool contains(usr::ID userID) const;
@@ -84,7 +84,7 @@ public:
 	 @brief Returns the User with the given id contained in the set
 	 @pre A User with the given id does exist within the implicit parameter
 	 @post Returns the User with the given id
-	 @param sessionID a usr::ID
+	 @param userID a usr::ID
 	 @return A reference to the User with the given id
 	 */
 	User & operator[](usr::ID userID);
@@ -101,8 +101,8 @@ public:
 	 @brief Adds a given User to the collection
 	 @pre There is not any User with the given id or the same problems as the given User within the implicit parameter
 	 @post The given User is added to the implicit parameter with the given id
-	 @param newSessionID a usr::ID
-	 @param newSession a User
+	 @param newUserID a usr::ID
+	 @param newUser a User
 	 */
 	void add(usr::ID newUserID);
 	
@@ -110,6 +110,7 @@ public:
 	 @brief Removes a User from the set
 	 @pre A User with the given ID exists within the set
 	 @post The User with the given ID no longer exists within the set
+	 @param userID a usr::ID
 	 */
 	void remove(usr::ID userID);
 };

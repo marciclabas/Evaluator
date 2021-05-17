@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['main_216',['main',['../program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'program.cc']]]
+  ['isenrolledincourse_245',['isEnrolledInCourse',['../classUser.html#afab0e9d7bbd0acc257f4b747c404e231',1,'User']]],
+  ['isvalid_246',['isValid',['../classCourse.html#a1a76f8038858c2253766bf6b5cacf5e1',1,'Course']]]
 ];

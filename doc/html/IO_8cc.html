@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -23,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Evaluator
-   &#160;<span id="projectnumber">1.0 Specification</span>
+   &#160;<span id="projectnumber">2.0 Implementation</span>
    </div>
    <div id="projectbrief">pro2 lab pracs: problem-evaluator-like platform</div>
   </td>
@@ -62,35 +63,75 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_08d237fc27d4ecd563f71c5d52f2fecc.html">sources</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">IO.cc File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>File containing the specification of some IO operations and types within the io namespace.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="IO_8hh_source.html">IO.hh</a>&quot;</code><br />
+<code>#include &lt;unordered_map&gt;</code><br />
+<code>#include &lt;list&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for IO.cc:</div>
 <div class="dyncontent">
 <div class="center"><img src="IO_8cc__incl.png" border="0" usemap="#aIO_8cc" alt=""/></div>
 <map name="aIO_8cc" id="aIO_8cc">
-<area shape="rect" title=" " alt="" coords="6,5,61,32"/>
+<area shape="rect" title="File containing the specification of some IO operations and types within the io namespace." alt="" coords="121,5,175,32"/>
 <area shape="rect" href="IO_8hh.html" title="File containing the specification of some IO operations and types within the io namespace." alt="" coords="5,80,61,107"/>
+<area shape="rect" title=" " alt="" coords="86,80,210,107"/>
+<area shape="rect" title=" " alt="" coords="235,80,277,107"/>
 </map>
 </div>
-</div><table class="memberdecls">
+</div>
+<p><a href="IO_8cc_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespaceio"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceio.html">io</a></td></tr>
+<tr class="memdesc:namespaceio"><td class="mdescLeft">&#160;</td><td class="mdescRight">namespace containing type definitions and some input/output functions <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a48057e237b63517e1913e80e9473a45a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="IO_8cc_a48057e237b63517e1913e80e9473a45a.html#a48057e237b63517e1913e80e9473a45a">operator==</a> (InputCommand a, SystemCommand b)</td></tr>
-<tr class="separator:a48057e237b63517e1913e80e9473a45a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acca42e1e3be7ae2acc30ecd10c7b38f7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="IO_8cc_acca42e1e3be7ae2acc30ecd10c7b38f7.html#acca42e1e3be7ae2acc30ecd10c7b38f7">operator!=</a> (InputCommand a, SystemCommand b)</td></tr>
-<tr class="separator:acca42e1e3be7ae2acc30ecd10c7b38f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31eef804d37f8945ce5d828a5419d37a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="IO_8cc_a31eef804d37f8945ce5d828a5419d37a.html#a31eef804d37f8945ce5d828a5419d37a">error</a> (std::string s=&quot;default error&quot;)</td></tr>
-<tr class="separator:a31eef804d37f8945ce5d828a5419d37a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af19e1eafa940755e7af9aa8113c163ca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceio.html#af19e1eafa940755e7af9aa8113c163ca">io::operator==</a> (InputCommand inputCommand, SystemCommand systemCommand)</td></tr>
+<tr class="memdesc:af19e1eafa940755e7af9aa8113c163ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether an InputCommand corresponds to a SystemCommand.  <a href="namespaceio.html#af19e1eafa940755e7af9aa8113c163ca">More...</a><br /></td></tr>
+<tr class="separator:af19e1eafa940755e7af9aa8113c163ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a179f625f3125b22f8d3e5e28cf6e141e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceio.html#a179f625f3125b22f8d3e5e28cf6e141e">io::operator!=</a> (InputCommand inputCommand, SystemCommand systemCommand)</td></tr>
+<tr class="memdesc:a179f625f3125b22f8d3e5e28cf6e141e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether an InputCommand does not correspond to a SystemCommand.  <a href="namespaceio.html#a179f625f3125b22f8d3e5e28cf6e141e">More...</a><br /></td></tr>
+<tr class="separator:a179f625f3125b22f8d3e5e28cf6e141e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9ec7118a920a99ec162d689e90c0ce7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceio.html#ab9ec7118a920a99ec162d689e90c0ce7">io::error</a> (Error er=default_error)</td></tr>
+<tr class="memdesc:ab9ec7118a920a99ec162d689e90c0ce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the given error message.  <a href="namespaceio.html#ab9ec7118a920a99ec162d689e90c0ce7">More...</a><br /></td></tr>
+<tr class="separator:ab9ec7118a920a99ec162d689e90c0ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4e65fa47214d732dfd840f97d8a11d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceio.html#ae4e65fa47214d732dfd840f97d8a11d5">io::echo</a> (InputCommand command)</td></tr>
+<tr class="memdesc:ae4e65fa47214d732dfd840f97d8a11d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Echoes the given command.  <a href="namespaceio.html#ae4e65fa47214d732dfd840f97d8a11d5">More...</a><br /></td></tr>
+<tr class="separator:ae4e65fa47214d732dfd840f97d8a11d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:acc7650ad61c6c1eb62c22cee17c54ac0"><td class="memItemLeft" align="right" valign="top">static const std::unordered_map&lt; <a class="el" href="namespaceio.html#a05d02c08bcfc0805d39733aac0f0371f">io::SystemCommand</a>, std::list&lt; <a class="el" href="namespaceio.html#a91256296d27891eb56958d80d5d9d1d9">io::InputCommand</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceio.html#acc7650ad61c6c1eb62c22cee17c54ac0">io::commands</a></td></tr>
+<tr class="memdesc:acc7650ad61c6c1eb62c22cee17c54ac0"><td class="mdescLeft">&#160;</td><td class="mdescRight">unordered map of SystemCommand's and a list of their corresponding InputCommand's  <a href="namespaceio.html#acc7650ad61c6c1eb62c22cee17c54ac0">More...</a><br /></td></tr>
+<tr class="separator:acc7650ad61c6c1eb62c22cee17c54ac0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66d12d70109aabffcdb7eed671543b92"><td class="memItemLeft" align="right" valign="top">static const std::unordered_map&lt; <a class="el" href="namespaceio.html#adbb419c9c9a584444a295d1738727dae">io::Error</a>, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceio.html#a66d12d70109aabffcdb7eed671543b92">io::errors</a></td></tr>
+<tr class="memdesc:a66d12d70109aabffcdb7eed671543b92"><td class="mdescLeft">&#160;</td><td class="mdescRight">unordered map of Error's and their corresponding strings to be logged  <a href="namespaceio.html#a66d12d70109aabffcdb7eed671543b92">More...</a><br /></td></tr>
+<tr class="separator:a66d12d70109aabffcdb7eed671543b92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>File containing the specification of some IO operations and types within the io namespace. </p>
+
+<p class="definition">Definition in file <a class="el" href="IO_8cc_source.html">IO.cc</a>.</p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1

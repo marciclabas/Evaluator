@@ -1,3 +1,8 @@
+/**
+@file Session.cc
+@brief File containing the implementation of the Session class
+*/
+
 #include "Session.hh"
 
 /*=========================================================constructors & destructors=========================================================*/
@@ -77,8 +82,8 @@ static void updateSolvableProblemsImmersion(ICanSolveProblems & solver, const Bi
 }
 
 /**
-@pre problemID is contained in the session, tree contains problemID
-@post tree contains problemID
+@pre problemID is contained in the session, tree = T contains problemID
+@post tree is the subtree of T that has problemID as root
 */
 static bool getProblemSubTree(prb::ID problemID, BinTree<prb::ID> & tree) {
 	if(tree.empty()) return false;
@@ -112,19 +117,19 @@ Session::const_iterator Session::end() const {
 }
 
 bool Session::operator==(const Session & otherSession) const {
-
+	// return false if have different number of problems
 	if(otherSession.getCount() != getCount()) return false;
 
 	Session::const_iterator thisIt = begin();
 	Session::const_iterator otherIt = otherSession.begin();
 
-	while(thisIt != end() and otherIt != otherSession.end()) {
+	while(thisIt != end() /* and otherIt != otherSession.end()*/) { // don't need to check since they have the same size*/
 		if(*thisIt != *otherIt) return false;
 		thisIt++;
 		otherIt++;
 	}
 
-	return thisIt == end() and otherIt == otherSession.end();
+	return true;
 }
 
 void Session::addProblemToSet(prb::ID problemID) {

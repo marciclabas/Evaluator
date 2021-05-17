@@ -142,6 +142,12 @@ Private Attributes</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>Creates a <a class="el" href="classProblem.html" title="Represents a problem with some statistics regarding it&#39;s submissions.">Problem</a> with ratio 1 </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="Problem_8cc_source.html#l00011">11</a> of file <a class="el" href="Problem_8cc_source.html">Problem.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;: <a class="code" href="classProblem.html#adb5240ca06e0a6e5ebb13c69d8315cf3">t</a>(0), <a class="code" href="classProblem.html#aca6215a0cd094ce01582821234ee81bc">e</a>(0), <a class="code" href="classProblem.html#a34720261fb68d7602632f0cf07da0698">r</a>(1) {}</div>
+<div class="ttc" id="aclassProblem_html_a34720261fb68d7602632f0cf07da0698"><div class="ttname"><a href="classProblem.html#a34720261fb68d7602632f0cf07da0698">Problem::r</a></div><div class="ttdeci">double r</div><div class="ttdoc">Ratio of total submissions vs accepted submissions.</div><div class="ttdef"><b>Definition:</b> <a href="Problem_8hh_source.html#l00035">Problem.hh:35</a></div></div>
+<div class="ttc" id="aclassProblem_html_aca6215a0cd094ce01582821234ee81bc"><div class="ttname"><a href="classProblem.html#aca6215a0cd094ce01582821234ee81bc">Problem::e</a></div><div class="ttdeci">int e</div><div class="ttdoc">Number of accepted submissions.</div><div class="ttdef"><b>Definition:</b> <a href="Problem_8hh_source.html#l00029">Problem.hh:29</a></div></div>
+<div class="ttc" id="aclassProblem_html_adb5240ca06e0a6e5ebb13c69d8315cf3"><div class="ttname"><a href="classProblem.html#adb5240ca06e0a6e5ebb13c69d8315cf3">Problem::t</a></div><div class="ttdeci">int t</div><div class="ttdoc">Total number of submissions issued.</div><div class="ttdef"><b>Definition:</b> <a href="Problem_8hh_source.html#l00023">Problem.hh:23</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a839a525ed01c34d57fff42583003d3e7"></a>
@@ -163,6 +169,9 @@ Private Attributes</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>Deletes the problem </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="Problem_8cc_source.html#l00013">13</a> of file <a class="el" href="Problem_8cc_source.html">Problem.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -186,6 +195,11 @@ Private Attributes</h2></td></tr>
 <dl class="section post"><dt>Postcondition</dt><dd>Returns the implicit parameter's ratio [r = (total+1)/(accepted+1)] </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>A double representing the problem's ratio </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="Problem_8cc_source.html#l00029">29</a> of file <a class="el" href="Problem_8cc_source.html">Problem.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                               {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classProblem.html#a34720261fb68d7602632f0cf07da0698">r</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab5522d13d71c4bdf1ea4f8a4cd891f9c"></a>
@@ -214,6 +228,15 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="Problem_8cc_source.html#l00023">23</a> of file <a class="el" href="Problem_8cc_source.html">Problem.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                                              {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classProblem.html#adb5240ca06e0a6e5ebb13c69d8315cf3">t</a>++;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="namespaceprb.html#ac8ae05a8ffb2fcf04a3520b950580832">result</a> == <a class="code" href="namespaceprb.html#ac8ae05a8ffb2fcf04a3520b950580832abe4e3b4aa35ba6fb1f61cbf2b8eff128">prb::accepted</a>) <a class="code" href="classProblem.html#aca6215a0cd094ce01582821234ee81bc">e</a>++;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="classProblem.html#a34720261fb68d7602632f0cf07da0698">r</a> = double((<a class="code" href="classProblem.html#adb5240ca06e0a6e5ebb13c69d8315cf3">t</a>+1))/(<a class="code" href="classProblem.html#aca6215a0cd094ce01582821234ee81bc">e</a>+1);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<div class="ttc" id="anamespaceprb_html_ac8ae05a8ffb2fcf04a3520b950580832"><div class="ttname"><a href="namespaceprb.html#ac8ae05a8ffb2fcf04a3520b950580832">prb::result</a></div><div class="ttdeci">result</div><div class="ttdef"><b>Definition:</b> <a href="Namespaces_8hh_source.html#l00024">Namespaces.hh:24</a></div></div>
+<div class="ttc" id="anamespaceprb_html_ac8ae05a8ffb2fcf04a3520b950580832abe4e3b4aa35ba6fb1f61cbf2b8eff128"><div class="ttname"><a href="namespaceprb.html#ac8ae05a8ffb2fcf04a3520b950580832abe4e3b4aa35ba6fb1f61cbf2b8eff128">prb::accepted</a></div><div class="ttdeci">@ accepted</div><div class="ttdef"><b>Definition:</b> <a href="Namespaces_8hh_source.html#l00024">Namespaces.hh:24</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a743af7c886c13ce185a988b2d3e7d789"></a>
@@ -245,6 +268,11 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classIPrintable.html#addc8a495860e3d637a25f0806409bc0a">IPrintable</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="Problem_8cc_source.html#l00017">17</a> of file <a class="el" href="Problem_8cc_source.html">Problem.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                          {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    std::cout &lt;&lt; <span class="charliteral">&#39;(&#39;</span> &lt;&lt; <a class="code" href="classProblem.html#adb5240ca06e0a6e5ebb13c69d8315cf3">t</a> &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; <a class="code" href="classProblem.html#aca6215a0cd094ce01582821234ee81bc">e</a> &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; <a class="code" href="classProblem.html#a34720261fb68d7602632f0cf07da0698">r</a> &lt;&lt; <span class="charliteral">&#39;)&#39;</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -329,8 +357,9 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="Problem_8hh_source.html">Problem.hh</a></li>
+<li><a class="el" href="Problem_8cc_source.html">Problem.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

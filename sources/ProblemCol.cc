@@ -1,3 +1,8 @@
+/**
+@file ProblemCol.cc
+@brief File containing the implementation of the ProblemCollection class
+*/
+
 #include "ProblemCol.hh"
 
 #include <algorithm>
@@ -12,6 +17,7 @@ ProblemCollection::~ProblemCollection() {}
 /*===========================================================singleton-related methods=========================================================*/
 
 ProblemCollection & ProblemCollection::getInstance() {
+	// gets created the first time (lazy instantiation) and referenced afterwards
 	static ProblemCollection instance;
 	return instance;
 }
@@ -21,11 +27,12 @@ ProblemCollection & ProblemCollection::getInstance() {
 void ProblemCollection::print() const {
 	using keyValue = std::pair<prb::ID, Problem>;
 
-	// create temporary sorted by ratio list	
+	// create temporary vector sorted by ratio and name list	
 	std::vector<keyValue> sortedProblems(this->count());
 
 	int i = 0;
 
+	// fills the vector
 	for(const keyValue & kv : problems) {
 		assert(i < sortedProblems.size());
 		sortedProblems[i] = kv;
@@ -33,7 +40,6 @@ void ProblemCollection::print() const {
 	}
 
 	// sort by ratio and name
-
 	std::sort(sortedProblems.begin(), sortedProblems.end(),
 		[](const keyValue & a, const keyValue & b) {
 			if(a.second.getRatio() == b.second.getRatio()) return a.first < b.first;
@@ -41,7 +47,9 @@ void ProblemCollection::print() const {
 		}
 	);
 
-	// for(const keyValue & [name, problem] : sortedProblems) out << name << ' ' << problem; // UPGRADE TO c++17 plz :(
+	// for(const keyValue & [name, problem] : sortedProblems) std::cout << name << ' ' << problem;
+	// Want some structured bindings...
+	// @todo UPGRADE TO c++17 plz :(
 	for(const keyValue & kv : sortedProblems) {
 		std::cout << kv.first;
 		kv.second.print();

@@ -1,11 +1,10 @@
 var searchData=
 [
-  ['_7ecourse_242',['~Course',['../classCourse.html#aa9038f2e129526920037dda9e76d69d0',1,'Course']]],
-  ['_7ecourseset_243',['~CourseSet',['../classCourseSet.html#a21dfdecd8c08a272d6c2af4adc0fccc0',1,'CourseSet']]],
-  ['_7eproblem_244',['~Problem',['../classProblem.html#a839a525ed01c34d57fff42583003d3e7',1,'Problem']]],
-  ['_7eproblemcollection_245',['~ProblemCollection',['../classProblemCollection.html#a315db5b8fb5f98166e1b62e7d5e6517d',1,'ProblemCollection']]],
-  ['_7esession_246',['~Session',['../classSession.html#a8753bb9dee966b7d39abc9b7237cd665',1,'Session']]],
-  ['_7esessionrepository_247',['~SessionRepository',['../classSessionRepository.html#adbef927f8d88802b2dabad68929409a6',1,'SessionRepository']]],
-  ['_7euser_248',['~User',['../classUser.html#ac00b72ad64eb4149f7b21b9f5468c2b2',1,'User']]],
-  ['_7euserset_249',['~UserSet',['../classUserSet.html#acecb88c9e7ba2b981126ae2d22c72fcc',1,'UserSet']]]
+  ['unenrollcourse_269',['unenrollCourse',['../classUser.html#a37756db9d861c3b26d3060f18ea449ee',1,'User']]],
+  ['unenrolluser_270',['unenrollUser',['../classCourse.html#a6a71deac55949b33c5903ed2cd71db4b',1,'Course']]],
+  ['updatesolvableproblems_271',['updateSolvableProblems',['../classCourse.html#a043b2c94e777c255ca8cc599626e03b6',1,'Course::updateSolvableProblems()'],['../classSession.html#a77f3a81755f2ef5febfaec93ef587911',1,'Session::updateSolvableProblems()'],['../classUser.html#a9502bc778ae19e195fa1e2a27f8d8ef4',1,'User::updateSolvableProblems()']]],
+  ['updatesolvableproblemsimmersion_272',['updateSolvableProblemsImmersion',['../Session_8cc.html#a175157a62846d5ef90e2f20846ad2d73',1,'Session.cc']]],
+  ['user_273',['User',['../classUser.html#a4a0137053e591fbb79d9057dd7d2283d',1,'User']]],
+  ['userset_274',['UserSet',['../classUserSet.html#a1fcb7215d45571e0f9c4cf4f20b05c80',1,'UserSet::UserSet()'],['../classUserSet.html#a292504d1f97fece38d2faf07dcc8c645',1,'UserSet::UserSet(UserSet &amp;copy)=delete']]],
+  ['userstats_275',['UserStats',['../structUser_1_1UserStats.html#ac73a7b3a4051c947eab4446e6cddf2f4',1,'User::UserStats']]]
 ];

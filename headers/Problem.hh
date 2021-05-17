@@ -1,6 +1,6 @@
 /**
 @file Problem.hh
-@brief File containing the specification of the @c Problem class
+@brief File containing the specification of the Problem class
 */
 
 #ifndef PROBLEM_HH

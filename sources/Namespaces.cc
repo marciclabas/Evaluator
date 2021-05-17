@@ -1,3 +1,8 @@
+/**
+@file Namespaces.cc
+@brief File containing  the namespaces' functions implementation
+*/
+
 #include "Namespaces.hh"
 
 std::istream& operator>>(std::istream & in, prb::result & result) {

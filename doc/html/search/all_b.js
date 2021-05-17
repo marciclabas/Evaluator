@@ -1,8 +1,15 @@
 var searchData=
 [
-  ['operator_21_3d_78',['operator!=',['../namespaceio.html#a179f625f3125b22f8d3e5e28cf6e141e',1,'io']]],
-  ['operator_3d_79',['operator=',['../classCourseSet.html#aa53d03c0eb0dd23ee0e81d9a245b5312',1,'CourseSet::operator=()'],['../classProblemCollection.html#a47b4c57020982feafa72ed61816e96f0',1,'ProblemCollection::operator=()'],['../classSessionRepository.html#ae2ed0c0b9b334f7c4e954bb619ce1915',1,'SessionRepository::operator=()'],['../classUserSet.html#a5eebe50f59b88c1a575baa2d3392deb6',1,'UserSet::operator=()']]],
-  ['operator_3d_3d_80',['operator==',['../classCourse.html#a903d8640ea2f7fc37aa773838357bbe5',1,'Course::operator==()'],['../classSession.html#a8baa3a14784e12bdfb1f668f4e3fd6e2',1,'Session::operator==()'],['../namespaceio.html#af19e1eafa940755e7af9aa8113c163ca',1,'io::operator==()']]],
-  ['operator_3e_3e_81',['operator&gt;&gt;',['../Namespaces_8hh.html#af062eca1dc6f82dbfb822d510fd6d8f9',1,'Namespaces.hh']]],
-  ['operator_5b_5d_82',['operator[]',['../classCourseSet.html#a3ac6d3c29d799303887e6d30a1ec44bc',1,'CourseSet::operator[]()'],['../classProblemCollection.html#a1c3c9eb212c1854ea16cb034c8a1bbdd',1,'ProblemCollection::operator[]()'],['../classSessionRepository.html#a789aab908664b816733f94a53ae970df',1,'SessionRepository::operator[]()'],['../classUserSet.html#a94feb29d589a537aa39efae399db7b25',1,'UserSet::operator[]()']]]
+  ['namespaces_2ecc_75',['Namespaces.cc',['../Namespaces_8cc.html',1,'']]],
+  ['namespaces_2ehh_76',['Namespaces.hh',['../Namespaces_8hh.html',1,'']]],
+  ['ndebug_77',['NDEBUG',['../Namespaces_8hh.html#a8de3ed741dadc9c979a4ff17c0a9116e',1,'Namespaces.hh']]],
+  ['new_5fcourse_78',['new_course',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fa5661adf5a352d5288bb7a428e9ea8fd7',1,'io']]],
+  ['new_5fproblem_79',['new_problem',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fa929bc2e79e7f8ec1874cf5ae7dd137fd',1,'io']]],
+  ['new_5fsession_80',['new_session',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fa5e4356ead8e86e8bfe9241eea1fa1918',1,'io']]],
+  ['new_5fuser_81',['new_user',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fa5e68784cda2e9dd50c654728f0245248',1,'io']]],
+  ['nonenrolled_5fuser_82',['nonenrolled_user',['../namespaceio.html#adbb419c9c9a584444a295d1738727daea86c78e783ad08cabfa804b96d769c427',1,'io']]],
+  ['nonexistent_5fcourse_83',['nonexistent_course',['../namespaceio.html#adbb419c9c9a584444a295d1738727daeaafb30d031b094858f4ee9fde14d68563',1,'io']]],
+  ['nonexistent_5fproblem_84',['nonexistent_problem',['../namespaceio.html#adbb419c9c9a584444a295d1738727daea73de562c73630dcd8997729ab97b1e09',1,'io']]],
+  ['nonexistent_5fsession_85',['nonexistent_session',['../namespaceio.html#adbb419c9c9a584444a295d1738727daeafdd530a7ad1f912ca847848cfeebc168',1,'io']]],
+  ['nonexistent_5fuser_86',['nonexistent_user',['../namespaceio.html#adbb419c9c9a584444a295d1738727daea70a59be58c0cabfcfc69fb395b4d1cdb',1,'io']]]
 ];

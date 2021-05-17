@@ -42,6 +42,9 @@ namespace io {
 	*/
 	bool operator!=(InputCommand inputCommand, SystemCommand systemCommand);
 
+	/**
+	@brief All system error messages available
+    */
 	enum Error {
 		default_error,
 		already_existing_problem,
@@ -62,7 +65,10 @@ namespace io {
 	*/
 	void error(Error er = default_error);
 
-	//void echo(InputCommand command);
+	/**
+	@brief Echoes the given command
+	*/
+	void echo(InputCommand command);
 }
 
 #endif

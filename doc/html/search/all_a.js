@@ -1,14 +1,5 @@
 var searchData=
 [
-  ['namespaces_2ehh_67',['Namespaces.hh',['../Namespaces_8hh.html',1,'']]],
-  ['ndebug_68',['NDEBUG',['../Namespaces_8hh.html#a8de3ed741dadc9c979a4ff17c0a9116e',1,'Namespaces.hh']]],
-  ['new_5fcourse_69',['new_course',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fa5661adf5a352d5288bb7a428e9ea8fd7',1,'io']]],
-  ['new_5fproblem_70',['new_problem',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fa929bc2e79e7f8ec1874cf5ae7dd137fd',1,'io']]],
-  ['new_5fsession_71',['new_session',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fa5e4356ead8e86e8bfe9241eea1fa1918',1,'io']]],
-  ['new_5fuser_72',['new_user',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fa5e68784cda2e9dd50c654728f0245248',1,'io']]],
-  ['nonenrolled_5fuser_73',['nonenrolled_user',['../namespaceio.html#adbb419c9c9a584444a295d1738727daea86c78e783ad08cabfa804b96d769c427',1,'io']]],
-  ['nonexistent_5fcourse_74',['nonexistent_course',['../namespaceio.html#adbb419c9c9a584444a295d1738727daeaafb30d031b094858f4ee9fde14d68563',1,'io']]],
-  ['nonexistent_5fproblem_75',['nonexistent_problem',['../namespaceio.html#adbb419c9c9a584444a295d1738727daea73de562c73630dcd8997729ab97b1e09',1,'io']]],
-  ['nonexistent_5fsession_76',['nonexistent_session',['../namespaceio.html#adbb419c9c9a584444a295d1738727daeafdd530a7ad1f912ca847848cfeebc168',1,'io']]],
-  ['nonexistent_5fuser_77',['nonexistent_user',['../namespaceio.html#adbb419c9c9a584444a295d1738727daea70a59be58c0cabfcfc69fb395b4d1cdb',1,'io']]]
+  ['main_73',['main',['../program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'program.cc']]],
+  ['malformed_5fcourse_74',['malformed_course',['../namespaceio.html#adbb419c9c9a584444a295d1738727daea0e91ec7889f754ba7a611e102c2a74d5',1,'io']]]
 ];

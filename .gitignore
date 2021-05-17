@@ -1,5 +1,4 @@
 debug/*
-doc/*
 *.o
 *.exe
 .*

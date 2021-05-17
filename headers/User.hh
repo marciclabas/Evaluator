@@ -21,7 +21,22 @@
 */
 class User : public IPrintable, public ICanSolveProblems {
 private:
+	/**
+	@brief Tells whether the user is enrolled in a course
+	@invariant	<ul>
+					<li>@c true if the user is enrolled in some course</li>
+					<li>@c false if the user is not enrolled to any course</li>
+				</ul>
+	*/
 	bool isEnrolled;
+
+	/**
+	@brief The id of the course the user is enrolled in
+	@invariant 	<ul>
+					<li>The id of the course the user is enrolled in if isEnrolled == @c true</li>
+					<li>An undefined value if isEnrolled == @c false</li>
+				</ul>
+	*/
 	crs::ID enrolledCourse;
 
 	/**
@@ -46,7 +61,13 @@ private:
 		int triedProblems;
 
 		UserStats();
-	} stats;
+	};
+
+	/**
+	@brief Holds the user's global stats
+	@invariant totalSubmissions >= triedProblems >= acceptedProblems
+	*/
+	UserStats stats;
 
 	/**
 	@struct ProblemStats
@@ -134,7 +155,10 @@ private:
 	/**
 	@brief Updates the solvable problems after solving the given problem
 	@pre The user has solved lastSolvedProblem last, which is part of the course he is enrolled in, or has not solved any problem
-	@post solvableProblems is updated accordingly. If empty, the user unenrolls the course (and notifies the course)
+	@post 	<ol>
+				<li>solvableProblems is updated accordingly</li>
+				<li>If empty, the user unenrolls the course (and notifies the course)</li>
+			</ol>
 	@param lastSolvedProblem a prb::ID
 	*/
 	void updateSolvableProblems(prb::ID lastSolvedProblem = prb::invalidID);
@@ -219,9 +243,14 @@ public:
 	/**
 	@brief Updates the user's stats according to the given result of a submission
 	@pre problemID is a valid problem whose prerequisites are held by the user
-	@post 	The problem sumission count is incremented by 1. If result equals result::accepted,
-				a) The problem is removed from solvable and added to solved, and
-				b) If the user finished the course, said course is notified
+	@post 	<ol>
+				<li>The problem sumission count is incremented by 1</li>
+				<li>If result equals result::accepted,
+				<ul>
+					<li>The problem is removed from solvable and added to solved</li>
+					<li>If the user finished the course, said course is notified</li>
+				</ul></li>
+			</ol>
 	*/
 	void parseSubmission(prb::ID problemID, prb::result r);
 };

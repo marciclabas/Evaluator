@@ -1,12 +1,21 @@
 var searchData=
 [
-  ['r_99',['r',['../classProblem.html#a34720261fb68d7602632f0cf07da0698',1,'Problem']]],
-  ['read_100',['read',['../classCourse.html#a6b04dba847f859a0440379eea607ca8d',1,'Course::read()'],['../classCourseSet.html#af724595d10f41dc7312941067192f3a8',1,'CourseSet::read()'],['../classIReadable.html#a595345a03025dac6772480c342900a49',1,'IReadable::read()'],['../classProblemCollection.html#a98230806a6e42b5875c102f7de345238',1,'ProblemCollection::read()'],['../classSession.html#a8af7ea5fb236ceb581e39d215b4c0811',1,'Session::read()'],['../classSessionRepository.html#a65ec9cf8253a692bb4016fb3784b7bf8',1,'SessionRepository::read()'],['../classUserSet.html#a2ded96a4d76f0c035e1b3b6800b77046',1,'UserSet::read()']]],
-  ['readimmersion_101',['readImmersion',['../classSession.html#a2f768ef5d1466e889c1cfc04e1da802d',1,'Session']]],
-  ['readme_2emd_102',['README.md',['../README_8md.html',1,'']]],
-  ['rejected_103',['rejected',['../namespaceprb.html#ac8ae05a8ffb2fcf04a3520b950580832a57f68538285d217aeed2f8826fdb7432',1,'prb']]],
-  ['remove_104',['remove',['../classUserSet.html#a2b4c1d5a036374c280d74b2a3d9ce772',1,'UserSet']]],
-  ['remove_5fuser_105',['remove_user',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fa36a2a903d4d6404102cd663963dae095',1,'io']]],
-  ['removeproblem_106',['removeProblem',['../structUser_1_1ProblemStats.html#a12d31f6f9a9a2b83da2163344d8faeca',1,'User::ProblemStats']]],
-  ['result_107',['result',['../namespaceprb.html#ac8ae05a8ffb2fcf04a3520b950580832',1,'prb']]]
+  ['parsesubmission_94',['parseSubmission',['../classProblem.html#ab5522d13d71c4bdf1ea4f8a4cd891f9c',1,'Problem::parseSubmission()'],['../classUser.html#ad7d1e5f0aa6e6a489b2379511082350f',1,'User::parseSubmission()']]],
+  ['prb_95',['prb',['../namespaceprb.html',1,'']]],
+  ['print_96',['print',['../structUser_1_1ProblemStats.html#a303357e728bcb58a1c8a5c1ce318c037',1,'User::ProblemStats::print()'],['../classSessionRepository.html#afa26909ce41c3a4b17a49eb0e56dd4f6',1,'SessionRepository::print()'],['../classSession.html#aa378fcde1f8e4572b9599c975dc8d354',1,'Session::print()'],['../classProblemCollection.html#ad49395eb1c71357fdc6130058b39d414',1,'ProblemCollection::print()'],['../classProblem.html#a743af7c886c13ce185a988b2d3e7d789',1,'Problem::print()'],['../classIPrintable.html#addc8a495860e3d637a25f0806409bc0a',1,'IPrintable::print()'],['../classCourseSet.html#ab793aad6427d5f2bba5df5e5727dd33a',1,'CourseSet::print()'],['../classCourse.html#a7fd61bcbad5041fc50642f1a8e7b1194',1,'Course::print()'],['../classUser.html#a7e3a3b397add1d7969213ee07afa6e30',1,'User::print()'],['../classUserSet.html#aedfbf2444bdfff40d062334b26e36438',1,'UserSet::print()']]],
+  ['problem_97',['Problem',['../classProblem.html#ad9d44f0ef936fb62f0ce41dd200494ac',1,'Problem::Problem()'],['../classProblem.html',1,'Problem']]],
+  ['problem_2ecc_98',['Problem.cc',['../Problem_8cc.html',1,'']]],
+  ['problem_2ehh_99',['Problem.hh',['../Problem_8hh.html',1,'']]],
+  ['problem_5fnot_5fin_5fcourse_100',['problem_not_in_course',['../namespaceio.html#adbb419c9c9a584444a295d1738727daea6e1d02c9662dd24c5e4ff3cd975373a2',1,'io']]],
+  ['problem_5fsession_101',['problem_session',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fad11e2a92f84842f2d7cc143ecbd338e0',1,'io']]],
+  ['problemcol_2ecc_102',['ProblemCol.cc',['../ProblemCol_8cc.html',1,'']]],
+  ['problemcol_2ehh_103',['ProblemCol.hh',['../ProblemCol_8hh.html',1,'']]],
+  ['problemcollection_104',['ProblemCollection',['../classProblemCollection.html#a9c64db5612113ea8c9cf2f4756fc1abf',1,'ProblemCollection::ProblemCollection()'],['../classProblemCollection.html#a7bbc4a1a9504512671c1c1369fbf4239',1,'ProblemCollection::ProblemCollection(ProblemCollection &amp;copy)=delete'],['../classProblemCollection.html',1,'ProblemCollection']]],
+  ['problemcount_105',['problemCount',['../classCourse.html#a615c5ea821a233723768409605e63b26',1,'Course']]],
+  ['problems_106',['problems',['../classProblemCollection.html#a2294b1ea5899056d21064469ea1af1f1',1,'ProblemCollection']]],
+  ['problemsessionindex_107',['problemSessionIndex',['../classCourse.html#abf815fafbd4ab96cb817e964457f721a',1,'Course']]],
+  ['problemsset_108',['problemsSet',['../classSession.html#a1d7fdb77a86c4fd4b49367c4e6d4149e',1,'Session']]],
+  ['problemstats_109',['ProblemStats',['../structUser_1_1ProblemStats.html#a74da848ee400fd2120f7e9de33ca0fb3',1,'User::ProblemStats::ProblemStats()'],['../structUser_1_1ProblemStats.html',1,'User::ProblemStats']]],
+  ['problemstree_110',['problemsTree',['../classSession.html#a204150ed58c0d3857521c6b3bd841247',1,'Session']]],
+  ['program_2ecc_111',['program.cc',['../program_8cc.html',1,'']]]
 ];
