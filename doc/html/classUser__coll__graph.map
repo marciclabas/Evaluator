@@ -1,5 +1,7 @@
 <map id="User" name="User">
-<area shape="rect" id="node1" title="Represents a user with a unique name (id) and some statistics." alt="" coords="77,80,129,107"/>
-<area shape="rect" id="node2" href="$classIReadable.html" title="IReadable interface." alt="" coords="5,5,92,32"/>
-<area shape="rect" id="node3" href="$classIPrintable.html" title="IPrintable interface." alt="" coords="116,5,200,32"/>
+<area shape="rect" id="node1" title="Represents a user with a unique name (id) and some statistics." alt="" coords="177,389,379,657"/>
+<area shape="rect" id="node2" href="$classIPrintable.html" title="IPrintable interface." alt="" coords="5,5,89,83"/>
+<area shape="rect" id="node4" href="$structUser_1_1ProblemStats.html" title="Holds the user&#39;s problem&#45;related stats." alt="" coords="69,132,236,312"/>
+<area shape="rect" id="node3" href="$classICanSolveProblems.html" title=" " alt="" coords="261,176,442,268"/>
+<area shape="rect" id="node5" href="$structUser_1_1UserStats.html" title="Holds the user&#39;s global stats." alt="" coords="466,169,623,275"/>
 </map>

@@ -1,29 +1,14 @@
 var searchData=
 [
-<<<<<<< HEAD
-  ['parsesubmission_52',['parseSubmission',['../classProblem_a4aadc22c686e0229fa71c377399a18b7.html#a4aadc22c686e0229fa71c377399a18b7',1,'Problem::parseSubmission()'],['../classUser_ad7d1e5f0aa6e6a489b2379511082350f.html#ad7d1e5f0aa6e6a489b2379511082350f',1,'User::parseSubmission()']]],
-  ['prb_53',['prb',['../namespaceprb.html',1,'']]],
-  ['print_54',['print',['../classIPrintable_a5b00d3f39de891a4caf1837763ffe8a3.html#a5b00d3f39de891a4caf1837763ffe8a3',1,'IPrintable']]],
-  ['problem_55',['Problem',['../classProblem.html',1,'Problem'],['../classProblem_ad9d44f0ef936fb62f0ce41dd200494ac.html#ad9d44f0ef936fb62f0ce41dd200494ac',1,'Problem::Problem()']]],
-  ['problem_2ehh_56',['Problem.hh',['../Problem_8hh.html',1,'']]],
-  ['problem_5fsession_57',['problem_session',['../namespaceio_a05d02c08bcfc0805d39733aac0f0371f.html#a05d02c08bcfc0805d39733aac0f0371fad11e2a92f84842f2d7cc143ecbd338e0',1,'io']]],
-  ['problemcol_2ehh_58',['ProblemCol.hh',['../ProblemCol_8hh.html',1,'']]],
-  ['problemcollection_59',['ProblemCollection',['../classProblemCollection.html',1,'ProblemCollection'],['../classProblemCollection_a9c64db5612113ea8c9cf2f4756fc1abf.html#a9c64db5612113ea8c9cf2f4756fc1abf',1,'ProblemCollection::ProblemCollection()']]],
-  ['problemstats_60',['ProblemStats',['../classProblemStats.html',1,'ProblemStats'],['../classProblemStats_a589e8772d08e6e6237911d31f002b813.html#a589e8772d08e6e6237911d31f002b813',1,'ProblemStats::ProblemStats()']]],
-  ['program_2ecc_61',['program.cc',['../program_8cc.html',1,'']]]
-=======
-  ['parsesubmission_49',['parseSubmission',['../class_problem.html#a4aadc22c686e0229fa71c377399a18b7',1,'Problem::parseSubmission()'],['../class_user.html#ad7d1e5f0aa6e6a489b2379511082350f',1,'User::parseSubmission()']]],
-  ['prb_50',['prb',['../namespaceprb.html',1,'']]],
-  ['print_51',['print',['../class_i_printable.html#a5b00d3f39de891a4caf1837763ffe8a3',1,'IPrintable']]],
-  ['problem_52',['Problem',['../class_problem.html',1,'Problem'],['../class_problem.html#ad9d44f0ef936fb62f0ce41dd200494ac',1,'Problem::Problem()']]],
-  ['problem_2ehh_53',['Problem.hh',['../_problem_8hh.html',1,'']]],
-  ['problem_5fsession_54',['problem_session',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fad11e2a92f84842f2d7cc143ecbd338e0',1,'io']]],
-  ['problemcol_2ehh_55',['ProblemCol.hh',['../_problem_col_8hh.html',1,'']]],
-  ['problemcollection_56',['ProblemCollection',['../class_problem_collection.html',1,'ProblemCollection'],['../class_problem_collection.html#a9c64db5612113ea8c9cf2f4756fc1abf',1,'ProblemCollection::ProblemCollection()']]],
-  ['program_2ecc_57',['program.cc',['../program_8cc.html',1,'']]]
-<<<<<<< HEAD
->>>>>>> d492b3a069c2074d005a742334644ac2220fcab0
-=======
->>>>>>> spec
->>>>>>> a9243d702bf53f762bc01ba95a77d594935fe2df
+  ['namespaces_2ehh_67',['Namespaces.hh',['../Namespaces_8hh.html',1,'']]],
+  ['ndebug_68',['NDEBUG',['../Namespaces_8hh.html#a8de3ed741dadc9c979a4ff17c0a9116e',1,'Namespaces.hh']]],
+  ['new_5fcourse_69',['new_course',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fa5661adf5a352d5288bb7a428e9ea8fd7',1,'io']]],
+  ['new_5fproblem_70',['new_problem',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fa929bc2e79e7f8ec1874cf5ae7dd137fd',1,'io']]],
+  ['new_5fsession_71',['new_session',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fa5e4356ead8e86e8bfe9241eea1fa1918',1,'io']]],
+  ['new_5fuser_72',['new_user',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fa5e68784cda2e9dd50c654728f0245248',1,'io']]],
+  ['nonenrolled_5fuser_73',['nonenrolled_user',['../namespaceio.html#adbb419c9c9a584444a295d1738727daea86c78e783ad08cabfa804b96d769c427',1,'io']]],
+  ['nonexistent_5fcourse_74',['nonexistent_course',['../namespaceio.html#adbb419c9c9a584444a295d1738727daeaafb30d031b094858f4ee9fde14d68563',1,'io']]],
+  ['nonexistent_5fproblem_75',['nonexistent_problem',['../namespaceio.html#adbb419c9c9a584444a295d1738727daea73de562c73630dcd8997729ab97b1e09',1,'io']]],
+  ['nonexistent_5fsession_76',['nonexistent_session',['../namespaceio.html#adbb419c9c9a584444a295d1738727daeafdd530a7ad1f912ca847848cfeebc168',1,'io']]],
+  ['nonexistent_5fuser_77',['nonexistent_user',['../namespaceio.html#adbb419c9c9a584444a295d1738727daea70a59be58c0cabfcfc69fb395b4d1cdb',1,'io']]]
 ];

@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -23,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Evaluator
-   &#160;<span id="projectnumber">1.0 Specification</span>
+   &#160;<span id="projectnumber">2.0 Implementation</span>
    </div>
    <div id="projectbrief">pro2 lab pracs: problem-evaluator-like platform</div>
   </td>
@@ -65,56 +66,495 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classSession-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Session Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Represents a session, i.e., a set of non-repeated problems with prerequisites with a unique name (id)  
+<p>Represents a session, i.e., a set of non-repeated problems sorted in a binary tree-like prerequisite structure.  
  <a href="classSession.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Session_8hh_source.html">Session.hh</a>&gt;</code></p>
-<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for Session:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classSession__inherit__graph.png" border="0" usemap="#aSession_inherit__map" alt="Inheritance graph"/></div>
-<map name="aSession_inherit__map" id="aSession_inherit__map">
-<area shape="rect" title="Represents a session, i.e., a set of non&#45;repeated problems with prerequisites with a unique name (id)" alt="" coords="67,80,139,107"/>
-<area shape="rect" href="classIReadable.html" title="IReadable interface." alt="" coords="5,5,92,32"/>
-<area shape="rect" href="classIPrintable.html" title="IPrintable interface." alt="" coords="116,5,200,32"/>
+<div class="dynheader">
+Collaboration diagram for Session:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSession__coll__graph.png" border="0" usemap="#aSession_coll__map" alt="Collaboration graph"/></div>
+<map name="aSession_coll__map" id="aSession_coll__map">
+<area shape="rect" title="Represents a session, i.e., a set of non&#45;repeated problems sorted in a binary tree&#45;like prerequisite ..." alt="" coords="5,131,215,384"/>
+<area shape="rect" href="classIPrintable.html" title="IPrintable interface." alt="" coords="13,5,97,83"/>
+<area shape="rect" href="classIReadable.html" title="IReadable interface." alt="" coords="121,5,208,83"/>
 </map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+</div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ae6a2d3f11b14ca0e7f68d66d846b5855"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#ae6a2d3f11b14ca0e7f68d66d846b5855">const_iterator</a> = std::set&lt; <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> &gt;::<a class="el" href="classSession.html#ae6a2d3f11b14ca0e7f68d66d846b5855">const_iterator</a></td></tr>
+<tr class="memdesc:ae6a2d3f11b14ca0e7f68d66d846b5855"><td class="mdescLeft">&#160;</td><td class="mdescRight">a constant iterator pointing to a <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> contained in the session  <a href="classSession.html#ae6a2d3f11b14ca0e7f68d66d846b5855">More...</a><br /></td></tr>
+<tr class="separator:ae6a2d3f11b14ca0e7f68d66d846b5855"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad92ef09b872c9227e38a6efdd4d8a837"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession_ad92ef09b872c9227e38a6efdd4d8a837.html#ad92ef09b872c9227e38a6efdd4d8a837">Session</a> ()</td></tr>
+<tr class="memitem:ad92ef09b872c9227e38a6efdd4d8a837"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#ad92ef09b872c9227e38a6efdd4d8a837">Session</a> ()</td></tr>
+<tr class="memdesc:ad92ef09b872c9227e38a6efdd4d8a837"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="classSession.html#ad92ef09b872c9227e38a6efdd4d8a837">More...</a><br /></td></tr>
 <tr class="separator:ad92ef09b872c9227e38a6efdd4d8a837"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4b7463d377f240e36136db3e8a9bd89"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession_ac4b7463d377f240e36136db3e8a9bd89.html#ac4b7463d377f240e36136db3e8a9bd89">operator&lt;</a> (const <a class="el" href="classSession.html">Session</a> &amp;session)</td></tr>
-<tr class="memdesc:ac4b7463d377f240e36136db3e8a9bd89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks wether the implicit value (<code>this</code>) is to be ordered before the parameter (<code>session</code>)  <a href="classSession_ac4b7463d377f240e36136db3e8a9bd89.html#ac4b7463d377f240e36136db3e8a9bd89">More...</a><br /></td></tr>
-<tr class="separator:ac4b7463d377f240e36136db3e8a9bd89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a143d68bd066b688c17e06beba7145c6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIReadable_a143d68bd066b688c17e06beba7145c6f.html#a143d68bd066b688c17e06beba7145c6f">read</a> ()</td></tr>
-<tr class="memdesc:a143d68bd066b688c17e06beba7145c6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read to the <code><a class="el" href="classIReadable.html" title="IReadable interface.">IReadable</a></code> object from the stdin.  <a href="classIReadable_a143d68bd066b688c17e06beba7145c6f.html#a143d68bd066b688c17e06beba7145c6f">More...</a><br /></td></tr>
-<tr class="separator:a143d68bd066b688c17e06beba7145c6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b00d3f39de891a4caf1837763ffe8a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIPrintable_a5b00d3f39de891a4caf1837763ffe8a3.html#a5b00d3f39de891a4caf1837763ffe8a3">print</a> () const</td></tr>
-<tr class="memdesc:a5b00d3f39de891a4caf1837763ffe8a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the <code><a class="el" href="classIPrintable.html" title="IPrintable interface.">IPrintable</a></code> object to the stdout.  <a href="classIPrintable_a5b00d3f39de891a4caf1837763ffe8a3.html#a5b00d3f39de891a4caf1837763ffe8a3">More...</a><br /></td></tr>
-<tr class="separator:a5b00d3f39de891a4caf1837763ffe8a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8753bb9dee966b7d39abc9b7237cd665"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#a8753bb9dee966b7d39abc9b7237cd665">~Session</a> ()</td></tr>
+<tr class="memdesc:a8753bb9dee966b7d39abc9b7237cd665"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor.  <a href="classSession.html#a8753bb9dee966b7d39abc9b7237cd665">More...</a><br /></td></tr>
+<tr class="separator:a8753bb9dee966b7d39abc9b7237cd665"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa378fcde1f8e4572b9599c975dc8d354"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#aa378fcde1f8e4572b9599c975dc8d354">print</a> () const override</td></tr>
+<tr class="memdesc:aa378fcde1f8e4572b9599c975dc8d354"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the implicit parameter.  <a href="classSession.html#aa378fcde1f8e4572b9599c975dc8d354">More...</a><br /></td></tr>
+<tr class="separator:aa378fcde1f8e4572b9599c975dc8d354"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8af7ea5fb236ceb581e39d215b4c0811"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#a8af7ea5fb236ceb581e39d215b4c0811">read</a> () override</td></tr>
+<tr class="memdesc:a8af7ea5fb236ceb581e39d215b4c0811"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads to the implicit parameter.  <a href="classSession.html#a8af7ea5fb236ceb581e39d215b4c0811">More...</a><br /></td></tr>
+<tr class="separator:a8af7ea5fb236ceb581e39d215b4c0811"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6032e66d3bef1b33d5b01762bd4bca4d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#a6032e66d3bef1b33d5b01762bd4bca4d">containsProblem</a> (<a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> problemID) const</td></tr>
+<tr class="memdesc:a6032e66d3bef1b33d5b01762bd4bca4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the sesssion contains a <a class="el" href="classProblem.html" title="Represents a problem with some statistics regarding it&#39;s submissions.">Problem</a> with the given id.  <a href="classSession.html#a6032e66d3bef1b33d5b01762bd4bca4d">More...</a><br /></td></tr>
+<tr class="separator:a6032e66d3bef1b33d5b01762bd4bca4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77f3a81755f2ef5febfaec93ef587911"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#a77f3a81755f2ef5febfaec93ef587911">updateSolvableProblems</a> (<a class="el" href="classICanSolveProblems.html">ICanSolveProblems</a> &amp;solverObject, <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> lastSolvedProblem=<a class="el" href="namespaceprb.html#a38b9bd74c7e713bf3ec914818814e869">prb::invalidID</a>) const</td></tr>
+<tr class="memdesc:a77f3a81755f2ef5febfaec93ef587911"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the problems contained in the session the given <a class="el" href="classICanSolveProblems.html">ICanSolveProblems</a> can solve.  <a href="classSession.html#a77f3a81755f2ef5febfaec93ef587911">More...</a><br /></td></tr>
+<tr class="separator:a77f3a81755f2ef5febfaec93ef587911"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e1c974241d60d762ef3dc3dc1a8ba97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#a9e1c974241d60d762ef3dc3dc1a8ba97">getCount</a> () const</td></tr>
+<tr class="memdesc:a9e1c974241d60d762ef3dc3dc1a8ba97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of problems contained in the session.  <a href="classSession.html#a9e1c974241d60d762ef3dc3dc1a8ba97">More...</a><br /></td></tr>
+<tr class="separator:a9e1c974241d60d762ef3dc3dc1a8ba97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0735755f0145dbd9d8d3a37dd6ea617d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSession.html#ae6a2d3f11b14ca0e7f68d66d846b5855">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#a0735755f0145dbd9d8d3a37dd6ea617d">begin</a> () const</td></tr>
+<tr class="memdesc:a0735755f0145dbd9d8d3a37dd6ea617d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const_iterator to the first <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> contained in the session.  <a href="classSession.html#a0735755f0145dbd9d8d3a37dd6ea617d">More...</a><br /></td></tr>
+<tr class="separator:a0735755f0145dbd9d8d3a37dd6ea617d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c6a3101c2fe847962b1348780918085"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSession.html#ae6a2d3f11b14ca0e7f68d66d846b5855">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#a2c6a3101c2fe847962b1348780918085">end</a> () const</td></tr>
+<tr class="memdesc:a2c6a3101c2fe847962b1348780918085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const_iterator after the last <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> contained in the session.  <a href="classSession.html#a2c6a3101c2fe847962b1348780918085">More...</a><br /></td></tr>
+<tr class="separator:a2c6a3101c2fe847962b1348780918085"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8baa3a14784e12bdfb1f668f4e3fd6e2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#a8baa3a14784e12bdfb1f668f4e3fd6e2">operator==</a> (const <a class="el" href="classSession.html">Session</a> &amp;otherSession) const</td></tr>
+<tr class="memdesc:a8baa3a14784e12bdfb1f668f4e3fd6e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the given session is equal (i.e., has the same problems in any order) to this session.  <a href="classSession.html#a8baa3a14784e12bdfb1f668f4e3fd6e2">More...</a><br /></td></tr>
+<tr class="separator:a8baa3a14784e12bdfb1f668f4e3fd6e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a25ac4518727f816e5c4815e38014b271"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#a25ac4518727f816e5c4815e38014b271">addProblemToSet</a> (<a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> problemID)</td></tr>
+<tr class="memdesc:a25ac4518727f816e5c4815e38014b271"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a problem to the set while keeping it ordered by id.  <a href="classSession.html#a25ac4518727f816e5c4815e38014b271">More...</a><br /></td></tr>
+<tr class="separator:a25ac4518727f816e5c4815e38014b271"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f768ef5d1466e889c1cfc04e1da802d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#a2f768ef5d1466e889c1cfc04e1da802d">readImmersion</a> (BinTree&lt; <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> &gt; &amp;tree)</td></tr>
+<tr class="memdesc:a2f768ef5d1466e889c1cfc04e1da802d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a tree from the stdin in preorder and initializes this-&gt;problemsSet with the same input.  <a href="classSession.html#a2f768ef5d1466e889c1cfc04e1da802d">More...</a><br /></td></tr>
+<tr class="separator:a2f768ef5d1466e889c1cfc04e1da802d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a204150ed58c0d3857521c6b3bd841247"><td class="memItemLeft" align="right" valign="top">BinTree&lt; <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#a204150ed58c0d3857521c6b3bd841247">problemsTree</a></td></tr>
+<tr class="memdesc:a204150ed58c0d3857521c6b3bd841247"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binary tree containing the session's problem's in their prerequisite structure.  <a href="classSession.html#a204150ed58c0d3857521c6b3bd841247">More...</a><br /></td></tr>
+<tr class="separator:a204150ed58c0d3857521c6b3bd841247"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d7fdb77a86c4fd4b49367c4e6d4149e"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#a1d7fdb77a86c4fd4b49367c4e6d4149e">problemsSet</a></td></tr>
+<tr class="memdesc:a1d7fdb77a86c4fd4b49367c4e6d4149e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set containing the session's problem's.  <a href="classSession.html#a1d7fdb77a86c4fd4b49367c4e6d4149e">More...</a><br /></td></tr>
+<tr class="separator:a1d7fdb77a86c4fd4b49367c4e6d4149e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Represents a session, i.e., a set of non-repeated problems with prerequisites with a unique name (id) </p>
-<dl class="section invariant"><dt>Invariant</dt><dd><ol>
-<li>
-Problems within <code>problemsTree</code> are unique </li>
-<li>
-The tree structure corresponds to the prerequisites between problems </li>
+<div class="textblock"><p>Represents a session, i.e., a set of non-repeated problems sorted in a binary tree-like prerequisite structure. </p>
+
+<p class="definition">Definition at line <a class="el" href="Session_8hh_source.html#l00027">27</a> of file <a class="el" href="Session_8hh_source.html">Session.hh</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="ae6a2d3f11b14ca0e7f68d66d846b5855"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6a2d3f11b14ca0e7f68d66d846b5855">&#9670;&nbsp;</a></span>const_iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSession.html#ae6a2d3f11b14ca0e7f68d66d846b5855">Session::const_iterator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>a constant iterator pointing to a <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> contained in the session </p>
+
+<p class="definition">Definition at line <a class="el" href="Session_8hh_source.html#l00061">61</a> of file <a class="el" href="Session_8hh_source.html">Session.hh</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ad92ef09b872c9227e38a6efdd4d8a837"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad92ef09b872c9227e38a6efdd4d8a837">&#9670;&nbsp;</a></span>Session()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Session::Session </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Default constructor. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Creates a <a class="el" href="classSession.html" title="Represents a session, i.e., a set of non-repeated problems sorted in a binary tree-like prerequisite ...">Session</a> with 0 problems </dd></dl>
+
+</div>
+</div>
+<a id="a8753bb9dee966b7d39abc9b7237cd665"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8753bb9dee966b7d39abc9b7237cd665">&#9670;&nbsp;</a></span>~Session()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Session::~Session </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Default destructor. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Deletes the session </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a25ac4518727f816e5c4815e38014b271"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25ac4518727f816e5c4815e38014b271">&#9670;&nbsp;</a></span>addProblemToSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Session::addProblemToSet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a>&#160;</td>
+          <td class="paramname"><em>problemID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds a problem to the set while keeping it ordered by id. </p>
+
+</div>
+</div>
+<a id="a2f768ef5d1466e889c1cfc04e1da802d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f768ef5d1466e889c1cfc04e1da802d">&#9670;&nbsp;</a></span>readImmersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Session::readImmersion </td>
+          <td>(</td>
+          <td class="paramtype">BinTree&lt; <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>tree</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reads a tree from the stdin in preorder and initializes this-&gt;problemsSet with the same input. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>tree is empty </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>tree is read from stdin in preorder, this-&gt;problemsSet is initialized with the same input </dd></dl>
+
+</div>
+</div>
+<a id="aa378fcde1f8e4572b9599c975dc8d354"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa378fcde1f8e4572b9599c975dc8d354">&#9670;&nbsp;</a></span>print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Session::print </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prints the implicit parameter. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Prints the implicit parameter to the stdout </dd></dl>
+
+<p>Implements <a class="el" href="classIPrintable.html#addc8a495860e3d637a25f0806409bc0a">IPrintable</a>.</p>
+
+</div>
+</div>
+<a id="a8af7ea5fb236ceb581e39d215b4c0811"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8af7ea5fb236ceb581e39d215b4c0811">&#9670;&nbsp;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Session::read </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reads to the implicit parameter. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Reads to the implicit parameter from the stdin </dd></dl>
+
+<p>Implements <a class="el" href="classIReadable.html#a595345a03025dac6772480c342900a49">IReadable</a>.</p>
+
+</div>
+</div>
+<a id="a6032e66d3bef1b33d5b01762bd4bca4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6032e66d3bef1b33d5b01762bd4bca4d">&#9670;&nbsp;</a></span>containsProblem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Session::containsProblem </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a>&#160;</td>
+          <td class="paramname"><em>problemID</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns whether the sesssion contains a <a class="el" href="classProblem.html" title="Represents a problem with some statistics regarding it&#39;s submissions.">Problem</a> with the given id. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Returns <code>true</code> if the implicit parameter contains a <a class="el" href="classProblem.html" title="Represents a problem with some statistics regarding it&#39;s submissions.">Problem</a> with the given id. Returns <code>false</code> otherwise </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">problemID</td><td>a <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A boolean representing whether the session contains the given problem </dd></dl>
+
+</div>
+</div>
+<a id="a77f3a81755f2ef5febfaec93ef587911"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77f3a81755f2ef5febfaec93ef587911">&#9670;&nbsp;</a></span>updateSolvableProblems()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Session::updateSolvableProblems </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classICanSolveProblems.html">ICanSolveProblems</a> &amp;&#160;</td>
+          <td class="paramname"><em>solverObject</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a>&#160;</td>
+          <td class="paramname"><em>lastSolvedProblem</em> = <code><a class="el" href="namespaceprb.html#a38b9bd74c7e713bf3ec914818814e869">prb::invalidID</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates the problems contained in the session the given <a class="el" href="classICanSolveProblems.html">ICanSolveProblems</a> can solve. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>lastSolvedProblem is invalid or is contained in the session </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The problems contained in the implicit parameter the given <a class="el" href="classICanSolveProblems.html">ICanSolveProblems</a> can solve are updated </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">solverObject</td><td>a reference to the object whose solvable problems are to be updated </td></tr>
+    <tr><td class="paramname">lastSolvedProblem</td><td>the <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> of the problem solverObject solved last </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9e1c974241d60d762ef3dc3dc1a8ba97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e1c974241d60d762ef3dc3dc1a8ba97">&#9670;&nbsp;</a></span>getCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Session::getCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the number of problems contained in the session. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Returns the number of problems contained in the implicit parameter </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>An integer representing the number of problems contained </dd></dl>
+
+</div>
+</div>
+<a id="a0735755f0145dbd9d8d3a37dd6ea617d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0735755f0145dbd9d8d3a37dd6ea617d">&#9670;&nbsp;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSession.html#ae6a2d3f11b14ca0e7f68d66d846b5855">const_iterator</a> Session::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a const_iterator to the first <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> contained in the session. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Returns a const_iterator to the first <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> contained in the implicit parameter </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A const_iterator to the beginning </dd></dl>
+
+</div>
+</div>
+<a id="a2c6a3101c2fe847962b1348780918085"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c6a3101c2fe847962b1348780918085">&#9670;&nbsp;</a></span>end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSession.html#ae6a2d3f11b14ca0e7f68d66d846b5855">const_iterator</a> Session::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a const_iterator after the last <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> contained in the session. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Returns a const_iterator after the last <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> contained in the implicit parameter </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A const_iterator to the end </dd></dl>
+
+</div>
+</div>
+<a id="a8baa3a14784e12bdfb1f668f4e3fd6e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8baa3a14784e12bdfb1f668f4e3fd6e2">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Session::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSession.html">Session</a> &amp;&#160;</td>
+          <td class="paramname"><em>otherSession</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns whether the given session is equal (i.e., has the same problems in any order) to this session. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Returns <code>true</code> if the given session is equal (i.e., has the same problems in any order) to the implicit parameter. Returns <code>false</code> otherwise </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A boolean representing whether the given session and the implicit parameter are equal </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a204150ed58c0d3857521c6b3bd841247"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a204150ed58c0d3857521c6b3bd841247">&#9670;&nbsp;</a></span>problemsTree</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BinTree&lt;<a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a>&gt; Session::problemsTree</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Binary tree containing the session's problem's in their prerequisite structure. </p>
+<dl class="section invariant"><dt>Invariant</dt><dd>1. There is not any node with value <a class="el" href="namespaceprb.html#a38b9bd74c7e713bf3ec914818814e869">prb::invalidID</a><ol type="1">
+<li>Has the same problems as problemsSet does </li>
 </ol>
 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Session_8hh_source.html#l00030">30</a> of file <a class="el" href="Session_8hh_source.html">Session.hh</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<p class="definition">Definition at line <a class="el" href="Session_8hh_source.html#l00034">34</a> of file <a class="el" href="Session_8hh_source.html">Session.hh</a>.</p>
+
+</div>
+</div>
+<a id="a1d7fdb77a86c4fd4b49367c4e6d4149e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d7fdb77a86c4fd4b49367c4e6d4149e">&#9670;&nbsp;</a></span>problemsSet</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::set&lt;<a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a>&gt; Session::problemsSet</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set containing the session's problem's. </p>
+<dl class="section invariant"><dt>Invariant</dt><dd>1. There is not any element with value <a class="el" href="namespaceprb.html#a38b9bd74c7e713bf3ec914818814e869">prb::invalidID</a><ol type="1">
+<li>Has the same problems as problemsTree does</li>
+<li>Is sorted by the elements themselves, i.e., by ID's </li>
+</ol>
+</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Session_8hh_source.html#l00042">42</a> of file <a class="el" href="Session_8hh_source.html">Session.hh</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="Session_8hh_source.html">Session.hh</a></li>
 </ul>
 </div><!-- contents -->

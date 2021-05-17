@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -23,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Evaluator
-   &#160;<span id="projectnumber">1.0 Specification</span>
+   &#160;<span id="projectnumber">2.0 Implementation</span>
    </div>
    <div id="projectbrief">pro2 lab pracs: problem-evaluator-like platform</div>
   </td>
@@ -76,38 +77,86 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef SESSION_HH</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define SESSION_HH</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Interfaces_8hh.html">Interfaces.hh</a>&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ProblemCol_8hh.html">ProblemCol.hh</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ProblemCol_8hh.html">ProblemCol.hh</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifndef NO_DIAGRAM </span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="BinTree_8hh.html">BinTree.hh</a>&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef NO_DIAGRAM </span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="IPrintable_8hh.html">IPrintable.hh</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="IReadable_8hh.html">IReadable.hh</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ICanSolveProblems_8hh.html">ICanSolveProblems.hh</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;set&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="BinTree_8hh.html">BinTree.hh</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classSession.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSession.html">Session</a> : <span class="keyword">public</span> <a class="code" href="classIReadable.html">IReadable</a>, <span class="keyword">public</span> <a class="code" href="classIPrintable.html">IPrintable</a> {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="namespaceses_aa211e681d163eb0b0870daad6ec08fae.html#aa211e681d163eb0b0870daad6ec08fae">ses::ID</a> id;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    BinTree&lt;prb::ID&gt; problemsTree;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classSession_ad92ef09b872c9227e38a6efdd4d8a837.html#ad92ef09b872c9227e38a6efdd4d8a837">   35</a></span>&#160;    <a class="code" href="classSession_ad92ef09b872c9227e38a6efdd4d8a837.html#ad92ef09b872c9227e38a6efdd4d8a837">Session</a>();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classSession_ac4b7463d377f240e36136db3e8a9bd89.html#ac4b7463d377f240e36136db3e8a9bd89">   42</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSession_ac4b7463d377f240e36136db3e8a9bd89.html#ac4b7463d377f240e36136db3e8a9bd89">operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="classSession.html">Session</a> &amp; session);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classSession.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSession.html">Session</a> : <span class="keyword">public</span> <a class="code" href="classIPrintable.html">IPrintable</a>, <span class="keyword">public</span> <a class="code" href="classIReadable.html">IReadable</a> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classSession.html#a204150ed58c0d3857521c6b3bd841247">   34</a></span>&#160;    BinTree&lt;prb::ID&gt; <a class="code" href="classSession.html#a204150ed58c0d3857521c6b3bd841247">problemsTree</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classSession.html#a1d7fdb77a86c4fd4b49367c4e6d4149e">   42</a></span>&#160;    std::set&lt;prb::ID&gt; <a class="code" href="classSession.html#a1d7fdb77a86c4fd4b49367c4e6d4149e">problemsSet</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classSession.html#a25ac4518727f816e5c4815e38014b271">   47</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSession.html#a25ac4518727f816e5c4815e38014b271">addProblemToSet</a>(<a class="code" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> problemID);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classSession.html#a2f768ef5d1466e889c1cfc04e1da802d">   54</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSession.html#a2f768ef5d1466e889c1cfc04e1da802d">readImmersion</a>(BinTree&lt;prb::ID&gt; &amp; tree);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classSession.html#ae6a2d3f11b14ca0e7f68d66d846b5855">   61</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="classSession.html#ae6a2d3f11b14ca0e7f68d66d846b5855">const_iterator</a> = std::set&lt;prb::ID&gt;::const_iterator;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">/*=========================================================constructors &amp; destructors=========================================================*/</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classSession.html#ad92ef09b872c9227e38a6efdd4d8a837">   70</a></span>&#160;    <a class="code" href="classSession.html#ad92ef09b872c9227e38a6efdd4d8a837">Session</a>();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classSession.html#a8753bb9dee966b7d39abc9b7237cd665">   77</a></span>&#160;    <a class="code" href="classSession.html#a8753bb9dee966b7d39abc9b7237cd665">~Session</a>();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="comment">/*==============================================================overrided IO methods============================================================*/</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classSession.html#aa378fcde1f8e4572b9599c975dc8d354">   81</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSession.html#aa378fcde1f8e4572b9599c975dc8d354">print</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classSession.html#a8af7ea5fb236ceb581e39d215b4c0811">   82</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSession.html#a8af7ea5fb236ceb581e39d215b4c0811">read</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">/*===============================================================getters &amp; setters=============================================================*/</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classSession.html#a6032e66d3bef1b33d5b01762bd4bca4d">   93</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSession.html#a6032e66d3bef1b33d5b01762bd4bca4d">containsProblem</a>(<a class="code" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> problemID) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="classSession.html#a77f3a81755f2ef5febfaec93ef587911">  102</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSession.html#a77f3a81755f2ef5febfaec93ef587911">updateSolvableProblems</a>(<a class="code" href="classICanSolveProblems.html">ICanSolveProblems</a> &amp; solverObject, <a class="code" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> lastSolvedProblem = <a class="code" href="namespaceprb.html#a38b9bd74c7e713bf3ec914818814e869">prb::invalidID</a>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="classSession.html#a9e1c974241d60d762ef3dc3dc1a8ba97">  110</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classSession.html#a9e1c974241d60d762ef3dc3dc1a8ba97">getCount</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="classSession.html#a0735755f0145dbd9d8d3a37dd6ea617d">  118</a></span>&#160;    <a class="code" href="classSession.html#ae6a2d3f11b14ca0e7f68d66d846b5855">const_iterator</a> <a class="code" href="classSession.html#a0735755f0145dbd9d8d3a37dd6ea617d">begin</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="classSession.html#a2c6a3101c2fe847962b1348780918085">  126</a></span>&#160;    <a class="code" href="classSession.html#ae6a2d3f11b14ca0e7f68d66d846b5855">const_iterator</a> <a class="code" href="classSession.html#a2c6a3101c2fe847962b1348780918085">end</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classSession.html#a8baa3a14784e12bdfb1f668f4e3fd6e2">  134</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSession.html#a8baa3a14784e12bdfb1f668f4e3fd6e2">operator==</a>(<span class="keyword">const</span> <a class="code" href="classSession.html">Session</a> &amp; otherSession) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;};</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aBinTree_8hh_html"><div class="ttname"><a href="BinTree_8hh.html">BinTree.hh</a></div></div>
-<div class="ttc" id="aInterfaces_8hh_html"><div class="ttname"><a href="Interfaces_8hh.html">Interfaces.hh</a></div><div class="ttdoc">File containing the specification of multiple common interfaces.</div></div>
+<div class="ttc" id="aICanSolveProblems_8hh_html"><div class="ttname"><a href="ICanSolveProblems_8hh.html">ICanSolveProblems.hh</a></div></div>
+<div class="ttc" id="aIPrintable_8hh_html"><div class="ttname"><a href="IPrintable_8hh.html">IPrintable.hh</a></div><div class="ttdoc">File containing the specification of the IPrintable interface.</div></div>
+<div class="ttc" id="aIReadable_8hh_html"><div class="ttname"><a href="IReadable_8hh.html">IReadable.hh</a></div><div class="ttdoc">File containing the specification the IReadable interface.</div></div>
 <div class="ttc" id="aProblemCol_8hh_html"><div class="ttname"><a href="ProblemCol_8hh.html">ProblemCol.hh</a></div><div class="ttdoc">File containing the specification of the ProblemCollection class.</div></div>
-<div class="ttc" id="aclassIPrintable_html"><div class="ttname"><a href="classIPrintable.html">IPrintable</a></div><div class="ttdoc">IPrintable interface.</div><div class="ttdef"><b>Definition:</b> <a href="Interfaces_8hh_source.html#l00019">Interfaces.hh:19</a></div></div>
-<div class="ttc" id="aclassIReadable_html"><div class="ttname"><a href="classIReadable.html">IReadable</a></div><div class="ttdoc">IReadable interface.</div><div class="ttdef"><b>Definition:</b> <a href="Interfaces_8hh_source.html#l00042">Interfaces.hh:42</a></div></div>
-<div class="ttc" id="aclassSession_ac4b7463d377f240e36136db3e8a9bd89_html_ac4b7463d377f240e36136db3e8a9bd89"><div class="ttname"><a href="classSession_ac4b7463d377f240e36136db3e8a9bd89.html#ac4b7463d377f240e36136db3e8a9bd89">Session::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const Session &amp;session)</div><div class="ttdoc">Checks wether the implicit value (this) is to be ordered before the parameter (session)</div></div>
-<div class="ttc" id="aclassSession_ad92ef09b872c9227e38a6efdd4d8a837_html_ad92ef09b872c9227e38a6efdd4d8a837"><div class="ttname"><a href="classSession_ad92ef09b872c9227e38a6efdd4d8a837.html#ad92ef09b872c9227e38a6efdd4d8a837">Session::Session</a></div><div class="ttdeci">Session()</div></div>
-<div class="ttc" id="aclassSession_html"><div class="ttname"><a href="classSession.html">Session</a></div><div class="ttdoc">Represents a session, i.e., a set of non-repeated problems with prerequisites with a unique name (id)</div><div class="ttdef"><b>Definition:</b> <a href="Session_8hh_source.html#l00030">Session.hh:30</a></div></div>
-<div class="ttc" id="anamespaceses_aa211e681d163eb0b0870daad6ec08fae_html_aa211e681d163eb0b0870daad6ec08fae"><div class="ttname"><a href="namespaceses_aa211e681d163eb0b0870daad6ec08fae.html#aa211e681d163eb0b0870daad6ec08fae">ses::ID</a></div><div class="ttdeci">std::string ID</div><div class="ttdef"><b>Definition:</b> <a href="Namespaces_8hh_source.html#l00027">Namespaces.hh:27</a></div></div>
+<div class="ttc" id="aclassICanSolveProblems_html"><div class="ttname"><a href="classICanSolveProblems.html">ICanSolveProblems</a></div><div class="ttdef"><b>Definition:</b> <a href="ICanSolveProblems_8hh_source.html#l00006">ICanSolveProblems.hh:6</a></div></div>
+<div class="ttc" id="aclassIPrintable_html"><div class="ttname"><a href="classIPrintable.html">IPrintable</a></div><div class="ttdoc">IPrintable interface.</div><div class="ttdef"><b>Definition:</b> <a href="IPrintable_8hh_source.html#l00019">IPrintable.hh:19</a></div></div>
+<div class="ttc" id="aclassIReadable_html"><div class="ttname"><a href="classIReadable.html">IReadable</a></div><div class="ttdoc">IReadable interface.</div><div class="ttdef"><b>Definition:</b> <a href="IReadable_8hh_source.html#l00019">IReadable.hh:19</a></div></div>
+<div class="ttc" id="aclassSession_html"><div class="ttname"><a href="classSession.html">Session</a></div><div class="ttdoc">Represents a session, i.e., a set of non-repeated problems sorted in a binary tree-like prerequisite ...</div><div class="ttdef"><b>Definition:</b> <a href="Session_8hh_source.html#l00027">Session.hh:27</a></div></div>
+<div class="ttc" id="aclassSession_html_a0735755f0145dbd9d8d3a37dd6ea617d"><div class="ttname"><a href="classSession.html#a0735755f0145dbd9d8d3a37dd6ea617d">Session::begin</a></div><div class="ttdeci">const_iterator begin() const</div><div class="ttdoc">Returns a const_iterator to the first prb::ID contained in the session.</div></div>
+<div class="ttc" id="aclassSession_html_a1d7fdb77a86c4fd4b49367c4e6d4149e"><div class="ttname"><a href="classSession.html#a1d7fdb77a86c4fd4b49367c4e6d4149e">Session::problemsSet</a></div><div class="ttdeci">std::set&lt; prb::ID &gt; problemsSet</div><div class="ttdoc">Set containing the session's problem's.</div><div class="ttdef"><b>Definition:</b> <a href="Session_8hh_source.html#l00042">Session.hh:42</a></div></div>
+<div class="ttc" id="aclassSession_html_a204150ed58c0d3857521c6b3bd841247"><div class="ttname"><a href="classSession.html#a204150ed58c0d3857521c6b3bd841247">Session::problemsTree</a></div><div class="ttdeci">BinTree&lt; prb::ID &gt; problemsTree</div><div class="ttdoc">Binary tree containing the session's problem's in their prerequisite structure.</div><div class="ttdef"><b>Definition:</b> <a href="Session_8hh_source.html#l00034">Session.hh:34</a></div></div>
+<div class="ttc" id="aclassSession_html_a25ac4518727f816e5c4815e38014b271"><div class="ttname"><a href="classSession.html#a25ac4518727f816e5c4815e38014b271">Session::addProblemToSet</a></div><div class="ttdeci">void addProblemToSet(prb::ID problemID)</div><div class="ttdoc">Adds a problem to the set while keeping it ordered by id.</div></div>
+<div class="ttc" id="aclassSession_html_a2c6a3101c2fe847962b1348780918085"><div class="ttname"><a href="classSession.html#a2c6a3101c2fe847962b1348780918085">Session::end</a></div><div class="ttdeci">const_iterator end() const</div><div class="ttdoc">Returns a const_iterator after the last prb::ID contained in the session.</div></div>
+<div class="ttc" id="aclassSession_html_a2f768ef5d1466e889c1cfc04e1da802d"><div class="ttname"><a href="classSession.html#a2f768ef5d1466e889c1cfc04e1da802d">Session::readImmersion</a></div><div class="ttdeci">void readImmersion(BinTree&lt; prb::ID &gt; &amp;tree)</div><div class="ttdoc">Reads a tree from the stdin in preorder and initializes this-&gt;problemsSet with the same input.</div></div>
+<div class="ttc" id="aclassSession_html_a6032e66d3bef1b33d5b01762bd4bca4d"><div class="ttname"><a href="classSession.html#a6032e66d3bef1b33d5b01762bd4bca4d">Session::containsProblem</a></div><div class="ttdeci">bool containsProblem(prb::ID problemID) const</div><div class="ttdoc">Returns whether the sesssion contains a Problem with the given id.</div></div>
+<div class="ttc" id="aclassSession_html_a77f3a81755f2ef5febfaec93ef587911"><div class="ttname"><a href="classSession.html#a77f3a81755f2ef5febfaec93ef587911">Session::updateSolvableProblems</a></div><div class="ttdeci">void updateSolvableProblems(ICanSolveProblems &amp;solverObject, prb::ID lastSolvedProblem=prb::invalidID) const</div><div class="ttdoc">Updates the problems contained in the session the given ICanSolveProblems can solve.</div></div>
+<div class="ttc" id="aclassSession_html_a8753bb9dee966b7d39abc9b7237cd665"><div class="ttname"><a href="classSession.html#a8753bb9dee966b7d39abc9b7237cd665">Session::~Session</a></div><div class="ttdeci">~Session()</div><div class="ttdoc">Default destructor.</div></div>
+<div class="ttc" id="aclassSession_html_a8af7ea5fb236ceb581e39d215b4c0811"><div class="ttname"><a href="classSession.html#a8af7ea5fb236ceb581e39d215b4c0811">Session::read</a></div><div class="ttdeci">void read() override</div><div class="ttdoc">Reads to the implicit parameter.</div></div>
+<div class="ttc" id="aclassSession_html_a8baa3a14784e12bdfb1f668f4e3fd6e2"><div class="ttname"><a href="classSession.html#a8baa3a14784e12bdfb1f668f4e3fd6e2">Session::operator==</a></div><div class="ttdeci">bool operator==(const Session &amp;otherSession) const</div><div class="ttdoc">Returns whether the given session is equal (i.e., has the same problems in any order) to this session...</div></div>
+<div class="ttc" id="aclassSession_html_a9e1c974241d60d762ef3dc3dc1a8ba97"><div class="ttname"><a href="classSession.html#a9e1c974241d60d762ef3dc3dc1a8ba97">Session::getCount</a></div><div class="ttdeci">int getCount() const</div><div class="ttdoc">Return the number of problems contained in the session.</div></div>
+<div class="ttc" id="aclassSession_html_aa378fcde1f8e4572b9599c975dc8d354"><div class="ttname"><a href="classSession.html#aa378fcde1f8e4572b9599c975dc8d354">Session::print</a></div><div class="ttdeci">void print() const override</div><div class="ttdoc">Prints the implicit parameter.</div></div>
+<div class="ttc" id="aclassSession_html_ad92ef09b872c9227e38a6efdd4d8a837"><div class="ttname"><a href="classSession.html#ad92ef09b872c9227e38a6efdd4d8a837">Session::Session</a></div><div class="ttdeci">Session()</div><div class="ttdoc">Default constructor.</div></div>
+<div class="ttc" id="aclassSession_html_ae6a2d3f11b14ca0e7f68d66d846b5855"><div class="ttname"><a href="classSession.html#ae6a2d3f11b14ca0e7f68d66d846b5855">Session::const_iterator</a></div><div class="ttdeci">std::set&lt; prb::ID &gt;::const_iterator const_iterator</div><div class="ttdoc">a constant iterator pointing to a prb::ID contained in the session</div><div class="ttdef"><b>Definition:</b> <a href="Session_8hh_source.html#l00061">Session.hh:61</a></div></div>
+<div class="ttc" id="anamespaceprb_html_a0c2e40f5311e288c190a36c31d25e784"><div class="ttname"><a href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a></div><div class="ttdeci">std::string ID</div><div class="ttdef"><b>Definition:</b> <a href="Namespaces_8hh_source.html#l00023">Namespaces.hh:23</a></div></div>
+<div class="ttc" id="anamespaceprb_html_a38b9bd74c7e713bf3ec914818814e869"><div class="ttname"><a href="namespaceprb.html#a38b9bd74c7e713bf3ec914818814e869">prb::invalidID</a></div><div class="ttdeci">const ID invalidID</div><div class="ttdef"><b>Definition:</b> <a href="Namespaces_8hh_source.html#l00025">Namespaces.hh:25</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

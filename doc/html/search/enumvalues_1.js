@@ -1,18 +1,4 @@
 var searchData=
 [
-<<<<<<< HEAD
-  ['list_5fcourses_175',['list_courses',['../namespaceio_a05d02c08bcfc0805d39733aac0f0371f.html#a05d02c08bcfc0805d39733aac0f0371fad3d5f416a30fff985404406332cef72c',1,'io']]],
-  ['list_5fproblems_176',['list_problems',['../namespaceio_a05d02c08bcfc0805d39733aac0f0371f.html#a05d02c08bcfc0805d39733aac0f0371fadfc02d84e308cd34aa393d549d8111fc',1,'io']]],
-  ['list_5fsessions_177',['list_sessions',['../namespaceio_a05d02c08bcfc0805d39733aac0f0371f.html#a05d02c08bcfc0805d39733aac0f0371faf06dfdb8b5dd745f30cf25ba431dcf47',1,'io']]],
-  ['list_5fusers_178',['list_users',['../namespaceio_a05d02c08bcfc0805d39733aac0f0371f.html#a05d02c08bcfc0805d39733aac0f0371fabfa87367a67f5b01e6390c18bb324e17',1,'io']]]
-=======
-  ['list_5fcourses_174',['list_courses',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fad3d5f416a30fff985404406332cef72c',1,'io']]],
-  ['list_5fproblems_175',['list_problems',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fadfc02d84e308cd34aa393d549d8111fc',1,'io']]],
-  ['list_5fsessions_176',['list_sessions',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371faf06dfdb8b5dd745f30cf25ba431dcf47',1,'io']]],
-  ['list_5fusers_177',['list_users',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fabfa87367a67f5b01e6390c18bb324e17',1,'io']]]
-<<<<<<< HEAD
->>>>>>> d492b3a069c2074d005a742334644ac2220fcab0
-=======
->>>>>>> spec
->>>>>>> a9243d702bf53f762bc01ba95a77d594935fe2df
+  ['default_5ferror_283',['default_error',['../namespaceio.html#adbb419c9c9a584444a295d1738727daea5f68ff264f89ab8ac3172891aacec52c',1,'io']]]
 ];

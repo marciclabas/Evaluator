@@ -7,6 +7,8 @@ User::User()
 :	isEnrolled(false), enrolledCourse(), stats(), solvedProblems(), solvableProblems()
 {	}
 
+User::~User() {}
+
 User::UserStats::UserStats()
 :	totalSubmissions(0), acceptedProblems(0), triedProblems(0)
 {	}
@@ -14,10 +16,6 @@ User::UserStats::UserStats()
 User::ProblemStats::ProblemStats()
 :	stats()
 {	}
-
-User::~User() {
-	/* if(isEnrolledInCourse()) CourseSet::getInstance()[getEnrolledCourseID()].unenrollUser(); */
-}
 
 /* ===================================================================getters==================================================================*/
 

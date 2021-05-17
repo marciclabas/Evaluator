@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -23,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Evaluator
-   &#160;<span id="projectnumber">1.0 Specification</span>
+   &#160;<span id="projectnumber">2.0 Implementation</span>
    </div>
    <div id="projectbrief">pro2 lab pracs: problem-evaluator-like platform</div>
   </td>
@@ -70,13 +71,17 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">Namespaces.hh File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>File containing the namespaces corresponding to <a class="el" href="classProblem.html" title="Represents a problem with a unique name (id) and some statistics.">Problem</a>, <a class="el" href="classSession.html" title="Represents a session, i.e., a set of non-repeated problems with prerequisites with a unique name (id)">Session</a>, <a class="el" href="classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics.">Course</a> and <a class="el" href="classUser.html" title="Represents a user with a unique name (id) and some statistics.">User</a>.  
+<p>File containing the namespaces corresponding to <a class="el" href="classProblem.html" title="Represents a problem with some statistics regarding it&#39;s submissions.">Problem</a>, <a class="el" href="classSession.html" title="Represents a session, i.e., a set of non-repeated problems sorted in a binary tree-like prerequisite ...">Session</a>, <a class="el" href="classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics.">Course</a> and <a class="el" href="classUser.html" title="Represents a user with a unique name (id) and some statistics.">User</a>.  
 <a href="#details">More...</a></p>
 
 <p><a href="Namespaces_8hh_source.html">Go to the source code of this file.</a></p>
@@ -84,10 +89,10 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespaceprb"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprb.html">prb</a></td></tr>
-<tr class="memdesc:namespaceprb"><td class="mdescLeft">&#160;</td><td class="mdescRight">namespace containing type definitions related to the <a class="el" href="classProblem.html" title="Represents a problem with a unique name (id) and some statistics.">Problem</a> class <br /></td></tr>
+<tr class="memdesc:namespaceprb"><td class="mdescLeft">&#160;</td><td class="mdescRight">namespace containing type definitions related to the <a class="el" href="classProblem.html" title="Represents a problem with some statistics regarding it&#39;s submissions.">Problem</a> class <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespaceses"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceses.html">ses</a></td></tr>
-<tr class="memdesc:namespaceses"><td class="mdescLeft">&#160;</td><td class="mdescRight">namespace containing type definitions related to the <a class="el" href="classSession.html" title="Represents a session, i.e., a set of non-repeated problems with prerequisites with a unique name (id)">Session</a> class <br /></td></tr>
+<tr class="memdesc:namespaceses"><td class="mdescLeft">&#160;</td><td class="mdescRight">namespace containing type definitions related to the <a class="el" href="classSession.html" title="Represents a session, i.e., a set of non-repeated problems sorted in a binary tree-like prerequisite ...">Session</a> class <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacecrs"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrs.html">crs</a></td></tr>
 <tr class="memdesc:namespacecrs"><td class="mdescLeft">&#160;</td><td class="mdescRight">namespace containing type definitions related to the <a class="el" href="classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics.">Course</a> class <br /></td></tr>
@@ -96,24 +101,90 @@ Namespaces</h2></td></tr>
 <tr class="memdesc:namespaceusr"><td class="mdescLeft">&#160;</td><td class="mdescRight">namespace containing type definitions related to the <a class="el" href="classUser.html" title="Represents a user with a unique name (id) and some statistics.">User</a> class <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a8de3ed741dadc9c979a4ff17c0a9116e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Namespaces_8hh.html#a8de3ed741dadc9c979a4ff17c0a9116e">NDEBUG</a></td></tr>
+<tr class="separator:a8de3ed741dadc9c979a4ff17c0a9116e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ac73f5af4cf1ee8080561c3daea7a437f"><td class="memItemLeft" align="right" valign="top">typedef std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprb_ac73f5af4cf1ee8080561c3daea7a437f.html#ac73f5af4cf1ee8080561c3daea7a437f">prb::ID</a></td></tr>
-<tr class="separator:ac73f5af4cf1ee8080561c3daea7a437f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72e825355fbd24713dfb8ef9875aa775"><td class="memItemLeft" align="right" valign="top">typedef bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprb_a72e825355fbd24713dfb8ef9875aa775.html#a72e825355fbd24713dfb8ef9875aa775">prb::result</a></td></tr>
-<tr class="separator:a72e825355fbd24713dfb8ef9875aa775"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa211e681d163eb0b0870daad6ec08fae"><td class="memItemLeft" align="right" valign="top">typedef std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceses_aa211e681d163eb0b0870daad6ec08fae.html#aa211e681d163eb0b0870daad6ec08fae">ses::ID</a></td></tr>
-<tr class="separator:aa211e681d163eb0b0870daad6ec08fae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6124b1a4ba860befee7a8499688e758"><td class="memItemLeft" align="right" valign="top">typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrs_ad6124b1a4ba860befee7a8499688e758.html#ad6124b1a4ba860befee7a8499688e758">crs::ID</a></td></tr>
-<tr class="separator:ad6124b1a4ba860befee7a8499688e758"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afed849d06665ce63a85325c909efe771"><td class="memItemLeft" align="right" valign="top">typedef std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceusr_afed849d06665ce63a85325c909efe771.html#afed849d06665ce63a85325c909efe771">usr::ID</a></td></tr>
-<tr class="separator:afed849d06665ce63a85325c909efe771"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c2e40f5311e288c190a36c31d25e784"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> = std::string</td></tr>
+<tr class="separator:a0c2e40f5311e288c190a36c31d25e784"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e27309376c2c29f777924e38b232b46"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceses.html#a3e27309376c2c29f777924e38b232b46">ses::ID</a> = std::string</td></tr>
+<tr class="separator:a3e27309376c2c29f777924e38b232b46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab6a467a83e78cac63a90d13466d8111"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrs.html#aab6a467a83e78cac63a90d13466d8111">crs::ID</a> = int</td></tr>
+<tr class="separator:aab6a467a83e78cac63a90d13466d8111"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a126b797f5297bd229fad6076ba9d0dcf"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceusr.html#a126b797f5297bd229fad6076ba9d0dcf">usr::ID</a> = std::string</td></tr>
+<tr class="separator:a126b797f5297bd229fad6076ba9d0dcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ac8ae05a8ffb2fcf04a3520b950580832"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprb.html#ac8ae05a8ffb2fcf04a3520b950580832">prb::result</a> { <a class="el" href="namespaceprb.html#ac8ae05a8ffb2fcf04a3520b950580832a57f68538285d217aeed2f8826fdb7432">prb::rejected</a> = 0
+, <a class="el" href="namespaceprb.html#ac8ae05a8ffb2fcf04a3520b950580832abe4e3b4aa35ba6fb1f61cbf2b8eff128">prb::accepted</a> = 1
+ }</td></tr>
+<tr class="separator:ac8ae05a8ffb2fcf04a3520b950580832"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:af062eca1dc6f82dbfb822d510fd6d8f9"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Namespaces_8hh.html#af062eca1dc6f82dbfb822d510fd6d8f9">operator&gt;&gt;</a> (std::istream &amp;in, <a class="el" href="namespaceprb.html#ac8ae05a8ffb2fcf04a3520b950580832">prb::result</a> &amp;result)</td></tr>
+<tr class="separator:af062eca1dc6f82dbfb822d510fd6d8f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a38b9bd74c7e713bf3ec914818814e869"><td class="memItemLeft" align="right" valign="top">const ID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprb.html#a38b9bd74c7e713bf3ec914818814e869">prb::invalidID</a> = &quot;0&quot;</td></tr>
+<tr class="separator:a38b9bd74c7e713bf3ec914818814e869"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>File containing the namespaces corresponding to <a class="el" href="classProblem.html" title="Represents a problem with a unique name (id) and some statistics.">Problem</a>, <a class="el" href="classSession.html" title="Represents a session, i.e., a set of non-repeated problems with prerequisites with a unique name (id)">Session</a>, <a class="el" href="classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics.">Course</a> and <a class="el" href="classUser.html" title="Represents a user with a unique name (id) and some statistics.">User</a>. </p>
+<div class="textblock"><p>File containing the namespaces corresponding to <a class="el" href="classProblem.html" title="Represents a problem with some statistics regarding it&#39;s submissions.">Problem</a>, <a class="el" href="classSession.html" title="Represents a session, i.e., a set of non-repeated problems sorted in a binary tree-like prerequisite ...">Session</a>, <a class="el" href="classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics.">Course</a> and <a class="el" href="classUser.html" title="Represents a user with a unique name (id) and some statistics.">User</a>. </p>
 
 <p class="definition">Definition in file <a class="el" href="Namespaces_8hh_source.html">Namespaces.hh</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a8de3ed741dadc9c979a4ff17c0a9116e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8de3ed741dadc9c979a4ff17c0a9116e">&#9670;&nbsp;</a></span>NDEBUG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NDEBUG</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Namespaces_8hh_source.html#l00009">9</a> of file <a class="el" href="Namespaces_8hh_source.html">Namespaces.hh</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="af062eca1dc6f82dbfb822d510fd6d8f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af062eca1dc6f82dbfb822d510fd6d8f9">&#9670;&nbsp;</a></span>operator&gt;&gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::istream&amp; operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceprb.html#ac8ae05a8ffb2fcf04a3520b950580832">prb::result</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1

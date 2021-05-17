@@ -1,9 +1,27 @@
 var classCourse =
 [
-    [ "Course", "classCourse.html#a6b959ccf15d9ceed9e9c14a701561982", null ],
-    [ "countUsersEnrolled", "classCourse.html#a240b3e8ee8cbf5f1d054dbd6e05ea3a9", null ],
-    [ "enrollUser", "classCourse.html#a6047349e41149231c71d1d2307283bc9", null ],
-    [ "getID", "classCourse.html#a59e58777fc2d830c54c04de1c8c50259", null ],
-    [ "getSessionByProblem", "classCourse.html#ace133d1f563d450142fedb91f2769d0d", null ],
-    [ "unenrollUser", "classCourse.html#a6a71deac55949b33c5903ed2cd71db4b", null ]
+    [ "const_iterator", "classCourse_a7ba8ff01a3475ff93cdaebd51173d7ca.html#a7ba8ff01a3475ff93cdaebd51173d7ca", null ],
+    [ "Course", "classCourse_a6b959ccf15d9ceed9e9c14a701561982.html#a6b959ccf15d9ceed9e9c14a701561982", null ],
+    [ "~Course", "classCourse_aa9038f2e129526920037dda9e76d69d0.html#aa9038f2e129526920037dda9e76d69d0", null ],
+    [ "addSession", "classCourse_ab848d6e1917d7294a238524d1e829d08.html#ab848d6e1917d7294a238524d1e829d08", null ],
+    [ "sessionCount", "classCourse_a948ab9eff6f6dadc7a4be961603d7f7f.html#a948ab9eff6f6dadc7a4be961603d7f7f", null ],
+    [ "problemCount", "classCourse_a615c5ea821a233723768409605e63b26.html#a615c5ea821a233723768409605e63b26", null ],
+    [ "containsProblem", "classCourse_aafd43f0cac7e85728eb8dddd7edb37e6.html#aafd43f0cac7e85728eb8dddd7edb37e6", null ],
+    [ "getUsersEnrolled", "classCourse_afdc0ce85c5dcc43f06ae9a7a63793156.html#afdc0ce85c5dcc43f06ae9a7a63793156", null ],
+    [ "getSessionByProblem", "classCourse_ada500ecbde39364e8dac698a409872e3.html#ada500ecbde39364e8dac698a409872e3", null ],
+    [ "updateSolvableProblems", "classCourse_a043b2c94e777c255ca8cc599626e03b6.html#a043b2c94e777c255ca8cc599626e03b6", null ],
+    [ "print", "classCourse_a7fd61bcbad5041fc50642f1a8e7b1194.html#a7fd61bcbad5041fc50642f1a8e7b1194", null ],
+    [ "read", "classCourse_a6b04dba847f859a0440379eea607ca8d.html#a6b04dba847f859a0440379eea607ca8d", null ],
+    [ "enrollUser", "classCourse_a6047349e41149231c71d1d2307283bc9.html#a6047349e41149231c71d1d2307283bc9", null ],
+    [ "unenrollUser", "classCourse_a6a71deac55949b33c5903ed2cd71db4b.html#a6a71deac55949b33c5903ed2cd71db4b", null ],
+    [ "completeCourse", "classCourse_a9bbd67ce05225a1b6058179f9bac22a4.html#a9bbd67ce05225a1b6058179f9bac22a4", null ],
+    [ "isValid", "classCourse_a1a76f8038858c2253766bf6b5cacf5e1.html#a1a76f8038858c2253766bf6b5cacf5e1", null ],
+    [ "begin", "classCourse_aadcbf642ecfd6b21118873350d8df79a.html#aadcbf642ecfd6b21118873350d8df79a", null ],
+    [ "end", "classCourse_ab66c4cec1447fb3f7275e9bae8e17a1f.html#ab66c4cec1447fb3f7275e9bae8e17a1f", null ],
+    [ "operator==", "classCourse_a903d8640ea2f7fc37aa773838357bbe5.html#a903d8640ea2f7fc37aa773838357bbe5", null ],
+    [ "usersCompleted", "classCourse_a2f973db9a40006e707040dc71e830e83.html#a2f973db9a40006e707040dc71e830e83", null ],
+    [ "usersEnrolled", "classCourse_a7e0ce99ccad21baa60c921a544b7f097.html#a7e0ce99ccad21baa60c921a544b7f097", null ],
+    [ "sessions", "classCourse_a771b28ad413837cdfb12af2bdfdc15b0.html#a771b28ad413837cdfb12af2bdfdc15b0", null ],
+    [ "problemSessionIndex", "classCourse_abf815fafbd4ab96cb817e964457f721a.html#abf815fafbd4ab96cb817e964457f721a", null ],
+    [ "valid", "classCourse_a966fe9048c51f4c5114923260c4b331b.html#a966fe9048c51f4c5114923260c4b331b", null ]
 ];

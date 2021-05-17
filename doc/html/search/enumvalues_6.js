@@ -1,12 +1,5 @@
 var searchData=
 [
-<<<<<<< HEAD
-  ['user_5fcourse_188',['user_course',['../namespaceio_a05d02c08bcfc0805d39733aac0f0371f.html#a05d02c08bcfc0805d39733aac0f0371fae7561e8140df0a1dc0b64cce2099a2b4',1,'io']]]
-=======
-  ['user_5fcourse_187',['user_course',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fae7561e8140df0a1dc0b64cce2099a2b4',1,'io']]]
-<<<<<<< HEAD
->>>>>>> d492b3a069c2074d005a742334644ac2220fcab0
-=======
->>>>>>> spec
->>>>>>> a9243d702bf53f762bc01ba95a77d594935fe2df
+  ['problem_5fnot_5fin_5fcourse_300',['problem_not_in_course',['../namespaceio.html#adbb419c9c9a584444a295d1738727daea6e1d02c9662dd24c5e4ff3cd975373a2',1,'io']]],
+  ['problem_5fsession_301',['problem_session',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fad11e2a92f84842f2d7cc143ecbd338e0',1,'io']]]
 ];

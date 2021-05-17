@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -23,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Evaluator
-   &#160;<span id="projectnumber">1.0 Specification</span>
+   &#160;<span id="projectnumber">2.0 Implementation</span>
    </div>
    <div id="projectbrief">pro2 lab pracs: problem-evaluator-like platform</div>
   </td>
@@ -66,60 +67,269 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classProblem-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Problem Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Represents a problem with a unique name (id) and some statistics.  
+<p>Represents a problem with some statistics regarding it's submissions.  
  <a href="classProblem.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Problem_8hh_source.html">Problem.hh</a>&gt;</code></p>
-<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for Problem:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classProblem__inherit__graph.png" border="0" usemap="#aProblem_inherit__map" alt="Inheritance graph"/></div>
-<map name="aProblem_inherit__map" id="aProblem_inherit__map">
-<area shape="rect" title="Represents a problem with a unique name (id) and some statistics." alt="" coords="65,80,141,107"/>
-<area shape="rect" href="classIReadable.html" title="IReadable interface." alt="" coords="5,5,92,32"/>
-<area shape="rect" href="classIPrintable.html" title="IPrintable interface." alt="" coords="116,5,200,32"/>
+<div class="dynheader">
+Collaboration diagram for Problem:</div>
+<div class="dyncontent">
+<div class="center"><img src="classProblem__coll__graph.png" border="0" usemap="#aProblem_coll__map" alt="Collaboration graph"/></div>
+<map name="aProblem_coll__map" id="aProblem_coll__map">
+<area shape="rect" title="Represents a problem with some statistics regarding it&#39;s submissions." alt="" coords="5,131,164,296"/>
+<area shape="rect" href="classIPrintable.html" title="IPrintable interface." alt="" coords="43,5,127,83"/>
 </map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad9d44f0ef936fb62f0ce41dd200494ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProblem_ad9d44f0ef936fb62f0ce41dd200494ac.html#ad9d44f0ef936fb62f0ce41dd200494ac">Problem</a> ()</td></tr>
+<tr class="memitem:ad9d44f0ef936fb62f0ce41dd200494ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProblem.html#ad9d44f0ef936fb62f0ce41dd200494ac">Problem</a> ()</td></tr>
+<tr class="memdesc:ad9d44f0ef936fb62f0ce41dd200494ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="classProblem.html#ad9d44f0ef936fb62f0ce41dd200494ac">More...</a><br /></td></tr>
 <tr class="separator:ad9d44f0ef936fb62f0ce41dd200494ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4aadc22c686e0229fa71c377399a18b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProblem_a4aadc22c686e0229fa71c377399a18b7.html#a4aadc22c686e0229fa71c377399a18b7">parseSubmission</a> (<a class="el" href="namespaceprb_a72e825355fbd24713dfb8ef9875aa775.html#a72e825355fbd24713dfb8ef9875aa775">prb::result</a> r)</td></tr>
-<tr class="memdesc:a4aadc22c686e0229fa71c377399a18b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the <code><a class="el" href="classProblem.html" title="Represents a problem with a unique name (id) and some statistics.">Problem</a></code>'s stats based on the submission result.  <a href="classProblem_a4aadc22c686e0229fa71c377399a18b7.html#a4aadc22c686e0229fa71c377399a18b7">More...</a><br /></td></tr>
-<tr class="separator:a4aadc22c686e0229fa71c377399a18b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65d3c8db0078052a101770e84800773e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProblem_a65d3c8db0078052a101770e84800773e.html#a65d3c8db0078052a101770e84800773e">operator&lt;</a> (const <a class="el" href="classProblem.html">Problem</a> &amp;problem)</td></tr>
-<tr class="memdesc:a65d3c8db0078052a101770e84800773e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks wether the implicit value (<code>this</code>) is to be ordered before the parameter (<code>problem</code>)  <a href="classProblem_a65d3c8db0078052a101770e84800773e.html#a65d3c8db0078052a101770e84800773e">More...</a><br /></td></tr>
-<tr class="separator:a65d3c8db0078052a101770e84800773e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a143d68bd066b688c17e06beba7145c6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIReadable_a143d68bd066b688c17e06beba7145c6f.html#a143d68bd066b688c17e06beba7145c6f">read</a> ()</td></tr>
-<tr class="memdesc:a143d68bd066b688c17e06beba7145c6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read to the <code><a class="el" href="classIReadable.html" title="IReadable interface.">IReadable</a></code> object from the stdin.  <a href="classIReadable_a143d68bd066b688c17e06beba7145c6f.html#a143d68bd066b688c17e06beba7145c6f">More...</a><br /></td></tr>
-<tr class="separator:a143d68bd066b688c17e06beba7145c6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b00d3f39de891a4caf1837763ffe8a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIPrintable_a5b00d3f39de891a4caf1837763ffe8a3.html#a5b00d3f39de891a4caf1837763ffe8a3">print</a> () const</td></tr>
-<tr class="memdesc:a5b00d3f39de891a4caf1837763ffe8a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the <code><a class="el" href="classIPrintable.html" title="IPrintable interface.">IPrintable</a></code> object to the stdout.  <a href="classIPrintable_a5b00d3f39de891a4caf1837763ffe8a3.html#a5b00d3f39de891a4caf1837763ffe8a3">More...</a><br /></td></tr>
-<tr class="separator:a5b00d3f39de891a4caf1837763ffe8a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a839a525ed01c34d57fff42583003d3e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProblem.html#a839a525ed01c34d57fff42583003d3e7">~Problem</a> ()</td></tr>
+<tr class="memdesc:a839a525ed01c34d57fff42583003d3e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor.  <a href="classProblem.html#a839a525ed01c34d57fff42583003d3e7">More...</a><br /></td></tr>
+<tr class="separator:a839a525ed01c34d57fff42583003d3e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b103faccfd87982f941c468802b4a22"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProblem.html#a9b103faccfd87982f941c468802b4a22">getRatio</a> () const</td></tr>
+<tr class="memdesc:a9b103faccfd87982f941c468802b4a22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total vs accepted submissions ratio.  <a href="classProblem.html#a9b103faccfd87982f941c468802b4a22">More...</a><br /></td></tr>
+<tr class="separator:a9b103faccfd87982f941c468802b4a22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5522d13d71c4bdf1ea4f8a4cd891f9c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProblem.html#ab5522d13d71c4bdf1ea4f8a4cd891f9c">parseSubmission</a> (<a class="el" href="namespaceprb.html#ac8ae05a8ffb2fcf04a3520b950580832">prb::result</a> result)</td></tr>
+<tr class="memdesc:ab5522d13d71c4bdf1ea4f8a4cd891f9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the implicit parameter's stats based on the submission result.  <a href="classProblem.html#ab5522d13d71c4bdf1ea4f8a4cd891f9c">More...</a><br /></td></tr>
+<tr class="separator:ab5522d13d71c4bdf1ea4f8a4cd891f9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a743af7c886c13ce185a988b2d3e7d789"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProblem.html#a743af7c886c13ce185a988b2d3e7d789">print</a> () const override</td></tr>
+<tr class="memdesc:a743af7c886c13ce185a988b2d3e7d789"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the implicit parameter.  <a href="classProblem.html#a743af7c886c13ce185a988b2d3e7d789">More...</a><br /></td></tr>
+<tr class="separator:a743af7c886c13ce185a988b2d3e7d789"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:adb5240ca06e0a6e5ebb13c69d8315cf3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProblem.html#adb5240ca06e0a6e5ebb13c69d8315cf3">t</a></td></tr>
+<tr class="memdesc:adb5240ca06e0a6e5ebb13c69d8315cf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total number of submissions issued.  <a href="classProblem.html#adb5240ca06e0a6e5ebb13c69d8315cf3">More...</a><br /></td></tr>
+<tr class="separator:adb5240ca06e0a6e5ebb13c69d8315cf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca6215a0cd094ce01582821234ee81bc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProblem.html#aca6215a0cd094ce01582821234ee81bc">e</a></td></tr>
+<tr class="memdesc:aca6215a0cd094ce01582821234ee81bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of accepted submissions.  <a href="classProblem.html#aca6215a0cd094ce01582821234ee81bc">More...</a><br /></td></tr>
+<tr class="separator:aca6215a0cd094ce01582821234ee81bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34720261fb68d7602632f0cf07da0698"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProblem.html#a34720261fb68d7602632f0cf07da0698">r</a></td></tr>
+<tr class="memdesc:a34720261fb68d7602632f0cf07da0698"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ratio of total submissions vs accepted submissions.  <a href="classProblem.html#a34720261fb68d7602632f0cf07da0698">More...</a><br /></td></tr>
+<tr class="separator:a34720261fb68d7602632f0cf07da0698"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Represents a problem with a unique name (id) and some statistics. </p>
-<dl class="section invariant"><dt>Invariant</dt><dd><ol>
-<li>
-<code>totalSubmissions</code> = t &gt;= e </li>
-<li>
-<code>acceptedSubmissions</code> = e &gt;= 0 </li>
-<li>
-<code>ratio</code> = (t+1)/(e+1) </li>
-</ol>
-</dd></dl>
+<div class="textblock"><p>Represents a problem with some statistics regarding it's submissions. </p>
 
-<p class="definition">Definition at line <a class="el" href="Problem_8hh_source.html#l00024">24</a> of file <a class="el" href="Problem_8hh_source.html">Problem.hh</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<p class="definition">Definition at line <a class="el" href="Problem_8hh_source.html#l00017">17</a> of file <a class="el" href="Problem_8hh_source.html">Problem.hh</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ad9d44f0ef936fb62f0ce41dd200494ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9d44f0ef936fb62f0ce41dd200494ac">&#9670;&nbsp;</a></span>Problem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Problem::Problem </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Default constructor. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Creates a <a class="el" href="classProblem.html" title="Represents a problem with some statistics regarding it&#39;s submissions.">Problem</a> with ratio 1 </dd></dl>
+
+</div>
+</div>
+<a id="a839a525ed01c34d57fff42583003d3e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a839a525ed01c34d57fff42583003d3e7">&#9670;&nbsp;</a></span>~Problem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Problem::~Problem </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Default destructor. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Deletes the problem </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9b103faccfd87982f941c468802b4a22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b103faccfd87982f941c468802b4a22">&#9670;&nbsp;</a></span>getRatio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Problem::getRatio </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the total vs accepted submissions ratio. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Returns the implicit parameter's ratio [r = (total+1)/(accepted+1)] </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A double representing the problem's ratio </dd></dl>
+
+</div>
+</div>
+<a id="ab5522d13d71c4bdf1ea4f8a4cd891f9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5522d13d71c4bdf1ea4f8a4cd891f9c">&#9670;&nbsp;</a></span>parseSubmission()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Problem::parseSubmission </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceprb.html#ac8ae05a8ffb2fcf04a3520b950580832">prb::result</a>&#160;</td>
+          <td class="paramname"><em>result</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates the implicit parameter's stats based on the submission result. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Stats are updated accordingly </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">result</td><td>a <a class="el" href="namespaceprb.html#ac8ae05a8ffb2fcf04a3520b950580832">prb::result</a> representing the result of the submission </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a743af7c886c13ce185a988b2d3e7d789"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a743af7c886c13ce185a988b2d3e7d789">&#9670;&nbsp;</a></span>print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Problem::print </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prints the implicit parameter. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Prints the implicit parameter to the stdout </dd></dl>
+
+<p>Implements <a class="el" href="classIPrintable.html#addc8a495860e3d637a25f0806409bc0a">IPrintable</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="adb5240ca06e0a6e5ebb13c69d8315cf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb5240ca06e0a6e5ebb13c69d8315cf3">&#9670;&nbsp;</a></span>t</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Problem::t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Total number of submissions issued. </p>
+<dl class="section invariant"><dt>Invariant</dt><dd>t &gt;= 0 </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Problem_8hh_source.html#l00023">23</a> of file <a class="el" href="Problem_8hh_source.html">Problem.hh</a>.</p>
+
+</div>
+</div>
+<a id="aca6215a0cd094ce01582821234ee81bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca6215a0cd094ce01582821234ee81bc">&#9670;&nbsp;</a></span>e</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Problem::e</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Number of accepted submissions. </p>
+<dl class="section invariant"><dt>Invariant</dt><dd>e &gt;= t </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Problem_8hh_source.html#l00029">29</a> of file <a class="el" href="Problem_8hh_source.html">Problem.hh</a>.</p>
+
+</div>
+</div>
+<a id="a34720261fb68d7602632f0cf07da0698"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34720261fb68d7602632f0cf07da0698">&#9670;&nbsp;</a></span>r</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Problem::r</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ratio of total submissions vs accepted submissions. </p>
+<dl class="section invariant"><dt>Invariant</dt><dd>r = (t+1)/(e+1) </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Problem_8hh_source.html#l00035">35</a> of file <a class="el" href="Problem_8hh_source.html">Problem.hh</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="Problem_8hh_source.html">Problem.hh</a></li>
 </ul>
 </div><!-- contents -->

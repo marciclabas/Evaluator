@@ -6,9 +6,9 @@
 class ICanSolveProblems {
 public:
     /**
-    @brief Checks whether the @c ICanSolveProblems object has solved a problem with the given ID
+    @brief Returns whether the @c ICanSolveProblems object has solved a problem with the given ID
     @pre True
-    @post Returns @c true if has solved a problem with the given id, returns @c false otherwise
+    @post Returns @c true if has solved a problem with the given id. Returns @c false otherwise
     */
     virtual bool hasSolvedProblem(prb::ID problemID) const = 0;
 

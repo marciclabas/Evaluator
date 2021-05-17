@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -23,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Evaluator
-   &#160;<span id="projectnumber">1.0 Specification</span>
+   &#160;<span id="projectnumber">2.0 Implementation</span>
    </div>
    <div id="projectbrief">pro2 lab pracs: problem-evaluator-like platform</div>
   </td>
@@ -66,57 +67,69 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#friends">Friends</a> &#124;
 <a href="classIPrintable-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">IPrintable Interface Reference</div>  </div>
+<div class="title">IPrintable Interface Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><a class="el" href="classIPrintable.html" title="IPrintable interface.">IPrintable</a> interface.  
  <a href="classIPrintable.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="Interfaces_8hh_source.html">Interfaces.hh</a>&gt;</code></p>
-<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for IPrintable:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classIPrintable__inherit__graph.png" border="0" usemap="#aIPrintable_inherit__map" alt="Inheritance graph"/></div>
-<map name="aIPrintable_inherit__map" id="aIPrintable_inherit__map">
-<area shape="rect" title="IPrintable interface." alt="" coords="5,233,89,260"/>
-<area shape="rect" href="classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics." alt="" coords="175,5,242,32"/>
-<area shape="rect" href="classCourseSet.html" title="Represents set of courses." alt="" coords="165,56,253,83"/>
-<area shape="rect" href="classProblem.html" title="Represents a problem with a unique name (id) and some statistics." alt="" coords="171,107,247,133"/>
-<area shape="rect" href="classProblemCollection.html" title="Represents a collection of problems." alt="" coords="138,157,279,184"/>
-<area shape="rect" href="classProblemStats.html" title="Represents the statistics of a problem related to some user." alt="" coords="154,208,263,235"/>
-<area shape="rect" href="classSession.html" title="Represents a session, i.e., a set of non&#45;repeated problems with prerequisites with a unique name (id)" alt="" coords="173,259,245,285"/>
-<area shape="rect" href="classSessionRepository.html" title="Represents a repository of sessions." alt="" coords="137,309,280,336"/>
-<area shape="rect" href="classUser.html" title="Represents a user with a unique name (id) and some statistics." alt="" coords="183,360,235,387"/>
-<area shape="rect" href="classUserSet.html" title="Represents a set of users." alt="" coords="172,411,245,437"/>
+<p><code>#include &lt;<a class="el" href="IPrintable_8hh_source.html">IPrintable.hh</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for IPrintable:</div>
+<div class="dyncontent">
+<div class="center"><img src="classIPrintable__coll__graph.png" border="0" usemap="#aIPrintable_coll__map" alt="Collaboration graph"/></div>
+<map name="aIPrintable_coll__map" id="aIPrintable_coll__map">
+<area shape="rect" title="IPrintable interface." alt="" coords="5,5,89,83"/>
 </map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af22d3b0590836d9f40d36c7b1279c580"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIPrintable_af22d3b0590836d9f40d36c7b1279c580.html#af22d3b0590836d9f40d36c7b1279c580">IPrintable</a> ()=delete</td></tr>
-<tr class="separator:af22d3b0590836d9f40d36c7b1279c580"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b00d3f39de891a4caf1837763ffe8a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIPrintable_a5b00d3f39de891a4caf1837763ffe8a3.html#a5b00d3f39de891a4caf1837763ffe8a3">print</a> () const</td></tr>
-<tr class="memdesc:a5b00d3f39de891a4caf1837763ffe8a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the <code><a class="el" href="classIPrintable.html" title="IPrintable interface.">IPrintable</a></code> object to the stdout.  <a href="classIPrintable_a5b00d3f39de891a4caf1837763ffe8a3.html#a5b00d3f39de891a4caf1837763ffe8a3">More...</a><br /></td></tr>
-<tr class="separator:a5b00d3f39de891a4caf1837763ffe8a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:afed3f1b972f0ad36ed1811162841f24b"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIPrintable_afed3f1b972f0ad36ed1811162841f24b.html#afed3f1b972f0ad36ed1811162841f24b">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classIPrintable.html">IPrintable</a> &amp;printable)</td></tr>
-<tr class="memdesc:afed3f1b972f0ad36ed1811162841f24b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the <code><a class="el" href="classIPrintable.html" title="IPrintable interface.">IPrintable</a></code> object to an output stream.  <a href="classIPrintable_afed3f1b972f0ad36ed1811162841f24b.html#afed3f1b972f0ad36ed1811162841f24b">More...</a><br /></td></tr>
-<tr class="separator:afed3f1b972f0ad36ed1811162841f24b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addc8a495860e3d637a25f0806409bc0a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIPrintable.html#addc8a495860e3d637a25f0806409bc0a">print</a> () const =0</td></tr>
+<tr class="memdesc:addc8a495860e3d637a25f0806409bc0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the implicit parameter.  <a href="classIPrintable.html#addc8a495860e3d637a25f0806409bc0a">More...</a><br /></td></tr>
+<tr class="separator:addc8a495860e3d637a25f0806409bc0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classIPrintable.html" title="IPrintable interface.">IPrintable</a> interface. </p>
 
-<p class="definition">Definition at line <a class="el" href="Interfaces_8hh_source.html#l00019">19</a> of file <a class="el" href="Interfaces_8hh_source.html">Interfaces.hh</a>.</p>
-</div><hr/>The documentation for this interface was generated from the following file:<ul>
-<li><a class="el" href="Interfaces_8hh_source.html">Interfaces.hh</a></li>
+<p class="definition">Definition at line <a class="el" href="IPrintable_8hh_source.html#l00019">19</a> of file <a class="el" href="IPrintable_8hh_source.html">IPrintable.hh</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="addc8a495860e3d637a25f0806409bc0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addc8a495860e3d637a25f0806409bc0a">&#9670;&nbsp;</a></span>print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IPrintable::print </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prints the implicit parameter. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Prints the implicit parameter to the stdout </dd></dl>
+
+<p>Implemented in <a class="el" href="classUserSet.html#aedfbf2444bdfff40d062334b26e36438">UserSet</a>, <a class="el" href="classUser.html#a7e3a3b397add1d7969213ee07afa6e30">User</a>, <a class="el" href="structUser_1_1ProblemStats.html#a303357e728bcb58a1c8a5c1ce318c037">User::ProblemStats</a>, <a class="el" href="classSessionRepository.html#afa26909ce41c3a4b17a49eb0e56dd4f6">SessionRepository</a>, <a class="el" href="classSession.html#aa378fcde1f8e4572b9599c975dc8d354">Session</a>, <a class="el" href="classProblem.html#a743af7c886c13ce185a988b2d3e7d789">Problem</a>, <a class="el" href="classCourse.html#a7fd61bcbad5041fc50642f1a8e7b1194">Course</a>, <a class="el" href="classProblemCollection.html#ad49395eb1c71357fdc6130058b39d414">ProblemCollection</a>, and <a class="el" href="classCourseSet.html#ab793aad6427d5f2bba5df5e5727dd33a">CourseSet</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this interface was generated from the following file:<ul>
+<li><a class="el" href="IPrintable_8hh_source.html">IPrintable.hh</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

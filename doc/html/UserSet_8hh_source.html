@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -23,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Evaluator
-   &#160;<span id="projectnumber">1.0 Specification</span>
+   &#160;<span id="projectnumber">2.0 Implementation</span>
    </div>
    <div id="projectbrief">pro2 lab pracs: problem-evaluator-like platform</div>
   </td>
@@ -79,30 +80,72 @@ $(function() {
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="User_8hh.html">User.hh</a>&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef NO_DIAGRAM </span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classUserSet.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classUserSet.html">UserSet</a> : <span class="keyword">public</span> <a class="code" href="classIReadable.html">IReadable</a>, <span class="keyword">public</span> <a class="code" href="classIPrintable.html">IPrintable</a>, <span class="keyword">public</span> <a class="code" href="classIContainer.html">IContainer</a>&lt;usr::ID, User&gt; {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    std::vector&lt;User&gt; users;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classUserSet_a066fa5e04436344dabe453950e3aa4bd.html#a066fa5e04436344dabe453950e3aa4bd">   24</a></span>&#160;    <a class="code" href="classUserSet_a066fa5e04436344dabe453950e3aa4bd.html#a066fa5e04436344dabe453950e3aa4bd">UserSet</a>(<span class="keyword">const</span> <a class="code" href="classCourseSet.html">CourseSet</a>&amp; courseSet);</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classUserSet_acecb88c9e7ba2b981126ae2d22c72fcc.html#acecb88c9e7ba2b981126ae2d22c72fcc">   25</a></span>&#160;    <a class="code" href="classUserSet_acecb88c9e7ba2b981126ae2d22c72fcc.html#acecb88c9e7ba2b981126ae2d22c72fcc">~UserSet</a>();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classUserSet_a63786bdeb122e55666ec60f3bbc889ef.html#a63786bdeb122e55666ec60f3bbc889ef">   32</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classUserSet_a63786bdeb122e55666ec60f3bbc889ef.html#a63786bdeb122e55666ec60f3bbc889ef">removeUser</a>(<a class="code" href="namespaceusr_afed849d06665ce63a85325c909efe771.html#afed849d06665ce63a85325c909efe771">usr::ID</a> toRemoveUser);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="IPrintable_8hh.html">IPrintable.hh</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="IReadable_8hh.html">IReadable.hh</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classUserSet.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="classUserSet.html">UserSet</a> : <span class="keyword">public</span> <a class="code" href="classIReadable.html">IReadable</a>, <span class="keyword">public</span> <a class="code" href="classIPrintable.html">IPrintable</a> {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">/* =========================================================constructors &amp; destructors=========================================================*/</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classUserSet.html#a1fcb7215d45571e0f9c4cf4f20b05c80">   32</a></span>&#160;    <a class="code" href="classUserSet.html#a1fcb7215d45571e0f9c4cf4f20b05c80">UserSet</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classUserSet.html#acecb88c9e7ba2b981126ae2d22c72fcc">   39</a></span>&#160;    <a class="code" href="classUserSet.html#acecb88c9e7ba2b981126ae2d22c72fcc">~UserSet</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classUserSet.html#a9f072fb1ca298d5e9e89de08531f3d75">   44</a></span>&#160;    std::map&lt;usr::ID, User&gt; <a class="code" href="classUserSet.html#a9f072fb1ca298d5e9e89de08531f3d75">users</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">/*===========================================================singleton-related methods=========================================================*/</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classUserSet.html#a292504d1f97fece38d2faf07dcc8c645">   52</a></span>&#160;    <a class="code" href="classUserSet.html#a292504d1f97fece38d2faf07dcc8c645">UserSet</a>(<a class="code" href="classUserSet.html">UserSet</a> &amp; copy) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classUserSet.html#a5eebe50f59b88c1a575baa2d3392deb6">   57</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classUserSet.html#a5eebe50f59b88c1a575baa2d3392deb6">operator=</a>(<span class="keyword">const</span> <a class="code" href="classUserSet.html">UserSet</a> &amp; userSet) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classUserSet.html#a8da5b0ebadb71409af6dbf9d5dc4f204">   65</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classUserSet.html">UserSet</a> &amp; <a class="code" href="classUserSet.html#a8da5b0ebadb71409af6dbf9d5dc4f204">getInstance</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">/*=============================================================overrided IO methods============================================================*/</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classUserSet.html#aedfbf2444bdfff40d062334b26e36438">   69</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classUserSet.html#aedfbf2444bdfff40d062334b26e36438">print</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classUserSet.html#a2ded96a4d76f0c035e1b3b6800b77046">   70</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classUserSet.html#a2ded96a4d76f0c035e1b3b6800b77046">read</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">/*================================================================container methods=============================================================*/</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classUserSet.html#aadde71289be89bdfe1a81c42e1ddf954">   81</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classUserSet.html#aadde71289be89bdfe1a81c42e1ddf954">contains</a>(<a class="code" href="namespaceusr.html#a126b797f5297bd229fad6076ba9d0dcf">usr::ID</a> userID) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    </div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classUserSet.html#a94feb29d589a537aa39efae399db7b25">   90</a></span>&#160;    <a class="code" href="classUser.html">User</a> &amp; <a class="code" href="classUserSet.html#a94feb29d589a537aa39efae399db7b25">operator[]</a>(<a class="code" href="namespaceusr.html#a126b797f5297bd229fad6076ba9d0dcf">usr::ID</a> userID);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classUserSet.html#a118005d68e716cb5d09d61f7fa47f787">   98</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classUserSet.html#a118005d68e716cb5d09d61f7fa47f787">count</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    </div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="classUserSet.html#a925f31426f253330f47ee75510be3985">  107</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classUserSet.html#a925f31426f253330f47ee75510be3985">add</a>(<a class="code" href="namespaceusr.html#a126b797f5297bd229fad6076ba9d0dcf">usr::ID</a> newUserID);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    </div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="classUserSet.html#a2b4c1d5a036374c280d74b2a3d9ce772">  114</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classUserSet.html#a2b4c1d5a036374c280d74b2a3d9ce772">remove</a>(<a class="code" href="namespaceusr.html#a126b797f5297bd229fad6076ba9d0dcf">usr::ID</a> userID);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;};</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aIPrintable_8hh_html"><div class="ttname"><a href="IPrintable_8hh.html">IPrintable.hh</a></div><div class="ttdoc">File containing the specification of the IPrintable interface.</div></div>
+<div class="ttc" id="aIReadable_8hh_html"><div class="ttname"><a href="IReadable_8hh.html">IReadable.hh</a></div><div class="ttdoc">File containing the specification the IReadable interface.</div></div>
 <div class="ttc" id="aUser_8hh_html"><div class="ttname"><a href="User_8hh.html">User.hh</a></div><div class="ttdoc">File containing the specification of the User class.</div></div>
-<div class="ttc" id="aclassCourseSet_html"><div class="ttname"><a href="classCourseSet.html">CourseSet</a></div><div class="ttdoc">Represents set of courses.</div><div class="ttdef"><b>Definition:</b> <a href="CourseSet_8hh_source.html#l00020">CourseSet.hh:20</a></div></div>
-<div class="ttc" id="aclassIContainer_html"><div class="ttname"><a href="classIContainer.html">IContainer</a></div><div class="ttdoc">IContainer interface</div><div class="ttdef"><b>Definition:</b> <a href="Interfaces_8hh_source.html#l00066">Interfaces.hh:66</a></div></div>
-<div class="ttc" id="aclassIPrintable_html"><div class="ttname"><a href="classIPrintable.html">IPrintable</a></div><div class="ttdoc">IPrintable interface.</div><div class="ttdef"><b>Definition:</b> <a href="Interfaces_8hh_source.html#l00019">Interfaces.hh:19</a></div></div>
-<div class="ttc" id="aclassIReadable_html"><div class="ttname"><a href="classIReadable.html">IReadable</a></div><div class="ttdoc">IReadable interface.</div><div class="ttdef"><b>Definition:</b> <a href="Interfaces_8hh_source.html#l00042">Interfaces.hh:42</a></div></div>
-<div class="ttc" id="aclassUserSet_a066fa5e04436344dabe453950e3aa4bd_html_a066fa5e04436344dabe453950e3aa4bd"><div class="ttname"><a href="classUserSet_a066fa5e04436344dabe453950e3aa4bd.html#a066fa5e04436344dabe453950e3aa4bd">UserSet::UserSet</a></div><div class="ttdeci">UserSet(const CourseSet &amp;courseSet)</div></div>
-<div class="ttc" id="aclassUserSet_a63786bdeb122e55666ec60f3bbc889ef_html_a63786bdeb122e55666ec60f3bbc889ef"><div class="ttname"><a href="classUserSet_a63786bdeb122e55666ec60f3bbc889ef.html#a63786bdeb122e55666ec60f3bbc889ef">UserSet::removeUser</a></div><div class="ttdeci">bool removeUser(usr::ID toRemoveUser)</div><div class="ttdoc">Removes a user from the set if possible and returns true if succeeded.</div></div>
-<div class="ttc" id="aclassUserSet_acecb88c9e7ba2b981126ae2d22c72fcc_html_acecb88c9e7ba2b981126ae2d22c72fcc"><div class="ttname"><a href="classUserSet_acecb88c9e7ba2b981126ae2d22c72fcc.html#acecb88c9e7ba2b981126ae2d22c72fcc">UserSet::~UserSet</a></div><div class="ttdeci">~UserSet()</div></div>
-<div class="ttc" id="aclassUserSet_html"><div class="ttname"><a href="classUserSet.html">UserSet</a></div><div class="ttdoc">Represents a set of users.</div><div class="ttdef"><b>Definition:</b> <a href="UserSet_8hh_source.html#l00020">UserSet.hh:20</a></div></div>
-<div class="ttc" id="anamespaceusr_afed849d06665ce63a85325c909efe771_html_afed849d06665ce63a85325c909efe771"><div class="ttname"><a href="namespaceusr_afed849d06665ce63a85325c909efe771.html#afed849d06665ce63a85325c909efe771">usr::ID</a></div><div class="ttdeci">std::string ID</div><div class="ttdef"><b>Definition:</b> <a href="Namespaces_8hh_source.html#l00043">Namespaces.hh:43</a></div></div>
+<div class="ttc" id="aclassIPrintable_html"><div class="ttname"><a href="classIPrintable.html">IPrintable</a></div><div class="ttdoc">IPrintable interface.</div><div class="ttdef"><b>Definition:</b> <a href="IPrintable_8hh_source.html#l00019">IPrintable.hh:19</a></div></div>
+<div class="ttc" id="aclassIReadable_html"><div class="ttname"><a href="classIReadable.html">IReadable</a></div><div class="ttdoc">IReadable interface.</div><div class="ttdef"><b>Definition:</b> <a href="IReadable_8hh_source.html#l00019">IReadable.hh:19</a></div></div>
+<div class="ttc" id="aclassUserSet_html"><div class="ttname"><a href="classUserSet.html">UserSet</a></div><div class="ttdoc">Represents a set of users.</div><div class="ttdef"><b>Definition:</b> <a href="UserSet_8hh_source.html#l00022">UserSet.hh:22</a></div></div>
+<div class="ttc" id="aclassUserSet_html_a118005d68e716cb5d09d61f7fa47f787"><div class="ttname"><a href="classUserSet.html#a118005d68e716cb5d09d61f7fa47f787">UserSet::count</a></div><div class="ttdeci">int count() const</div><div class="ttdoc">Returns the number of users contained in the set.</div></div>
+<div class="ttc" id="aclassUserSet_html_a1fcb7215d45571e0f9c4cf4f20b05c80"><div class="ttname"><a href="classUserSet.html#a1fcb7215d45571e0f9c4cf4f20b05c80">UserSet::UserSet</a></div><div class="ttdeci">UserSet()</div><div class="ttdoc">Private default constructor.</div></div>
+<div class="ttc" id="aclassUserSet_html_a292504d1f97fece38d2faf07dcc8c645"><div class="ttname"><a href="classUserSet.html#a292504d1f97fece38d2faf07dcc8c645">UserSet::UserSet</a></div><div class="ttdeci">UserSet(UserSet &amp;copy)=delete</div><div class="ttdoc">Deleted copy constructor.</div></div>
+<div class="ttc" id="aclassUserSet_html_a2b4c1d5a036374c280d74b2a3d9ce772"><div class="ttname"><a href="classUserSet.html#a2b4c1d5a036374c280d74b2a3d9ce772">UserSet::remove</a></div><div class="ttdeci">void remove(usr::ID userID)</div><div class="ttdoc">Removes a User from the set.</div></div>
+<div class="ttc" id="aclassUserSet_html_a2ded96a4d76f0c035e1b3b6800b77046"><div class="ttname"><a href="classUserSet.html#a2ded96a4d76f0c035e1b3b6800b77046">UserSet::read</a></div><div class="ttdeci">void read() override</div><div class="ttdoc">Reads to the implicit parameter.</div></div>
+<div class="ttc" id="aclassUserSet_html_a5eebe50f59b88c1a575baa2d3392deb6"><div class="ttname"><a href="classUserSet.html#a5eebe50f59b88c1a575baa2d3392deb6">UserSet::operator=</a></div><div class="ttdeci">void operator=(const UserSet &amp;userSet)=delete</div><div class="ttdoc">deleted assignment operator</div></div>
+<div class="ttc" id="aclassUserSet_html_a8da5b0ebadb71409af6dbf9d5dc4f204"><div class="ttname"><a href="classUserSet.html#a8da5b0ebadb71409af6dbf9d5dc4f204">UserSet::getInstance</a></div><div class="ttdeci">static UserSet &amp; getInstance()</div><div class="ttdoc">Returns the single instance of the class.</div></div>
+<div class="ttc" id="aclassUserSet_html_a925f31426f253330f47ee75510be3985"><div class="ttname"><a href="classUserSet.html#a925f31426f253330f47ee75510be3985">UserSet::add</a></div><div class="ttdeci">void add(usr::ID newUserID)</div><div class="ttdoc">Adds a given User to the collection.</div></div>
+<div class="ttc" id="aclassUserSet_html_a94feb29d589a537aa39efae399db7b25"><div class="ttname"><a href="classUserSet.html#a94feb29d589a537aa39efae399db7b25">UserSet::operator[]</a></div><div class="ttdeci">User &amp; operator[](usr::ID userID)</div><div class="ttdoc">Returns the User with the given id contained in the set.</div></div>
+<div class="ttc" id="aclassUserSet_html_a9f072fb1ca298d5e9e89de08531f3d75"><div class="ttname"><a href="classUserSet.html#a9f072fb1ca298d5e9e89de08531f3d75">UserSet::users</a></div><div class="ttdeci">std::map&lt; usr::ID, User &gt; users</div><div class="ttdoc">Map of users accessed by ID's.</div><div class="ttdef"><b>Definition:</b> <a href="UserSet_8hh_source.html#l00044">UserSet.hh:44</a></div></div>
+<div class="ttc" id="aclassUserSet_html_aadde71289be89bdfe1a81c42e1ddf954"><div class="ttname"><a href="classUserSet.html#aadde71289be89bdfe1a81c42e1ddf954">UserSet::contains</a></div><div class="ttdeci">bool contains(usr::ID userID) const</div><div class="ttdoc">Returns wheter the set contains a User with the given id.</div></div>
+<div class="ttc" id="aclassUserSet_html_acecb88c9e7ba2b981126ae2d22c72fcc"><div class="ttname"><a href="classUserSet.html#acecb88c9e7ba2b981126ae2d22c72fcc">UserSet::~UserSet</a></div><div class="ttdeci">~UserSet()</div><div class="ttdoc">Private default destructor.</div></div>
+<div class="ttc" id="aclassUserSet_html_aedfbf2444bdfff40d062334b26e36438"><div class="ttname"><a href="classUserSet.html#aedfbf2444bdfff40d062334b26e36438">UserSet::print</a></div><div class="ttdeci">void print() const override</div><div class="ttdoc">Prints the implicit parameter.</div></div>
+<div class="ttc" id="aclassUser_html"><div class="ttname"><a href="classUser.html">User</a></div><div class="ttdoc">Represents a user with a unique name (id) and some statistics.</div><div class="ttdef"><b>Definition:</b> <a href="User_8hh_source.html#l00022">User.hh:22</a></div></div>
+<div class="ttc" id="anamespaceusr_html_a126b797f5297bd229fad6076ba9d0dcf"><div class="ttname"><a href="namespaceusr.html#a126b797f5297bd229fad6076ba9d0dcf">usr::ID</a></div><div class="ttdeci">std::string ID</div><div class="ttdef"><b>Definition:</b> <a href="Namespaces_8hh_source.html#l00051">Namespaces.hh:51</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

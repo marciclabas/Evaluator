@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -23,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Evaluator
-   &#160;<span id="projectnumber">1.0 Specification</span>
+   &#160;<span id="projectnumber">2.0 Implementation</span>
    </div>
    <div id="projectbrief">pro2 lab pracs: problem-evaluator-like platform</div>
   </td>
@@ -66,57 +67,70 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#friends">Friends</a> &#124;
 <a href="classIReadable-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">IReadable Class Reference</div>  </div>
+<div class="title">IReadable Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><a class="el" href="classIReadable.html" title="IReadable interface.">IReadable</a> interface.  
  <a href="classIReadable.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="Interfaces_8hh_source.html">Interfaces.hh</a>&gt;</code></p>
-<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for IReadable:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classIReadable__inherit__graph.png" border="0" usemap="#aIReadable_inherit__map" alt="Inheritance graph"/></div>
-<map name="aIReadable_inherit__map" id="aIReadable_inherit__map">
-<area shape="rect" title="IReadable interface." alt="" coords="467,5,554,32"/>
-<area shape="rect" href="classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics." alt="" coords="5,80,72,107"/>
-<area shape="rect" href="classCourseSet.html" title="Represents set of courses." alt="" coords="96,80,184,107"/>
-<area shape="rect" href="classProblem.html" title="Represents a problem with a unique name (id) and some statistics." alt="" coords="209,80,285,107"/>
-<area shape="rect" href="classProblemCollection.html" title="Represents a collection of problems." alt="" coords="309,80,451,107"/>
-<area shape="rect" href="classSession.html" title="Represents a session, i.e., a set of non&#45;repeated problems with prerequisites with a unique name (id)" alt="" coords="475,80,547,107"/>
-<area shape="rect" href="classSessionRepository.html" title="Represents a repository of sessions." alt="" coords="571,80,714,107"/>
-<area shape="rect" href="classUser.html" title="Represents a user with a unique name (id) and some statistics." alt="" coords="738,80,790,107"/>
-<area shape="rect" href="classUserSet.html" title="Represents a set of users." alt="" coords="814,80,887,107"/>
+<p><code>#include &lt;<a class="el" href="IReadable_8hh_source.html">IReadable.hh</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for IReadable:</div>
+<div class="dyncontent">
+<div class="center"><img src="classIReadable__coll__graph.png" border="0" usemap="#aIReadable_coll__map" alt="Collaboration graph"/></div>
+<map name="aIReadable_coll__map" id="aIReadable_coll__map">
+<area shape="rect" title="IReadable interface." alt="" coords="5,5,92,83"/>
 </map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a820ad5ad2700f268e45cf79b1ea4e92e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIReadable_a820ad5ad2700f268e45cf79b1ea4e92e.html#a820ad5ad2700f268e45cf79b1ea4e92e">IReadable</a> ()=delete</td></tr>
-<tr class="separator:a820ad5ad2700f268e45cf79b1ea4e92e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a143d68bd066b688c17e06beba7145c6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIReadable_a143d68bd066b688c17e06beba7145c6f.html#a143d68bd066b688c17e06beba7145c6f">read</a> ()</td></tr>
-<tr class="memdesc:a143d68bd066b688c17e06beba7145c6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read to the <code><a class="el" href="classIReadable.html" title="IReadable interface.">IReadable</a></code> object from the stdin.  <a href="classIReadable_a143d68bd066b688c17e06beba7145c6f.html#a143d68bd066b688c17e06beba7145c6f">More...</a><br /></td></tr>
-<tr class="separator:a143d68bd066b688c17e06beba7145c6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:a851070ee2b053b9a83e58fb0866e39f7"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIReadable_a851070ee2b053b9a83e58fb0866e39f7.html#a851070ee2b053b9a83e58fb0866e39f7">operator&gt;&gt;</a> (std::istream &amp;in, <a class="el" href="classIReadable.html">IReadable</a> &amp;readable)</td></tr>
-<tr class="memdesc:a851070ee2b053b9a83e58fb0866e39f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read to the <code><a class="el" href="classIReadable.html" title="IReadable interface.">IReadable</a></code> object from an input stream.  <a href="classIReadable_a851070ee2b053b9a83e58fb0866e39f7.html#a851070ee2b053b9a83e58fb0866e39f7">More...</a><br /></td></tr>
-<tr class="separator:a851070ee2b053b9a83e58fb0866e39f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a595345a03025dac6772480c342900a49"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIReadable.html#a595345a03025dac6772480c342900a49">read</a> ()=0</td></tr>
+<tr class="memdesc:a595345a03025dac6772480c342900a49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads to the implicit parameter.  <a href="classIReadable.html#a595345a03025dac6772480c342900a49">More...</a><br /></td></tr>
+<tr class="separator:a595345a03025dac6772480c342900a49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classIReadable.html" title="IReadable interface.">IReadable</a> interface. </p>
 <p>@Interface <a class="el" href="classIReadable.html" title="IReadable interface.">IReadable</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="Interfaces_8hh_source.html#l00042">42</a> of file <a class="el" href="Interfaces_8hh_source.html">Interfaces.hh</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="Interfaces_8hh_source.html">Interfaces.hh</a></li>
+<p class="definition">Definition at line <a class="el" href="IReadable_8hh_source.html#l00019">19</a> of file <a class="el" href="IReadable_8hh_source.html">IReadable.hh</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a595345a03025dac6772480c342900a49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a595345a03025dac6772480c342900a49">&#9670;&nbsp;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IReadable::read </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reads to the implicit parameter. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Reads to the implicit parameter from the stdin </dd></dl>
+
+<p>Implemented in <a class="el" href="classUserSet.html#a2ded96a4d76f0c035e1b3b6800b77046">UserSet</a>, <a class="el" href="classSessionRepository.html#a65ec9cf8253a692bb4016fb3784b7bf8">SessionRepository</a>, <a class="el" href="classSession.html#a8af7ea5fb236ceb581e39d215b4c0811">Session</a>, <a class="el" href="classCourse.html#a6b04dba847f859a0440379eea607ca8d">Course</a>, <a class="el" href="classProblemCollection.html#a98230806a6e42b5875c102f7de345238">ProblemCollection</a>, and <a class="el" href="classCourseSet.html#af724595d10f41dc7312941067192f3a8">CourseSet</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="IReadable_8hh_source.html">IReadable.hh</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

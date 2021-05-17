@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -23,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Evaluator
-   &#160;<span id="projectnumber">1.0 Specification</span>
+   &#160;<span id="projectnumber">2.0 Implementation</span>
    </div>
    <div id="projectbrief">pro2 lab pracs: problem-evaluator-like platform</div>
   </td>
@@ -71,12 +72,21 @@ $(function() {
 
 <p>This is the complete list of members for <a class="el" href="classSession.html">Session</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classIPrintable_af22d3b0590836d9f40d36c7b1279c580.html#af22d3b0590836d9f40d36c7b1279c580">IPrintable</a>()=delete</td><td class="entry"><a class="el" href="classIPrintable.html">IPrintable</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classIReadable_a820ad5ad2700f268e45cf79b1ea4e92e.html#a820ad5ad2700f268e45cf79b1ea4e92e">IReadable</a>()=delete</td><td class="entry"><a class="el" href="classIReadable.html">IReadable</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classSession_ac4b7463d377f240e36136db3e8a9bd89.html#ac4b7463d377f240e36136db3e8a9bd89">operator&lt;</a>(const Session &amp;session)</td><td class="entry"><a class="el" href="classSession.html">Session</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classIPrintable_a5b00d3f39de891a4caf1837763ffe8a3.html#a5b00d3f39de891a4caf1837763ffe8a3">print</a>() const</td><td class="entry"><a class="el" href="classIPrintable.html">IPrintable</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classIReadable_a143d68bd066b688c17e06beba7145c6f.html#a143d68bd066b688c17e06beba7145c6f">read</a>()</td><td class="entry"><a class="el" href="classIReadable.html">IReadable</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classSession_ad92ef09b872c9227e38a6efdd4d8a837.html#ad92ef09b872c9227e38a6efdd4d8a837">Session</a>()</td><td class="entry"><a class="el" href="classSession.html">Session</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classSession.html#a25ac4518727f816e5c4815e38014b271">addProblemToSet</a>(prb::ID problemID)</td><td class="entry"><a class="el" href="classSession.html">Session</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classSession.html#a0735755f0145dbd9d8d3a37dd6ea617d">begin</a>() const</td><td class="entry"><a class="el" href="classSession.html">Session</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classSession.html#ae6a2d3f11b14ca0e7f68d66d846b5855">const_iterator</a> typedef</td><td class="entry"><a class="el" href="classSession.html">Session</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classSession.html#a6032e66d3bef1b33d5b01762bd4bca4d">containsProblem</a>(prb::ID problemID) const</td><td class="entry"><a class="el" href="classSession.html">Session</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classSession.html#a2c6a3101c2fe847962b1348780918085">end</a>() const</td><td class="entry"><a class="el" href="classSession.html">Session</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classSession.html#a9e1c974241d60d762ef3dc3dc1a8ba97">getCount</a>() const</td><td class="entry"><a class="el" href="classSession.html">Session</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classSession.html#a8baa3a14784e12bdfb1f668f4e3fd6e2">operator==</a>(const Session &amp;otherSession) const</td><td class="entry"><a class="el" href="classSession.html">Session</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classSession.html#aa378fcde1f8e4572b9599c975dc8d354">print</a>() const override</td><td class="entry"><a class="el" href="classSession.html">Session</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classSession.html#a1d7fdb77a86c4fd4b49367c4e6d4149e">problemsSet</a></td><td class="entry"><a class="el" href="classSession.html">Session</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classSession.html#a204150ed58c0d3857521c6b3bd841247">problemsTree</a></td><td class="entry"><a class="el" href="classSession.html">Session</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classSession.html#a8af7ea5fb236ceb581e39d215b4c0811">read</a>() override</td><td class="entry"><a class="el" href="classSession.html">Session</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classSession.html#a2f768ef5d1466e889c1cfc04e1da802d">readImmersion</a>(BinTree&lt; prb::ID &gt; &amp;tree)</td><td class="entry"><a class="el" href="classSession.html">Session</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classSession.html#ad92ef09b872c9227e38a6efdd4d8a837">Session</a>()</td><td class="entry"><a class="el" href="classSession.html">Session</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classSession.html#a77f3a81755f2ef5febfaec93ef587911">updateSolvableProblems</a>(ICanSolveProblems &amp;solverObject, prb::ID lastSolvedProblem=prb::invalidID) const</td><td class="entry"><a class="el" href="classSession.html">Session</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classSession.html#a8753bb9dee966b7d39abc9b7237cd665">~Session</a>()</td><td class="entry"><a class="el" href="classSession.html">Session</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

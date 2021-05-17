@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -23,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Evaluator
-   &#160;<span id="projectnumber">1.0 Specification</span>
+   &#160;<span id="projectnumber">2.0 Implementation</span>
    </div>
    <div id="projectbrief">pro2 lab pracs: problem-evaluator-like platform</div>
   </td>
@@ -67,202 +68,275 @@ $(function() {
 &#160;
 
 <h3><a id="index_a"></a>- a -</h3><ul>
-<li>addElement()
-: <a class="el" href="classIContainer_a88315472c494cf200df505fbf68b2105.html#a88315472c494cf200df505fbf68b2105">IContainer&lt; ID, T &gt;</a>
+<li>add()
+: <a class="el" href="classProblemCollection.html#a6bed10344c048d05d710c729d3729301">ProblemCollection</a>
+, <a class="el" href="classSessionRepository.html#aeb44714b8721f5fa62da6944b1fab46f">SessionRepository</a>
+, <a class="el" href="classUserSet.html#a925f31426f253330f47ee75510be3985">UserSet</a>
+</li>
+<li>addProblem()
+: <a class="el" href="structUser_1_1ProblemStats.html#ae7112f9ba6d08ab58eb2dc79fe56235a">User::ProblemStats</a>
+</li>
+<li>addProblemToSet()
+: <a class="el" href="classSession.html#a25ac4518727f816e5c4815e38014b271">Session</a>
+</li>
+<li>addSessionToVector()
+: <a class="el" href="classCourse.html#a2038c2d09aef93ebb74acf0a96ab3ad6">Course</a>
+</li>
+<li>addSolvableProblem()
+: <a class="el" href="classICanSolveProblems.html#ad25562b94fa70f83a0724da142f92ef0">ICanSolveProblems</a>
+, <a class="el" href="classUser.html#a678396f4a28b3cc6d106c04732893468">User</a>
+</li>
+<li>addSubmission()
+: <a class="el" href="structUser_1_1ProblemStats.html#a3f85b07f5c647f489d770118ec98ee16">User::ProblemStats</a>
+</li>
+<li>append()
+: <a class="el" href="classCourseSet.html#adfd4930ec997c1a2779143dfa87e8aef">CourseSet</a>
+</li>
+</ul>
+
+
+<h3><a id="index_b"></a>- b -</h3><ul>
+<li>begin()
+: <a class="el" href="classCourse.html#aadcbf642ecfd6b21118873350d8df79a">Course</a>
+, <a class="el" href="classSession.html#a0735755f0145dbd9d8d3a37dd6ea617d">Session</a>
 </li>
 </ul>
 
 
 <h3><a id="index_c"></a>- c -</h3><ul>
-<li>completedEnrolledCourse()
-: <a class="el" href="classUser_ab5a8203b1eecf0d25a16f40f10dda6f5.html#ab5a8203b1eecf0d25a16f40f10dda6f5">User</a>
+<li>completeCourse()
+: <a class="el" href="classCourse.html#a9bbd67ce05225a1b6058179f9bac22a4">Course</a>
 </li>
-<li>containsElement()
-: <a class="el" href="classIContainer_a1a285fa8d0202100ad3d60d78f085677.html#a1a285fa8d0202100ad3d60d78f085677">IContainer&lt; ID, T &gt;</a>
+<li>contains()
+: <a class="el" href="classCourseSet.html#a22771e1415257fb23d22cd4d3a3bb6f4">CourseSet</a>
+, <a class="el" href="classProblemCollection.html#aadc7afc414c274888e3deb3c126c5416">ProblemCollection</a>
+, <a class="el" href="classSessionRepository.html#a324f09ca93e28d071329e49794e742dd">SessionRepository</a>
+, <a class="el" href="structUser_1_1ProblemStats.html#a2c3cf02331746bb3d9711f094d6df2e2">User::ProblemStats</a>
+, <a class="el" href="classUserSet.html#aadde71289be89bdfe1a81c42e1ddf954">UserSet</a>
+</li>
+<li>containsProblem()
+: <a class="el" href="classCourse.html#aafd43f0cac7e85728eb8dddd7edb37e6">Course</a>
+, <a class="el" href="classSession.html#a6032e66d3bef1b33d5b01762bd4bca4d">Session</a>
+</li>
+<li>count()
+: <a class="el" href="classCourseSet.html#a0ad3ee825dca6108675dff721a0913a3">CourseSet</a>
+, <a class="el" href="classProblemCollection.html#a980471ab3b69e04ce772108dbd629194">ProblemCollection</a>
+, <a class="el" href="classSessionRepository.html#ac157d3e9e342a7b78c487250001f661d">SessionRepository</a>
+, <a class="el" href="classUserSet.html#a118005d68e716cb5d09d61f7fa47f787">UserSet</a>
 </li>
 <li>Course()
-: <a class="el" href="classCourse_a6b959ccf15d9ceed9e9c14a701561982.html#a6b959ccf15d9ceed9e9c14a701561982">Course</a>
+: <a class="el" href="classCourse.html#a6b959ccf15d9ceed9e9c14a701561982">Course</a>
 </li>
 <li>CourseSet()
-: <a class="el" href="classCourseSet_ac96b9d76c9e0f87784138c4086a7435b.html#ac96b9d76c9e0f87784138c4086a7435b">CourseSet</a>
+: <a class="el" href="classCourseSet.html#ae0b73bd2e6bda115838ba65644e015bc">CourseSet</a>
 </li>
 </ul>
 
 
 <h3><a id="index_e"></a>- e -</h3><ul>
+<li>empty()
+: <a class="el" href="structUser_1_1ProblemStats.html#a547778bedcf24a545e7ea6519f2b2393">User::ProblemStats</a>
+</li>
+<li>end()
+: <a class="el" href="classCourse.html#ab66c4cec1447fb3f7275e9bae8e17a1f">Course</a>
+, <a class="el" href="classSession.html#a2c6a3101c2fe847962b1348780918085">Session</a>
+</li>
 <li>enrollCourse()
-: <a class="el" href="classUser_ae0d7460cd0a7ff8c069b07f573f3a46f.html#ae0d7460cd0a7ff8c069b07f573f3a46f">User</a>
+: <a class="el" href="classUser.html#ae0d7460cd0a7ff8c069b07f573f3a46f">User</a>
 </li>
 <li>enrollUser()
-: <a class="el" href="classCourse_a6047349e41149231c71d1d2307283bc9.html#a6047349e41149231c71d1d2307283bc9">Course</a>
+: <a class="el" href="classCourse.html#a6047349e41149231c71d1d2307283bc9">Course</a>
 </li>
 </ul>
 
 
 <h3><a id="index_g"></a>- g -</h3><ul>
-<li>getConstElement()
-: <a class="el" href="classIContainer_a53d878603e548a1c500f67a43ea8699d.html#a53d878603e548a1c500f67a43ea8699d">IContainer&lt; ID, T &gt;</a>
-</li>
 <li>getCount()
-: <a class="el" href="classIContainer_a3f98d7e86a90a9f521d000d776216b1f.html#a3f98d7e86a90a9f521d000d776216b1f">IContainer&lt; ID, T &gt;</a>
-</li>
-<li>getCurrentEnrolled()
-: <a class="el" href="classCourse_ae933e2e2c89148658d7ed35bd39335e5.html#ae933e2e2c89148658d7ed35bd39335e5">Course</a>
-</li>
-<li>getElement()
-: <a class="el" href="classIContainer_ac6a372ab01d690a8ce00c807dd052ceb.html#ac6a372ab01d690a8ce00c807dd052ceb">IContainer&lt; ID, T &gt;</a>
+: <a class="el" href="classSession.html#a9e1c974241d60d762ef3dc3dc1a8ba97">Session</a>
 </li>
 <li>getEnrolledCourseID()
-: <a class="el" href="classUser_a58f94778be2ff3c33932def944ff3743.html#a58f94778be2ff3c33932def944ff3743">User</a>
+: <a class="el" href="classUser.html#a58f94778be2ff3c33932def944ff3743">User</a>
+</li>
+<li>getInstance()
+: <a class="el" href="classCourseSet.html#ada87984af3b75efc054cb407dea74b93">CourseSet</a>
+, <a class="el" href="classProblemCollection.html#a6a60ef79d7e781938acedec41fd4f71c">ProblemCollection</a>
+, <a class="el" href="classSessionRepository.html#a6a0994ace996a6dbc214764e2da27200">SessionRepository</a>
+, <a class="el" href="classUserSet.html#a8da5b0ebadb71409af6dbf9d5dc4f204">UserSet</a>
+</li>
+<li>getRatio()
+: <a class="el" href="classProblem.html#a9b103faccfd87982f941c468802b4a22">Problem</a>
 </li>
 <li>getSessionByProblem()
-: <a class="el" href="classCourse_ada500ecbde39364e8dac698a409872e3.html#ada500ecbde39364e8dac698a409872e3">Course</a>
+: <a class="el" href="classCourse.html#ada500ecbde39364e8dac698a409872e3">Course</a>
 </li>
 <li>getSolvableStats()
-<<<<<<< HEAD
-: <a class="el" href="classUser_a35dbac271954b5e180f95d1b7201abb7.html#a35dbac271954b5e180f95d1b7201abb7">User</a>
+: <a class="el" href="classUser.html#abceaa2bc54ee3bdc945a1edab880f37d">User</a>
 </li>
 <li>getSolvedStats()
-: <a class="el" href="classUser_abf640d2436d67d0327cd9a4b6f33bb80.html#abf640d2436d67d0327cd9a4b6f33bb80">User</a>
-=======
-: <a class="el" href="class_user.html#a3de54afb03e5d5a2b63cab408612b201">User</a>
+: <a class="el" href="classUser.html#a2b61b100681ea333f19f7b3c9e836875">User</a>
 </li>
-<li>getSolvedStats()
-: <a class="el" href="class_user.html#a2b7c33f7766f7245225b74f2741821cc">User</a>
-<<<<<<< HEAD
->>>>>>> d492b3a069c2074d005a742334644ac2220fcab0
-=======
->>>>>>> spec
->>>>>>> a9243d702bf53f762bc01ba95a77d594935fe2df
+<li>getUsersEnrolled()
+: <a class="el" href="classCourse.html#afdc0ce85c5dcc43f06ae9a7a63793156">Course</a>
+</li>
+</ul>
+
+
+<h3><a id="index_h"></a>- h -</h3><ul>
+<li>hasSolvedProblem()
+: <a class="el" href="classICanSolveProblems.html#a3c66ab6e449a42b0ae996a6b8993eb07">ICanSolveProblems</a>
+, <a class="el" href="classUser.html#a8b48f850b7a1457454233a250e87929d">User</a>
 </li>
 </ul>
 
 
 <h3><a id="index_i"></a>- i -</h3><ul>
-<li>IContainer()
-: <a class="el" href="classIContainer_a57bebe11003b412a4b421ef6d10a9136.html#a57bebe11003b412a4b421ef6d10a9136">IContainer&lt; ID, T &gt;</a>
-</li>
-<li>IPrintable()
-: <a class="el" href="classIPrintable_af22d3b0590836d9f40d36c7b1279c580.html#af22d3b0590836d9f40d36c7b1279c580">IPrintable</a>
-</li>
-<li>IReadable()
-: <a class="el" href="classIReadable_a820ad5ad2700f268e45cf79b1ea4e92e.html#a820ad5ad2700f268e45cf79b1ea4e92e">IReadable</a>
-</li>
 <li>isEnrolledInCourse()
-: <a class="el" href="classUser_afab0e9d7bbd0acc257f4b747c404e231.html#afab0e9d7bbd0acc257f4b747c404e231">User</a>
+: <a class="el" href="classUser.html#afab0e9d7bbd0acc257f4b747c404e231">User</a>
+</li>
+<li>isValid()
+: <a class="el" href="classCourse.html#a1a76f8038858c2253766bf6b5cacf5e1">Course</a>
 </li>
 </ul>
 
 
 <h3><a id="index_o"></a>- o -</h3><ul>
-<li>operator&lt;()
-: <a class="el" href="classProblem_a65d3c8db0078052a101770e84800773e.html#a65d3c8db0078052a101770e84800773e">Problem</a>
-, <a class="el" href="classSession_ac4b7463d377f240e36136db3e8a9bd89.html#ac4b7463d377f240e36136db3e8a9bd89">Session</a>
-, <a class="el" href="classUser_ae84e74b90f12b4b6d03b735245fbbdcc.html#ae84e74b90f12b4b6d03b735245fbbdcc">User</a>
+<li>operator=()
+: <a class="el" href="classCourseSet.html#aa53d03c0eb0dd23ee0e81d9a245b5312">CourseSet</a>
+, <a class="el" href="classProblemCollection.html#a47b4c57020982feafa72ed61816e96f0">ProblemCollection</a>
+, <a class="el" href="classSessionRepository.html#ae2ed0c0b9b334f7c4e954bb619ce1915">SessionRepository</a>
+, <a class="el" href="classUserSet.html#a5eebe50f59b88c1a575baa2d3392deb6">UserSet</a>
+</li>
+<li>operator==()
+: <a class="el" href="classCourse.html#a903d8640ea2f7fc37aa773838357bbe5">Course</a>
+, <a class="el" href="classSession.html#a8baa3a14784e12bdfb1f668f4e3fd6e2">Session</a>
 </li>
 <li>operator[]()
-: <a class="el" href="classIContainer_a680c9a9a75ef1f9289700e4648b8f62b.html#a680c9a9a75ef1f9289700e4648b8f62b">IContainer&lt; ID, T &gt;</a>
+: <a class="el" href="classCourseSet.html#a3ac6d3c29d799303887e6d30a1ec44bc">CourseSet</a>
+, <a class="el" href="classProblemCollection.html#a1c3c9eb212c1854ea16cb034c8a1bbdd">ProblemCollection</a>
+, <a class="el" href="classSessionRepository.html#a789aab908664b816733f94a53ae970df">SessionRepository</a>
+, <a class="el" href="classUserSet.html#a94feb29d589a537aa39efae399db7b25">UserSet</a>
 </li>
 </ul>
 
 
 <h3><a id="index_p"></a>- p -</h3><ul>
 <li>parseSubmission()
-: <a class="el" href="classProblem_a4aadc22c686e0229fa71c377399a18b7.html#a4aadc22c686e0229fa71c377399a18b7">Problem</a>
-, <a class="el" href="classUser_ad7d1e5f0aa6e6a489b2379511082350f.html#ad7d1e5f0aa6e6a489b2379511082350f">User</a>
+: <a class="el" href="classProblem.html#ab5522d13d71c4bdf1ea4f8a4cd891f9c">Problem</a>
+, <a class="el" href="classUser.html#ad7d1e5f0aa6e6a489b2379511082350f">User</a>
 </li>
 <li>print()
-: <a class="el" href="classIPrintable_a5b00d3f39de891a4caf1837763ffe8a3.html#a5b00d3f39de891a4caf1837763ffe8a3">IPrintable</a>
-</li>
-<li>print()
-: <a class="el" href="class_i_printable.html#a5b00d3f39de891a4caf1837763ffe8a3">IPrintable</a>
+: <a class="el" href="classCourse.html#a7fd61bcbad5041fc50642f1a8e7b1194">Course</a>
+, <a class="el" href="classCourseSet.html#ab793aad6427d5f2bba5df5e5727dd33a">CourseSet</a>
+, <a class="el" href="classIPrintable.html#addc8a495860e3d637a25f0806409bc0a">IPrintable</a>
+, <a class="el" href="classProblem.html#a743af7c886c13ce185a988b2d3e7d789">Problem</a>
+, <a class="el" href="classProblemCollection.html#ad49395eb1c71357fdc6130058b39d414">ProblemCollection</a>
+, <a class="el" href="classSession.html#aa378fcde1f8e4572b9599c975dc8d354">Session</a>
+, <a class="el" href="classSessionRepository.html#afa26909ce41c3a4b17a49eb0e56dd4f6">SessionRepository</a>
+, <a class="el" href="classUser.html#a7e3a3b397add1d7969213ee07afa6e30">User</a>
+, <a class="el" href="structUser_1_1ProblemStats.html#a303357e728bcb58a1c8a5c1ce318c037">User::ProblemStats</a>
+, <a class="el" href="classUserSet.html#aedfbf2444bdfff40d062334b26e36438">UserSet</a>
 </li>
 <li>Problem()
-: <a class="el" href="classProblem_ad9d44f0ef936fb62f0ce41dd200494ac.html#ad9d44f0ef936fb62f0ce41dd200494ac">Problem</a>
+: <a class="el" href="classProblem.html#ad9d44f0ef936fb62f0ce41dd200494ac">Problem</a>
 </li>
 <li>ProblemCollection()
-: <a class="el" href="classProblemCollection_a9c64db5612113ea8c9cf2f4756fc1abf.html#a9c64db5612113ea8c9cf2f4756fc1abf">ProblemCollection</a>
+: <a class="el" href="classProblemCollection.html#a9c64db5612113ea8c9cf2f4756fc1abf">ProblemCollection</a>
 </li>
-<<<<<<< HEAD
+<li>problemCount()
+: <a class="el" href="classCourse.html#a615c5ea821a233723768409605e63b26">Course</a>
+</li>
 <li>ProblemStats()
-: <a class="el" href="classProblemStats_a589e8772d08e6e6237911d31f002b813.html#a589e8772d08e6e6237911d31f002b813">ProblemStats</a>
+: <a class="el" href="structUser_1_1ProblemStats.html#a74da848ee400fd2120f7e9de33ca0fb3">User::ProblemStats</a>
 </li>
-=======
-<<<<<<< HEAD
->>>>>>> d492b3a069c2074d005a742334644ac2220fcab0
-=======
->>>>>>> spec
->>>>>>> a9243d702bf53f762bc01ba95a77d594935fe2df
 </ul>
 
 
 <h3><a id="index_r"></a>- r -</h3><ul>
 <li>read()
-<<<<<<< HEAD
-: <a class="el" href="classIReadable_a143d68bd066b688c17e06beba7145c6f.html#a143d68bd066b688c17e06beba7145c6f">IReadable</a>
-=======
-: <a class="el" href="class_i_readable.html#a143d68bd066b688c17e06beba7145c6f">IReadable</a>
-<<<<<<< HEAD
->>>>>>> d492b3a069c2074d005a742334644ac2220fcab0
-=======
->>>>>>> spec
->>>>>>> a9243d702bf53f762bc01ba95a77d594935fe2df
+: <a class="el" href="classCourse.html#a6b04dba847f859a0440379eea607ca8d">Course</a>
+, <a class="el" href="classCourseSet.html#af724595d10f41dc7312941067192f3a8">CourseSet</a>
+, <a class="el" href="classIReadable.html#a595345a03025dac6772480c342900a49">IReadable</a>
+, <a class="el" href="classProblemCollection.html#a98230806a6e42b5875c102f7de345238">ProblemCollection</a>
+, <a class="el" href="classSession.html#a8af7ea5fb236ceb581e39d215b4c0811">Session</a>
+, <a class="el" href="classSessionRepository.html#a65ec9cf8253a692bb4016fb3784b7bf8">SessionRepository</a>
+, <a class="el" href="classUserSet.html#a2ded96a4d76f0c035e1b3b6800b77046">UserSet</a>
 </li>
-<li>removeUser()
-: <a class="el" href="classUserSet_a63786bdeb122e55666ec60f3bbc889ef.html#a63786bdeb122e55666ec60f3bbc889ef">UserSet</a>
+<li>readImmersion()
+: <a class="el" href="classSession.html#a2f768ef5d1466e889c1cfc04e1da802d">Session</a>
+</li>
+<li>remove()
+: <a class="el" href="classUserSet.html#a2b4c1d5a036374c280d74b2a3d9ce772">UserSet</a>
+</li>
+<li>removeProblem()
+: <a class="el" href="structUser_1_1ProblemStats.html#a12d31f6f9a9a2b83da2163344d8faeca">User::ProblemStats</a>
 </li>
 </ul>
 
 
 <h3><a id="index_s"></a>- s -</h3><ul>
 <li>Session()
-: <a class="el" href="classSession_ad92ef09b872c9227e38a6efdd4d8a837.html#ad92ef09b872c9227e38a6efdd4d8a837">Session</a>
+: <a class="el" href="classSession.html#ad92ef09b872c9227e38a6efdd4d8a837">Session</a>
+</li>
+<li>sessionCount()
+: <a class="el" href="classCourse.html#a948ab9eff6f6dadc7a4be961603d7f7f">Course</a>
 </li>
 <li>SessionRepository()
-: <a class="el" href="classSessionRepository_aeb02a7399939a1576a505716306e53a1.html#aeb02a7399939a1576a505716306e53a1">SessionRepository</a>
+: <a class="el" href="classSessionRepository.html#a8d8416dc1fe09f2de09b7904db426637">SessionRepository</a>
+</li>
+<li>submissionsCount()
+: <a class="el" href="structUser_1_1ProblemStats.html#ad54a512d65096a71c621152071e59413">User::ProblemStats</a>
 </li>
 </ul>
 
 
 <h3><a id="index_u"></a>- u -</h3><ul>
 <li>unenrollCourse()
-: <a class="el" href="classUser_a37756db9d861c3b26d3060f18ea449ee.html#a37756db9d861c3b26d3060f18ea449ee">User</a>
+: <a class="el" href="classUser.html#a37756db9d861c3b26d3060f18ea449ee">User</a>
 </li>
 <li>unenrollUser()
-: <a class="el" href="classCourse_a6a71deac55949b33c5903ed2cd71db4b.html#a6a71deac55949b33c5903ed2cd71db4b">Course</a>
+: <a class="el" href="classCourse.html#a6a71deac55949b33c5903ed2cd71db4b">Course</a>
+</li>
+<li>updateSolvableProblems()
+: <a class="el" href="classCourse.html#a043b2c94e777c255ca8cc599626e03b6">Course</a>
+, <a class="el" href="classSession.html#a77f3a81755f2ef5febfaec93ef587911">Session</a>
+, <a class="el" href="classUser.html#a9502bc778ae19e195fa1e2a27f8d8ef4">User</a>
 </li>
 <li>User()
-: <a class="el" href="classUser_a4a0137053e591fbb79d9057dd7d2283d.html#a4a0137053e591fbb79d9057dd7d2283d">User</a>
+: <a class="el" href="classUser.html#a4a0137053e591fbb79d9057dd7d2283d">User</a>
 </li>
 <li>UserSet()
-: <a class="el" href="classUserSet_a066fa5e04436344dabe453950e3aa4bd.html#a066fa5e04436344dabe453950e3aa4bd">UserSet</a>
+: <a class="el" href="classUserSet.html#a1fcb7215d45571e0f9c4cf4f20b05c80">UserSet</a>
+</li>
+<li>UserStats()
+: <a class="el" href="structUser_1_1UserStats.html#ac73a7b3a4051c947eab4446e6cddf2f4">User::UserStats</a>
 </li>
 </ul>
 
 
 <h3><a id="index__7E"></a>- ~ -</h3><ul>
+<li>~Course()
+: <a class="el" href="classCourse.html#aa9038f2e129526920037dda9e76d69d0">Course</a>
+</li>
 <li>~CourseSet()
-: <a class="el" href="classCourseSet_a21dfdecd8c08a272d6c2af4adc0fccc0.html#a21dfdecd8c08a272d6c2af4adc0fccc0">CourseSet</a>
+: <a class="el" href="classCourseSet.html#a21dfdecd8c08a272d6c2af4adc0fccc0">CourseSet</a>
+</li>
+<li>~Problem()
+: <a class="el" href="classProblem.html#a839a525ed01c34d57fff42583003d3e7">Problem</a>
 </li>
 <li>~ProblemCollection()
-<<<<<<< HEAD
-: <a class="el" href="classProblemCollection_a315db5b8fb5f98166e1b62e7d5e6517d.html#a315db5b8fb5f98166e1b62e7d5e6517d">ProblemCollection</a>
-=======
-: <a class="el" href="class_problem_collection.html#a315db5b8fb5f98166e1b62e7d5e6517d">ProblemCollection</a>
+: <a class="el" href="classProblemCollection.html#a315db5b8fb5f98166e1b62e7d5e6517d">ProblemCollection</a>
 </li>
 <li>~Session()
-: <a class="el" href="class_session.html#a8753bb9dee966b7d39abc9b7237cd665">Session</a>
-<<<<<<< HEAD
->>>>>>> d492b3a069c2074d005a742334644ac2220fcab0
-=======
->>>>>>> spec
->>>>>>> a9243d702bf53f762bc01ba95a77d594935fe2df
+: <a class="el" href="classSession.html#a8753bb9dee966b7d39abc9b7237cd665">Session</a>
 </li>
 <li>~SessionRepository()
-: <a class="el" href="classSessionRepository_adbef927f8d88802b2dabad68929409a6.html#adbef927f8d88802b2dabad68929409a6">SessionRepository</a>
+: <a class="el" href="classSessionRepository.html#adbef927f8d88802b2dabad68929409a6">SessionRepository</a>
+</li>
+<li>~User()
+: <a class="el" href="classUser.html#ac00b72ad64eb4149f7b21b9f5468c2b2">User</a>
 </li>
 <li>~UserSet()
-: <a class="el" href="classUserSet_acecb88c9e7ba2b981126ae2d22c72fcc.html#acecb88c9e7ba2b981126ae2d22c72fcc">UserSet</a>
+: <a class="el" href="classUserSet.html#acecb88c9e7ba2b981126ae2d22c72fcc">UserSet</a>
 </li>
 </ul>
 </div><!-- contents -->

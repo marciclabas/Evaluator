@@ -59,7 +59,7 @@ namespace io {
         std::cout << "error: " << errors.at(er) << std::endl;
 	}
 	
-	void echo(io::InputCommand command) {
+	/*void echo(io::InputCommand command) {
 	    std::cout << '#' << command;
-	}
+	}*/
 }

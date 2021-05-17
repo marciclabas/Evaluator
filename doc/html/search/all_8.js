@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['namespaces_2ehh_41',['Namespaces.hh',['../Namespaces_8hh.html',1,'']]],
-  ['new_5fcourse_42',['new_course',['../namespaceio_a05d02c08bcfc0805d39733aac0f0371f.html#a05d02c08bcfc0805d39733aac0f0371fa5661adf5a352d5288bb7a428e9ea8fd7',1,'io']]],
-  ['new_5fproblem_43',['new_problem',['../namespaceio_a05d02c08bcfc0805d39733aac0f0371f.html#a05d02c08bcfc0805d39733aac0f0371fa929bc2e79e7f8ec1874cf5ae7dd137fd',1,'io']]],
-  ['new_5fsession_44',['new_session',['../namespaceio_a05d02c08bcfc0805d39733aac0f0371f.html#a05d02c08bcfc0805d39733aac0f0371fa5e4356ead8e86e8bfe9241eea1fa1918',1,'io']]],
-  ['new_5fuser_45',['new_user',['../namespaceio_a05d02c08bcfc0805d39733aac0f0371f.html#a05d02c08bcfc0805d39733aac0f0371fa5e68784cda2e9dd50c654728f0245248',1,'io']]]
+  ['list_5fcourses_61',['list_courses',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fad3d5f416a30fff985404406332cef72c',1,'io']]],
+  ['list_5fproblems_62',['list_problems',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fadfc02d84e308cd34aa393d549d8111fc',1,'io']]],
+  ['list_5fsessions_63',['list_sessions',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371faf06dfdb8b5dd745f30cf25ba431dcf47',1,'io']]],
+  ['list_5fusers_64',['list_users',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fabfa87367a67f5b01e6390c18bb324e17',1,'io']]]
 ];

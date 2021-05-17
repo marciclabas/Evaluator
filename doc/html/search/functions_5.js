@@ -1,12 +1,4 @@
 var searchData=
 [
-<<<<<<< HEAD
-  ['main_147',['main',['../program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'program.cc']]]
-=======
-  ['main_144',['main',['../program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'program.cc']]]
-<<<<<<< HEAD
->>>>>>> d492b3a069c2074d005a742334644ac2220fcab0
-=======
->>>>>>> spec
->>>>>>> a9243d702bf53f762bc01ba95a77d594935fe2df
+  ['hassolvedproblem_213',['hasSolvedProblem',['../classICanSolveProblems.html#a3c66ab6e449a42b0ae996a6b8993eb07',1,'ICanSolveProblems::hasSolvedProblem()'],['../classUser.html#a8b48f850b7a1457454233a250e87929d',1,'User::hasSolvedProblem()']]]
 ];

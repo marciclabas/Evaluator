@@ -1,18 +1,11 @@
 var searchData=
 [
-<<<<<<< HEAD
-  ['icontainer_143',['IContainer',['../classIContainer_a57bebe11003b412a4b421ef6d10a9136.html#a57bebe11003b412a4b421ef6d10a9136',1,'IContainer']]],
-  ['iprintable_144',['IPrintable',['../classIPrintable_af22d3b0590836d9f40d36c7b1279c580.html#af22d3b0590836d9f40d36c7b1279c580',1,'IPrintable']]],
-  ['ireadable_145',['IReadable',['../classIReadable_a820ad5ad2700f268e45cf79b1ea4e92e.html#a820ad5ad2700f268e45cf79b1ea4e92e',1,'IReadable']]],
-  ['isenrolledincourse_146',['isEnrolledInCourse',['../classUser_afab0e9d7bbd0acc257f4b747c404e231.html#afab0e9d7bbd0acc257f4b747c404e231',1,'User']]]
-=======
-  ['icontainer_140',['IContainer',['../class_i_container.html#a57bebe11003b412a4b421ef6d10a9136',1,'IContainer']]],
-  ['iprintable_141',['IPrintable',['../class_i_printable.html#af22d3b0590836d9f40d36c7b1279c580',1,'IPrintable']]],
-  ['ireadable_142',['IReadable',['../class_i_readable.html#a820ad5ad2700f268e45cf79b1ea4e92e',1,'IReadable']]],
-  ['isenrolledincourse_143',['isEnrolledInCourse',['../class_user.html#afab0e9d7bbd0acc257f4b747c404e231',1,'User']]]
-<<<<<<< HEAD
->>>>>>> d492b3a069c2074d005a742334644ac2220fcab0
-=======
->>>>>>> spec
->>>>>>> a9243d702bf53f762bc01ba95a77d594935fe2df
+  ['getcount_205',['getCount',['../classSession.html#a9e1c974241d60d762ef3dc3dc1a8ba97',1,'Session']]],
+  ['getenrolledcourseid_206',['getEnrolledCourseID',['../classUser.html#a58f94778be2ff3c33932def944ff3743',1,'User']]],
+  ['getinstance_207',['getInstance',['../classCourseSet.html#ada87984af3b75efc054cb407dea74b93',1,'CourseSet::getInstance()'],['../classProblemCollection.html#a6a60ef79d7e781938acedec41fd4f71c',1,'ProblemCollection::getInstance()'],['../classSessionRepository.html#a6a0994ace996a6dbc214764e2da27200',1,'SessionRepository::getInstance()'],['../classUserSet.html#a8da5b0ebadb71409af6dbf9d5dc4f204',1,'UserSet::getInstance()']]],
+  ['getratio_208',['getRatio',['../classProblem.html#a9b103faccfd87982f941c468802b4a22',1,'Problem']]],
+  ['getsessionbyproblem_209',['getSessionByProblem',['../classCourse.html#ada500ecbde39364e8dac698a409872e3',1,'Course']]],
+  ['getsolvablestats_210',['getSolvableStats',['../classUser.html#abceaa2bc54ee3bdc945a1edab880f37d',1,'User']]],
+  ['getsolvedstats_211',['getSolvedStats',['../classUser.html#a2b61b100681ea333f19f7b3c9e836875',1,'User']]],
+  ['getusersenrolled_212',['getUsersEnrolled',['../classCourse.html#afdc0ce85c5dcc43f06ae9a7a63793156',1,'Course']]]
 ];

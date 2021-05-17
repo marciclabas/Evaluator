@@ -6,8 +6,6 @@
 #ifndef IO_HH
 #define IO_HH
 
-#define NDEBUG
-
 #ifndef NO_DIAGRAM
 #include <string>
 #include <iostream>
@@ -60,11 +58,11 @@ namespace io {
 	};
 
 	/**
-	@brief
+	@brief Prints the given error message
 	*/
 	void error(Error er = default_error);
 
-	void echo(InputCommand command);
+	//void echo(InputCommand command);
 }
 
 #endif

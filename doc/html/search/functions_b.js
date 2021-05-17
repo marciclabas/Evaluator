@@ -1,22 +1,7 @@
 var searchData=
 [
-<<<<<<< HEAD
-  ['_7ecourseset_165',['~CourseSet',['../classCourseSet_a21dfdecd8c08a272d6c2af4adc0fccc0.html#a21dfdecd8c08a272d6c2af4adc0fccc0',1,'CourseSet']]],
-  ['_7eproblemcollection_166',['~ProblemCollection',['../classProblemCollection_a315db5b8fb5f98166e1b62e7d5e6517d.html#a315db5b8fb5f98166e1b62e7d5e6517d',1,'ProblemCollection']]],
-  ['_7esessionrepository_167',['~SessionRepository',['../classSessionRepository_adbef927f8d88802b2dabad68929409a6.html#adbef927f8d88802b2dabad68929409a6',1,'SessionRepository']]],
-  ['_7euserset_168',['~UserSet',['../classUserSet_acecb88c9e7ba2b981126ae2d22c72fcc.html#acecb88c9e7ba2b981126ae2d22c72fcc',1,'UserSet']]]
-=======
-  ['_7ecourse_160',['~Course',['../class_course.html#aa9038f2e129526920037dda9e76d69d0',1,'Course']]],
-  ['_7ecourseset_161',['~CourseSet',['../class_course_set.html#a21dfdecd8c08a272d6c2af4adc0fccc0',1,'CourseSet']]],
-  ['_7eproblem_162',['~Problem',['../class_problem.html#a839a525ed01c34d57fff42583003d3e7',1,'Problem']]],
-  ['_7eproblemcollection_163',['~ProblemCollection',['../class_problem_collection.html#a315db5b8fb5f98166e1b62e7d5e6517d',1,'ProblemCollection']]],
-  ['_7esession_164',['~Session',['../class_session.html#a8753bb9dee966b7d39abc9b7237cd665',1,'Session']]],
-  ['_7esessionrepository_165',['~SessionRepository',['../class_session_repository.html#adbef927f8d88802b2dabad68929409a6',1,'SessionRepository']]],
-  ['_7euser_166',['~User',['../class_user.html#ac00b72ad64eb4149f7b21b9f5468c2b2',1,'User']]],
-  ['_7euserset_167',['~UserSet',['../class_user_set.html#acecb88c9e7ba2b981126ae2d22c72fcc',1,'UserSet']]]
-<<<<<<< HEAD
->>>>>>> d492b3a069c2074d005a742334644ac2220fcab0
-=======
->>>>>>> spec
->>>>>>> a9243d702bf53f762bc01ba95a77d594935fe2df
+  ['session_232',['Session',['../classSession.html#ad92ef09b872c9227e38a6efdd4d8a837',1,'Session']]],
+  ['sessioncount_233',['sessionCount',['../classCourse.html#a948ab9eff6f6dadc7a4be961603d7f7f',1,'Course']]],
+  ['sessionrepository_234',['SessionRepository',['../classSessionRepository.html#a8d8416dc1fe09f2de09b7904db426637',1,'SessionRepository::SessionRepository()'],['../classSessionRepository.html#ae4aec97d83299867b739dae791a8ca1c',1,'SessionRepository::SessionRepository(SessionRepository &amp;copy)=delete']]],
+  ['submissionscount_235',['submissionsCount',['../structUser_1_1ProblemStats.html#ad54a512d65096a71c621152071e59413',1,'User::ProblemStats']]]
 ];

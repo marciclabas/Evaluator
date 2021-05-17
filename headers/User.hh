@@ -159,7 +159,7 @@ public:
 	/**
 	@brief Default destructor
 	@pre True
-	@post If the user was enrolled in a course, it is now unenrolled
+	@post Deletes the user
 	*/
 	~User();
 
@@ -196,12 +196,8 @@ public:
 	*/
 	bool isEnrolledInCourse() const;
 
+	/*=======================================================overrided ICanSolveProblems methods=====================================================*/
 
-	/**
-	@brief Checks whether the user has solved a problem with the given id
-	@pre True
-	@post Returns @c true if has solved the problem, returns @c false otherwise
-	 */
 	bool hasSolvedProblem(prb::ID problemID) const override;
 
 	void addSolvableProblem(prb::ID problemID) override;
@@ -209,7 +205,7 @@ public:
 	/*==============================================================overrided IO methods============================================================*/
 	void print() const override;
 
-	/* ===========================================================other functionality===========================================================*/
+	/*===============================================================other functionality============================================================*/
 
 	/**
 	@brief Enrolls the user to a course
@@ -222,8 +218,10 @@ public:
 
 	/**
 	@brief Updates the user's stats according to the given result of a submission
-	@pre @c p points to a valid problem whose prerequisites are held by the user
-	@post If @c result (the problem is accepted) the problem is removed from solvable and added to solved. Otherwise, tho problem (contained in solvable) count is incremented by 1
+	@pre problemID is a valid problem whose prerequisites are held by the user
+	@post 	The problem sumission count is incremented by 1. If result equals result::accepted,
+				a) The problem is removed from solvable and added to solved, and
+				b) If the user finished the course, said course is notified
 	*/
 	void parseSubmission(prb::ID problemID, prb::result r);
 };

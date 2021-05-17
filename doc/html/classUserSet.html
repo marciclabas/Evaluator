@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -23,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Evaluator
-   &#160;<span id="projectnumber">1.0 Specification</span>
+   &#160;<span id="projectnumber">2.0 Implementation</span>
    </div>
    <div id="projectbrief">pro2 lab pracs: problem-evaluator-like platform</div>
   </td>
@@ -66,6 +67,9 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classUserSet-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UserSet Class Reference</div>  </div>
@@ -76,70 +80,439 @@ $(function() {
  <a href="classUserSet.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="UserSet_8hh_source.html">UserSet.hh</a>&gt;</code></p>
-<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for UserSet:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classUserSet__inherit__graph.png" border="0" usemap="#aUserSet_inherit__map" alt="Inheritance graph"/></div>
-<map name="aUserSet_inherit__map" id="aUserSet_inherit__map">
-<area shape="rect" title="Represents a set of users." alt="" coords="121,185,195,212"/>
-<area shape="rect" href="classIReadable.html" title="IReadable interface." alt="" coords="5,102,92,129"/>
-<area shape="rect" href="classIPrintable.html" title="IPrintable interface." alt="" coords="116,102,200,129"/>
-<area shape="rect" href="classIContainer.html" title=" " alt="" coords="224,95,375,136"/>
-<area shape="rect" href="classIContainer.html" title="IContainer interface" alt="" coords="225,5,374,32"/>
+<div class="dynheader">
+Collaboration diagram for UserSet:</div>
+<div class="dyncontent">
+<div class="center"><img src="classUserSet__coll__graph.png" border="0" usemap="#aUserSet_coll__map" alt="Collaboration graph"/></div>
+<map name="aUserSet_coll__map" id="aUserSet_coll__map">
+<area shape="rect" title="Represents a set of users." alt="" coords="42,131,165,369"/>
+<area shape="rect" href="classIReadable.html" title="IReadable interface." alt="" coords="5,5,92,83"/>
+<area shape="rect" href="classIPrintable.html" title="IPrintable interface." alt="" coords="116,5,200,83"/>
 </map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a066fa5e04436344dabe453950e3aa4bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUserSet_a066fa5e04436344dabe453950e3aa4bd.html#a066fa5e04436344dabe453950e3aa4bd">UserSet</a> (const <a class="el" href="classCourseSet.html">CourseSet</a> &amp;courseSet)</td></tr>
-<tr class="separator:a066fa5e04436344dabe453950e3aa4bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acecb88c9e7ba2b981126ae2d22c72fcc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUserSet_acecb88c9e7ba2b981126ae2d22c72fcc.html#acecb88c9e7ba2b981126ae2d22c72fcc">~UserSet</a> ()</td></tr>
+<tr class="memitem:a292504d1f97fece38d2faf07dcc8c645"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUserSet.html#a292504d1f97fece38d2faf07dcc8c645">UserSet</a> (<a class="el" href="classUserSet.html">UserSet</a> &amp;copy)=delete</td></tr>
+<tr class="memdesc:a292504d1f97fece38d2faf07dcc8c645"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deleted copy constructor.  <a href="classUserSet.html#a292504d1f97fece38d2faf07dcc8c645">More...</a><br /></td></tr>
+<tr class="separator:a292504d1f97fece38d2faf07dcc8c645"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5eebe50f59b88c1a575baa2d3392deb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUserSet.html#a5eebe50f59b88c1a575baa2d3392deb6">operator=</a> (const <a class="el" href="classUserSet.html">UserSet</a> &amp;userSet)=delete</td></tr>
+<tr class="memdesc:a5eebe50f59b88c1a575baa2d3392deb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted assignment operator  <a href="classUserSet.html#a5eebe50f59b88c1a575baa2d3392deb6">More...</a><br /></td></tr>
+<tr class="separator:a5eebe50f59b88c1a575baa2d3392deb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedfbf2444bdfff40d062334b26e36438"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUserSet.html#aedfbf2444bdfff40d062334b26e36438">print</a> () const override</td></tr>
+<tr class="memdesc:aedfbf2444bdfff40d062334b26e36438"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the implicit parameter.  <a href="classUserSet.html#aedfbf2444bdfff40d062334b26e36438">More...</a><br /></td></tr>
+<tr class="separator:aedfbf2444bdfff40d062334b26e36438"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ded96a4d76f0c035e1b3b6800b77046"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUserSet.html#a2ded96a4d76f0c035e1b3b6800b77046">read</a> () override</td></tr>
+<tr class="memdesc:a2ded96a4d76f0c035e1b3b6800b77046"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads to the implicit parameter.  <a href="classUserSet.html#a2ded96a4d76f0c035e1b3b6800b77046">More...</a><br /></td></tr>
+<tr class="separator:a2ded96a4d76f0c035e1b3b6800b77046"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadde71289be89bdfe1a81c42e1ddf954"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUserSet.html#aadde71289be89bdfe1a81c42e1ddf954">contains</a> (<a class="el" href="namespaceusr.html#a126b797f5297bd229fad6076ba9d0dcf">usr::ID</a> userID) const</td></tr>
+<tr class="memdesc:aadde71289be89bdfe1a81c42e1ddf954"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns wheter the set contains a <a class="el" href="classUser.html" title="Represents a user with a unique name (id) and some statistics.">User</a> with the given id.  <a href="classUserSet.html#aadde71289be89bdfe1a81c42e1ddf954">More...</a><br /></td></tr>
+<tr class="separator:aadde71289be89bdfe1a81c42e1ddf954"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94feb29d589a537aa39efae399db7b25"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUser.html">User</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUserSet.html#a94feb29d589a537aa39efae399db7b25">operator[]</a> (<a class="el" href="namespaceusr.html#a126b797f5297bd229fad6076ba9d0dcf">usr::ID</a> userID)</td></tr>
+<tr class="memdesc:a94feb29d589a537aa39efae399db7b25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="classUser.html" title="Represents a user with a unique name (id) and some statistics.">User</a> with the given id contained in the set.  <a href="classUserSet.html#a94feb29d589a537aa39efae399db7b25">More...</a><br /></td></tr>
+<tr class="separator:a94feb29d589a537aa39efae399db7b25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a118005d68e716cb5d09d61f7fa47f787"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUserSet.html#a118005d68e716cb5d09d61f7fa47f787">count</a> () const</td></tr>
+<tr class="memdesc:a118005d68e716cb5d09d61f7fa47f787"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of users contained in the set.  <a href="classUserSet.html#a118005d68e716cb5d09d61f7fa47f787">More...</a><br /></td></tr>
+<tr class="separator:a118005d68e716cb5d09d61f7fa47f787"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a925f31426f253330f47ee75510be3985"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUserSet.html#a925f31426f253330f47ee75510be3985">add</a> (<a class="el" href="namespaceusr.html#a126b797f5297bd229fad6076ba9d0dcf">usr::ID</a> newUserID)</td></tr>
+<tr class="memdesc:a925f31426f253330f47ee75510be3985"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a given <a class="el" href="classUser.html" title="Represents a user with a unique name (id) and some statistics.">User</a> to the collection.  <a href="classUserSet.html#a925f31426f253330f47ee75510be3985">More...</a><br /></td></tr>
+<tr class="separator:a925f31426f253330f47ee75510be3985"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b4c1d5a036374c280d74b2a3d9ce772"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUserSet.html#a2b4c1d5a036374c280d74b2a3d9ce772">remove</a> (<a class="el" href="namespaceusr.html#a126b797f5297bd229fad6076ba9d0dcf">usr::ID</a> userID)</td></tr>
+<tr class="memdesc:a2b4c1d5a036374c280d74b2a3d9ce772"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a <a class="el" href="classUser.html" title="Represents a user with a unique name (id) and some statistics.">User</a> from the set.  <a href="classUserSet.html#a2b4c1d5a036374c280d74b2a3d9ce772">More...</a><br /></td></tr>
+<tr class="separator:a2b4c1d5a036374c280d74b2a3d9ce772"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a8da5b0ebadb71409af6dbf9d5dc4f204"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classUserSet.html">UserSet</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUserSet.html#a8da5b0ebadb71409af6dbf9d5dc4f204">getInstance</a> ()</td></tr>
+<tr class="memdesc:a8da5b0ebadb71409af6dbf9d5dc4f204"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the single instance of the class.  <a href="classUserSet.html#a8da5b0ebadb71409af6dbf9d5dc4f204">More...</a><br /></td></tr>
+<tr class="separator:a8da5b0ebadb71409af6dbf9d5dc4f204"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a1fcb7215d45571e0f9c4cf4f20b05c80"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUserSet.html#a1fcb7215d45571e0f9c4cf4f20b05c80">UserSet</a> ()</td></tr>
+<tr class="memdesc:a1fcb7215d45571e0f9c4cf4f20b05c80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Private default constructor.  <a href="classUserSet.html#a1fcb7215d45571e0f9c4cf4f20b05c80">More...</a><br /></td></tr>
+<tr class="separator:a1fcb7215d45571e0f9c4cf4f20b05c80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acecb88c9e7ba2b981126ae2d22c72fcc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUserSet.html#acecb88c9e7ba2b981126ae2d22c72fcc">~UserSet</a> ()</td></tr>
+<tr class="memdesc:acecb88c9e7ba2b981126ae2d22c72fcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Private default destructor.  <a href="classUserSet.html#acecb88c9e7ba2b981126ae2d22c72fcc">More...</a><br /></td></tr>
 <tr class="separator:acecb88c9e7ba2b981126ae2d22c72fcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63786bdeb122e55666ec60f3bbc889ef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUserSet_a63786bdeb122e55666ec60f3bbc889ef.html#a63786bdeb122e55666ec60f3bbc889ef">removeUser</a> (<a class="el" href="namespaceusr_afed849d06665ce63a85325c909efe771.html#afed849d06665ce63a85325c909efe771">usr::ID</a> toRemoveUser)</td></tr>
-<tr class="memdesc:a63786bdeb122e55666ec60f3bbc889ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a user from the set if possible and returns <code>true</code> if succeeded.  <a href="classUserSet_a63786bdeb122e55666ec60f3bbc889ef.html#a63786bdeb122e55666ec60f3bbc889ef">More...</a><br /></td></tr>
-<tr class="separator:a63786bdeb122e55666ec60f3bbc889ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a143d68bd066b688c17e06beba7145c6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIReadable_a143d68bd066b688c17e06beba7145c6f.html#a143d68bd066b688c17e06beba7145c6f">read</a> ()</td></tr>
-<tr class="memdesc:a143d68bd066b688c17e06beba7145c6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read to the <code><a class="el" href="classIReadable.html" title="IReadable interface.">IReadable</a></code> object from the stdin.  <a href="classIReadable_a143d68bd066b688c17e06beba7145c6f.html#a143d68bd066b688c17e06beba7145c6f">More...</a><br /></td></tr>
-<tr class="separator:a143d68bd066b688c17e06beba7145c6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b00d3f39de891a4caf1837763ffe8a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIPrintable_a5b00d3f39de891a4caf1837763ffe8a3.html#a5b00d3f39de891a4caf1837763ffe8a3">print</a> () const</td></tr>
-<tr class="memdesc:a5b00d3f39de891a4caf1837763ffe8a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the <code><a class="el" href="classIPrintable.html" title="IPrintable interface.">IPrintable</a></code> object to the stdout.  <a href="classIPrintable_a5b00d3f39de891a4caf1837763ffe8a3.html#a5b00d3f39de891a4caf1837763ffe8a3">More...</a><br /></td></tr>
-<tr class="separator:a5b00d3f39de891a4caf1837763ffe8a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a285fa8d0202100ad3d60d78f085677"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_a1a285fa8d0202100ad3d60d78f085677.html#a1a285fa8d0202100ad3d60d78f085677">containsElement</a> (<a class="el" href="namespaceusr_afed849d06665ce63a85325c909efe771.html#afed849d06665ce63a85325c909efe771">usr::ID</a> id) const</td></tr>
-<tr class="memdesc:a1a285fa8d0202100ad3d60d78f085677"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return wheter the <code><a class="el" href="classIContainer.html" title="IContainer interface">IContainer</a></code> object has an element with the given id.  <a href="classIContainer_a1a285fa8d0202100ad3d60d78f085677.html#a1a285fa8d0202100ad3d60d78f085677">More...</a><br /></td></tr>
-<tr class="separator:a1a285fa8d0202100ad3d60d78f085677"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0f2b19a33fe97ed7bebad7fd191980d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_ac0f2b19a33fe97ed7bebad7fd191980d.html#ac0f2b19a33fe97ed7bebad7fd191980d">containsElement</a> (<a class="el" href="classUser.html">User</a> element) const</td></tr>
-<tr class="memdesc:ac0f2b19a33fe97ed7bebad7fd191980d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return wheter the <code><a class="el" href="classIContainer.html" title="IContainer interface">IContainer</a></code> object has an element with the same id as <code>element</code>.  <a href="classIContainer_ac0f2b19a33fe97ed7bebad7fd191980d.html#ac0f2b19a33fe97ed7bebad7fd191980d">More...</a><br /></td></tr>
-<tr class="separator:ac0f2b19a33fe97ed7bebad7fd191980d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6a372ab01d690a8ce00c807dd052ceb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUser.html">User</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_ac6a372ab01d690a8ce00c807dd052ceb.html#ac6a372ab01d690a8ce00c807dd052ceb">getElement</a> (<a class="el" href="namespaceusr_afed849d06665ce63a85325c909efe771.html#afed849d06665ce63a85325c909efe771">usr::ID</a> id)</td></tr>
-<tr class="memdesc:ac6a372ab01d690a8ce00c807dd052ceb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the element with the given ID contained in the <code><a class="el" href="classIContainer.html" title="IContainer interface">IContainer</a></code> object.  <a href="classIContainer_ac6a372ab01d690a8ce00c807dd052ceb.html#ac6a372ab01d690a8ce00c807dd052ceb">More...</a><br /></td></tr>
-<tr class="separator:ac6a372ab01d690a8ce00c807dd052ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a680c9a9a75ef1f9289700e4648b8f62b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUser.html">User</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_a680c9a9a75ef1f9289700e4648b8f62b.html#a680c9a9a75ef1f9289700e4648b8f62b">operator[]</a> (<a class="el" href="namespaceusr_afed849d06665ce63a85325c909efe771.html#afed849d06665ce63a85325c909efe771">usr::ID</a> id)</td></tr>
-<tr class="memdesc:a680c9a9a75ef1f9289700e4648b8f62b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the element with the given ID contained in the <code><a class="el" href="classIContainer.html" title="IContainer interface">IContainer</a></code> object.  <a href="classIContainer_a680c9a9a75ef1f9289700e4648b8f62b.html#a680c9a9a75ef1f9289700e4648b8f62b">More...</a><br /></td></tr>
-<tr class="separator:a680c9a9a75ef1f9289700e4648b8f62b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeab8a0a391dee3070c21045ab694daab"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classUser.html">User</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_aeab8a0a391dee3070c21045ab694daab.html#aeab8a0a391dee3070c21045ab694daab">operator[]</a> (<a class="el" href="namespaceusr_afed849d06665ce63a85325c909efe771.html#afed849d06665ce63a85325c909efe771">usr::ID</a> id) const</td></tr>
-<tr class="memdesc:aeab8a0a391dee3070c21045ab694daab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the constant element with the given ID contained in the <code><a class="el" href="classIContainer.html" title="IContainer interface">IContainer</a></code> object.  <a href="classIContainer_aeab8a0a391dee3070c21045ab694daab.html#aeab8a0a391dee3070c21045ab694daab">More...</a><br /></td></tr>
-<tr class="separator:aeab8a0a391dee3070c21045ab694daab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53d878603e548a1c500f67a43ea8699d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classUser.html">User</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_a53d878603e548a1c500f67a43ea8699d.html#a53d878603e548a1c500f67a43ea8699d">getConstElement</a> (<a class="el" href="namespaceusr_afed849d06665ce63a85325c909efe771.html#afed849d06665ce63a85325c909efe771">usr::ID</a> id) const</td></tr>
-<tr class="memdesc:a53d878603e548a1c500f67a43ea8699d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the constant element with the given ID contained in the <code><a class="el" href="classIContainer.html" title="IContainer interface">IContainer</a></code> object.  <a href="classIContainer_a53d878603e548a1c500f67a43ea8699d.html#a53d878603e548a1c500f67a43ea8699d">More...</a><br /></td></tr>
-<tr class="separator:a53d878603e548a1c500f67a43ea8699d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f98d7e86a90a9f521d000d776216b1f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_a3f98d7e86a90a9f521d000d776216b1f.html#a3f98d7e86a90a9f521d000d776216b1f">getCount</a> () const</td></tr>
-<tr class="memdesc:a3f98d7e86a90a9f521d000d776216b1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of elements contained in the <code><a class="el" href="classIContainer.html" title="IContainer interface">IContainer</a></code> object.  <a href="classIContainer_a3f98d7e86a90a9f521d000d776216b1f.html#a3f98d7e86a90a9f521d000d776216b1f">More...</a><br /></td></tr>
-<tr class="separator:a3f98d7e86a90a9f521d000d776216b1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88315472c494cf200df505fbf68b2105"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_a88315472c494cf200df505fbf68b2105.html#a88315472c494cf200df505fbf68b2105">addElement</a> (<a class="el" href="classUser.html">User</a> newElement)</td></tr>
-<tr class="memdesc:a88315472c494cf200df505fbf68b2105"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new element, given such element.  <a href="classIContainer_a88315472c494cf200df505fbf68b2105.html#a88315472c494cf200df505fbf68b2105">More...</a><br /></td></tr>
-<tr class="separator:a88315472c494cf200df505fbf68b2105"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13b37809c2489f57d670ffc1194b70cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_a13b37809c2489f57d670ffc1194b70cc.html#a13b37809c2489f57d670ffc1194b70cc">addElement</a> (<a class="el" href="namespaceusr_afed849d06665ce63a85325c909efe771.html#afed849d06665ce63a85325c909efe771">usr::ID</a> newElementID)</td></tr>
-<tr class="memdesc:a13b37809c2489f57d670ffc1194b70cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new element, given such element's id.  <a href="classIContainer_a13b37809c2489f57d670ffc1194b70cc.html#a13b37809c2489f57d670ffc1194b70cc">More...</a><br /></td></tr>
-<tr class="separator:a13b37809c2489f57d670ffc1194b70cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a9f072fb1ca298d5e9e89de08531f3d75"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="namespaceusr.html#a126b797f5297bd229fad6076ba9d0dcf">usr::ID</a>, <a class="el" href="classUser.html">User</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUserSet.html#a9f072fb1ca298d5e9e89de08531f3d75">users</a></td></tr>
+<tr class="memdesc:a9f072fb1ca298d5e9e89de08531f3d75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map of users accessed by ID's.  <a href="classUserSet.html#a9f072fb1ca298d5e9e89de08531f3d75">More...</a><br /></td></tr>
+<tr class="separator:a9f072fb1ca298d5e9e89de08531f3d75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a set of users. </p>
-<dl class="section invariant"><dt>Invariant</dt><dd><code>users</code> is sorted by id </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="UserSet_8hh_source.html#l00020">20</a> of file <a class="el" href="UserSet_8hh_source.html">UserSet.hh</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<p class="definition">Definition at line <a class="el" href="UserSet_8hh_source.html#l00022">22</a> of file <a class="el" href="UserSet_8hh_source.html">UserSet.hh</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a1fcb7215d45571e0f9c4cf4f20b05c80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fcb7215d45571e0f9c4cf4f20b05c80">&#9670;&nbsp;</a></span>UserSet() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UserSet::UserSet </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Private default constructor. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Creates an empty <a class="el" href="classSessionRepository.html" title="Represents a repository of sessions.">SessionRepository</a> </dd></dl>
+
+</div>
+</div>
+<a id="acecb88c9e7ba2b981126ae2d22c72fcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acecb88c9e7ba2b981126ae2d22c72fcc">&#9670;&nbsp;</a></span>~UserSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UserSet::~UserSet </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Private default destructor. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Deletes the implicit parameter </dd></dl>
+
+</div>
+</div>
+<a id="a292504d1f97fece38d2faf07dcc8c645"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a292504d1f97fece38d2faf07dcc8c645">&#9670;&nbsp;</a></span>UserSet() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UserSet::UserSet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classUserSet.html">UserSet</a> &amp;&#160;</td>
+          <td class="paramname"><em>copy</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deleted copy constructor. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5eebe50f59b88c1a575baa2d3392deb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5eebe50f59b88c1a575baa2d3392deb6">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UserSet::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classUserSet.html">UserSet</a> &amp;&#160;</td>
+          <td class="paramname"><em>userSet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>deleted assignment operator </p>
+
+</div>
+</div>
+<a id="a8da5b0ebadb71409af6dbf9d5dc4f204"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8da5b0ebadb71409af6dbf9d5dc4f204">&#9670;&nbsp;</a></span>getInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classUserSet.html">UserSet</a>&amp; UserSet::getInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the single instance of the class. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The single instance of the class is returned </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a reference to the single instance </dd></dl>
+
+</div>
+</div>
+<a id="aedfbf2444bdfff40d062334b26e36438"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedfbf2444bdfff40d062334b26e36438">&#9670;&nbsp;</a></span>print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UserSet::print </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prints the implicit parameter. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Prints the implicit parameter to the stdout </dd></dl>
+
+<p>Implements <a class="el" href="classIPrintable.html#addc8a495860e3d637a25f0806409bc0a">IPrintable</a>.</p>
+
+</div>
+</div>
+<a id="a2ded96a4d76f0c035e1b3b6800b77046"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ded96a4d76f0c035e1b3b6800b77046">&#9670;&nbsp;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UserSet::read </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reads to the implicit parameter. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Reads to the implicit parameter from the stdin </dd></dl>
+
+<p>Implements <a class="el" href="classIReadable.html#a595345a03025dac6772480c342900a49">IReadable</a>.</p>
+
+</div>
+</div>
+<a id="aadde71289be89bdfe1a81c42e1ddf954"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadde71289be89bdfe1a81c42e1ddf954">&#9670;&nbsp;</a></span>contains()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UserSet::contains </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceusr.html#a126b797f5297bd229fad6076ba9d0dcf">usr::ID</a>&#160;</td>
+          <td class="paramname"><em>userID</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns wheter the set contains a <a class="el" href="classUser.html" title="Represents a user with a unique name (id) and some statistics.">User</a> with the given id. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Returns <code>true</code> if there is <a class="el" href="classUser.html" title="Represents a user with a unique name (id) and some statistics.">User</a> with the given id within the implicit parameter. Returns <code>false</code> otherwise </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sessionID</td><td>a <a class="el" href="namespaceusr.html#a126b797f5297bd229fad6076ba9d0dcf">usr::ID</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A boolean representing whether the implicit parameter contains the given <a class="el" href="classUser.html" title="Represents a user with a unique name (id) and some statistics.">User</a> </dd></dl>
+
+</div>
+</div>
+<a id="a94feb29d589a537aa39efae399db7b25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94feb29d589a537aa39efae399db7b25">&#9670;&nbsp;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classUser.html">User</a>&amp; UserSet::operator[] </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceusr.html#a126b797f5297bd229fad6076ba9d0dcf">usr::ID</a>&#160;</td>
+          <td class="paramname"><em>userID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the <a class="el" href="classUser.html" title="Represents a user with a unique name (id) and some statistics.">User</a> with the given id contained in the set. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>A <a class="el" href="classUser.html" title="Represents a user with a unique name (id) and some statistics.">User</a> with the given id does exist within the implicit parameter </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Returns the <a class="el" href="classUser.html" title="Represents a user with a unique name (id) and some statistics.">User</a> with the given id </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sessionID</td><td>a <a class="el" href="namespaceusr.html#a126b797f5297bd229fad6076ba9d0dcf">usr::ID</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the <a class="el" href="classUser.html" title="Represents a user with a unique name (id) and some statistics.">User</a> with the given id </dd></dl>
+
+</div>
+</div>
+<a id="a118005d68e716cb5d09d61f7fa47f787"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a118005d68e716cb5d09d61f7fa47f787">&#9670;&nbsp;</a></span>count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UserSet::count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the number of users contained in the set. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Returns the number of users contained in the implicit parameter </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>An integer representing the number of users contained </dd></dl>
+
+</div>
+</div>
+<a id="a925f31426f253330f47ee75510be3985"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a925f31426f253330f47ee75510be3985">&#9670;&nbsp;</a></span>add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UserSet::add </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceusr.html#a126b797f5297bd229fad6076ba9d0dcf">usr::ID</a>&#160;</td>
+          <td class="paramname"><em>newUserID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a given <a class="el" href="classUser.html" title="Represents a user with a unique name (id) and some statistics.">User</a> to the collection. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>There is not any <a class="el" href="classUser.html" title="Represents a user with a unique name (id) and some statistics.">User</a> with the given id or the same problems as the given <a class="el" href="classUser.html" title="Represents a user with a unique name (id) and some statistics.">User</a> within the implicit parameter </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The given <a class="el" href="classUser.html" title="Represents a user with a unique name (id) and some statistics.">User</a> is added to the implicit parameter with the given id </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newSessionID</td><td>a <a class="el" href="namespaceusr.html#a126b797f5297bd229fad6076ba9d0dcf">usr::ID</a> </td></tr>
+    <tr><td class="paramname">newSession</td><td>a <a class="el" href="classUser.html" title="Represents a user with a unique name (id) and some statistics.">User</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2b4c1d5a036374c280d74b2a3d9ce772"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b4c1d5a036374c280d74b2a3d9ce772">&#9670;&nbsp;</a></span>remove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UserSet::remove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceusr.html#a126b797f5297bd229fad6076ba9d0dcf">usr::ID</a>&#160;</td>
+          <td class="paramname"><em>userID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes a <a class="el" href="classUser.html" title="Represents a user with a unique name (id) and some statistics.">User</a> from the set. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>A <a class="el" href="classUser.html" title="Represents a user with a unique name (id) and some statistics.">User</a> with the given ID exists within the set </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The <a class="el" href="classUser.html" title="Represents a user with a unique name (id) and some statistics.">User</a> with the given ID no longer exists within the set </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a9f072fb1ca298d5e9e89de08531f3d75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f072fb1ca298d5e9e89de08531f3d75">&#9670;&nbsp;</a></span>users</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;<a class="el" href="namespaceusr.html#a126b797f5297bd229fad6076ba9d0dcf">usr::ID</a>, <a class="el" href="classUser.html">User</a>&gt; UserSet::users</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Map of users accessed by ID's. </p>
+
+<p class="definition">Definition at line <a class="el" href="UserSet_8hh_source.html#l00044">44</a> of file <a class="el" href="UserSet_8hh_source.html">UserSet.hh</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="UserSet_8hh_source.html">UserSet.hh</a></li>
 </ul>
 </div><!-- contents -->

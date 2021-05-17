@@ -21,6 +21,7 @@ using std::cout;
 using std::endl;
 
 int main() {
+	assert(false);
     ProblemCollection & problemCollection = ProblemCollection::getInstance(); 
     SessionRepository & sessionRepository = SessionRepository::getInstance(); 
     CourseSet & courseSet = CourseSet::getInstance(); 
@@ -95,10 +96,10 @@ int main() {
 			// echo
 			cout << ' '  << toRemoveUserID << endl;
             if(userSet.contains(toRemoveUserID)) {
-				const User & user = userSet[toRemoveUserID];
-				// unenroll user from course (if enrolled in any)
-				if(user.isEnrolledInCourse())
-					courseSet[user.getEnrolledCourseID()].unenrollUser();
+				// check if enrolled in course and unenroll
+				if(userSet[toRemoveUserID].isEnrolledInCourse())
+					CourseSet::getInstance()[userSet[toRemoveUserID].getEnrolledCourseID()].unenrollUser();
+
 				userSet.remove(toRemoveUserID);
             	cout << userSet.count() << endl;
 			} 

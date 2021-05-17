@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -23,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Evaluator
-   &#160;<span id="projectnumber">1.0 Specification</span>
+   &#160;<span id="projectnumber">2.0 Implementation</span>
    </div>
    <div id="projectbrief">pro2 lab pracs: problem-evaluator-like platform</div>
   </td>
@@ -77,24 +78,19 @@ $(function() {
 
 <p>File containing the specification of the <a class="el" href="classUser.html" title="Represents a user with a unique name (id) and some statistics.">User</a> class.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="Interfaces_8hh_source.html">Interfaces.hh</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="CourseSet_8hh_source.html">CourseSet.hh</a>&quot;</code><br />
-</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for User.hh:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="textblock"><code>#include &quot;<a class="el" href="CourseSet_8hh_source.html">CourseSet.hh</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for User.hh:</div>
+<div class="dyncontent">
 <div class="center"><img src="User_8hh__incl.png" border="0" usemap="#aUser_8hh" alt=""/></div>
 <map name="aUser_8hh" id="aUser_8hh">
-<area shape="rect" title="File containing the specification of the User class." alt="" coords="15,5,87,32"/>
-<area shape="rect" href="Interfaces_8hh.html" title="File containing the specification of multiple common interfaces." alt="" coords="28,528,135,555"/>
-<area shape="rect" href="CourseSet_8hh.html" title="File containing the specification of the CourseSet class." alt="" coords="43,80,151,107"/>
-<area shape="rect" href="Namespaces_8hh.html" title="File containing the namespaces corresponding to Problem, Session, Course and User." alt="" coords="18,603,145,629"/>
-<area shape="rect" href="Course_8hh.html" title="File containing the specification of the Course class." alt="" coords="54,155,141,181"/>
-<area shape="rect" href="SessionRep_8hh.html" title="File containing the specification of the SessionRepository class." alt="" coords="93,229,211,256"/>
-<area shape="rect" href="Session_8hh.html" title="File containing the specification of the Session class and it&#39;s corresponding namespace." alt="" coords="106,304,198,331"/>
-<area shape="rect" href="ProblemCol_8hh.html" title="File containing the specification of the ProblemCollection class." alt="" coords="144,379,261,405"/>
-<area shape="rect" href="Problem_8hh.html" title="File containing the specification of the Problem class." alt="" coords="149,453,245,480"/>
+<area shape="rect" title="File containing the specification of the User class." alt="" coords="29,5,99,32"/>
+<area shape="rect" href="CourseSet_8hh.html" title="File containing the specification of the CourseSet class." alt="" coords="10,80,118,107"/>
+<area shape="rect" href="Course_8hh.html" title="File containing the specification of the Course class." alt="" coords="21,155,107,181"/>
+<area shape="rect" href="SessionRep_8hh.html" title="File containing the specification of the SessionRepository class." alt="" coords="5,229,123,256"/>
+<area shape="rect" href="Session_8hh.html" title="File containing the specification of the Session class and it&#39;s corresponding namespace." alt="" coords="18,304,110,331"/>
+<area shape="rect" href="ProblemCol_8hh.html" title="File containing the specification of the ProblemCollection class." alt="" coords="5,379,123,405"/>
+<area shape="rect" href="Problem_8hh.html" title="File containing the specification of the Problem class." alt="" coords="16,453,112,480"/>
 </map>
 </div>
 </div>
@@ -102,11 +98,14 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProblemStats.html">ProblemStats</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the statistics of a problem related to some user.  <a href="classProblemStats.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUser.html">User</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a user with a unique name (id) and some statistics.  <a href="classUser.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structUser_1_1UserStats.html">User::UserStats</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds the user's global stats.  <a href="structUser_1_1UserStats.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structUser_1_1ProblemStats.html">User::ProblemStats</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds the user's problem-related stats.  <a href="structUser_1_1ProblemStats.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>

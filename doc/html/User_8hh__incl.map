@@ -1,11 +1,9 @@
 <map id="User.hh" name="User.hh">
-<area shape="rect" id="node1" title="File containing the specification of the User class." alt="" coords="15,5,87,32"/>
-<area shape="rect" id="node2" href="$Interfaces_8hh.html" title="File containing the specification of multiple common interfaces." alt="" coords="28,528,135,555"/>
-<area shape="rect" id="node4" href="$CourseSet_8hh.html" title="File containing the specification of the CourseSet class." alt="" coords="43,80,151,107"/>
-<area shape="rect" id="node3" href="$Namespaces_8hh.html" title="File containing the namespaces corresponding to Problem, Session, Course and User." alt="" coords="18,603,145,629"/>
-<area shape="rect" id="node5" href="$Course_8hh.html" title="File containing the specification of the Course class." alt="" coords="54,155,141,181"/>
-<area shape="rect" id="node6" href="$SessionRep_8hh.html" title="File containing the specification of the SessionRepository class." alt="" coords="93,229,211,256"/>
-<area shape="rect" id="node7" href="$Session_8hh.html" title="File containing the specification of the Session class and it&#39;s corresponding namespace." alt="" coords="106,304,198,331"/>
-<area shape="rect" id="node8" href="$ProblemCol_8hh.html" title="File containing the specification of the ProblemCollection class." alt="" coords="144,379,261,405"/>
-<area shape="rect" id="node9" href="$Problem_8hh.html" title="File containing the specification of the Problem class." alt="" coords="149,453,245,480"/>
+<area shape="rect" id="node1" title="File containing the specification of the User class." alt="" coords="29,5,99,32"/>
+<area shape="rect" id="node2" href="$CourseSet_8hh.html" title="File containing the specification of the CourseSet class." alt="" coords="10,80,118,107"/>
+<area shape="rect" id="node3" href="$Course_8hh.html" title="File containing the specification of the Course class." alt="" coords="21,155,107,181"/>
+<area shape="rect" id="node4" href="$SessionRep_8hh.html" title="File containing the specification of the SessionRepository class." alt="" coords="5,229,123,256"/>
+<area shape="rect" id="node5" href="$Session_8hh.html" title="File containing the specification of the Session class and it&#39;s corresponding namespace." alt="" coords="18,304,110,331"/>
+<area shape="rect" id="node6" href="$ProblemCol_8hh.html" title="File containing the specification of the ProblemCollection class." alt="" coords="5,379,123,405"/>
+<area shape="rect" id="node7" href="$Problem_8hh.html" title="File containing the specification of the Problem class." alt="" coords="16,453,112,480"/>
 </map>

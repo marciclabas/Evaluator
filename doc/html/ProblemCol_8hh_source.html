@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -23,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Evaluator
-   &#160;<span id="projectnumber">1.0 Specification</span>
+   &#160;<span id="projectnumber">2.0 Implementation</span>
    </div>
    <div id="projectbrief">pro2 lab pracs: problem-evaluator-like platform</div>
   </td>
@@ -79,25 +80,70 @@ $(function() {
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Problem_8hh.html">Problem.hh</a>&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef NO_DIAGRAM</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classProblemCollection.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="classProblemCollection.html">ProblemCollection</a> : <span class="keyword">public</span> <a class="code" href="classIReadable.html">IReadable</a>, <span class="keyword">public</span> <a class="code" href="classIPrintable.html">IPrintable</a>, <span class="keyword">public</span> <a class="code" href="classIContainer.html">IContainer</a>&lt;prb::ID, Problem&gt; {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    std::vector&lt;Problem&gt; problems;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classProblemCollection_a9c64db5612113ea8c9cf2f4756fc1abf.html#a9c64db5612113ea8c9cf2f4756fc1abf">   28</a></span>&#160;    <a class="code" href="classProblemCollection_a9c64db5612113ea8c9cf2f4756fc1abf.html#a9c64db5612113ea8c9cf2f4756fc1abf">ProblemCollection</a>();</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classProblemCollection_a315db5b8fb5f98166e1b62e7d5e6517d.html#a315db5b8fb5f98166e1b62e7d5e6517d">   29</a></span>&#160;    <a class="code" href="classProblemCollection_a315db5b8fb5f98166e1b62e7d5e6517d.html#a315db5b8fb5f98166e1b62e7d5e6517d">~ProblemCollection</a>();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="IPrintable_8hh.html">IPrintable.hh</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="IReadable_8hh.html">IReadable.hh</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classProblemCollection.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="classProblemCollection.html">ProblemCollection</a> : <span class="keyword">public</span> <a class="code" href="classIReadable.html">IReadable</a>, <span class="keyword">public</span> <a class="code" href="classIPrintable.html">IPrintable</a>  {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">/*==========================================================constructors &amp; destructors=========================================================*/</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classProblemCollection.html#a9c64db5612113ea8c9cf2f4756fc1abf">   31</a></span>&#160;    <a class="code" href="classProblemCollection.html#a9c64db5612113ea8c9cf2f4756fc1abf">ProblemCollection</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classProblemCollection.html#a315db5b8fb5f98166e1b62e7d5e6517d">   38</a></span>&#160;    <a class="code" href="classProblemCollection.html#a315db5b8fb5f98166e1b62e7d5e6517d">~ProblemCollection</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classProblemCollection.html#a2294b1ea5899056d21064469ea1af1f1">   44</a></span>&#160;    std::map&lt;prb::ID,Problem&gt; <a class="code" href="classProblemCollection.html#a2294b1ea5899056d21064469ea1af1f1">problems</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">/*===========================================================singleton-related methods=========================================================*/</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classProblemCollection.html#a7bbc4a1a9504512671c1c1369fbf4239">   52</a></span>&#160;    <a class="code" href="classProblemCollection.html#a7bbc4a1a9504512671c1c1369fbf4239">ProblemCollection</a>(<a class="code" href="classProblemCollection.html">ProblemCollection</a> &amp; copy) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classProblemCollection.html#a47b4c57020982feafa72ed61816e96f0">   57</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classProblemCollection.html#a47b4c57020982feafa72ed61816e96f0">operator=</a>(<span class="keyword">const</span> <a class="code" href="classProblemCollection.html">ProblemCollection</a> &amp; problemCollection) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classProblemCollection.html#a6a60ef79d7e781938acedec41fd4f71c">   65</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classProblemCollection.html">ProblemCollection</a> &amp; <a class="code" href="classProblemCollection.html#a6a60ef79d7e781938acedec41fd4f71c">getInstance</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">/*==============================================================overrided IO methods============================================================*/</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classProblemCollection.html#ad49395eb1c71357fdc6130058b39d414">   69</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classProblemCollection.html#ad49395eb1c71357fdc6130058b39d414">print</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classProblemCollection.html#a98230806a6e42b5875c102f7de345238">   70</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classProblemCollection.html#a98230806a6e42b5875c102f7de345238">read</a>();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">/*====================================================================getters===================================================================*/</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classProblemCollection.html#aadc7afc414c274888e3deb3c126c5416">   81</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classProblemCollection.html#aadc7afc414c274888e3deb3c126c5416">contains</a>(<a class="code" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> problemID) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    </div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classProblemCollection.html#a1c3c9eb212c1854ea16cb034c8a1bbdd">   90</a></span>&#160;    <a class="code" href="classProblem.html">Problem</a> &amp; <a class="code" href="classProblemCollection.html#a1c3c9eb212c1854ea16cb034c8a1bbdd">operator[]</a>(<a class="code" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> problemID);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    </div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classProblemCollection.html#a980471ab3b69e04ce772108dbd629194">   98</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classProblemCollection.html#a980471ab3b69e04ce772108dbd629194">count</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="comment">/*====================================================================setters===================================================================*/</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    </div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="classProblemCollection.html#a6bed10344c048d05d710c729d3729301">  108</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classProblemCollection.html#a6bed10344c048d05d710c729d3729301">add</a>(<a class="code" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> newProblemID);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;};</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aIPrintable_8hh_html"><div class="ttname"><a href="IPrintable_8hh.html">IPrintable.hh</a></div><div class="ttdoc">File containing the specification of the IPrintable interface.</div></div>
+<div class="ttc" id="aIReadable_8hh_html"><div class="ttname"><a href="IReadable_8hh.html">IReadable.hh</a></div><div class="ttdoc">File containing the specification the IReadable interface.</div></div>
 <div class="ttc" id="aProblem_8hh_html"><div class="ttname"><a href="Problem_8hh.html">Problem.hh</a></div><div class="ttdoc">File containing the specification of the Problem class.</div></div>
-<div class="ttc" id="aclassIContainer_html"><div class="ttname"><a href="classIContainer.html">IContainer</a></div><div class="ttdoc">IContainer interface</div><div class="ttdef"><b>Definition:</b> <a href="Interfaces_8hh_source.html#l00066">Interfaces.hh:66</a></div></div>
-<div class="ttc" id="aclassIPrintable_html"><div class="ttname"><a href="classIPrintable.html">IPrintable</a></div><div class="ttdoc">IPrintable interface.</div><div class="ttdef"><b>Definition:</b> <a href="Interfaces_8hh_source.html#l00019">Interfaces.hh:19</a></div></div>
-<div class="ttc" id="aclassIReadable_html"><div class="ttname"><a href="classIReadable.html">IReadable</a></div><div class="ttdoc">IReadable interface.</div><div class="ttdef"><b>Definition:</b> <a href="Interfaces_8hh_source.html#l00042">Interfaces.hh:42</a></div></div>
-<div class="ttc" id="aclassProblemCollection_a315db5b8fb5f98166e1b62e7d5e6517d_html_a315db5b8fb5f98166e1b62e7d5e6517d"><div class="ttname"><a href="classProblemCollection_a315db5b8fb5f98166e1b62e7d5e6517d.html#a315db5b8fb5f98166e1b62e7d5e6517d">ProblemCollection::~ProblemCollection</a></div><div class="ttdeci">~ProblemCollection()</div></div>
-<div class="ttc" id="aclassProblemCollection_a9c64db5612113ea8c9cf2f4756fc1abf_html_a9c64db5612113ea8c9cf2f4756fc1abf"><div class="ttname"><a href="classProblemCollection_a9c64db5612113ea8c9cf2f4756fc1abf.html#a9c64db5612113ea8c9cf2f4756fc1abf">ProblemCollection::ProblemCollection</a></div><div class="ttdeci">ProblemCollection()</div></div>
-<div class="ttc" id="aclassProblemCollection_html"><div class="ttname"><a href="classProblemCollection.html">ProblemCollection</a></div><div class="ttdoc">Represents a collection of problems.</div><div class="ttdef"><b>Definition:</b> <a href="ProblemCol_8hh_source.html#l00024">ProblemCol.hh:24</a></div></div>
+<div class="ttc" id="aclassIPrintable_html"><div class="ttname"><a href="classIPrintable.html">IPrintable</a></div><div class="ttdoc">IPrintable interface.</div><div class="ttdef"><b>Definition:</b> <a href="IPrintable_8hh_source.html#l00019">IPrintable.hh:19</a></div></div>
+<div class="ttc" id="aclassIReadable_html"><div class="ttname"><a href="classIReadable.html">IReadable</a></div><div class="ttdoc">IReadable interface.</div><div class="ttdef"><b>Definition:</b> <a href="IReadable_8hh_source.html#l00019">IReadable.hh:19</a></div></div>
+<div class="ttc" id="aclassProblemCollection_html"><div class="ttname"><a href="classProblemCollection.html">ProblemCollection</a></div><div class="ttdoc">Represents a collection of problems. Is implemented as a Singleton.</div><div class="ttdef"><b>Definition:</b> <a href="ProblemCol_8hh_source.html#l00022">ProblemCol.hh:22</a></div></div>
+<div class="ttc" id="aclassProblemCollection_html_a1c3c9eb212c1854ea16cb034c8a1bbdd"><div class="ttname"><a href="classProblemCollection.html#a1c3c9eb212c1854ea16cb034c8a1bbdd">ProblemCollection::operator[]</a></div><div class="ttdeci">Problem &amp; operator[](prb::ID problemID)</div><div class="ttdoc">Returns the Problem with the given id contained in the collection.</div></div>
+<div class="ttc" id="aclassProblemCollection_html_a2294b1ea5899056d21064469ea1af1f1"><div class="ttname"><a href="classProblemCollection.html#a2294b1ea5899056d21064469ea1af1f1">ProblemCollection::problems</a></div><div class="ttdeci">std::map&lt; prb::ID, Problem &gt; problems</div><div class="ttdoc">Map of problems accessed by ID's.</div><div class="ttdef"><b>Definition:</b> <a href="ProblemCol_8hh_source.html#l00044">ProblemCol.hh:44</a></div></div>
+<div class="ttc" id="aclassProblemCollection_html_a315db5b8fb5f98166e1b62e7d5e6517d"><div class="ttname"><a href="classProblemCollection.html#a315db5b8fb5f98166e1b62e7d5e6517d">ProblemCollection::~ProblemCollection</a></div><div class="ttdeci">~ProblemCollection()</div><div class="ttdoc">Private default destructor.</div></div>
+<div class="ttc" id="aclassProblemCollection_html_a47b4c57020982feafa72ed61816e96f0"><div class="ttname"><a href="classProblemCollection.html#a47b4c57020982feafa72ed61816e96f0">ProblemCollection::operator=</a></div><div class="ttdeci">void operator=(const ProblemCollection &amp;problemCollection)=delete</div><div class="ttdoc">Deleted assignment operator.</div></div>
+<div class="ttc" id="aclassProblemCollection_html_a6a60ef79d7e781938acedec41fd4f71c"><div class="ttname"><a href="classProblemCollection.html#a6a60ef79d7e781938acedec41fd4f71c">ProblemCollection::getInstance</a></div><div class="ttdeci">static ProblemCollection &amp; getInstance()</div><div class="ttdoc">Returns the single instance of the class.</div></div>
+<div class="ttc" id="aclassProblemCollection_html_a6bed10344c048d05d710c729d3729301"><div class="ttname"><a href="classProblemCollection.html#a6bed10344c048d05d710c729d3729301">ProblemCollection::add</a></div><div class="ttdeci">void add(prb::ID newProblemID)</div><div class="ttdoc">Adds a new Problem to the collection.</div></div>
+<div class="ttc" id="aclassProblemCollection_html_a7bbc4a1a9504512671c1c1369fbf4239"><div class="ttname"><a href="classProblemCollection.html#a7bbc4a1a9504512671c1c1369fbf4239">ProblemCollection::ProblemCollection</a></div><div class="ttdeci">ProblemCollection(ProblemCollection &amp;copy)=delete</div><div class="ttdoc">Deleted copy constructor.</div></div>
+<div class="ttc" id="aclassProblemCollection_html_a980471ab3b69e04ce772108dbd629194"><div class="ttname"><a href="classProblemCollection.html#a980471ab3b69e04ce772108dbd629194">ProblemCollection::count</a></div><div class="ttdeci">int count() const</div><div class="ttdoc">Returns the number of problems contained in the collection.</div></div>
+<div class="ttc" id="aclassProblemCollection_html_a98230806a6e42b5875c102f7de345238"><div class="ttname"><a href="classProblemCollection.html#a98230806a6e42b5875c102f7de345238">ProblemCollection::read</a></div><div class="ttdeci">void read()</div><div class="ttdoc">Reads to the implicit parameter.</div></div>
+<div class="ttc" id="aclassProblemCollection_html_a9c64db5612113ea8c9cf2f4756fc1abf"><div class="ttname"><a href="classProblemCollection.html#a9c64db5612113ea8c9cf2f4756fc1abf">ProblemCollection::ProblemCollection</a></div><div class="ttdeci">ProblemCollection()</div><div class="ttdoc">Private default constructor.</div></div>
+<div class="ttc" id="aclassProblemCollection_html_aadc7afc414c274888e3deb3c126c5416"><div class="ttname"><a href="classProblemCollection.html#aadc7afc414c274888e3deb3c126c5416">ProblemCollection::contains</a></div><div class="ttdeci">bool contains(prb::ID problemID) const</div><div class="ttdoc">Returns wheter the collection contains a Problem with the given id.</div></div>
+<div class="ttc" id="aclassProblemCollection_html_ad49395eb1c71357fdc6130058b39d414"><div class="ttname"><a href="classProblemCollection.html#ad49395eb1c71357fdc6130058b39d414">ProblemCollection::print</a></div><div class="ttdeci">void print() const</div><div class="ttdoc">Prints the implicit parameter.</div></div>
+<div class="ttc" id="aclassProblem_html"><div class="ttname"><a href="classProblem.html">Problem</a></div><div class="ttdoc">Represents a problem with some statistics regarding it's submissions.</div><div class="ttdef"><b>Definition:</b> <a href="Problem_8hh_source.html#l00017">Problem.hh:17</a></div></div>
+<div class="ttc" id="anamespaceprb_html_a0c2e40f5311e288c190a36c31d25e784"><div class="ttname"><a href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a></div><div class="ttdeci">std::string ID</div><div class="ttdef"><b>Definition:</b> <a href="Namespaces_8hh_source.html#l00023">Namespaces.hh:23</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

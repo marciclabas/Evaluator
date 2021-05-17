@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -23,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Evaluator
-   &#160;<span id="projectnumber">1.0 Specification</span>
+   &#160;<span id="projectnumber">2.0 Implementation</span>
    </div>
    <div id="projectbrief">pro2 lab pracs: problem-evaluator-like platform</div>
   </td>
@@ -71,15 +72,30 @@ $(function() {
 
 <p>This is the complete list of members for <a class="el" href="classCourse.html">Course</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classCourse_a6b959ccf15d9ceed9e9c14a701561982.html#a6b959ccf15d9ceed9e9c14a701561982">Course</a>()</td><td class="entry"><a class="el" href="classCourse.html">Course</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classCourse_a6047349e41149231c71d1d2307283bc9.html#a6047349e41149231c71d1d2307283bc9">enrollUser</a>()</td><td class="entry"><a class="el" href="classCourse.html">Course</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classCourse_ae933e2e2c89148658d7ed35bd39335e5.html#ae933e2e2c89148658d7ed35bd39335e5">getCurrentEnrolled</a>() const</td><td class="entry"><a class="el" href="classCourse.html">Course</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classCourse_ada500ecbde39364e8dac698a409872e3.html#ada500ecbde39364e8dac698a409872e3">getSessionByProblem</a>(prb::ID problemID, ses::ID &amp;sessionID) const</td><td class="entry"><a class="el" href="classCourse.html">Course</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classIPrintable_af22d3b0590836d9f40d36c7b1279c580.html#af22d3b0590836d9f40d36c7b1279c580">IPrintable</a>()=delete</td><td class="entry"><a class="el" href="classIPrintable.html">IPrintable</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classIReadable_a820ad5ad2700f268e45cf79b1ea4e92e.html#a820ad5ad2700f268e45cf79b1ea4e92e">IReadable</a>()=delete</td><td class="entry"><a class="el" href="classIReadable.html">IReadable</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classIPrintable_a5b00d3f39de891a4caf1837763ffe8a3.html#a5b00d3f39de891a4caf1837763ffe8a3">print</a>() const</td><td class="entry"><a class="el" href="classIPrintable.html">IPrintable</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classIReadable_a143d68bd066b688c17e06beba7145c6f.html#a143d68bd066b688c17e06beba7145c6f">read</a>()</td><td class="entry"><a class="el" href="classIReadable.html">IReadable</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classCourse_a6a71deac55949b33c5903ed2cd71db4b.html#a6a71deac55949b33c5903ed2cd71db4b">unenrollUser</a>()</td><td class="entry"><a class="el" href="classCourse.html">Course</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classCourse.html#a2038c2d09aef93ebb74acf0a96ab3ad6">addSessionToVector</a>(ses::ID sessionID)</td><td class="entry"><a class="el" href="classCourse.html">Course</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classCourse.html#aadcbf642ecfd6b21118873350d8df79a">begin</a>() const</td><td class="entry"><a class="el" href="classCourse.html">Course</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classCourse.html#a9bbd67ce05225a1b6058179f9bac22a4">completeCourse</a>()</td><td class="entry"><a class="el" href="classCourse.html">Course</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classCourse.html#a7ba8ff01a3475ff93cdaebd51173d7ca">const_iterator</a> typedef</td><td class="entry"><a class="el" href="classCourse.html">Course</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classCourse.html#aafd43f0cac7e85728eb8dddd7edb37e6">containsProblem</a>(prb::ID problemID) const</td><td class="entry"><a class="el" href="classCourse.html">Course</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classCourse.html#a6b959ccf15d9ceed9e9c14a701561982">Course</a>()</td><td class="entry"><a class="el" href="classCourse.html">Course</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classCourse.html#ab66c4cec1447fb3f7275e9bae8e17a1f">end</a>() const</td><td class="entry"><a class="el" href="classCourse.html">Course</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classCourse.html#a6047349e41149231c71d1d2307283bc9">enrollUser</a>()</td><td class="entry"><a class="el" href="classCourse.html">Course</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classCourse.html#ada500ecbde39364e8dac698a409872e3">getSessionByProblem</a>(prb::ID problemID, ses::ID &amp;sessionID) const</td><td class="entry"><a class="el" href="classCourse.html">Course</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classCourse.html#afdc0ce85c5dcc43f06ae9a7a63793156">getUsersEnrolled</a>() const</td><td class="entry"><a class="el" href="classCourse.html">Course</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classCourse.html#a1a76f8038858c2253766bf6b5cacf5e1">isValid</a>() const</td><td class="entry"><a class="el" href="classCourse.html">Course</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classCourse.html#a903d8640ea2f7fc37aa773838357bbe5">operator==</a>(const Course &amp;otherCourse) const</td><td class="entry"><a class="el" href="classCourse.html">Course</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classCourse.html#a7fd61bcbad5041fc50642f1a8e7b1194">print</a>() const override</td><td class="entry"><a class="el" href="classCourse.html">Course</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classCourse.html#a615c5ea821a233723768409605e63b26">problemCount</a>() const</td><td class="entry"><a class="el" href="classCourse.html">Course</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classCourse.html#abf815fafbd4ab96cb817e964457f721a">problemSessionIndex</a></td><td class="entry"><a class="el" href="classCourse.html">Course</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classCourse.html#a6b04dba847f859a0440379eea607ca8d">read</a>() override</td><td class="entry"><a class="el" href="classCourse.html">Course</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classCourse.html#a948ab9eff6f6dadc7a4be961603d7f7f">sessionCount</a>() const</td><td class="entry"><a class="el" href="classCourse.html">Course</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classCourse.html#a771b28ad413837cdfb12af2bdfdc15b0">sessions</a></td><td class="entry"><a class="el" href="classCourse.html">Course</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classCourse.html#a6a71deac55949b33c5903ed2cd71db4b">unenrollUser</a>()</td><td class="entry"><a class="el" href="classCourse.html">Course</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classCourse.html#a043b2c94e777c255ca8cc599626e03b6">updateSolvableProblems</a>(ICanSolveProblems &amp;solverObject, prb::ID lastSolvedProblem=prb::invalidID) const</td><td class="entry"><a class="el" href="classCourse.html">Course</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classCourse.html#a2f973db9a40006e707040dc71e830e83">usersCompleted</a></td><td class="entry"><a class="el" href="classCourse.html">Course</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classCourse.html#a7e0ce99ccad21baa60c921a544b7f097">usersEnrolled</a></td><td class="entry"><a class="el" href="classCourse.html">Course</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classCourse.html#a966fe9048c51f4c5114923260c4b331b">valid</a></td><td class="entry"><a class="el" href="classCourse.html">Course</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classCourse.html#aa9038f2e129526920037dda9e76d69d0">~Course</a>()</td><td class="entry"><a class="el" href="classCourse.html">Course</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

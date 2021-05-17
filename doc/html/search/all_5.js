@@ -1,16 +1,11 @@
 var searchData=
 [
-  ['icontainer_23',['IContainer',['../classIContainer.html',1,'IContainer&lt; ID, T &gt;'],['../classIContainer_a57bebe11003b412a4b421ef6d10a9136.html#a57bebe11003b412a4b421ef6d10a9136',1,'IContainer::IContainer()']]],
-  ['icontainer_3c_20crs_3a_3aid_2c_20course_20_3e_24',['IContainer&lt; crs::ID, Course &gt;',['../classIContainer.html',1,'']]],
-  ['icontainer_3c_20prb_3a_3aid_2c_20problem_20_3e_25',['IContainer&lt; prb::ID, Problem &gt;',['../classIContainer.html',1,'']]],
-  ['icontainer_3c_20ses_3a_3aid_2c_20session_20_3e_26',['IContainer&lt; ses::ID, Session &gt;',['../classIContainer.html',1,'']]],
-  ['icontainer_3c_20usr_3a_3aid_2c_20user_20_3e_27',['IContainer&lt; usr::ID, User &gt;',['../classIContainer.html',1,'']]],
-  ['id_28',['ID',['../namespaceusr_afed849d06665ce63a85325c909efe771.html#afed849d06665ce63a85325c909efe771',1,'usr::ID()'],['../namespacecrs_ad6124b1a4ba860befee7a8499688e758.html#ad6124b1a4ba860befee7a8499688e758',1,'crs::ID()'],['../namespaceses_aa211e681d163eb0b0870daad6ec08fae.html#aa211e681d163eb0b0870daad6ec08fae',1,'ses::ID()'],['../namespaceprb_ac73f5af4cf1ee8080561c3daea7a437f.html#ac73f5af4cf1ee8080561c3daea7a437f',1,'prb::ID()']]],
-  ['inputcommand_29',['InputCommand',['../namespaceio_a6a88a8efa87bc65537b492af5d214170.html#a6a88a8efa87bc65537b492af5d214170',1,'io']]],
-  ['interfaces_2ehh_30',['Interfaces.hh',['../Interfaces_8hh.html',1,'']]],
-  ['io_31',['io',['../namespaceio.html',1,'']]],
-  ['io_2ehh_32',['IO.hh',['../IO_8hh.html',1,'']]],
-  ['iprintable_33',['IPrintable',['../classIPrintable_af22d3b0590836d9f40d36c7b1279c580.html#af22d3b0590836d9f40d36c7b1279c580',1,'IPrintable::IPrintable()'],['../classIPrintable.html',1,'IPrintable']]],
-  ['ireadable_34',['IReadable',['../classIReadable_a820ad5ad2700f268e45cf79b1ea4e92e.html#a820ad5ad2700f268e45cf79b1ea4e92e',1,'IReadable::IReadable()'],['../classIReadable.html',1,'IReadable']]],
-  ['isenrolledincourse_35',['isEnrolledInCourse',['../classUser_afab0e9d7bbd0acc257f4b747c404e231.html#afab0e9d7bbd0acc257f4b747c404e231',1,'User']]]
+  ['getcount_38',['getCount',['../classSession.html#a9e1c974241d60d762ef3dc3dc1a8ba97',1,'Session']]],
+  ['getenrolledcourseid_39',['getEnrolledCourseID',['../classUser.html#a58f94778be2ff3c33932def944ff3743',1,'User']]],
+  ['getinstance_40',['getInstance',['../classCourseSet.html#ada87984af3b75efc054cb407dea74b93',1,'CourseSet::getInstance()'],['../classProblemCollection.html#a6a60ef79d7e781938acedec41fd4f71c',1,'ProblemCollection::getInstance()'],['../classSessionRepository.html#a6a0994ace996a6dbc214764e2da27200',1,'SessionRepository::getInstance()'],['../classUserSet.html#a8da5b0ebadb71409af6dbf9d5dc4f204',1,'UserSet::getInstance()']]],
+  ['getratio_41',['getRatio',['../classProblem.html#a9b103faccfd87982f941c468802b4a22',1,'Problem']]],
+  ['getsessionbyproblem_42',['getSessionByProblem',['../classCourse.html#ada500ecbde39364e8dac698a409872e3',1,'Course']]],
+  ['getsolvablestats_43',['getSolvableStats',['../classUser.html#abceaa2bc54ee3bdc945a1edab880f37d',1,'User']]],
+  ['getsolvedstats_44',['getSolvedStats',['../classUser.html#a2b61b100681ea333f19f7b3c9e836875',1,'User']]],
+  ['getusersenrolled_45',['getUsersEnrolled',['../classCourse.html#afdc0ce85c5dcc43f06ae9a7a63793156',1,'Course']]]
 ];

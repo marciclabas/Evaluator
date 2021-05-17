@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -23,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Evaluator
-   &#160;<span id="projectnumber">1.0 Specification</span>
+   &#160;<span id="projectnumber">2.0 Implementation</span>
    </div>
    <div id="projectbrief">pro2 lab pracs: problem-evaluator-like platform</div>
   </td>
@@ -65,7 +66,10 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classCourse-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Course Class Reference</div>  </div>
@@ -76,54 +80,759 @@ $(function() {
  <a href="classCourse.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Course_8hh_source.html">Course.hh</a>&gt;</code></p>
-<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for Course:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classCourse__inherit__graph.png" border="0" usemap="#aCourse_inherit__map" alt="Inheritance graph"/></div>
-<map name="aCourse_inherit__map" id="aCourse_inherit__map">
-<area shape="rect" title="Represents a course, i.e., a set of sessions with void intersection and some statistics." alt="" coords="70,80,137,107"/>
-<area shape="rect" href="classIReadable.html" title="IReadable interface." alt="" coords="5,5,92,32"/>
-<area shape="rect" href="classIPrintable.html" title="IPrintable interface." alt="" coords="116,5,200,32"/>
+<div class="dynheader">
+Collaboration diagram for Course:</div>
+<div class="dyncontent">
+<div class="center"><img src="classCourse__coll__graph.png" border="0" usemap="#aCourse_coll__map" alt="Collaboration graph"/></div>
+<map name="aCourse_coll__map" id="aCourse_coll__map">
+<area shape="rect" title="Represents a course, i.e., a set of sessions with void intersection and some statistics." alt="" coords="5,131,215,516"/>
+<area shape="rect" href="classIPrintable.html" title="IPrintable interface." alt="" coords="13,5,97,83"/>
+<area shape="rect" href="classIReadable.html" title="IReadable interface." alt="" coords="121,5,208,83"/>
 </map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+</div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a7ba8ff01a3475ff93cdaebd51173d7ca"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourse.html#a7ba8ff01a3475ff93cdaebd51173d7ca">const_iterator</a> = std::vector&lt; <a class="el" href="namespaceses.html#a3e27309376c2c29f777924e38b232b46">ses::ID</a> &gt;::<a class="el" href="classCourse.html#a7ba8ff01a3475ff93cdaebd51173d7ca">const_iterator</a></td></tr>
+<tr class="memdesc:a7ba8ff01a3475ff93cdaebd51173d7ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">a constant iterator pointing to a <a class="el" href="namespaceses.html#a3e27309376c2c29f777924e38b232b46">ses::ID</a> contained in the course  <a href="classCourse.html#a7ba8ff01a3475ff93cdaebd51173d7ca">More...</a><br /></td></tr>
+<tr class="separator:a7ba8ff01a3475ff93cdaebd51173d7ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6b959ccf15d9ceed9e9c14a701561982"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourse_a6b959ccf15d9ceed9e9c14a701561982.html#a6b959ccf15d9ceed9e9c14a701561982">Course</a> ()</td></tr>
+<tr class="memitem:a6b959ccf15d9ceed9e9c14a701561982"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourse.html#a6b959ccf15d9ceed9e9c14a701561982">Course</a> ()</td></tr>
+<tr class="memdesc:a6b959ccf15d9ceed9e9c14a701561982"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="classCourse.html#a6b959ccf15d9ceed9e9c14a701561982">More...</a><br /></td></tr>
 <tr class="separator:a6b959ccf15d9ceed9e9c14a701561982"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6047349e41149231c71d1d2307283bc9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourse_a6047349e41149231c71d1d2307283bc9.html#a6047349e41149231c71d1d2307283bc9">enrollUser</a> ()</td></tr>
-<tr class="memdesc:a6047349e41149231c71d1d2307283bc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the stats regarding enrolled users adding a new user.  <a href="classCourse_a6047349e41149231c71d1d2307283bc9.html#a6047349e41149231c71d1d2307283bc9">More...</a><br /></td></tr>
-<tr class="separator:a6047349e41149231c71d1d2307283bc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a71deac55949b33c5903ed2cd71db4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourse_a6a71deac55949b33c5903ed2cd71db4b.html#a6a71deac55949b33c5903ed2cd71db4b">unenrollUser</a> ()</td></tr>
-<tr class="memdesc:a6a71deac55949b33c5903ed2cd71db4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the stats regarding enrolled users removing an enrolled user.  <a href="classCourse_a6a71deac55949b33c5903ed2cd71db4b.html#a6a71deac55949b33c5903ed2cd71db4b">More...</a><br /></td></tr>
-<tr class="separator:a6a71deac55949b33c5903ed2cd71db4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae933e2e2c89148658d7ed35bd39335e5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourse_ae933e2e2c89148658d7ed35bd39335e5.html#ae933e2e2c89148658d7ed35bd39335e5">getCurrentEnrolled</a> () const</td></tr>
-<tr class="memdesc:ae933e2e2c89148658d7ed35bd39335e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of users currently enrolled on the course.  <a href="classCourse_ae933e2e2c89148658d7ed35bd39335e5.html#ae933e2e2c89148658d7ed35bd39335e5">More...</a><br /></td></tr>
-<tr class="separator:ae933e2e2c89148658d7ed35bd39335e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada500ecbde39364e8dac698a409872e3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourse_ada500ecbde39364e8dac698a409872e3.html#ada500ecbde39364e8dac698a409872e3">getSessionByProblem</a> (<a class="el" href="namespaceprb_ac73f5af4cf1ee8080561c3daea7a437f.html#ac73f5af4cf1ee8080561c3daea7a437f">prb::ID</a> problemID, <a class="el" href="namespaceses_aa211e681d163eb0b0870daad6ec08fae.html#aa211e681d163eb0b0870daad6ec08fae">ses::ID</a> &amp;sessionID) const</td></tr>
-<tr class="memdesc:ada500ecbde39364e8dac698a409872e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether a session within the course contains a problem with the given id does exists. If it does, returs the id of such session through sessionID.  <a href="classCourse_ada500ecbde39364e8dac698a409872e3.html#ada500ecbde39364e8dac698a409872e3">More...</a><br /></td></tr>
+<tr class="memitem:aa9038f2e129526920037dda9e76d69d0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourse.html#aa9038f2e129526920037dda9e76d69d0">~Course</a> ()</td></tr>
+<tr class="memdesc:aa9038f2e129526920037dda9e76d69d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor.  <a href="classCourse.html#aa9038f2e129526920037dda9e76d69d0">More...</a><br /></td></tr>
+<tr class="separator:aa9038f2e129526920037dda9e76d69d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdc0ce85c5dcc43f06ae9a7a63793156"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourse.html#afdc0ce85c5dcc43f06ae9a7a63793156">getUsersEnrolled</a> () const</td></tr>
+<tr class="memdesc:afdc0ce85c5dcc43f06ae9a7a63793156"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of users currently enrolled on the course.  <a href="classCourse.html#afdc0ce85c5dcc43f06ae9a7a63793156">More...</a><br /></td></tr>
+<tr class="separator:afdc0ce85c5dcc43f06ae9a7a63793156"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada500ecbde39364e8dac698a409872e3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourse.html#ada500ecbde39364e8dac698a409872e3">getSessionByProblem</a> (<a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> problemID, <a class="el" href="namespaceses.html#a3e27309376c2c29f777924e38b232b46">ses::ID</a> &amp;sessionID) const</td></tr>
+<tr class="memdesc:ada500ecbde39364e8dac698a409872e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a session within the course contains a problem with the given id exists. If it does, returns the id of such session through sessionID.  <a href="classCourse.html#ada500ecbde39364e8dac698a409872e3">More...</a><br /></td></tr>
 <tr class="separator:ada500ecbde39364e8dac698a409872e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a143d68bd066b688c17e06beba7145c6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIReadable_a143d68bd066b688c17e06beba7145c6f.html#a143d68bd066b688c17e06beba7145c6f">read</a> ()</td></tr>
-<tr class="memdesc:a143d68bd066b688c17e06beba7145c6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read to the <code><a class="el" href="classIReadable.html" title="IReadable interface.">IReadable</a></code> object from the stdin.  <a href="classIReadable_a143d68bd066b688c17e06beba7145c6f.html#a143d68bd066b688c17e06beba7145c6f">More...</a><br /></td></tr>
-<tr class="separator:a143d68bd066b688c17e06beba7145c6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b00d3f39de891a4caf1837763ffe8a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIPrintable_a5b00d3f39de891a4caf1837763ffe8a3.html#a5b00d3f39de891a4caf1837763ffe8a3">print</a> () const</td></tr>
-<tr class="memdesc:a5b00d3f39de891a4caf1837763ffe8a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the <code><a class="el" href="classIPrintable.html" title="IPrintable interface.">IPrintable</a></code> object to the stdout.  <a href="classIPrintable_a5b00d3f39de891a4caf1837763ffe8a3.html#a5b00d3f39de891a4caf1837763ffe8a3">More...</a><br /></td></tr>
-<tr class="separator:a5b00d3f39de891a4caf1837763ffe8a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a043b2c94e777c255ca8cc599626e03b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourse.html#a043b2c94e777c255ca8cc599626e03b6">updateSolvableProblems</a> (<a class="el" href="classICanSolveProblems.html">ICanSolveProblems</a> &amp;solverObject, <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> lastSolvedProblem=<a class="el" href="namespaceprb.html#a38b9bd74c7e713bf3ec914818814e869">prb::invalidID</a>) const</td></tr>
+<tr class="memdesc:a043b2c94e777c255ca8cc599626e03b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the problems contained in the session the given <a class="el" href="classICanSolveProblems.html">ICanSolveProblems</a> can solve.  <a href="classCourse.html#a043b2c94e777c255ca8cc599626e03b6">More...</a><br /></td></tr>
+<tr class="separator:a043b2c94e777c255ca8cc599626e03b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fd61bcbad5041fc50642f1a8e7b1194"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourse.html#a7fd61bcbad5041fc50642f1a8e7b1194">print</a> () const override</td></tr>
+<tr class="memdesc:a7fd61bcbad5041fc50642f1a8e7b1194"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the implicit parameter.  <a href="classCourse.html#a7fd61bcbad5041fc50642f1a8e7b1194">More...</a><br /></td></tr>
+<tr class="separator:a7fd61bcbad5041fc50642f1a8e7b1194"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b04dba847f859a0440379eea607ca8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourse.html#a6b04dba847f859a0440379eea607ca8d">read</a> () override</td></tr>
+<tr class="memdesc:a6b04dba847f859a0440379eea607ca8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads to the implicit parameter.  <a href="classCourse.html#a6b04dba847f859a0440379eea607ca8d">More...</a><br /></td></tr>
+<tr class="separator:a6b04dba847f859a0440379eea607ca8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6047349e41149231c71d1d2307283bc9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourse.html#a6047349e41149231c71d1d2307283bc9">enrollUser</a> ()</td></tr>
+<tr class="memdesc:a6047349e41149231c71d1d2307283bc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enrolls a new user to the course.  <a href="classCourse.html#a6047349e41149231c71d1d2307283bc9">More...</a><br /></td></tr>
+<tr class="separator:a6047349e41149231c71d1d2307283bc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a71deac55949b33c5903ed2cd71db4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourse.html#a6a71deac55949b33c5903ed2cd71db4b">unenrollUser</a> ()</td></tr>
+<tr class="memdesc:a6a71deac55949b33c5903ed2cd71db4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a user from the course.  <a href="classCourse.html#a6a71deac55949b33c5903ed2cd71db4b">More...</a><br /></td></tr>
+<tr class="separator:a6a71deac55949b33c5903ed2cd71db4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bbd67ce05225a1b6058179f9bac22a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourse.html#a9bbd67ce05225a1b6058179f9bac22a4">completeCourse</a> ()</td></tr>
+<tr class="memdesc:a9bbd67ce05225a1b6058179f9bac22a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a user from the course as it has finished the course.  <a href="classCourse.html#a9bbd67ce05225a1b6058179f9bac22a4">More...</a><br /></td></tr>
+<tr class="separator:a9bbd67ce05225a1b6058179f9bac22a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a76f8038858c2253766bf6b5cacf5e1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourse.html#a1a76f8038858c2253766bf6b5cacf5e1">isValid</a> () const</td></tr>
+<tr class="memdesc:a1a76f8038858c2253766bf6b5cacf5e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns wether the course is valid.  <a href="classCourse.html#a1a76f8038858c2253766bf6b5cacf5e1">More...</a><br /></td></tr>
+<tr class="separator:a1a76f8038858c2253766bf6b5cacf5e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadcbf642ecfd6b21118873350d8df79a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCourse.html#a7ba8ff01a3475ff93cdaebd51173d7ca">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourse.html#aadcbf642ecfd6b21118873350d8df79a">begin</a> () const</td></tr>
+<tr class="memdesc:aadcbf642ecfd6b21118873350d8df79a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const_iterator to the first <a class="el" href="namespaceses.html#a3e27309376c2c29f777924e38b232b46">ses::ID</a> contained in the course.  <a href="classCourse.html#aadcbf642ecfd6b21118873350d8df79a">More...</a><br /></td></tr>
+<tr class="separator:aadcbf642ecfd6b21118873350d8df79a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab66c4cec1447fb3f7275e9bae8e17a1f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCourse.html#a7ba8ff01a3475ff93cdaebd51173d7ca">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourse.html#ab66c4cec1447fb3f7275e9bae8e17a1f">end</a> () const</td></tr>
+<tr class="memdesc:ab66c4cec1447fb3f7275e9bae8e17a1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const_iterator after the last <a class="el" href="namespaceses.html#a3e27309376c2c29f777924e38b232b46">ses::ID</a> contained in the course.  <a href="classCourse.html#ab66c4cec1447fb3f7275e9bae8e17a1f">More...</a><br /></td></tr>
+<tr class="separator:ab66c4cec1447fb3f7275e9bae8e17a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a903d8640ea2f7fc37aa773838357bbe5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourse.html#a903d8640ea2f7fc37aa773838357bbe5">operator==</a> (const <a class="el" href="classCourse.html">Course</a> &amp;otherCourse) const</td></tr>
+<tr class="memdesc:a903d8640ea2f7fc37aa773838357bbe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a given course is equal to the implicit parameter (same sessions)  <a href="classCourse.html#a903d8640ea2f7fc37aa773838357bbe5">More...</a><br /></td></tr>
+<tr class="separator:a903d8640ea2f7fc37aa773838357bbe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a2038c2d09aef93ebb74acf0a96ab3ad6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourse.html#a2038c2d09aef93ebb74acf0a96ab3ad6">addSessionToVector</a> (<a class="el" href="namespaceses.html#a3e27309376c2c29f777924e38b232b46">ses::ID</a> sessionID)</td></tr>
+<tr class="memdesc:a2038c2d09aef93ebb74acf0a96ab3ad6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a session to the vector of sessions and returns the index its stored in.  <a href="classCourse.html#a2038c2d09aef93ebb74acf0a96ab3ad6">More...</a><br /></td></tr>
+<tr class="separator:a2038c2d09aef93ebb74acf0a96ab3ad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a948ab9eff6f6dadc7a4be961603d7f7f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourse.html#a948ab9eff6f6dadc7a4be961603d7f7f">sessionCount</a> () const</td></tr>
+<tr class="memdesc:a948ab9eff6f6dadc7a4be961603d7f7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of sessions contained in the course.  <a href="classCourse.html#a948ab9eff6f6dadc7a4be961603d7f7f">More...</a><br /></td></tr>
+<tr class="separator:a948ab9eff6f6dadc7a4be961603d7f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a615c5ea821a233723768409605e63b26"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourse.html#a615c5ea821a233723768409605e63b26">problemCount</a> () const</td></tr>
+<tr class="memdesc:a615c5ea821a233723768409605e63b26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of problems contained in the course.  <a href="classCourse.html#a615c5ea821a233723768409605e63b26">More...</a><br /></td></tr>
+<tr class="separator:a615c5ea821a233723768409605e63b26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafd43f0cac7e85728eb8dddd7edb37e6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourse.html#aafd43f0cac7e85728eb8dddd7edb37e6">containsProblem</a> (<a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> problemID) const</td></tr>
+<tr class="memdesc:aafd43f0cac7e85728eb8dddd7edb37e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the course contains a problem with the given id.  <a href="classCourse.html#aafd43f0cac7e85728eb8dddd7edb37e6">More...</a><br /></td></tr>
+<tr class="separator:aafd43f0cac7e85728eb8dddd7edb37e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a2f973db9a40006e707040dc71e830e83"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourse.html#a2f973db9a40006e707040dc71e830e83">usersCompleted</a></td></tr>
+<tr class="memdesc:a2f973db9a40006e707040dc71e830e83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of users that have completed the course.  <a href="classCourse.html#a2f973db9a40006e707040dc71e830e83">More...</a><br /></td></tr>
+<tr class="separator:a2f973db9a40006e707040dc71e830e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e0ce99ccad21baa60c921a544b7f097"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourse.html#a7e0ce99ccad21baa60c921a544b7f097">usersEnrolled</a></td></tr>
+<tr class="memdesc:a7e0ce99ccad21baa60c921a544b7f097"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of users currently enrolled to the course.  <a href="classCourse.html#a7e0ce99ccad21baa60c921a544b7f097">More...</a><br /></td></tr>
+<tr class="separator:a7e0ce99ccad21baa60c921a544b7f097"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a771b28ad413837cdfb12af2bdfdc15b0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespaceses.html#a3e27309376c2c29f777924e38b232b46">ses::ID</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourse.html#a771b28ad413837cdfb12af2bdfdc15b0">sessions</a></td></tr>
+<tr class="memdesc:a771b28ad413837cdfb12af2bdfdc15b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector of the sessions contained in the course.  <a href="classCourse.html#a771b28ad413837cdfb12af2bdfdc15b0">More...</a><br /></td></tr>
+<tr class="separator:a771b28ad413837cdfb12af2bdfdc15b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf815fafbd4ab96cb817e964457f721a"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a>, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourse.html#abf815fafbd4ab96cb817e964457f721a">problemSessionIndex</a></td></tr>
+<tr class="memdesc:abf815fafbd4ab96cb817e964457f721a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map of integers representing a position of this-&gt;sessions accessed by ID's.  <a href="classCourse.html#abf815fafbd4ab96cb817e964457f721a">More...</a><br /></td></tr>
+<tr class="separator:abf815fafbd4ab96cb817e964457f721a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a966fe9048c51f4c5114923260c4b331b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourse.html#a966fe9048c51f4c5114923260c4b331b">valid</a></td></tr>
+<tr class="memdesc:a966fe9048c51f4c5114923260c4b331b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents wheter the course is valid.  <a href="classCourse.html#a966fe9048c51f4c5114923260c4b331b">More...</a><br /></td></tr>
+<tr class="separator:a966fe9048c51f4c5114923260c4b331b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a course, i.e., a set of sessions with void intersection and some statistics. </p>
-<dl class="section invariant"><dt>Invariant</dt><dd><ol>
-<li>
-<code>totalEnrolled</code> &gt;= currentEnrolled </li>
-<li>
-<code>currentEnrolled</code> &gt;= 0 </li>
-</ol>
-</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Course_8hh_source.html#l00026">26</a> of file <a class="el" href="Course_8hh_source.html">Course.hh</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<p class="definition">Definition at line <a class="el" href="Course_8hh_source.html#l00024">24</a> of file <a class="el" href="Course_8hh_source.html">Course.hh</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a7ba8ff01a3475ff93cdaebd51173d7ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ba8ff01a3475ff93cdaebd51173d7ca">&#9670;&nbsp;</a></span>const_iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCourse.html#a7ba8ff01a3475ff93cdaebd51173d7ca">Course::const_iterator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>a constant iterator pointing to a <a class="el" href="namespaceses.html#a3e27309376c2c29f777924e38b232b46">ses::ID</a> contained in the course </p>
+
+<p class="definition">Definition at line <a class="el" href="Course_8hh_source.html#l00095">95</a> of file <a class="el" href="Course_8hh_source.html">Course.hh</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a6b959ccf15d9ceed9e9c14a701561982"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b959ccf15d9ceed9e9c14a701561982">&#9670;&nbsp;</a></span>Course()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Course::Course </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Default constructor. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Creates an empty <a class="el" href="classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics.">Course</a> </dd></dl>
+
+</div>
+</div>
+<a id="aa9038f2e129526920037dda9e76d69d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9038f2e129526920037dda9e76d69d0">&#9670;&nbsp;</a></span>~Course()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Course::~Course </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Default destructor. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Deletes the course </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2038c2d09aef93ebb74acf0a96ab3ad6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2038c2d09aef93ebb74acf0a96ab3ad6">&#9670;&nbsp;</a></span>addSessionToVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Course::addSessionToVector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceses.html#a3e27309376c2c29f777924e38b232b46">ses::ID</a>&#160;</td>
+          <td class="paramname"><em>sessionID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds a session to the vector of sessions and returns the index its stored in. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The given session id is added to the vector </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sessionID</td><td>a <a class="el" href="namespaceses.html#a3e27309376c2c29f777924e38b232b46">ses::ID</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An integer representing the position of the vector containing the given id </dd></dl>
+
+</div>
+</div>
+<a id="a948ab9eff6f6dadc7a4be961603d7f7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a948ab9eff6f6dadc7a4be961603d7f7f">&#9670;&nbsp;</a></span>sessionCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Course::sessionCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the number of sessions contained in the course. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Returns the number of sessions contained in the course </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>An integer representing the number of sessions contained in the course </dd></dl>
+
+</div>
+</div>
+<a id="a615c5ea821a233723768409605e63b26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a615c5ea821a233723768409605e63b26">&#9670;&nbsp;</a></span>problemCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Course::problemCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the number of problems contained in the course. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Returns the number of problems contained in the course </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>An integer representing the number of problems contained in the course </dd></dl>
+
+</div>
+</div>
+<a id="aafd43f0cac7e85728eb8dddd7edb37e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafd43f0cac7e85728eb8dddd7edb37e6">&#9670;&nbsp;</a></span>containsProblem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Course::containsProblem </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a>&#160;</td>
+          <td class="paramname"><em>problemID</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns whether the course contains a problem with the given id. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Returns <code>true</code> if the course contains a problem with the given id. Returns <code>false</code> otherwise </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">problemID</td><td>a <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A boolean representing whether the given problem is contained in the course </dd></dl>
+
+</div>
+</div>
+<a id="afdc0ce85c5dcc43f06ae9a7a63793156"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdc0ce85c5dcc43f06ae9a7a63793156">&#9670;&nbsp;</a></span>getUsersEnrolled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Course::getUsersEnrolled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the number of users currently enrolled on the course. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The number of currently enrolled users is returned </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>An integer representing the number of enrolled users </dd></dl>
+
+</div>
+</div>
+<a id="ada500ecbde39364e8dac698a409872e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada500ecbde39364e8dac698a409872e3">&#9670;&nbsp;</a></span>getSessionByProblem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Course::getSessionByProblem </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a>&#160;</td>
+          <td class="paramname"><em>problemID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceses.html#a3e27309376c2c29f777924e38b232b46">ses::ID</a> &amp;&#160;</td>
+          <td class="paramname"><em>sessionID</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns whether a session within the course contains a problem with the given id exists. If it does, returns the id of such session through sessionID. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>problemID is the id of a valid problem </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Returns <code>true</code> and sessionID is the id of a session containing a problem with the given id, if such session exists. Returns <code>false</code> otherwise </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">problemID</td><td>a <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> </td></tr>
+    <tr><td class="paramname">sessionID</td><td>a reference to a <a class="el" href="namespaceses.html#a3e27309376c2c29f777924e38b232b46">ses::ID</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A boolean representing whether a session containing the given problem exists in the course </dd></dl>
+
+</div>
+</div>
+<a id="a043b2c94e777c255ca8cc599626e03b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a043b2c94e777c255ca8cc599626e03b6">&#9670;&nbsp;</a></span>updateSolvableProblems()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Course::updateSolvableProblems </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classICanSolveProblems.html">ICanSolveProblems</a> &amp;&#160;</td>
+          <td class="paramname"><em>solverObject</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a>&#160;</td>
+          <td class="paramname"><em>lastSolvedProblem</em> = <code><a class="el" href="namespaceprb.html#a38b9bd74c7e713bf3ec914818814e869">prb::invalidID</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates the problems contained in the session the given <a class="el" href="classICanSolveProblems.html">ICanSolveProblems</a> can solve. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>The given <a class="el" href="classICanSolveProblems.html">ICanSolveProblems</a> is enrolled in the course and has solved the given problem </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The problems <a class="el" href="classICanSolveProblems.html">ICanSolveProblems</a> can solve are updated </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">solverObject</td><td>a reference to the object whose solvable problems are to be updated </td></tr>
+    <tr><td class="paramname">lastSolvedProblem</td><td>the <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> of the problem solverObject solved last </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7fd61bcbad5041fc50642f1a8e7b1194"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fd61bcbad5041fc50642f1a8e7b1194">&#9670;&nbsp;</a></span>print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Course::print </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prints the implicit parameter. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Prints the implicit parameter to the stdout </dd></dl>
+
+<p>Implements <a class="el" href="classIPrintable.html#addc8a495860e3d637a25f0806409bc0a">IPrintable</a>.</p>
+
+</div>
+</div>
+<a id="a6b04dba847f859a0440379eea607ca8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b04dba847f859a0440379eea607ca8d">&#9670;&nbsp;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Course::read </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reads to the implicit parameter. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Reads to the implicit parameter from the stdin </dd></dl>
+
+<p>Implements <a class="el" href="classIReadable.html#a595345a03025dac6772480c342900a49">IReadable</a>.</p>
+
+</div>
+</div>
+<a id="a6047349e41149231c71d1d2307283bc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6047349e41149231c71d1d2307283bc9">&#9670;&nbsp;</a></span>enrollUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Course::enrollUser </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enrolls a new user to the course. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The course's stats are updated accordingly </dd></dl>
+
+</div>
+</div>
+<a id="a6a71deac55949b33c5903ed2cd71db4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a71deac55949b33c5903ed2cd71db4b">&#9670;&nbsp;</a></span>unenrollUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Course::unenrollUser </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes a user from the course. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The course's stats are updated accordingly </dd></dl>
+
+</div>
+</div>
+<a id="a9bbd67ce05225a1b6058179f9bac22a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bbd67ce05225a1b6058179f9bac22a4">&#9670;&nbsp;</a></span>completeCourse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Course::completeCourse </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes a user from the course as it has finished the course. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The course's stats are updated accordingly </dd></dl>
+
+</div>
+</div>
+<a id="a1a76f8038858c2253766bf6b5cacf5e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a76f8038858c2253766bf6b5cacf5e1">&#9670;&nbsp;</a></span>isValid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Course::isValid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns wether the course is valid. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Returns <code>true</code> if there is a void intersection between the course's sessions. Returns <code>false</code> otherwise </dd></dl>
+
+</div>
+</div>
+<a id="aadcbf642ecfd6b21118873350d8df79a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadcbf642ecfd6b21118873350d8df79a">&#9670;&nbsp;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCourse.html#a7ba8ff01a3475ff93cdaebd51173d7ca">const_iterator</a> Course::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a const_iterator to the first <a class="el" href="namespaceses.html#a3e27309376c2c29f777924e38b232b46">ses::ID</a> contained in the course. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Returns a const_iterator to the first <a class="el" href="namespaceses.html#a3e27309376c2c29f777924e38b232b46">ses::ID</a> contained in the implicit parameter </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A const_iterator to the beginning </dd></dl>
+
+</div>
+</div>
+<a id="ab66c4cec1447fb3f7275e9bae8e17a1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab66c4cec1447fb3f7275e9bae8e17a1f">&#9670;&nbsp;</a></span>end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCourse.html#a7ba8ff01a3475ff93cdaebd51173d7ca">const_iterator</a> Course::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a const_iterator after the last <a class="el" href="namespaceses.html#a3e27309376c2c29f777924e38b232b46">ses::ID</a> contained in the course. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Returns a const_iterator after the last <a class="el" href="namespaceses.html#a3e27309376c2c29f777924e38b232b46">ses::ID</a> contained in the implicit parameter </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A const_iterator to the end </dd></dl>
+
+</div>
+</div>
+<a id="a903d8640ea2f7fc37aa773838357bbe5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a903d8640ea2f7fc37aa773838357bbe5">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Course::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCourse.html">Course</a> &amp;&#160;</td>
+          <td class="paramname"><em>otherCourse</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns whether a given course is equal to the implicit parameter (same sessions) </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Returns <code>true</code> if the given course has the same sessions as the implicit parameter. Returns <code>false</code> otherwise </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">otherCourse</td><td>a <a class="el" href="classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics.">Course</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A boolean representing whether the given course is equal to the implicit parameter </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a2f973db9a40006e707040dc71e830e83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f973db9a40006e707040dc71e830e83">&#9670;&nbsp;</a></span>usersCompleted</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Course::usersCompleted</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Number of users that have completed the course. </p>
+<dl class="section invariant"><dt>Invariant</dt><dd>usersCompleted &gt;= 0 </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Course_8hh_source.html#l00030">30</a> of file <a class="el" href="Course_8hh_source.html">Course.hh</a>.</p>
+
+</div>
+</div>
+<a id="a7e0ce99ccad21baa60c921a544b7f097"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e0ce99ccad21baa60c921a544b7f097">&#9670;&nbsp;</a></span>usersEnrolled</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Course::usersEnrolled</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Number of users currently enrolled to the course. </p>
+<dl class="section invariant"><dt>Invariant</dt><dd>usersEnrolled &gt;= 0 </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Course_8hh_source.html#l00036">36</a> of file <a class="el" href="Course_8hh_source.html">Course.hh</a>.</p>
+
+</div>
+</div>
+<a id="a771b28ad413837cdfb12af2bdfdc15b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a771b28ad413837cdfb12af2bdfdc15b0">&#9670;&nbsp;</a></span>sessions</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="namespaceses.html#a3e27309376c2c29f777924e38b232b46">ses::ID</a>&gt; Course::sessions</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vector of the sessions contained in the course. </p>
+<dl class="section invariant"><dt>Invariant</dt><dd>Is ordered by antiquity (sessions[0] is the oldest addition, sessions[size-1] is the latest) </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Course_8hh_source.html#l00042">42</a> of file <a class="el" href="Course_8hh_source.html">Course.hh</a>.</p>
+
+</div>
+</div>
+<a id="abf815fafbd4ab96cb817e964457f721a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf815fafbd4ab96cb817e964457f721a">&#9670;&nbsp;</a></span>problemSessionIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;<a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a>, int&gt; Course::problemSessionIndex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Map of integers representing a position of this-&gt;sessions accessed by ID's. </p>
+<dl class="section invariant"><dt>Invariant</dt><dd>0 &lt;= problemSessionIndex[id] &lt; sessions.size(), where problemSessionIndex.count(id) == 1, i.e., id is a key of the map </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Course_8hh_source.html#l00048">48</a> of file <a class="el" href="Course_8hh_source.html">Course.hh</a>.</p>
+
+</div>
+</div>
+<a id="a966fe9048c51f4c5114923260c4b331b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a966fe9048c51f4c5114923260c4b331b">&#9670;&nbsp;</a></span>valid</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Course::valid</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Represents wheter the course is valid. </p>
+<dl class="section invariant"><dt>Invariant</dt><dd>If <code>true</code>, there is no intersection of problems between all sessions contained in the course. If <code>false</code>, there is </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Course_8hh_source.html#l00054">54</a> of file <a class="el" href="Course_8hh_source.html">Course.hh</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="Course_8hh_source.html">Course.hh</a></li>
 </ul>
 </div><!-- contents -->

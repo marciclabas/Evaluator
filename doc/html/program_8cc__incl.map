@@ -1,14 +1,12 @@
 <map id="program.cc" name="program.cc">
-<area shape="rect" id="node1" title="File containing the main function." alt="" coords="81,5,175,32"/>
+<area shape="rect" id="node1" title="File containing the main function." alt="" coords="77,5,171,32"/>
 <area shape="rect" id="node2" href="$ProblemCol_8hh.html" title="File containing the specification of the ProblemCollection class." alt="" coords="5,528,123,555"/>
-<area shape="rect" id="node6" href="$SessionRep_8hh.html" title="File containing the specification of the SessionRepository class." alt="" coords="56,379,173,405"/>
-<area shape="rect" id="node8" href="$CourseSet_8hh.html" title="File containing the specification of the CourseSet class." alt="" coords="115,229,223,256"/>
-<area shape="rect" id="node10" href="$UserSet_8hh.html" title="File containing the specification of the UserSet class." alt="" coords="165,80,259,107"/>
-<area shape="rect" id="node12" href="$IO_8hh.html" title="File containing the specification of some IO operations and types within the io namespace." alt="" coords="283,80,339,107"/>
-<area shape="rect" id="node3" href="$Problem_8hh.html" title="File containing the specification of the Problem class." alt="" coords="21,603,117,629"/>
-<area shape="rect" id="node4" href="$Interfaces_8hh.html" title="File containing the specification of multiple common interfaces." alt="" coords="132,677,239,704"/>
-<area shape="rect" id="node5" href="$Namespaces_8hh.html" title="File containing the namespaces corresponding to Problem, Session, Course and User." alt="" coords="122,752,249,779"/>
-<area shape="rect" id="node7" href="$Session_8hh.html" title="File containing the specification of the Session class and it&#39;s corresponding namespace." alt="" coords="69,453,161,480"/>
-<area shape="rect" id="node9" href="$Course_8hh.html" title="File containing the specification of the Course class." alt="" coords="126,304,213,331"/>
-<area shape="rect" id="node11" href="$User_8hh.html" title="File containing the specification of the User class." alt="" coords="176,155,248,181"/>
+<area shape="rect" id="node4" href="$SessionRep_8hh.html" title="File containing the specification of the SessionRepository class." alt="" coords="60,379,177,405"/>
+<area shape="rect" id="node6" href="$CourseSet_8hh.html" title="File containing the specification of the CourseSet class." alt="" coords="111,229,219,256"/>
+<area shape="rect" id="node8" href="$UserSet_8hh.html" title="File containing the specification of the UserSet class." alt="" coords="161,80,255,107"/>
+<area shape="rect" id="node10" href="$IO_8hh.html" title="File containing the specification of some IO operations and types within the io namespace." alt="" coords="279,80,335,107"/>
+<area shape="rect" id="node3" href="$Problem_8hh.html" title="File containing the specification of the Problem class." alt="" coords="16,603,112,629"/>
+<area shape="rect" id="node5" href="$Session_8hh.html" title="File containing the specification of the Session class and it&#39;s corresponding namespace." alt="" coords="66,453,158,480"/>
+<area shape="rect" id="node7" href="$Course_8hh.html" title="File containing the specification of the Course class." alt="" coords="117,304,203,331"/>
+<area shape="rect" id="node9" href="$User_8hh.html" title="File containing the specification of the User class." alt="" coords="167,155,238,181"/>
 </map>

@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -23,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Evaluator
-   &#160;<span id="projectnumber">1.0 Specification</span>
+   &#160;<span id="projectnumber">2.0 Implementation</span>
    </div>
    <div id="projectbrief">pro2 lab pracs: problem-evaluator-like platform</div>
   </td>
@@ -66,6 +67,9 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classCourseSet-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">CourseSet Class Reference</div>  </div>
@@ -76,67 +80,436 @@ $(function() {
  <a href="classCourseSet.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="CourseSet_8hh_source.html">CourseSet.hh</a>&gt;</code></p>
-<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for CourseSet:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classCourseSet__inherit__graph.png" border="0" usemap="#aCourseSet_inherit__map" alt="Inheritance graph"/></div>
-<map name="aCourseSet_inherit__map" id="aCourseSet_inherit__map">
-<area shape="rect" title="Represents set of courses." alt="" coords="114,185,202,212"/>
-<area shape="rect" href="classIReadable.html" title="IReadable interface." alt="" coords="5,102,92,129"/>
-<area shape="rect" href="classIPrintable.html" title="IPrintable interface." alt="" coords="116,102,200,129"/>
-<area shape="rect" href="classIContainer.html" title=" " alt="" coords="225,95,374,136"/>
-<area shape="rect" href="classIContainer.html" title="IContainer interface" alt="" coords="225,5,374,32"/>
+<div class="dynheader">
+Collaboration diagram for CourseSet:</div>
+<div class="dyncontent">
+<div class="center"><img src="classCourseSet__coll__graph.png" border="0" usemap="#aCourseSet_coll__map" alt="Collaboration graph"/></div>
+<map name="aCourseSet_coll__map" id="aCourseSet_coll__map">
+<area shape="rect" title="Represents set of courses." alt="" coords="42,131,165,369"/>
+<area shape="rect" href="classIReadable.html" title="IReadable interface." alt="" coords="5,5,92,83"/>
+<area shape="rect" href="classIPrintable.html" title="IPrintable interface." alt="" coords="116,5,200,83"/>
 </map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac96b9d76c9e0f87784138c4086a7435b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourseSet_ac96b9d76c9e0f87784138c4086a7435b.html#ac96b9d76c9e0f87784138c4086a7435b">CourseSet</a> (const <a class="el" href="classSessionRepository.html">SessionRepository</a> &amp;<a class="el" href="classSessionRepository.html">SessionRepository</a>)</td></tr>
-<tr class="separator:ac96b9d76c9e0f87784138c4086a7435b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21dfdecd8c08a272d6c2af4adc0fccc0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourseSet_a21dfdecd8c08a272d6c2af4adc0fccc0.html#a21dfdecd8c08a272d6c2af4adc0fccc0">~CourseSet</a> ()</td></tr>
+<tr class="memitem:ab4a1c4f788c12f6e2b2e37c09517b620"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourseSet.html#ab4a1c4f788c12f6e2b2e37c09517b620">CourseSet</a> (<a class="el" href="classCourseSet.html">CourseSet</a> &amp;copy)=delete</td></tr>
+<tr class="memdesc:ab4a1c4f788c12f6e2b2e37c09517b620"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deleted copy constructor.  <a href="classCourseSet.html#ab4a1c4f788c12f6e2b2e37c09517b620">More...</a><br /></td></tr>
+<tr class="separator:ab4a1c4f788c12f6e2b2e37c09517b620"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa53d03c0eb0dd23ee0e81d9a245b5312"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourseSet.html#aa53d03c0eb0dd23ee0e81d9a245b5312">operator=</a> (const <a class="el" href="classCourseSet.html">CourseSet</a> &amp;courseSet)=delete</td></tr>
+<tr class="memdesc:aa53d03c0eb0dd23ee0e81d9a245b5312"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deleted assignment operator.  <a href="classCourseSet.html#aa53d03c0eb0dd23ee0e81d9a245b5312">More...</a><br /></td></tr>
+<tr class="separator:aa53d03c0eb0dd23ee0e81d9a245b5312"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab793aad6427d5f2bba5df5e5727dd33a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourseSet.html#ab793aad6427d5f2bba5df5e5727dd33a">print</a> () const</td></tr>
+<tr class="memdesc:ab793aad6427d5f2bba5df5e5727dd33a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the implicit parameter.  <a href="classCourseSet.html#ab793aad6427d5f2bba5df5e5727dd33a">More...</a><br /></td></tr>
+<tr class="separator:ab793aad6427d5f2bba5df5e5727dd33a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af724595d10f41dc7312941067192f3a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourseSet.html#af724595d10f41dc7312941067192f3a8">read</a> ()</td></tr>
+<tr class="memdesc:af724595d10f41dc7312941067192f3a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads to the implicit parameter.  <a href="classCourseSet.html#af724595d10f41dc7312941067192f3a8">More...</a><br /></td></tr>
+<tr class="separator:af724595d10f41dc7312941067192f3a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22771e1415257fb23d22cd4d3a3bb6f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourseSet.html#a22771e1415257fb23d22cd4d3a3bb6f4">contains</a> (<a class="el" href="namespacecrs.html#aab6a467a83e78cac63a90d13466d8111">crs::ID</a> courseID) const</td></tr>
+<tr class="memdesc:a22771e1415257fb23d22cd4d3a3bb6f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns wheter the set contains a <a class="el" href="classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics.">Course</a> with the given id.  <a href="classCourseSet.html#a22771e1415257fb23d22cd4d3a3bb6f4">More...</a><br /></td></tr>
+<tr class="separator:a22771e1415257fb23d22cd4d3a3bb6f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1548182a5c3f33686ec6811881431319"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourseSet.html#a1548182a5c3f33686ec6811881431319">contains</a> (const <a class="el" href="classCourse.html">Course</a> &amp;toCheckCourse) const</td></tr>
+<tr class="memdesc:a1548182a5c3f33686ec6811881431319"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns wheter the set contains a <a class="el" href="classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics.">Course</a> equal to the given one.  <a href="classCourseSet.html#a1548182a5c3f33686ec6811881431319">More...</a><br /></td></tr>
+<tr class="separator:a1548182a5c3f33686ec6811881431319"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ac6d3c29d799303887e6d30a1ec44bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCourse.html">Course</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourseSet.html#a3ac6d3c29d799303887e6d30a1ec44bc">operator[]</a> (<a class="el" href="namespacecrs.html#aab6a467a83e78cac63a90d13466d8111">crs::ID</a> courseID)</td></tr>
+<tr class="memdesc:a3ac6d3c29d799303887e6d30a1ec44bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics.">Course</a> with the given id contained in the set.  <a href="classCourseSet.html#a3ac6d3c29d799303887e6d30a1ec44bc">More...</a><br /></td></tr>
+<tr class="separator:a3ac6d3c29d799303887e6d30a1ec44bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ad3ee825dca6108675dff721a0913a3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourseSet.html#a0ad3ee825dca6108675dff721a0913a3">count</a> () const</td></tr>
+<tr class="memdesc:a0ad3ee825dca6108675dff721a0913a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of courses contained in the set.  <a href="classCourseSet.html#a0ad3ee825dca6108675dff721a0913a3">More...</a><br /></td></tr>
+<tr class="separator:a0ad3ee825dca6108675dff721a0913a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfd4930ec997c1a2779143dfa87e8aef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourseSet.html#adfd4930ec997c1a2779143dfa87e8aef">append</a> (<a class="el" href="classCourse.html">Course</a> newCourse)</td></tr>
+<tr class="memdesc:adfd4930ec997c1a2779143dfa87e8aef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a given <a class="el" href="classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics.">Course</a> to the set.  <a href="classCourseSet.html#adfd4930ec997c1a2779143dfa87e8aef">More...</a><br /></td></tr>
+<tr class="separator:adfd4930ec997c1a2779143dfa87e8aef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ada87984af3b75efc054cb407dea74b93"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classCourseSet.html">CourseSet</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourseSet.html#ada87984af3b75efc054cb407dea74b93">getInstance</a> ()</td></tr>
+<tr class="memdesc:ada87984af3b75efc054cb407dea74b93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the single instance of the class.  <a href="classCourseSet.html#ada87984af3b75efc054cb407dea74b93">More...</a><br /></td></tr>
+<tr class="separator:ada87984af3b75efc054cb407dea74b93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ae0b73bd2e6bda115838ba65644e015bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourseSet.html#ae0b73bd2e6bda115838ba65644e015bc">CourseSet</a> ()</td></tr>
+<tr class="separator:ae0b73bd2e6bda115838ba65644e015bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21dfdecd8c08a272d6c2af4adc0fccc0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourseSet.html#a21dfdecd8c08a272d6c2af4adc0fccc0">~CourseSet</a> ()</td></tr>
 <tr class="separator:a21dfdecd8c08a272d6c2af4adc0fccc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a143d68bd066b688c17e06beba7145c6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIReadable_a143d68bd066b688c17e06beba7145c6f.html#a143d68bd066b688c17e06beba7145c6f">read</a> ()</td></tr>
-<tr class="memdesc:a143d68bd066b688c17e06beba7145c6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read to the <code><a class="el" href="classIReadable.html" title="IReadable interface.">IReadable</a></code> object from the stdin.  <a href="classIReadable_a143d68bd066b688c17e06beba7145c6f.html#a143d68bd066b688c17e06beba7145c6f">More...</a><br /></td></tr>
-<tr class="separator:a143d68bd066b688c17e06beba7145c6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b00d3f39de891a4caf1837763ffe8a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIPrintable_a5b00d3f39de891a4caf1837763ffe8a3.html#a5b00d3f39de891a4caf1837763ffe8a3">print</a> () const</td></tr>
-<tr class="memdesc:a5b00d3f39de891a4caf1837763ffe8a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the <code><a class="el" href="classIPrintable.html" title="IPrintable interface.">IPrintable</a></code> object to the stdout.  <a href="classIPrintable_a5b00d3f39de891a4caf1837763ffe8a3.html#a5b00d3f39de891a4caf1837763ffe8a3">More...</a><br /></td></tr>
-<tr class="separator:a5b00d3f39de891a4caf1837763ffe8a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a285fa8d0202100ad3d60d78f085677"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_a1a285fa8d0202100ad3d60d78f085677.html#a1a285fa8d0202100ad3d60d78f085677">containsElement</a> (<a class="el" href="namespacecrs_ad6124b1a4ba860befee7a8499688e758.html#ad6124b1a4ba860befee7a8499688e758">crs::ID</a> id) const</td></tr>
-<tr class="memdesc:a1a285fa8d0202100ad3d60d78f085677"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return wheter the <code><a class="el" href="classIContainer.html" title="IContainer interface">IContainer</a></code> object has an element with the given id.  <a href="classIContainer_a1a285fa8d0202100ad3d60d78f085677.html#a1a285fa8d0202100ad3d60d78f085677">More...</a><br /></td></tr>
-<tr class="separator:a1a285fa8d0202100ad3d60d78f085677"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0f2b19a33fe97ed7bebad7fd191980d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_ac0f2b19a33fe97ed7bebad7fd191980d.html#ac0f2b19a33fe97ed7bebad7fd191980d">containsElement</a> (<a class="el" href="classCourse.html">Course</a> element) const</td></tr>
-<tr class="memdesc:ac0f2b19a33fe97ed7bebad7fd191980d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return wheter the <code><a class="el" href="classIContainer.html" title="IContainer interface">IContainer</a></code> object has an element with the same id as <code>element</code>.  <a href="classIContainer_ac0f2b19a33fe97ed7bebad7fd191980d.html#ac0f2b19a33fe97ed7bebad7fd191980d">More...</a><br /></td></tr>
-<tr class="separator:ac0f2b19a33fe97ed7bebad7fd191980d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6a372ab01d690a8ce00c807dd052ceb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCourse.html">Course</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_ac6a372ab01d690a8ce00c807dd052ceb.html#ac6a372ab01d690a8ce00c807dd052ceb">getElement</a> (<a class="el" href="namespacecrs_ad6124b1a4ba860befee7a8499688e758.html#ad6124b1a4ba860befee7a8499688e758">crs::ID</a> id)</td></tr>
-<tr class="memdesc:ac6a372ab01d690a8ce00c807dd052ceb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the element with the given ID contained in the <code><a class="el" href="classIContainer.html" title="IContainer interface">IContainer</a></code> object.  <a href="classIContainer_ac6a372ab01d690a8ce00c807dd052ceb.html#ac6a372ab01d690a8ce00c807dd052ceb">More...</a><br /></td></tr>
-<tr class="separator:ac6a372ab01d690a8ce00c807dd052ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a680c9a9a75ef1f9289700e4648b8f62b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCourse.html">Course</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_a680c9a9a75ef1f9289700e4648b8f62b.html#a680c9a9a75ef1f9289700e4648b8f62b">operator[]</a> (<a class="el" href="namespacecrs_ad6124b1a4ba860befee7a8499688e758.html#ad6124b1a4ba860befee7a8499688e758">crs::ID</a> id)</td></tr>
-<tr class="memdesc:a680c9a9a75ef1f9289700e4648b8f62b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the element with the given ID contained in the <code><a class="el" href="classIContainer.html" title="IContainer interface">IContainer</a></code> object.  <a href="classIContainer_a680c9a9a75ef1f9289700e4648b8f62b.html#a680c9a9a75ef1f9289700e4648b8f62b">More...</a><br /></td></tr>
-<tr class="separator:a680c9a9a75ef1f9289700e4648b8f62b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeab8a0a391dee3070c21045ab694daab"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classCourse.html">Course</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_aeab8a0a391dee3070c21045ab694daab.html#aeab8a0a391dee3070c21045ab694daab">operator[]</a> (<a class="el" href="namespacecrs_ad6124b1a4ba860befee7a8499688e758.html#ad6124b1a4ba860befee7a8499688e758">crs::ID</a> id) const</td></tr>
-<tr class="memdesc:aeab8a0a391dee3070c21045ab694daab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the constant element with the given ID contained in the <code><a class="el" href="classIContainer.html" title="IContainer interface">IContainer</a></code> object.  <a href="classIContainer_aeab8a0a391dee3070c21045ab694daab.html#aeab8a0a391dee3070c21045ab694daab">More...</a><br /></td></tr>
-<tr class="separator:aeab8a0a391dee3070c21045ab694daab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53d878603e548a1c500f67a43ea8699d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classCourse.html">Course</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_a53d878603e548a1c500f67a43ea8699d.html#a53d878603e548a1c500f67a43ea8699d">getConstElement</a> (<a class="el" href="namespacecrs_ad6124b1a4ba860befee7a8499688e758.html#ad6124b1a4ba860befee7a8499688e758">crs::ID</a> id) const</td></tr>
-<tr class="memdesc:a53d878603e548a1c500f67a43ea8699d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the constant element with the given ID contained in the <code><a class="el" href="classIContainer.html" title="IContainer interface">IContainer</a></code> object.  <a href="classIContainer_a53d878603e548a1c500f67a43ea8699d.html#a53d878603e548a1c500f67a43ea8699d">More...</a><br /></td></tr>
-<tr class="separator:a53d878603e548a1c500f67a43ea8699d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f98d7e86a90a9f521d000d776216b1f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_a3f98d7e86a90a9f521d000d776216b1f.html#a3f98d7e86a90a9f521d000d776216b1f">getCount</a> () const</td></tr>
-<tr class="memdesc:a3f98d7e86a90a9f521d000d776216b1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of elements contained in the <code><a class="el" href="classIContainer.html" title="IContainer interface">IContainer</a></code> object.  <a href="classIContainer_a3f98d7e86a90a9f521d000d776216b1f.html#a3f98d7e86a90a9f521d000d776216b1f">More...</a><br /></td></tr>
-<tr class="separator:a3f98d7e86a90a9f521d000d776216b1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88315472c494cf200df505fbf68b2105"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_a88315472c494cf200df505fbf68b2105.html#a88315472c494cf200df505fbf68b2105">addElement</a> (<a class="el" href="classCourse.html">Course</a> newElement)</td></tr>
-<tr class="memdesc:a88315472c494cf200df505fbf68b2105"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new element, given such element.  <a href="classIContainer_a88315472c494cf200df505fbf68b2105.html#a88315472c494cf200df505fbf68b2105">More...</a><br /></td></tr>
-<tr class="separator:a88315472c494cf200df505fbf68b2105"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13b37809c2489f57d670ffc1194b70cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIContainer_a13b37809c2489f57d670ffc1194b70cc.html#a13b37809c2489f57d670ffc1194b70cc">addElement</a> (<a class="el" href="namespacecrs_ad6124b1a4ba860befee7a8499688e758.html#ad6124b1a4ba860befee7a8499688e758">crs::ID</a> newElementID)</td></tr>
-<tr class="memdesc:a13b37809c2489f57d670ffc1194b70cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new element, given such element's id.  <a href="classIContainer_a13b37809c2489f57d670ffc1194b70cc.html#a13b37809c2489f57d670ffc1194b70cc">More...</a><br /></td></tr>
-<tr class="separator:a13b37809c2489f57d670ffc1194b70cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a50490640c139d2b83938e651afba2588"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classCourse.html">Course</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCourseSet.html#a50490640c139d2b83938e651afba2588">courses</a></td></tr>
+<tr class="memdesc:a50490640c139d2b83938e651afba2588"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector of courses accessed by implicit ID's (i.e., integers from 0 to size-1)  <a href="classCourseSet.html#a50490640c139d2b83938e651afba2588">More...</a><br /></td></tr>
+<tr class="separator:a50490640c139d2b83938e651afba2588"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents set of courses. </p>
-<dl class="section invariant"><dt>Invariant</dt><dd>courses is sorted by id </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="CourseSet_8hh_source.html#l00020">20</a> of file <a class="el" href="CourseSet_8hh_source.html">CourseSet.hh</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<p class="definition">Definition at line <a class="el" href="CourseSet_8hh_source.html#l00022">22</a> of file <a class="el" href="CourseSet_8hh_source.html">CourseSet.hh</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ae0b73bd2e6bda115838ba65644e015bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0b73bd2e6bda115838ba65644e015bc">&#9670;&nbsp;</a></span>CourseSet() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CourseSet::CourseSet </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a21dfdecd8c08a272d6c2af4adc0fccc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21dfdecd8c08a272d6c2af4adc0fccc0">&#9670;&nbsp;</a></span>~CourseSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CourseSet::~CourseSet </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab4a1c4f788c12f6e2b2e37c09517b620"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4a1c4f788c12f6e2b2e37c09517b620">&#9670;&nbsp;</a></span>CourseSet() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CourseSet::CourseSet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCourseSet.html">CourseSet</a> &amp;&#160;</td>
+          <td class="paramname"><em>copy</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deleted copy constructor. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa53d03c0eb0dd23ee0e81d9a245b5312"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa53d03c0eb0dd23ee0e81d9a245b5312">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CourseSet::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCourseSet.html">CourseSet</a> &amp;&#160;</td>
+          <td class="paramname"><em>courseSet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deleted assignment operator. </p>
+
+</div>
+</div>
+<a id="ada87984af3b75efc054cb407dea74b93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada87984af3b75efc054cb407dea74b93">&#9670;&nbsp;</a></span>getInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classCourseSet.html">CourseSet</a>&amp; CourseSet::getInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the single instance of the class. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The single instance of the class is returned </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a reference to the single instance </dd></dl>
+
+</div>
+</div>
+<a id="ab793aad6427d5f2bba5df5e5727dd33a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab793aad6427d5f2bba5df5e5727dd33a">&#9670;&nbsp;</a></span>print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CourseSet::print </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prints the implicit parameter. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Prints the implicit parameter to the stdout </dd></dl>
+
+<p>Implements <a class="el" href="classIPrintable.html#addc8a495860e3d637a25f0806409bc0a">IPrintable</a>.</p>
+
+</div>
+</div>
+<a id="af724595d10f41dc7312941067192f3a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af724595d10f41dc7312941067192f3a8">&#9670;&nbsp;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CourseSet::read </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reads to the implicit parameter. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Reads to the implicit parameter from the stdin </dd></dl>
+
+<p>Implements <a class="el" href="classIReadable.html#a595345a03025dac6772480c342900a49">IReadable</a>.</p>
+
+</div>
+</div>
+<a id="a22771e1415257fb23d22cd4d3a3bb6f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22771e1415257fb23d22cd4d3a3bb6f4">&#9670;&nbsp;</a></span>contains() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CourseSet::contains </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecrs.html#aab6a467a83e78cac63a90d13466d8111">crs::ID</a>&#160;</td>
+          <td class="paramname"><em>courseID</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns wheter the set contains a <a class="el" href="classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics.">Course</a> with the given id. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Returns <code>true</code> if there is <a class="el" href="classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics.">Course</a> with the given id within the implicit parameter. Returns <code>false</code> otherwise </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">courseID</td><td>a <a class="el" href="namespacecrs.html#aab6a467a83e78cac63a90d13466d8111">crs::ID</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A boolean representing whether the implicit parameter contains the given <a class="el" href="classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics.">Course</a> </dd></dl>
+
+</div>
+</div>
+<a id="a1548182a5c3f33686ec6811881431319"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1548182a5c3f33686ec6811881431319">&#9670;&nbsp;</a></span>contains() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CourseSet::contains </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCourse.html">Course</a> &amp;&#160;</td>
+          <td class="paramname"><em>toCheckCourse</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns wheter the set contains a <a class="el" href="classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics.">Course</a> equal to the given one. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Returns <code>true</code> if there is <a class="el" href="classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics.">Course</a> equal to the given one within the implicit parameter. Returns <code>false</code> otherwise </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">toCheckSession</td><td>a <a class="el" href="classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics.">Course</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A boolean representing whether the implicit parameter contains a <a class="el" href="classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics.">Course</a> equal to the given one </dd></dl>
+
+</div>
+</div>
+<a id="a3ac6d3c29d799303887e6d30a1ec44bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ac6d3c29d799303887e6d30a1ec44bc">&#9670;&nbsp;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCourse.html">Course</a>&amp; CourseSet::operator[] </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecrs.html#aab6a467a83e78cac63a90d13466d8111">crs::ID</a>&#160;</td>
+          <td class="paramname"><em>courseID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the <a class="el" href="classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics.">Course</a> with the given id contained in the set. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>A <a class="el" href="classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics.">Course</a> with the given id does exist within the implicit parameter </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Returns the <a class="el" href="classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics.">Course</a> with the given id </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">courseID</td><td>a <a class="el" href="namespacecrs.html#aab6a467a83e78cac63a90d13466d8111">crs::ID</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the <a class="el" href="classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics.">Course</a> with the given id </dd></dl>
+
+</div>
+</div>
+<a id="a0ad3ee825dca6108675dff721a0913a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ad3ee825dca6108675dff721a0913a3">&#9670;&nbsp;</a></span>count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CourseSet::count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the number of courses contained in the set. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Returns the number of courses contained in the implicit parameter </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>An integer representing the number of courses contained </dd></dl>
+
+</div>
+</div>
+<a id="adfd4930ec997c1a2779143dfa87e8aef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfd4930ec997c1a2779143dfa87e8aef">&#9670;&nbsp;</a></span>append()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CourseSet::append </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCourse.html">Course</a>&#160;</td>
+          <td class="paramname"><em>newCourse</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a given <a class="el" href="classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics.">Course</a> to the set. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>There is not any <a class="el" href="classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics.">Course</a> with the given id or the same sessions as the given <a class="el" href="classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics.">Course</a> within the implicit parameter </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The given <a class="el" href="classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics.">Course</a> is added to the implicit parameter </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newCourse</td><td>a <a class="el" href="classCourse.html" title="Represents a course, i.e., a set of sessions with void intersection and some statistics.">Course</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a50490640c139d2b83938e651afba2588"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50490640c139d2b83938e651afba2588">&#9670;&nbsp;</a></span>courses</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classCourse.html">Course</a>&gt; CourseSet::courses</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vector of courses accessed by implicit ID's (i.e., integers from 0 to size-1) </p>
+<dl class="section invariant"><dt>Invariant</dt><dd>There are not two courses with the same sessions </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="CourseSet_8hh_source.html#l00032">32</a> of file <a class="el" href="CourseSet_8hh_source.html">CourseSet.hh</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="CourseSet_8hh_source.html">CourseSet.hh</a></li>
 </ul>
 </div><!-- contents -->

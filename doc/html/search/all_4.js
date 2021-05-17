@@ -1,24 +1,14 @@
 var searchData=
 [
-<<<<<<< HEAD
-  ['getconstelement_15',['getConstElement',['../classIContainer_a53d878603e548a1c500f67a43ea8699d.html#a53d878603e548a1c500f67a43ea8699d',1,'IContainer']]],
-  ['getcount_16',['getCount',['../classIContainer_a3f98d7e86a90a9f521d000d776216b1f.html#a3f98d7e86a90a9f521d000d776216b1f',1,'IContainer']]],
-  ['getcurrentenrolled_17',['getCurrentEnrolled',['../classCourse_ae933e2e2c89148658d7ed35bd39335e5.html#ae933e2e2c89148658d7ed35bd39335e5',1,'Course']]],
-  ['getelement_18',['getElement',['../classIContainer_ac6a372ab01d690a8ce00c807dd052ceb.html#ac6a372ab01d690a8ce00c807dd052ceb',1,'IContainer']]],
-  ['getenrolledcourseid_19',['getEnrolledCourseID',['../classUser_a58f94778be2ff3c33932def944ff3743.html#a58f94778be2ff3c33932def944ff3743',1,'User']]],
-  ['getsessionbyproblem_20',['getSessionByProblem',['../classCourse_ada500ecbde39364e8dac698a409872e3.html#ada500ecbde39364e8dac698a409872e3',1,'Course']]],
-  ['getsolvablestats_21',['getSolvableStats',['../classUser_a35dbac271954b5e180f95d1b7201abb7.html#a35dbac271954b5e180f95d1b7201abb7',1,'User']]],
-  ['getsolvedstats_22',['getSolvedStats',['../classUser_abf640d2436d67d0327cd9a4b6f33bb80.html#abf640d2436d67d0327cd9a4b6f33bb80',1,'User']]]
-=======
-  ['getcount_15',['getCount',['../class_i_container.html#a3f98d7e86a90a9f521d000d776216b1f',1,'IContainer']]],
-  ['getcurrentenrolled_16',['getCurrentEnrolled',['../class_course.html#ae933e2e2c89148658d7ed35bd39335e5',1,'Course']]],
-  ['getenrolledcourseid_17',['getEnrolledCourseID',['../class_user.html#a58f94778be2ff3c33932def944ff3743',1,'User']]],
-  ['getsessionbyproblem_18',['getSessionByProblem',['../class_course.html#ada500ecbde39364e8dac698a409872e3',1,'Course']]],
-  ['getsolvablestats_19',['getSolvableStats',['../class_user.html#a3de54afb03e5d5a2b63cab408612b201',1,'User']]],
-  ['getsolvedstats_20',['getSolvedStats',['../class_user.html#a2b7c33f7766f7245225b74f2741821cc',1,'User']]]
-<<<<<<< HEAD
->>>>>>> d492b3a069c2074d005a742334644ac2220fcab0
-=======
->>>>>>> spec
->>>>>>> a9243d702bf53f762bc01ba95a77d594935fe2df
+  ['e_27',['e',['../classProblem.html#aca6215a0cd094ce01582821234ee81bc',1,'Problem']]],
+  ['empty_28',['empty',['../structUser_1_1ProblemStats.html#a547778bedcf24a545e7ea6519f2b2393',1,'User::ProblemStats']]],
+  ['end_29',['end',['../classCourse.html#ab66c4cec1447fb3f7275e9bae8e17a1f',1,'Course::end()'],['../classSession.html#a2c6a3101c2fe847962b1348780918085',1,'Session::end()']]],
+  ['end_5fprogram_30',['end_program',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fa5e2cb507ee5d7460547559578ac229c5',1,'io']]],
+  ['enroll_5fuser_31',['enroll_user',['../namespaceio.html#a05d02c08bcfc0805d39733aac0f0371fab056421040352f8435ecb74c178d7f1e',1,'io']]],
+  ['enrollcourse_32',['enrollCourse',['../classUser.html#ae0d7460cd0a7ff8c069b07f573f3a46f',1,'User']]],
+  ['enrolledcourse_33',['enrolledCourse',['../classUser.html#aa9aa2d00f1a525a6881ba6cd71b5bd0f',1,'User']]],
+  ['enrolluser_34',['enrollUser',['../classCourse.html#a6047349e41149231c71d1d2307283bc9',1,'Course']]],
+  ['error_35',['error',['../namespaceio.html#ab9ec7118a920a99ec162d689e90c0ce7',1,'io']]],
+  ['error_36',['Error',['../namespaceio.html#adbb419c9c9a584444a295d1738727dae',1,'io']]],
+  ['evaluator_20platform_20documentation_37',['Evaluator Platform Documentation',['../index.html',1,'']]]
 ];

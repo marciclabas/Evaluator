@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -23,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Evaluator
-   &#160;<span id="projectnumber">1.0 Specification</span>
+   &#160;<span id="projectnumber">2.0 Implementation</span>
    </div>
    <div id="projectbrief">pro2 lab pracs: problem-evaluator-like platform</div>
   </td>
@@ -65,25 +66,95 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">prb Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>namespace containing type definitions related to the <a class="el" href="classProblem.html" title="Represents a problem with a unique name (id) and some statistics.">Problem</a> class  
+<p>namespace containing type definitions related to the <a class="el" href="classProblem.html" title="Represents a problem with some statistics regarding it&#39;s submissions.">Problem</a> class  
 <a href="namespaceprb.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ac73f5af4cf1ee8080561c3daea7a437f"><td class="memItemLeft" align="right" valign="top">typedef std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprb_ac73f5af4cf1ee8080561c3daea7a437f.html#ac73f5af4cf1ee8080561c3daea7a437f">ID</a></td></tr>
-<tr class="separator:ac73f5af4cf1ee8080561c3daea7a437f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72e825355fbd24713dfb8ef9875aa775"><td class="memItemLeft" align="right" valign="top">typedef bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprb_a72e825355fbd24713dfb8ef9875aa775.html#a72e825355fbd24713dfb8ef9875aa775">result</a></td></tr>
-<tr class="separator:a72e825355fbd24713dfb8ef9875aa775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c2e40f5311e288c190a36c31d25e784"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">ID</a> = std::string</td></tr>
+<tr class="separator:a0c2e40f5311e288c190a36c31d25e784"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ac8ae05a8ffb2fcf04a3520b950580832"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprb.html#ac8ae05a8ffb2fcf04a3520b950580832">result</a> { <a class="el" href="namespaceprb.html#ac8ae05a8ffb2fcf04a3520b950580832a57f68538285d217aeed2f8826fdb7432">rejected</a> = 0
+, <a class="el" href="namespaceprb.html#ac8ae05a8ffb2fcf04a3520b950580832abe4e3b4aa35ba6fb1f61cbf2b8eff128">accepted</a> = 1
+ }</td></tr>
+<tr class="separator:ac8ae05a8ffb2fcf04a3520b950580832"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a38b9bd74c7e713bf3ec914818814e869"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">ID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprb.html#a38b9bd74c7e713bf3ec914818814e869">invalidID</a> = &quot;0&quot;</td></tr>
+<tr class="separator:a38b9bd74c7e713bf3ec914818814e869"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>namespace containing type definitions related to the <a class="el" href="classProblem.html" title="Represents a problem with a unique name (id) and some statistics.">Problem</a> class </p>
-</div></div><!-- contents -->
+<div class="textblock"><p>namespace containing type definitions related to the <a class="el" href="classProblem.html" title="Represents a problem with some statistics regarding it&#39;s submissions.">Problem</a> class </p>
+</div><h2 class="groupheader">Typedef Documentation</h2>
+<a id="a0c2e40f5311e288c190a36c31d25e784"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c2e40f5311e288c190a36c31d25e784">&#9670;&nbsp;</a></span>ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">prb::ID</a> = typedef std::string</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Namespaces_8hh_source.html#l00023">23</a> of file <a class="el" href="Namespaces_8hh_source.html">Namespaces.hh</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ac8ae05a8ffb2fcf04a3520b950580832"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8ae05a8ffb2fcf04a3520b950580832">&#9670;&nbsp;</a></span>result</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespaceprb.html#ac8ae05a8ffb2fcf04a3520b950580832">prb::result</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ac8ae05a8ffb2fcf04a3520b950580832a57f68538285d217aeed2f8826fdb7432"></a>rejected&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac8ae05a8ffb2fcf04a3520b950580832abe4e3b4aa35ba6fb1f61cbf2b8eff128"></a>accepted&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="Namespaces_8hh_source.html#l00024">24</a> of file <a class="el" href="Namespaces_8hh_source.html">Namespaces.hh</a>.</p>
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{ <a class="code" href="namespaceprb.html#ac8ae05a8ffb2fcf04a3520b950580832a57f68538285d217aeed2f8826fdb7432">rejected</a> = 0, <a class="code" href="namespaceprb.html#ac8ae05a8ffb2fcf04a3520b950580832abe4e3b4aa35ba6fb1f61cbf2b8eff128">accepted</a> = 1};</div>
+<div class="ttc" id="anamespaceprb_html_ac8ae05a8ffb2fcf04a3520b950580832a57f68538285d217aeed2f8826fdb7432"><div class="ttname"><a href="namespaceprb.html#ac8ae05a8ffb2fcf04a3520b950580832a57f68538285d217aeed2f8826fdb7432">prb::rejected</a></div><div class="ttdeci">@ rejected</div><div class="ttdef"><b>Definition:</b> <a href="Namespaces_8hh_source.html#l00024">Namespaces.hh:24</a></div></div>
+<div class="ttc" id="anamespaceprb_html_ac8ae05a8ffb2fcf04a3520b950580832abe4e3b4aa35ba6fb1f61cbf2b8eff128"><div class="ttname"><a href="namespaceprb.html#ac8ae05a8ffb2fcf04a3520b950580832abe4e3b4aa35ba6fb1f61cbf2b8eff128">prb::accepted</a></div><div class="ttdeci">@ accepted</div><div class="ttdef"><b>Definition:</b> <a href="Namespaces_8hh_source.html#l00024">Namespaces.hh:24</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a38b9bd74c7e713bf3ec914818814e869"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38b9bd74c7e713bf3ec914818814e869">&#9670;&nbsp;</a></span>invalidID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespaceprb.html#a0c2e40f5311e288c190a36c31d25e784">ID</a> prb::invalidID = &quot;0&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Namespaces_8hh_source.html#l00025">25</a> of file <a class="el" href="Namespaces_8hh_source.html">Namespaces.hh</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1

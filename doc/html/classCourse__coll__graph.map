@@ -1,5 +1,5 @@
 <map id="Course" name="Course">
-<area shape="rect" id="node1" title="Represents a course, i.e., a set of sessions with void intersection and some statistics." alt="" coords="70,80,137,107"/>
-<area shape="rect" id="node2" href="$classIReadable.html" title="IReadable interface." alt="" coords="5,5,92,32"/>
-<area shape="rect" id="node3" href="$classIPrintable.html" title="IPrintable interface." alt="" coords="116,5,200,32"/>
+<area shape="rect" id="node1" title="Represents a course, i.e., a set of sessions with void intersection and some statistics." alt="" coords="5,131,215,516"/>
+<area shape="rect" id="node2" href="$classIPrintable.html" title="IPrintable interface." alt="" coords="13,5,97,83"/>
+<area shape="rect" id="node3" href="$classIReadable.html" title="IReadable interface." alt="" coords="121,5,208,83"/>
 </map>

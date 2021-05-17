@@ -1,6 +1,7 @@
 var IO_8hh =
 [
-    [ "InputCommand", "IO_8hh.html#a6a88a8efa87bc65537b492af5d214170", null ],
+    [ "NDEBUG", "IO_8hh_a8de3ed741dadc9c979a4ff17c0a9116e.html#a8de3ed741dadc9c979a4ff17c0a9116e", null ],
+    [ "InputCommand", "IO_8hh.html#a91256296d27891eb56958d80d5d9d1d9", null ],
     [ "SystemCommand", "IO_8hh.html#a05d02c08bcfc0805d39733aac0f0371f", [
       [ "new_problem", "IO_8hh.html#a05d02c08bcfc0805d39733aac0f0371fa929bc2e79e7f8ec1874cf5ae7dd137fd", null ],
       [ "new_session", "IO_8hh.html#a05d02c08bcfc0805d39733aac0f0371fa5e4356ead8e86e8bfe9241eea1fa1918", null ],
@@ -23,7 +24,22 @@ var IO_8hh =
       [ "write_user", "IO_8hh.html#a05d02c08bcfc0805d39733aac0f0371fa392abf161f8f14388c8548d806a3f181", null ],
       [ "end_program", "IO_8hh.html#a05d02c08bcfc0805d39733aac0f0371fa5e2cb507ee5d7460547559578ac229c5", null ]
     ] ],
-    [ "error", "IO_8hh.html#a51f1edf34b2c93982b7bd6720553a541", null ],
+    [ "Error", "IO_8hh.html#adbb419c9c9a584444a295d1738727dae", [
+      [ "default_error", "IO_8hh.html#adbb419c9c9a584444a295d1738727daea5f68ff264f89ab8ac3172891aacec52c", null ],
+      [ "already_existing_problem", "IO_8hh.html#adbb419c9c9a584444a295d1738727daea4212adc88e82eba84cd284d97bec8445", null ],
+      [ "nonexistent_problem", "IO_8hh.html#adbb419c9c9a584444a295d1738727daea73de562c73630dcd8997729ab97b1e09", null ],
+      [ "already_existing_session", "IO_8hh.html#adbb419c9c9a584444a295d1738727daea43ab05a5404f65c8bf54c4166ec8e6a5", null ],
+      [ "nonexistent_session", "IO_8hh.html#adbb419c9c9a584444a295d1738727daeafdd530a7ad1f912ca847848cfeebc168", null ],
+      [ "nonexistent_course", "IO_8hh.html#adbb419c9c9a584444a295d1738727daeaafb30d031b094858f4ee9fde14d68563", null ],
+      [ "nonexistent_user", "IO_8hh.html#adbb419c9c9a584444a295d1738727daea70a59be58c0cabfcfc69fb395b4d1cdb", null ],
+      [ "already_existing_user", "IO_8hh.html#adbb419c9c9a584444a295d1738727daeaff725f336d8a983f0fb2238aee957cda", null ],
+      [ "already_enrolled_user", "IO_8hh.html#adbb419c9c9a584444a295d1738727daea41796c73d06498981f86c782bdcdec19", null ],
+      [ "nonenrolled_user", "IO_8hh.html#adbb419c9c9a584444a295d1738727daea86c78e783ad08cabfa804b96d769c427", null ],
+      [ "problem_not_in_course", "IO_8hh.html#adbb419c9c9a584444a295d1738727daea6e1d02c9662dd24c5e4ff3cd975373a2", null ],
+      [ "malformed_course", "IO_8hh.html#adbb419c9c9a584444a295d1738727daea0e91ec7889f754ba7a611e102c2a74d5", null ]
+    ] ],
+    [ "operator==", "IO_8hh.html#af19e1eafa940755e7af9aa8113c163ca", null ],
     [ "operator!=", "IO_8hh.html#a179f625f3125b22f8d3e5e28cf6e141e", null ],
-    [ "operator==", "IO_8hh.html#af19e1eafa940755e7af9aa8113c163ca", null ]
+    [ "error", "IO_8hh.html#ab9ec7118a920a99ec162d689e90c0ce7", null ],
+    [ "echo", "IO_8hh.html#ae4e65fa47214d732dfd840f97d8a11d5", null ]
 ];
